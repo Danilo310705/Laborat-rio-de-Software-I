@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"699e7757b49ffa4c","type":"text","text":"juiuhuy87yhgty","x":-600,"y":-108,"width":250,"height":60},
+		{"id":"5d0249f9f6ec1294","type":"file","file":"06_Interfaces/Anexos/Prototipos/IMG-02 - Itens da requisicao.png","x":-160,"y":-140,"width":520,"height":304},
+		{"id":"5f0970052863424e","type":"file","file":"06_Interfaces/Anexos/Diagramas da Fonte/Diagrama de Casos de Uso.png","x":200,"y":380,"width":400,"height":267}
+	],
+	"edges":[
+		{"id":"71988f01ba562c97","fromNode":"699e7757b49ffa4c","fromSide":"bottom","toNode":"5d0249f9f6ec1294","toSide":"left"},
+		{"id":"5dbf81f5d4f31361","fromNode":"5d0249f9f6ec1294","fromSide":"bottom","toNode":"5f0970052863424e","toSide":"top"}
+	]
+}

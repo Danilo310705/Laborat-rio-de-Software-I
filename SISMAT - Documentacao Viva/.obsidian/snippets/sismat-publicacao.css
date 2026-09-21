@@ -1,0 +1,227 @@
+/*
+ * SISMAT - perfil de impressão para o Caderno do Projeto Integrador.
+ * Ativado por meio da propriedade cssclasses: [sismat-publicacao].
+ */
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 30mm 20mm 20mm 30mm;
+  }
+
+  body,
+  .sismat-publicacao,
+  .sismat-publicacao .markdown-preview-view {
+    color: #000 !important;
+    background: #fff !important;
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+  }
+
+  .sismat-publicacao .markdown-preview-sizer {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .sismat-publicacao .inline-title,
+  .sismat-publicacao .metadata-container,
+  .sismat-publicacao .frontmatter-container,
+  .sismat-publicacao .markdown-embed-title,
+  .sismat-publicacao .file-embed-title,
+  .sismat-publicacao .edit-block-button,
+  .sismat-publicacao .copy-code-button {
+    display: none !important;
+  }
+
+  .sismat-publicacao p {
+    margin: 0 0 0.75em 0 !important;
+    text-align: justify !important;
+    orphans: 3;
+    widows: 3;
+  }
+
+  .sismat-publicacao h1,
+  .sismat-publicacao h2,
+  .sismat-publicacao h3,
+  .sismat-publicacao h4 {
+    color: #000 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    page-break-after: avoid;
+    break-after: avoid-page;
+  }
+
+  .sismat-publicacao > .markdown-preview-view h1,
+  .sismat-publicacao .markdown-preview-sizer > div > h1 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    font-size: 16pt !important;
+    text-transform: uppercase;
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .sismat-publicacao h2 {
+    margin-top: 1.25em !important;
+    font-size: 14pt !important;
+  }
+
+  .sismat-publicacao h3 {
+    margin-top: 1em !important;
+    font-size: 12pt !important;
+  }
+
+  /* Títulos das páginas transcluídas funcionam como subseções. */
+  .sismat-publicacao .markdown-embed h1 {
+    margin-top: 1.4em !important;
+    font-size: 14pt !important;
+    text-transform: none !important;
+    page-break-before: auto !important;
+    break-before: auto !important;
+  }
+
+  .sismat-publicacao .markdown-embed,
+  .sismat-publicacao .markdown-embed-content,
+  .sismat-publicacao .file-embed {
+    max-height: none !important;
+    overflow: visible !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+
+  .sismat-publicacao a,
+  .sismat-publicacao a.internal-link,
+  .sismat-publicacao a.external-link {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  .sismat-publicacao ul,
+  .sismat-publicacao ol {
+    margin-top: 0.25em !important;
+    margin-bottom: 0.75em !important;
+  }
+
+  .sismat-publicacao li {
+    margin-bottom: 0.2em !important;
+  }
+
+  .sismat-publicacao table {
+    width: 100% !important;
+    margin: 0.8em 0 1.2em !important;
+    border-collapse: collapse !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 9pt !important;
+    line-height: 1.25 !important;
+  }
+
+  .sismat-publicacao thead {
+    display: table-header-group;
+  }
+
+  .sismat-publicacao tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .sismat-publicacao th,
+  .sismat-publicacao td {
+    border: 0.6pt solid #555 !important;
+    padding: 5pt 6pt !important;
+    vertical-align: top !important;
+  }
+
+  .sismat-publicacao th {
+    background: #e9e9e9 !important;
+    font-weight: 700 !important;
+  }
+
+  .sismat-publicacao img,
+  .sismat-publicacao svg,
+  .sismat-publicacao .mermaid {
+    display: block !important;
+    max-width: 100% !important;
+    max-height: 210mm !important;
+    margin: 0.8em auto 1em !important;
+    object-fit: contain;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .sismat-publicacao pre {
+    white-space: pre-wrap !important;
+    overflow-wrap: anywhere !important;
+    border: 0.6pt solid #999 !important;
+    background: #f6f6f6 !important;
+    font-size: 8.5pt !important;
+    line-height: 1.25 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .sismat-publicacao code {
+    color: #000 !important;
+    background: #f2f2f2 !important;
+  }
+
+  .sismat-publicacao .callout {
+    color: #000 !important;
+    background: #f5f5f5 !important;
+    border: 0.8pt solid #777 !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .sismat-publicacao .sismat-cover {
+    min-height: 225mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif !important;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .sismat-publicacao .sismat-cover p {
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  .sismat-publicacao .sismat-cover__institution,
+  .sismat-publicacao .sismat-cover__authors,
+  .sismat-publicacao .sismat-cover__place {
+    font-size: 12pt;
+    text-transform: uppercase;
+  }
+
+  .sismat-publicacao .sismat-cover__title {
+    margin: auto 0 !important;
+    font-size: 20pt;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .sismat-publicacao .sismat-cover__subtitle {
+    margin-top: 8mm !important;
+    font-size: 14pt;
+    font-weight: 400;
+  }
+
+  .sismat-publicacao .pdf-page-break {
+    display: block;
+    height: 0;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .sismat-publicacao .keep-together {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

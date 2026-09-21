@@ -1,0 +1,14 @@
+{
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "06_Interfaces/Anexos",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00_Inicio/Inbox",
+  "showInlineTitle": true,
+  "useTab": false,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
+}

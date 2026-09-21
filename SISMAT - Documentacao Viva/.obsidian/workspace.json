@@ -1,0 +1,274 @@
+{
+  "main": {
+    "id": "65258f6ea3ba6423",
+    "type": "split",
+    "children": [
+      {
+        "id": "cf2e37bc677c3ff3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6abf5f97016ad2d7",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Sem título.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Sem título"
+            }
+          },
+          {
+            "id": "e22e5ec7f14b4ddf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sem título.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sem título"
+            }
+          },
+          {
+            "id": "928b16549edadd5b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "08_Publicacao/VALIDACAO - Layout Academico.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "VALIDACAO - Layout Academico"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7b60ebf9a2058e8c",
+    "type": "split",
+    "children": [
+      {
+        "id": "500d100e528b5167",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9714cf9df0cc568c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "640d59e8277b63b1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "253554633ba90295",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 260.5
+  },
+  "right": {
+    "id": "8b3127f33acded34",
+    "type": "split",
+    "children": [
+      {
+        "id": "b41ca30c9411b26b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b077586054ce0399",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "08_Publicacao/VALIDACAO - Layout Academico.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos"
+            }
+          },
+          {
+            "id": "b459d66f29413f19",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "04_Arquitetura/Diagramas de Sequencia.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída"
+            }
+          },
+          {
+            "id": "e16df4187da6a267",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "064a376006b554f3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "da5f0756a759c97c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "04_Arquitetura/Diagramas de Sequencia.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "928b16549edadd5b",
+  "lastOpenFiles": [
+    "08_Publicacao/LEIA-ME - Geracao do PDF.md",
+    "08_Publicacao/Caderno do Projeto Integrador - SISMAT.md",
+    "08_Publicacao/Gerador PDF/assets/LEIA-ME - Marca UNIPAR.md",
+    "08_Publicacao/Gerador PDF/LICENCAS.md",
+    "Sem título 1.canvas",
+    "Sem título.md",
+    "Sem título.canvas",
+    "README.md",
+    "Mapa SISMAT.canvas",
+    "09_UsoIA/Impactos Riscos e Controles.md",
+    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-79-82.jpg",
+    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-73-78.jpg",
+    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-67-72.jpg",
+    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-61-66.jpg",
+    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-55-60.jpg",
+    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-49-54.jpg",
+    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-43-48.jpg",
+    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-37-42.jpg",
+    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-31-36.jpg",
+    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-25-30.jpg",
+    "tmp/pdfs/qa-cabecalho-horizontal-v1.2",
+    "09_UsoIA/Etapas e Registro de Uso.md",
+    "09_UsoIA/Declaracao de Transparencia.md",
+    "output/pdf/SISMAT-Projeto-Integrador-v1.1.pdf",
+    "tmp/pdfs/arquivados/SISMAT-Projeto-Integrador-v1.1.pdf",
+    "tmp/pdfs/qa-uso-ia-v1.2",
+    "output/pdf/SISMAT-Projeto-Integrador-v1.2.pdf",
+    "09_UsoIA/Metodologia e Responsabilidades.md",
+    "09_UsoIA/Indice de Uso de IA.md",
+    "09_UsoIA",
+    "tmp/pdfs/arquivados/SISMAT-Projeto-Integrador-v1.0.pdf",
+    "tmp/pdfs/arquivados",
+    "08_Publicacao/VALIDACAO - Layout Academico.md",
+    "08_Publicacao/Validacao",
+    "tmp/pdfs/qa-layout-referencia-final-regenerated",
+    "02_Requisitos/Regras de Negocio/RN-08 - Somente requisicao aprovada pode ser entregue.md",
+    "03_Modelo de Dominio/Ciclo de Vida da Requisicao.md",
+    "02_Requisitos/Regras de Negocio/RN-03 - Status inicial pendente.md",
+    "04_Arquitetura/Diagramas de Sequencia.md",
+    "04_Arquitetura/Decisoes/Indice de Decisoes.md",
+    "04_Arquitetura/Decisoes/ADR-001 - Momento da reserva e baixa de estoque.md",
+    "00_Inicio/Home.md",
+    "00_Inicio/Status da documentacao.md",
+    "02_Requisitos/Casos de Uso/UC-005 - Gerenciar produtos.md",
+    "02_Requisitos/Catalogo de Mensagens.md",
+    "06_Interfaces/Mapa de Interfaces.md",
+    "02_Requisitos/Casos de Uso/UC-004 - Entregar material.md",
+    "01_Produto/Glossario.md",
+    "02_Requisitos/Indice de Casos de Uso.md"
+  ]
+}

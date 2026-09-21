@@ -1,0 +1,881 @@
+@font-face {
+  font-family: "Sismat Serif";
+  src: url("file:///C:/Windows/Fonts/cambria.ttc");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sismat Serif";
+  src: url("file:///C:/Windows/Fonts/cambriab.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sismat Sans";
+  src: url("file:///C:/Windows/Fonts/segoeui.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sismat Sans";
+  src: url("file:///C:/Windows/Fonts/segoeuib.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --ink: #1c2933;
+  --muted: #62727e;
+  --navy: #17324d;
+  --blue: #49677f;
+  --teal: #167a78;
+  --teal-soft: #e8f4f2;
+  --paper-soft: #f5f7f8;
+  --line: #ced8df;
+  --gold: #b68a2c;
+  --unipar-red: #ef233c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--ink);
+  background: #ffffff;
+  font-family: "Sismat Serif", Cambria, Georgia, serif;
+  font-size: 10.5pt;
+  line-height: 1.48;
+  hyphens: auto;
+  text-rendering: optimizeLegibility;
+}
+
+@page {
+  size: A4;
+  margin: 24mm 20mm 23mm 27mm;
+
+  @top-left { content: none; }
+  @top-right { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+
+@page cover {
+  margin: 0;
+  counter-reset: page 0;
+
+  @top-left { content: none; }
+  @top-right { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+
+@page title {
+  @top-left { content: none; }
+  @top-right { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+
+@page front {
+  @top-left {
+    content: element(pageHeader);
+    vertical-align: bottom;
+    padding-bottom: 2mm;
+    border-bottom: 0.25mm solid var(--line);
+  }
+
+  @top-right { content: none; }
+
+  @bottom-left {
+    content: "PROJETO INTEGRADOR · DOCUMENTAÇÃO VIVA";
+    color: var(--muted);
+    font-family: "Sismat Sans", Arial, sans-serif;
+    font-size: 6.5pt;
+    letter-spacing: 0.05em;
+  }
+}
+
+@page content {
+  @top-left {
+    content: element(pageHeader);
+    vertical-align: bottom;
+    padding-bottom: 2mm;
+    border-bottom: 0.25mm solid var(--line);
+  }
+
+  @top-right {
+    content: counter(page);
+    color: var(--navy);
+    font-family: "Sismat Sans", Arial, sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    vertical-align: bottom;
+    padding-bottom: 2mm;
+    border-bottom: 0.25mm solid var(--line);
+  }
+
+  @bottom-left {
+    content: "SISMAT · ANÁLISE E DESENVOLVIMENTO DE SISTEMAS";
+    color: var(--muted);
+    font-family: "Sismat Sans", Arial, sans-serif;
+    font-size: 6.5pt;
+    letter-spacing: 0.04em;
+  }
+}
+
+.running-header {
+  position: running(pageHeader);
+  width: 125mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.running-header-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3mm;
+}
+
+.running-header img {
+  display: block;
+  flex: 0 0 8mm;
+  width: 8mm;
+  height: 9.4mm;
+  object-fit: contain;
+}
+
+.running-header-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.65mm;
+}
+
+.running-header-copy strong {
+  display: block;
+  font-size: 6.8pt;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.running-header-copy span {
+  display: block;
+  color: var(--muted);
+  font-size: 5.8pt;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.cover {
+  page: cover;
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 87% 13%, rgba(238, 122, 170, 0.13) 0, rgba(238, 122, 170, 0.13) 23mm, transparent 23.3mm),
+    linear-gradient(145deg, #ffffff 0%, #ffffff 72%, #f1f5f7 72%);
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 14mm;
+  background: linear-gradient(180deg, var(--navy) 0 68%, var(--teal) 68% 100%);
+}
+
+.cover::after {
+  content: "";
+  position: absolute;
+  right: -18mm;
+  bottom: 27mm;
+  width: 70mm;
+  height: 70mm;
+  border: 0.7mm solid rgba(73, 103, 127, 0.18);
+  transform: rotate(45deg);
+}
+
+.cover-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 23mm 23mm 19mm 33mm;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+}
+
+.academic-institution {
+  display: flex;
+  align-items: center;
+  gap: 5mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.unipar-logo {
+  display: block;
+  width: 22mm;
+  height: auto;
+}
+
+.cover-brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2mm;
+}
+
+.academic-institution .institution {
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.academic-institution .course,
+.academic-institution .subject {
+  color: var(--muted);
+  font-size: 7pt;
+  letter-spacing: 0.06em;
+}
+
+.cover-kicker {
+  align-self: flex-start;
+  margin-top: 23mm;
+  padding: 2.2mm 4mm;
+  color: #ffffff;
+  background: var(--teal);
+  border-radius: 1mm;
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.cover-title-group {
+  margin-top: 15mm;
+  max-width: 137mm;
+}
+
+.cover-code {
+  color: var(--blue);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 8.5pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.cover-title-group h1 {
+  margin: 4mm 0 2mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 34pt;
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.cover-rule {
+  width: 30mm;
+  height: 0.9mm;
+  margin: 7mm 0 6mm;
+  background: var(--teal);
+}
+
+.cover-title-group p {
+  margin: 0;
+  color: #3c5264;
+  font-size: 14pt;
+  line-height: 1.34;
+}
+
+.cover-authors {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 9pt;
+  text-transform: uppercase;
+}
+
+.cover-authors span {
+  margin-bottom: 1mm;
+  color: var(--muted);
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.cover-footer {
+  margin-top: 12mm;
+  padding-top: 5mm;
+  border-top: 0.35mm solid var(--line);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: var(--muted);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 8pt;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.version-badge {
+  padding: 2mm 3.5mm;
+  color: var(--navy);
+  background: #ffffff;
+  border: 0.3mm solid var(--line);
+  border-radius: 1mm;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.title-page {
+  page: title;
+  counter-reset: page 1;
+  min-height: 250mm;
+  break-before: page;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title-authors {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.title-main {
+  margin-top: 42mm;
+}
+
+.title-main h1 {
+  margin: 0 0 4mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 25pt;
+  line-height: 1.1;
+}
+
+.title-main p {
+  margin: 0;
+  color: #3c5264;
+  font-size: 13pt;
+  line-height: 1.4;
+}
+
+.academic-nature {
+  width: 88mm;
+  margin: 27mm 0 0 auto;
+  padding-left: 5mm;
+  border-left: 0.9mm solid var(--teal);
+  color: #3f5362;
+  font-size: 9pt;
+  line-height: 1.25;
+  text-align: justify;
+}
+
+.academic-nature p {
+  margin: 0 0 2.5mm;
+}
+
+.title-footer {
+  margin-top: auto;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 9pt;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.front-page {
+  page: front;
+  break-before: page;
+}
+
+.front-page > h1 {
+  margin: 0 0 8mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 22pt;
+  line-height: 1.15;
+}
+
+.lead {
+  max-width: 135mm;
+  margin: -2mm 0 9mm;
+  color: var(--muted);
+  font-size: 11.5pt;
+  line-height: 1.45;
+}
+
+.publication-data {
+  margin: 0;
+  border-top: 0.6mm solid var(--navy);
+}
+
+.publication-data > div {
+  display: grid;
+  grid-template-columns: 40mm 1fr;
+  gap: 7mm;
+  padding: 3mm 0;
+  border-bottom: 0.25mm solid var(--line);
+}
+
+.publication-data dt,
+.front-block h2 {
+  margin: 0;
+  color: var(--muted);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.publication-data dd {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.status-chip {
+  display: inline-block;
+  padding: 0.8mm 2.4mm;
+  color: var(--teal);
+  background: var(--teal-soft);
+  border-radius: 4mm;
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+}
+
+.front-block {
+  margin-top: 7mm;
+}
+
+.front-block h2 {
+  margin-bottom: 2.5mm;
+}
+
+.front-block ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  columns: 2;
+  column-gap: 12mm;
+}
+
+.front-block li {
+  margin-bottom: 1.5mm;
+}
+
+.front-block p {
+  margin: 0;
+}
+
+.edition-note {
+  margin-top: 8mm;
+  padding: 4mm 5mm;
+  background: var(--paper-soft);
+  border-left: 1.2mm solid var(--gold);
+  color: #4d5d68;
+  font-size: 8.8pt;
+}
+
+.toc-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 8.7pt;
+  line-height: 1.14;
+}
+
+.toc-list li {
+  break-inside: avoid;
+}
+
+.toc-list a {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: end;
+  gap: 2mm;
+  color: inherit;
+  text-decoration: none;
+}
+
+.toc-list a::before {
+  content: "";
+  grid-column: 2;
+  border-bottom: 0.25mm dotted #9cabb5;
+  transform: translateY(-1mm);
+}
+
+.toc-list a::after {
+  content: target-counter(attr(href), page);
+  grid-column: 3;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.toc-list a span {
+  grid-column: 1;
+}
+
+.toc-level-1 {
+  margin: 1.6mm 0 0.7mm;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.toc-level-2 {
+  margin: 0.5mm 0 0.5mm 7mm;
+  color: #4b5d69;
+  font-size: 8.2pt;
+}
+
+.figure-list li {
+  margin: 1.4mm 0;
+  color: #435662;
+  font-size: 8.4pt;
+  line-height: 1.2;
+}
+
+.publication-content {
+  page: content;
+}
+
+.source-anchor {
+  display: block;
+  height: 0;
+}
+
+.chapter-heading {
+  break-before: page;
+  margin: 0 0 8mm;
+  padding-bottom: 4mm;
+  border-bottom: 0.6mm solid var(--navy);
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 22pt;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.chapter-heading .heading-number {
+  display: block;
+  margin-bottom: 2.5mm;
+  color: var(--teal);
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.chapter-heading.unnumbered {
+  padding-top: 0;
+}
+
+.section-heading {
+  margin: 8mm 0 4mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 15pt;
+  line-height: 1.22;
+  break-after: avoid;
+}
+
+.section-heading .heading-number {
+  margin-right: 2.5mm;
+  color: var(--teal);
+  font-size: 10pt;
+  letter-spacing: 0.04em;
+}
+
+.publication-content h3 {
+  margin: 7mm 0 3mm;
+  color: #29465d;
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 11.5pt;
+  line-height: 1.25;
+  break-after: avoid;
+}
+
+.publication-content h4,
+.publication-content h5,
+.publication-content h6 {
+  margin: 5mm 0 2.5mm;
+  color: #3f586a;
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 10pt;
+  break-after: avoid;
+}
+
+.publication-content p {
+  margin: 0 0 3.3mm;
+  text-align: justify;
+  orphans: 3;
+  widows: 3;
+}
+
+.publication-content ul,
+.publication-content ol {
+  margin: 2mm 0 4mm;
+  padding-left: 7mm;
+}
+
+.publication-content li {
+  margin-bottom: 1.2mm;
+  padding-left: 0.8mm;
+}
+
+.publication-content li::marker {
+  color: var(--teal);
+  font-weight: 700;
+}
+
+a {
+  color: #245d79;
+  text-decoration-color: rgba(36, 93, 121, 0.35);
+  text-decoration-thickness: 0.2mm;
+  text-underline-offset: 0.5mm;
+}
+
+code {
+  padding: 0.2mm 0.8mm;
+  border-radius: 0.8mm;
+  color: #27455b;
+  background: #edf2f5;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 8.5pt;
+  hyphens: none;
+}
+
+pre {
+  margin: 4mm 0;
+  padding: 4mm;
+  overflow: hidden;
+  background: #f3f6f8;
+  border: 0.25mm solid var(--line);
+  border-left: 1.1mm solid var(--blue);
+  border-radius: 1mm;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  break-inside: avoid;
+}
+
+pre code {
+  padding: 0;
+  background: transparent;
+}
+
+.table-wrap {
+  width: 100%;
+  margin: 4mm 0 6mm;
+  break-inside: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 8.2pt;
+  line-height: 1.28;
+  hyphens: auto;
+}
+
+thead {
+  display: table-header-group;
+}
+
+tr {
+  break-inside: avoid;
+}
+
+th,
+td {
+  padding: 2.3mm 2.5mm;
+  border: 0.25mm solid var(--line);
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+th {
+  color: #ffffff;
+  background: var(--navy);
+  font-size: 7.7pt;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) td {
+  background: #f6f8f9;
+}
+
+table.columns-4 { font-size: 7.7pt; }
+table.columns-5,
+table.columns-6,
+table.columns-7,
+table.columns-8 { font-size: 7.1pt; line-height: 1.2; }
+
+table.columns-5 th,
+table.columns-5 td,
+table.columns-6 th,
+table.columns-6 td,
+table.columns-7 th,
+table.columns-7 td,
+table.columns-8 th,
+table.columns-8 td { padding: 1.8mm; }
+
+blockquote.callout,
+.edition-note {
+  break-inside: avoid;
+}
+
+blockquote.callout {
+  margin: 5mm 0;
+  padding: 4mm 5mm;
+  color: #3d505e;
+  background: #f5f8fa;
+  border: 0;
+  border-left: 1.2mm solid var(--blue);
+}
+
+.callout-title {
+  margin-bottom: 1.5mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+blockquote.callout-warning {
+  background: #fff9e9;
+  border-left-color: var(--gold);
+}
+
+blockquote.callout-warning .callout-title {
+  color: #815f18;
+}
+
+figure.illustration {
+  width: 100%;
+  margin: 6mm 0 7mm;
+  text-align: center;
+  break-inside: avoid;
+}
+
+figure.illustration img,
+figure.illustration svg {
+  display: block;
+  max-width: 100%;
+  max-height: 174mm;
+  width: auto;
+  height: auto;
+  margin: 2.5mm auto;
+  object-fit: contain;
+}
+
+figure.diagram {
+  padding: 4mm;
+  background: #fbfcfd;
+  border: 0.25mm solid var(--line);
+  border-radius: 1mm;
+}
+
+figure.diagram .mermaid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+figure.diagram svg {
+  max-height: 166mm;
+}
+
+figcaption,
+.figure-source {
+  color: var(--muted);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 8pt;
+  line-height: 1.3;
+  text-align: left;
+}
+
+figcaption {
+  margin-bottom: 2mm;
+}
+
+.figure-label {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.figure-source {
+  margin-top: 2mm;
+}
+
+.repeated-reference {
+  padding: 2.5mm 3mm;
+  color: var(--muted);
+  background: var(--paper-soft);
+  border-left: 0.8mm solid var(--line);
+  font-size: 8.5pt;
+}
+
+.pagedjs_pages {
+  background: #ffffff !important;
+}
+
+.pagedjs_page {
+  margin: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+@media screen {
+  body {
+    background: #dce3e7;
+  }
+
+  .pagedjs_pages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12mm;
+    padding: 12mm 0;
+    background: #dce3e7 !important;
+  }
+
+  .pagedjs_page {
+    box-shadow: 0 3mm 12mm rgba(23, 50, 77, 0.18) !important;
+  }
+}
