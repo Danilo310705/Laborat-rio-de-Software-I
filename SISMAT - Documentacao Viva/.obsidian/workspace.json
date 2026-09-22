@@ -8,52 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6abf5f97016ad2d7",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Sem título.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Sem título"
-            }
-          },
-          {
-            "id": "e22e5ec7f14b4ddf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sem título.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sem título"
-            }
-          },
-          {
             "id": "928b16549edadd5b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Requisitos/Catalogo de Mensagens.md",
+                "file": "02_Requisitos/Indice de Casos de Uso.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Catalogo de Mensagens"
+              "title": "Indice de Casos de Uso"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -131,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_Requisitos/Catalogo de Mensagens.md",
+                "file": "02_Requisitos/Indice de Casos de Uso.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -221,12 +189,19 @@
   },
   "active": "928b16549edadd5b",
   "lastOpenFiles": [
+    "04_Arquitetura/Decisoes/ADR-001 - Momento da reserva e baixa de estoque.md",
+    "04_Arquitetura/Visao de Arquitetura.md",
+    "04_Arquitetura/Diagramas de Sequencia.md",
+    "06_Interfaces/Mapa de Interfaces.md",
+    "02_Requisitos/Casos de Uso/UC-005 - Cadastrar produto.md",
+    "01_Produto/Escopo e Contexto.md",
+    "01_Produto/Atores e Stakeholders.md",
+    "02_Requisitos/Casos de Uso/UC-007 - Consultar pedidos finalizados.md",
+    "02_Requisitos/Catalogo de Mensagens.md",
     "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
     "02_Requisitos/Casos de Uso/UC-004 - Cadastrar Serviço.md",
     "05_Qualidade/Cenarios de Aceitacao.md",
-    "02_Requisitos/Casos de Uso/UC-007 - Consultar pedidos finalizados.md",
     "02_Requisitos/Casos de Uso/UC-006 - Registrar entrada de mercadoria.md",
-    "01_Produto/Atores e Stakeholders.md",
     "02_Requisitos/Regras de Negocio/RN-01 - Quantidade positiva.md",
     "08_Publicacao/VALIDACAO - Layout Academico.md",
     "08_Publicacao/LEIA-ME - Geracao do PDF.md",
@@ -262,13 +237,6 @@
     "tmp/pdfs/arquivados/SISMAT-Projeto-Integrador-v1.0.pdf",
     "tmp/pdfs/arquivados",
     "08_Publicacao/Validacao",
-    "tmp/pdfs/qa-layout-referencia-final-regenerated",
-    "02_Requisitos/Regras de Negocio/RN-08 - Somente requisicao aprovada pode ser entregue.md",
-    "03_Modelo de Dominio/Ciclo de Vida da Requisicao.md",
-    "02_Requisitos/Regras de Negocio/RN-03 - Status inicial pendente.md",
-    "04_Arquitetura/Diagramas de Sequencia.md",
-    "04_Arquitetura/Decisoes/Indice de Decisoes.md",
-    "04_Arquitetura/Decisoes/ADR-001 - Momento da reserva e baixa de estoque.md",
-    "00_Inicio/Home.md"
+    "tmp/pdfs/qa-layout-referencia-final-regenerated"
   ]
 }
