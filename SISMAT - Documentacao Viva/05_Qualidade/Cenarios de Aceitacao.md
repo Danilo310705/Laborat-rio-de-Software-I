@@ -139,7 +139,7 @@ Quando abre “Pedidos Finalizados”
 Então visualiza apenas seus pedidos Rejeitados e Entregues
 ```
 
-Rastreia: [[02_Requisitos/Casos de Uso/UC-007 - Consultar pedidos finalizados|UC-007]], [[02_Requisitos/Regras de Negocio/RN-17 - Visualizar apenas pedidos proprios|RN-17]], [[02_Requisitos/Regras de Negocio/RN-18 - Exibir apenas pedidos encerrados|RN-18]].
+Rastreia: [[UC-007 - Cadastrar fornecedor|UC-007]], [[02_Requisitos/Regras de Negocio/RN-17 - Visualizar apenas pedidos proprios|RN-17]], [[02_Requisitos/Regras de Negocio/RN-18 - Exibir apenas pedidos encerrados|RN-18]].
 
 ## CA-011 - Impedir e-mail duplicado
 

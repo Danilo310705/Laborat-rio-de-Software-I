@@ -20,7 +20,7 @@ tags: [sismat, casos-de-uso]
 | UC-004 | [[UC-004 - Cadastrar Serviço\|Entregar material]] | Estoquista | em revisão |
 | UC-005 | [[UC-005 - Cadastrar produto\|Gerenciar produtos]] | Administrador | em revisão |
 | UC-006 | [[UC-006 - Registrar entrada de mercadoria\|Gerar relatórios]] | Administrador / Estoquista | em revisão |
-| UC-007 | [[02_Requisitos/Casos de Uso/UC-007 - Consultar pedidos finalizados\|Consultar pedidos finalizados]] | Usuário | em revisão |
+| UC-007 | [[UC-007 - Cadastrar fornecedor\|Consultar pedidos finalizados]] | Usuário | em revisão |
 | UC-008 | [[02_Requisitos/Casos de Uso/UC-008 - Gerenciar usuarios\|Gerenciar usuários]] | Administrador | em revisão |
 
 ## Mapa de atores e capacidades

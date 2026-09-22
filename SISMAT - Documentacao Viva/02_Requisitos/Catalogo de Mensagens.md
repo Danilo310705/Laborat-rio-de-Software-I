@@ -52,7 +52,7 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-10
 
-**Entrega realizada com sucesso.** Tipo: sucesso. Uso: [[UC-004 - Cadastrar Serviço|UC-004]].
+**Não foi possível registrar a entrada dos produtos.** Tipo: erro. Uso: [[UC-006 - Registrar entrada de mercadoria|UC-006]].
 
 ## MSG-11
 
@@ -88,11 +88,11 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-19
 
-**Nenhum pedido encontrado.** Tipo: informativo. Uso: [[02_Requisitos/Casos de Uso/UC-007 - Consultar pedidos finalizados|UC-007]].
+**Nenhum pedido encontrado.** Tipo: informativo. Uso: [[UC-007 - Cadastrar fornecedor|UC-007]].
 
 ## MSG-20
 
-**Filtro inválido.** Tipo: erro. Uso: [[02_Requisitos/Casos de Uso/UC-007 - Consultar pedidos finalizados|UC-007]].
+**Filtro inválido.** Tipo: erro. Uso: [[UC-007 - Cadastrar fornecedor|UC-007]].
 
 ## MSG-21
 

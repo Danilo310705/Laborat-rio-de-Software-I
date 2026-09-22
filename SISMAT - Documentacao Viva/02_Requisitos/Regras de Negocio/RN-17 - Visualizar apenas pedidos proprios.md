@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, autorizacao]
 
 O usuário comum visualiza somente pedidos finalizados vinculados à própria identidade.
 
-**Aplicação:** [[02_Requisitos/Casos de Uso/UC-007 - Consultar pedidos finalizados|UC-007]].
+**Aplicação:** [[UC-007 - Cadastrar fornecedor|UC-007]].
 
 **Verificação:** filtrar no servidor e impedir consulta direta de IDs de terceiros.
