@@ -38,12 +38,12 @@ Permitir que o usuário cadastre fornecedores e vincule os produtos fornecidos p
 |     6 |  EV  | Usuário confirma o cadastro.                                                |
 |     7 |  RS  | Sistema valida os dados informados.                                         |
 |     8 |  RS  | Sistema registra o fornecedor e vincula os produtos selecionados.           |
-|     9 |  RS  | Sistema registra a entrada e atualiza a quantidade dos produtos em estoque. |
 |    10 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-01\|MSG-01]]        |
-## Alternativa - filtrar
+## Alternativa  - Fornecedor sem produtos vinculados
 
-1. Usuário informa filtros.
-2. Sistema valida e exibe os pedidos correspondentes.
+1. No passo 5, o usuário não seleciona nenhum produto.
+2. O usuário confirma o cadastro normalmente.
+3. O sistema cadastra o fornecedor sem produtos vinculados.
 
 ## Exceções
 
