@@ -44,12 +44,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "08_Publicacao/VALIDACAO - Layout Academico.md",
+                "file": "02_Requisitos/Casos de Uso/UC-004 - Cadastrar Serviço.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "VALIDACAO - Layout Academico"
+              "title": "UC-004 - Cadastrar Serviço"
             }
           }
         ],
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "08_Publicacao/VALIDACAO - Layout Academico.md",
+                "file": "02_Requisitos/Casos de Uso/UC-004 - Cadastrar Serviço.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -206,7 +206,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -219,8 +219,15 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "928b16549edadd5b",
+  "active": "b077586054ce0399",
   "lastOpenFiles": [
+    "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
+    "05_Qualidade/Cenarios de Aceitacao.md",
+    "02_Requisitos/Casos de Uso/UC-007 - Consultar pedidos finalizados.md",
+    "02_Requisitos/Casos de Uso/UC-006 - Registrar entrada de mercadoria.md",
+    "01_Produto/Atores e Stakeholders.md",
+    "02_Requisitos/Regras de Negocio/RN-01 - Quantidade positiva.md",
+    "08_Publicacao/VALIDACAO - Layout Academico.md",
     "08_Publicacao/LEIA-ME - Geracao do PDF.md",
     "08_Publicacao/Caderno do Projeto Integrador - SISMAT.md",
     "08_Publicacao/Gerador PDF/assets/LEIA-ME - Marca UNIPAR.md",
@@ -253,7 +260,6 @@
     "09_UsoIA",
     "tmp/pdfs/arquivados/SISMAT-Projeto-Integrador-v1.0.pdf",
     "tmp/pdfs/arquivados",
-    "08_Publicacao/VALIDACAO - Layout Academico.md",
     "08_Publicacao/Validacao",
     "tmp/pdfs/qa-layout-referencia-final-regenerated",
     "02_Requisitos/Regras de Negocio/RN-08 - Somente requisicao aprovada pode ser entregue.md",
@@ -263,12 +269,6 @@
     "04_Arquitetura/Decisoes/Indice de Decisoes.md",
     "04_Arquitetura/Decisoes/ADR-001 - Momento da reserva e baixa de estoque.md",
     "00_Inicio/Home.md",
-    "00_Inicio/Status da documentacao.md",
-    "02_Requisitos/Casos de Uso/UC-005 - Gerenciar produtos.md",
-    "02_Requisitos/Catalogo de Mensagens.md",
-    "06_Interfaces/Mapa de Interfaces.md",
-    "02_Requisitos/Casos de Uso/UC-004 - Entregar material.md",
-    "01_Produto/Glossario.md",
-    "02_Requisitos/Indice de Casos de Uso.md"
+    "00_Inicio/Status da documentacao.md"
   ]
 }
