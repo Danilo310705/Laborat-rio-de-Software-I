@@ -150,7 +150,7 @@ Então o cadastro não é salvo
 E o sistema apresenta MSG-23
 ```
 
-Rastreia: [[02_Requisitos/Casos de Uso/UC-008 - Gerenciar usuarios|UC-008]], [[02_Requisitos/Regras de Negocio/RN-21 - Email unico|RN-21]].
+Rastreia: [[UC-008 - Abrir OS vinculando cliente|UC-008]], [[02_Requisitos/Regras de Negocio/RN-21 - Email unico|RN-21]].
 
 ## CA-012 - Bloquear gestão por perfil não autorizado
 

@@ -49,7 +49,7 @@ Para usuários internos, estoquistas e administradores que precisam solicitar, a
 - [[UC-005 - Cadastrar produto|Gerenciar produtos]]
 - [[UC-006 - Registrar entrada de mercadoria|Gerar relatórios]]
 - [[UC-007 - Cadastrar fornecedor|Consultar histórico]]
-- [[02_Requisitos/Casos de Uso/UC-008 - Gerenciar usuarios|Gerenciar usuários]]
+- [[UC-008 - Abrir OS vinculando cliente|Gerenciar usuários]]
 
 ## Restrições conhecidas
 

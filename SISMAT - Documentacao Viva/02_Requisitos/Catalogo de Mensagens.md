@@ -24,11 +24,11 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-03
 
-**CNPJ invalido.** Tipo: erro. Uso: [[UC-001 - Cadastrar cliente|UC-001]].
+**CNPJ invalido.** Tipo: erro. Uso: [[UC-001 - Cadastrar cliente|UC-001]],  [[UC-007 - Cadastrar fornecedor|UC-007]].
 
 ## MSG-04
 
-**CPF/CNPJ já cadastrado.** Tipo: erro. Uso: [[UC-001 - Cadastrar cliente|UC-001]].
+**CPF/CNPJ já cadastrado.** Tipo: erro. Uso: [[UC-001 - Cadastrar cliente|UC-001]], [[UC-007 - Cadastrar fornecedor|UC-007]].
 
 ## MSG-05
 
@@ -44,7 +44,7 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-08
 
-**Erro ao realisar cadastro.** Tipo: erro. Uso: [[UC-004 - Cadastrar Serviço|UC-004]], [[UC-005 - Cadastrar produto|UC-005]].
+**Erro ao realisar cadastro.** Tipo: erro. Uso: [[UC-004 - Cadastrar Serviço|UC-004]], [[UC-005 - Cadastrar produto|UC-005]],  [[UC-007 - Cadastrar fornecedor|UC-007]].
 
 ## MSG-09
 
@@ -96,19 +96,19 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-21
 
-**Usuário cadastrado com sucesso.** Tipo: sucesso. Uso: [[02_Requisitos/Casos de Uso/UC-008 - Gerenciar usuarios|UC-008]].
+**Usuário cadastrado com sucesso.** Tipo: sucesso. Uso: [[UC-008 - Abrir OS vinculando cliente|UC-008]].
 
 ## MSG-22
 
-**Preencha os campos obrigatórios.** Tipo: erro. Uso: [[UC-004 - Cadastrar Serviço|UC-004]] , [[UC-001 - Cadastrar cliente|UC-001]], [[UC-005 - Cadastrar produto|UC-005]], [[UC-006 - Registrar entrada de mercadoria|UC-006]] .
+**Preencha os campos obrigatórios.** Tipo: erro. Uso: [[UC-004 - Cadastrar Serviço|UC-004]] , [[UC-001 - Cadastrar cliente|UC-001]], [[UC-005 - Cadastrar produto|UC-005]], [[UC-006 - Registrar entrada de mercadoria|UC-006]], [[UC-007 - Cadastrar fornecedor|UC-007]] .
 
 ## MSG-23
 
-**E-mail já cadastrado.** Tipo: erro. Uso: [[02_Requisitos/Casos de Uso/UC-008 - Gerenciar usuarios|UC-008]].
+**E-mail já cadastrado.** Tipo: erro. Uso: [[UC-008 - Abrir OS vinculando cliente|UC-008]].
 
 ## MSG-24
 
-**Usuário não encontrado.** Tipo: erro. Uso: [[02_Requisitos/Casos de Uso/UC-008 - Gerenciar usuarios|UC-008]].
+**Usuário não encontrado.** Tipo: erro. Uso: [[UC-008 - Abrir OS vinculando cliente|UC-008]].
 
 ## Diretrizes propostas
 

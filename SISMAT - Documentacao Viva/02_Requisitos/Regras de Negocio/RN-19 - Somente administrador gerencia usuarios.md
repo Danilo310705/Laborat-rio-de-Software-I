@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, autorizacao]
 
 Apenas o perfil Administrador pode cadastrar, editar, inativar ou remover usuários.
 
-**Aplicação:** [[02_Requisitos/Casos de Uso/UC-008 - Gerenciar usuarios|UC-008]].
+**Aplicação:** [[UC-008 - Abrir OS vinculando cliente|UC-008]].
 
 **Verificação:** restringir interface e servidor; registrar alterações sensíveis.

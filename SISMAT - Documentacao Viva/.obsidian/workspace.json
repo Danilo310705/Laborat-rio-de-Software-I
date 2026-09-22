@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Requisitos/Indice de Casos de Uso.md",
+                "file": "02_Requisitos/Casos de Uso/UC-008 - Abrir OS vinculando cliente.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Indice de Casos de Uso"
+              "title": "UC-008 - Abrir OS vinculando cliente"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_Requisitos/Indice de Casos de Uso.md",
+                "file": "02_Requisitos/Casos de Uso/UC-008 - Abrir OS vinculando cliente.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,16 +190,19 @@
   "active": "928b16549edadd5b",
   "lastOpenFiles": [
     "02_Requisitos/Casos de Uso/UC-007 - Cadastrar fornecedor.md",
+    "03_Modelo de Dominio/Dicionario de Dados.md",
+    "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
+    "01_Produto/Visao do Produto.md",
+    "01_Produto/Atores e Stakeholders.md",
+    "02_Requisitos/Catalogo de Mensagens.md",
+    "02_Requisitos/Casos de Uso/UC-005 - Cadastrar produto.md",
+    "02_Requisitos/Indice de Casos de Uso.md",
     "04_Arquitetura/Decisoes/ADR-001 - Momento da reserva e baixa de estoque.md",
     "04_Arquitetura/Visao de Arquitetura.md",
     "04_Arquitetura/Diagramas de Sequencia.md",
     "06_Interfaces/Mapa de Interfaces.md",
-    "02_Requisitos/Casos de Uso/UC-005 - Cadastrar produto.md",
     "01_Produto/Escopo e Contexto.md",
-    "01_Produto/Atores e Stakeholders.md",
     "02_Requisitos/Casos de Uso/UC-007 - Consultar pedidos finalizados.md",
-    "02_Requisitos/Catalogo de Mensagens.md",
-    "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
     "02_Requisitos/Casos de Uso/UC-004 - Cadastrar Serviço.md",
     "05_Qualidade/Cenarios de Aceitacao.md",
     "02_Requisitos/Casos de Uso/UC-006 - Registrar entrada de mercadoria.md",
@@ -226,13 +229,10 @@
     "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-31-36.jpg",
     "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-25-30.jpg",
     "tmp/pdfs/qa-cabecalho-horizontal-v1.2",
-    "09_UsoIA/Etapas e Registro de Uso.md",
-    "09_UsoIA/Declaracao de Transparencia.md",
     "output/pdf/SISMAT-Projeto-Integrador-v1.1.pdf",
     "tmp/pdfs/arquivados/SISMAT-Projeto-Integrador-v1.1.pdf",
     "tmp/pdfs/qa-uso-ia-v1.2",
     "output/pdf/SISMAT-Projeto-Integrador-v1.2.pdf",
-    "09_UsoIA/Metodologia e Responsabilidades.md",
     "09_UsoIA",
     "tmp/pdfs/arquivados/SISMAT-Projeto-Integrador-v1.0.pdf",
     "tmp/pdfs/arquivados",

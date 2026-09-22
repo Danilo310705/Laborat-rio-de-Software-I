@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, usuario]
 
 Cada e-mail identifica no máximo um usuário do sistema.
 
-**Aplicação:** [[02_Requisitos/Casos de Uso/UC-008 - Gerenciar usuarios|UC-008]].
+**Aplicação:** [[UC-008 - Abrir OS vinculando cliente|UC-008]].
 
 **Verificação:** normalizar caixa/espaços conforme política e aplicar restrição única no banco.

@@ -30,8 +30,8 @@ Os 13 protótipos foram extraídos diretamente dos objetos de imagem do PDF, pre
 | IMG-09 | [[#IMG-09 - Emitir relatório\|Emitir relatório]]                   | [[UC-006 - Registrar entrada de mercadoria\|UC-006]] | [[06_Interfaces/Anexos/Prototipos/IMG-09 - Emitir relatorio.png\|Abrir PNG]] |
 | IMG-10 | [[#IMG-10 - Resultado do relatório\|Resultado do relatório]]             | [[UC-006 - Registrar entrada de mercadoria\|UC-006]] | [[06_Interfaces/Anexos/Prototipos/IMG-10 - Resultado do relatorio.png\|Abrir PNG]] |
 | IMG-11 | [[#IMG-11 - Pedidos finalizados\|Pedidos finalizados]]                | [[UC-007 - Cadastrar fornecedor\|UC-007]] | [[06_Interfaces/Anexos/Prototipos/IMG-11 - Pedidos finalizados.png\|Abrir PNG]] |
-| IMG-12 | [[#IMG-12 - Gerenciar usuários\|Gerenciar usuários]]                 | [[02_Requisitos/Casos de Uso/UC-008 - Gerenciar usuarios\|UC-008]] | [[06_Interfaces/Anexos/Prototipos/IMG-12 - Gerenciar usuarios.png\|Abrir PNG]] |
-| IMG-13 | [[#IMG-13 - Cadastrar usuário\|Cadastrar usuário]]                  | [[02_Requisitos/Casos de Uso/UC-008 - Gerenciar usuarios\|UC-008]] | [[06_Interfaces/Anexos/Prototipos/IMG-13 - Cadastrar usuario.png\|Abrir PNG]] |
+| IMG-12 | [[#IMG-12 - Gerenciar usuários\|Gerenciar usuários]]                 | [[UC-008 - Abrir OS vinculando cliente\|UC-008]] | [[06_Interfaces/Anexos/Prototipos/IMG-12 - Gerenciar usuarios.png\|Abrir PNG]] |
+| IMG-13 | [[#IMG-13 - Cadastrar usuário\|Cadastrar usuário]]                  | [[UC-008 - Abrir OS vinculando cliente\|UC-008]] | [[06_Interfaces/Anexos/Prototipos/IMG-13 - Cadastrar usuario.png\|Abrir PNG]] |
 
 ## Galeria de protótipos
 
@@ -103,13 +103,13 @@ Caso de uso: [[UC-007 - Cadastrar fornecedor|UC-007]]. Fonte: [[99_Fontes/Especi
 
 ### IMG-12 - Gerenciar usuários
 
-Caso de uso: [[02_Requisitos/Casos de Uso/UC-008 - Gerenciar usuarios|UC-008]]. Fonte: [[99_Fontes/Especificacao original SISMAT.pdf#page=31|página 31]].
+Caso de uso: [[UC-008 - Abrir OS vinculando cliente|UC-008]]. Fonte: [[99_Fontes/Especificacao original SISMAT.pdf#page=31|página 31]].
 
 ![[06_Interfaces/Anexos/Prototipos/IMG-12 - Gerenciar usuarios.png]]
 
 ### IMG-13 - Cadastrar usuário
 
-Caso de uso: [[02_Requisitos/Casos de Uso/UC-008 - Gerenciar usuarios|UC-008]]. Fonte: [[99_Fontes/Especificacao original SISMAT.pdf#page=31|página 31]].
+Caso de uso: [[UC-008 - Abrir OS vinculando cliente|UC-008]]. Fonte: [[99_Fontes/Especificacao original SISMAT.pdf#page=31|página 31]].
 
 ![[06_Interfaces/Anexos/Prototipos/IMG-13 - Cadastrar usuario.png]]
 

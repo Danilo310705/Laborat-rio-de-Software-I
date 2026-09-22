@@ -47,8 +47,12 @@ Permitir que o usuário cadastre fornecedores e vincule os produtos fornecidos p
 
 ## Exceções
 
-- Nenhum pedido encontrado: [[02_Requisitos/Catalogo de Mensagens#MSG-19|MSG-19]].
-- Filtro inválido: [[02_Requisitos/Catalogo de Mensagens#MSG-20|MSG-20]].
+- Dados obrigatórios não preenchidos: [[02_Requisitos/Catalogo de Mensagens#MSG-22|MSG-22]].
+- CNPJ já cadastrado: exibe [[02_Requisitos/Catalogo de Mensagens#MSG-04|MSG-4]].
+- CNPJ inválido: exibe [[02_Requisitos/Catalogo de Mensagens#MSG-03|MSG-3]].
+- Falha ao cadastrar fornecedor: exibir [[Catalogo de Mensagens#MSG-08|MSG-08]].
+- **8a - Falha ao cadastrar fornecedor:** informar que não foi possível realizar o cadastro e não realizar gravação parcial.
+- **8b - Falha ao vincular produtos:** não concluir o cadastro parcialmente e informar que não foi possível vincular os produtos ao fornecedor.
 
 '*conferir daqui pra baixo*'
 ## Dados e interfaces
