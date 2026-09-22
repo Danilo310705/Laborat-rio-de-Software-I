@@ -17,7 +17,7 @@ tags: [sismat, caso-de-uso, usuario, acesso]
 
 ## Objetivo
 
-Permitir que o administrador cadastre e edite usuários e seus perfis de acesso.
+Permitir que o administrador cadastre e edite usuários e seus perfis de acesso
 
 | Campo          | Valor                                                                                                                         |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------- |
