@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, status]
 
 A consulta de pedidos finalizados inclui somente requisições em estado terminal.
 
-**Aplicação:** [[02_Requisitos/Casos de Uso/UC-007 - Consultar pedidos finalizados|UC-007]].
+**Aplicação:** [[UC-007 - Cadastrar fornecedor|UC-007]].
 
 **Ponto de revisão:** a fonte indica `Entregue` e `Rejeitada`; a entrega parcial depende de decisão.

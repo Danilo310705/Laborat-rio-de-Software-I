@@ -48,7 +48,7 @@ Para usuários internos, estoquistas e administradores que precisam solicitar, a
 - [[UC-004 - Cadastrar Serviço|Entregar materiais]]
 - [[UC-005 - Cadastrar produto|Gerenciar produtos]]
 - [[UC-006 - Registrar entrada de mercadoria|Gerar relatórios]]
-- [[02_Requisitos/Casos de Uso/UC-007 - Consultar pedidos finalizados|Consultar histórico]]
+- [[UC-007 - Cadastrar fornecedor|Consultar histórico]]
 - [[02_Requisitos/Casos de Uso/UC-008 - Gerenciar usuarios|Gerenciar usuários]]
 
 ## Restrições conhecidas

@@ -82,7 +82,7 @@ Este caderno consolida a documentação viva do Sistema de Requisição de Mater
 
 ![[UC-006 - Registrar entrada de mercadoria]]
 
-![[02_Requisitos/Casos de Uso/UC-007 - Consultar pedidos finalizados]]
+![[UC-007 - Cadastrar fornecedor]]
 
 ![[02_Requisitos/Casos de Uso/UC-008 - Gerenciar usuarios]]
 

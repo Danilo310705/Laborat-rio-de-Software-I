@@ -54,7 +54,7 @@ Permitir que o usuário registre a entrada de produtos adquiridos de um forneced
 - Produto não selecionado: exibe [[Catalogo de Mensagens#MSG-22|MSG-22]].
 - Quantidade inválida: exibe [[Catalogo de Mensagens#MSG-09|MSG-09]] e permite a correção.
 - Valor de compra inválido: [[Catalogo de Mensagens#MSG-07|MSG-07]] e permitir a correção.
-- Falha ao registrar a entrada: informar que não foi possível registrar a entrada e não realizar nenhuma alteração no estoque.
+- Falha ao registrar a entrada: exibe [[Catalogo de Mensagens#MSG-10|MSG-10]] e não realizar nenhuma alteração no estoque.
 
 '*conferir daqui pra baixo*'
 ## Dados e interfaces
