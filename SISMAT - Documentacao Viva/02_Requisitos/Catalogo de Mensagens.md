@@ -15,7 +15,7 @@ tags: [sismat, mensagens, interface]
 Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisar tom, contexto, acessibilidade e ações de recuperação.
 
 ## MSG-01
-`*conferir se é melhor colocar que é do cliente ou deixar geral*`
+
 **Cadastrado com sucesso.** Tipo: sucesso. Uso: [[UC-001 - Cadastrar cliente|UC-001]], [[UC-004 - Cadastrar Serviço|UC-004]], [[UC-005 - Cadastrar produto|UC-005]].
 
 ## MSG-02

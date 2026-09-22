@@ -44,12 +44,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Requisitos/Casos de Uso/UC-004 - Cadastrar Serviço.md",
+                "file": "02_Requisitos/Catalogo de Mensagens.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UC-004 - Cadastrar Serviço"
+              "title": "Catalogo de Mensagens"
             }
           }
         ],
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_Requisitos/Casos de Uso/UC-004 - Cadastrar Serviço.md",
+                "file": "02_Requisitos/Catalogo de Mensagens.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -219,9 +219,10 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "b077586054ce0399",
+  "active": "928b16549edadd5b",
   "lastOpenFiles": [
     "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
+    "02_Requisitos/Casos de Uso/UC-004 - Cadastrar Serviço.md",
     "05_Qualidade/Cenarios de Aceitacao.md",
     "02_Requisitos/Casos de Uso/UC-007 - Consultar pedidos finalizados.md",
     "02_Requisitos/Casos de Uso/UC-006 - Registrar entrada de mercadoria.md",
@@ -268,7 +269,6 @@
     "04_Arquitetura/Diagramas de Sequencia.md",
     "04_Arquitetura/Decisoes/Indice de Decisoes.md",
     "04_Arquitetura/Decisoes/ADR-001 - Momento da reserva e baixa de estoque.md",
-    "00_Inicio/Home.md",
-    "00_Inicio/Status da documentacao.md"
+    "00_Inicio/Home.md"
   ]
 }
