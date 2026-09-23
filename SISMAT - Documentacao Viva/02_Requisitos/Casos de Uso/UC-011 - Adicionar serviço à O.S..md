@@ -29,19 +29,19 @@ Permitir que o usuário adicione serviços à Ordem de Serviço, definindo o val
 
 ## Fluxo principal
 
-| Passo | Tipo | Comportamento                                                        |
-| ----: | :--: | -------------------------------------------------------------------- |
-|     1 |  EV  | Usuário acessa uma O.S. cadastrada.                                  |
-|     2 |  EV  | Usuário seleciona “Adicionar Serviço”.                               |
-|     3 |  RS  | Sistema exibe os serviços cadastrados.                               |
-|     4 |  EV  | Usuário seleciona o serviço desejado.                                |
-|     5 |  RS  | Sistema preenche automaticamente o valor padrão do serviço.          |
-|     6 |  EV  | Usuário seleciona o técnico responsável pela execução do serviço.    |
-|     7 |  RS  | Usuário confirma a inclusão do serviço.                              |
-|     8 |  RS  | Sistema valida os dados informados.                                  |
-|     9 |  RS  | Sistema adiciona o serviço à O.S. com o valor e técnico responsável. |
-|    10 |  RS  | Sistema atualiza o valor total da O.S.                               |
-|    11 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-01\|MSG-01]] |
+| Passo | Tipo | Comportamento                                                         |
+| ----: | :--: | --------------------------------------------------------------------- |
+|     1 |  EV  | Usuário acessa uma O.S. cadastrada.                                   |
+|     2 |  EV  | Usuário seleciona “Adicionar Serviço”.                                |
+|     3 |  RS  | Sistema exibe os serviços cadastrados.                                |
+|     4 |  EV  | Usuário seleciona o serviço desejado.                                 |
+|     5 |  RS  | Sistema preenche automaticamente o valor padrão do serviço.           |
+|     6 |  EV  | Usuário seleciona o técnico responsável pela execução do serviço.     |
+|     7 |  EV  | Usuário confirma a inclusão do serviço.                               |
+|     8 |  RS  | Sistema valida os dados informados.                                   |
+|     9 |  RS  | Sistema adiciona o serviço à O.S. com o valor e técnico responsável.  |
+|    10 |  RS  | Sistema atualiza o valor total da O.S.                                |
+|    11 |  RS  | Sistema exibe  [[02_Requisitos/Catalogo de Mensagens#MSG-17\|MSG-17]] |
 
 ## Alternativa A - Alterar valor do serviço
 
@@ -58,9 +58,10 @@ Permitir que o usuário adicione serviços à Ordem de Serviço, definindo o val
 
 ## Exceções
 
-- Campo obrigatório ausente: [[02_Requisitos/Catalogo de Mensagens#MSG-22|MSG-22]].
-- E-mail já usado: [[02_Requisitos/Catalogo de Mensagens#MSG-23|MSG-23]].
-- Usuário não encontrado: [[02_Requisitos/Catalogo de Mensagens#MSG-24|MSG-24]].
+- Serviço não encontrado: exibe [[02_Requisitos/Catalogo de Mensagens#MSG-19|MSG-19]] e permitir uma nova busca.
+- Técnico não selecionado: informar que é necessário selecionar o técnico responsável.
+8a - Valor inválido: informar que o valor do serviço é inválido e permitir a correção.
+9a - Falha ao adicionar o serviço: informar que não foi possível adicionar o serviço à O.S. e não realizar gravação parcial.
 
 ## Remoção e segurança
 

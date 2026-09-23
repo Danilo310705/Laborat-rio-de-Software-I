@@ -59,6 +59,7 @@ Permitir que o usuário adicione à Ordem de Serviço os produtos que serão uti
 
 ## Exceções
 
+- Produto não encontrado: exibe [[Catalogo de Mensagens#MSG-18|MSG-18]] e permitir uma nova busca.
 - Quantidade inválida: exibe [[Catalogo de Mensagens#MSG-09|MSG-09]] e permite a correção.
 - Falha ao adicionar o produto: exiber [[Catalogo de Mensagens#MSG-08|MSG-08]]. e não alterar o estoque.
 - Falha ao atualizar o estoque: desfazer a inclusão do produto na O.S. e manter a quantidade anterior em estoque.
