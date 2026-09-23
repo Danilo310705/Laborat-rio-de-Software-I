@@ -29,20 +29,20 @@ Cadastrar produto com código, unidade, preço de custo/venda
 
 ## Fluxo principal
 
-| Passo | Tipo | Comportamento                                                               |
-| ----: | :--: | --------------------------------------------------------------------------- |
-|     1 |  EV  | Usuário acessa o sistema.                                                   |
-|     2 |  EV  | Usuário seleciona “Cadastrar Novo Produto”.                                 |
-|     3 |  RS  | Sistema exibe a tela de cadastro de produto.                                |
-|     4 |  EV  | Usuário preenche o nome do produto, código, unidade, preço de custo e venda |
-|     5 |  EV  | Usuário confirma o cadastro.                                                |
-|     6 |  RS  | Sistema valida os dados informados.                                         |
-|     7 |  RS  | Sistema grava o produto                                                     |
-|     8 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-01\|MSG-01]]        |
+| Passo | Tipo | Comportamento                                                                                 |
+| ----: | :--: | --------------------------------------------------------------------------------------------- |
+|     1 |  EV  | Usuário acessa o sistema.                                                                     |
+|     2 |  EV  | Usuário seleciona “Cadastrar Novo Produto”.                                                   |
+|     3 |  RS  | Sistema exibe a tela de cadastro de produto.                                                  |
+|     4 |  EV  | Usuário preenche o nome do produto, código, unidade, preço de custo e venda e estoque mínimo. |
+|     5 |  EV  | Usuário confirma o cadastro.                                                                  |
+|     6 |  RS  | Sistema valida os dados informados.                                                           |
+|     7 |  RS  | Sistema grava o produto                                                                       |
+|     8 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-01\|MSG-01]]                          |
 
 ## Exceções
 
-- Campo obrigatorio não informado: exibir [[Catalogo de Mensagens#MSG-22|MSG-22]] e retornar ao preenchimento.
+- Campo obrigatório não informado: exibir [[Catalogo de Mensagens#MSG-22|MSG-22]] e retornar ao preenchimento.
 - Valor padrão inválido: exibir [[Catalogo de Mensagens#MSG-07|MSG-07]] permitir a correção.
 - Falha ao cadastrar o serviço: exibir [[Catalogo de Mensagens#MSG-08|MSG-08]] e encerrar sem gravação.
 

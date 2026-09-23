@@ -48,7 +48,7 @@ Feito para pequenas oficinas mecânicas, o sistema ERP para gestão de oficinas,
 - [[UC-005 - Cadastrar produto|Gerenciar produtos]]
 - [[UC-006 - Registrar entrada de mercadoria|Gerar relatórios]]
 - [[UC-007 - Cadastrar fornecedor|Consultar histórico]]
-- [[UC-008 - Abrir OS vinculando cliente|Gerenciar usuários]]
+- [[UC-008 - Alertar estoque mínimo|Gerenciar usuários]]
 
 ## Restrições conhecidas
 
