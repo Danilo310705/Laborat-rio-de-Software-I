@@ -16,20 +16,14 @@ tags: [sismat, produto, visao]
 
 ## Problema
 
-Solicitações internas de materiais realizadas de forma manual ou descentralizada dificultam o acompanhamento dos pedidos, o controle do estoque e a rastreabilidade das entregas.
+
 
 ## Visão
 
-Para usuários internos, estoquistas e administradores que precisam solicitar, atender e controlar materiais, o **SISMAT** é um sistema de requisição e estoque que centraliza o pedido, a análise, a entrega e as informações gerenciais. Diferentemente de controles dispersos, oferece um fluxo padronizado, rastreável e com responsabilidades separadas por perfil.
 
 ## Objetivos
 
-- reduzir falhas operacionais no processo de requisição;
-- dar visibilidade ao andamento dos pedidos;
-- manter o saldo de materiais confiável;
-- agilizar análise, separação e entrega;
-- apoiar decisões com consultas e relatórios;
-- controlar acesso conforme o perfil do usuário.
+- 
 
 ## Resultados esperados
 

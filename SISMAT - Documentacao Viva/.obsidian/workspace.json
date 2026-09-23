@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Requisitos/Casos de Uso/UC-008 - Abrir OS vinculando cliente.md",
+                "file": "01_Produto/Visao do Produto.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UC-008 - Abrir OS vinculando cliente"
+              "title": "Visao do Produto"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_Requisitos/Casos de Uso/UC-008 - Abrir OS vinculando cliente.md",
+                "file": "01_Produto/Visao do Produto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,10 +189,11 @@
   },
   "active": "928b16549edadd5b",
   "lastOpenFiles": [
-    "02_Requisitos/Casos de Uso/UC-007 - Cadastrar fornecedor.md",
-    "03_Modelo de Dominio/Dicionario de Dados.md",
     "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
     "01_Produto/Visao do Produto.md",
+    "02_Requisitos/Casos de Uso/UC-008 - Abrir OS vinculando cliente.md",
+    "02_Requisitos/Casos de Uso/UC-007 - Cadastrar fornecedor.md",
+    "03_Modelo de Dominio/Dicionario de Dados.md",
     "01_Produto/Atores e Stakeholders.md",
     "02_Requisitos/Catalogo de Mensagens.md",
     "02_Requisitos/Casos de Uso/UC-005 - Cadastrar produto.md",
@@ -217,7 +218,6 @@
     "Sem título.canvas",
     "README.md",
     "Mapa SISMAT.canvas",
-    "09_UsoIA/Impactos Riscos e Controles.md",
     "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-79-82.jpg",
     "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-73-78.jpg",
     "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-67-72.jpg",
