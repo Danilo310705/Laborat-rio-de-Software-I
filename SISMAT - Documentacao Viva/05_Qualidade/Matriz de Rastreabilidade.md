@@ -22,7 +22,7 @@ tags: [sismat, rastreabilidade, qualidade]
 | [[UC-005 - Cadastrar produto\|UC-005]] | RN-11, RN-12, RN-13 | Produto | CA-008, CA-012 | a vincular |
 | [[UC-006 - Registrar entrada de mercadoria\|UC-006]] | RN-14, RN-15, RN-16 | Produto, Requisicao, Movimentacao | CA-009 | a vincular |
 | [[UC-007 - Cadastrar fornecedor\|UC-007]] | RN-04, RN-17, RN-18 | Requisicao, Item | CA-010 | a vincular |
-| [[UC-008 - Abrir OS vinculando cliente\|UC-008]] | RN-19, RN-20, RN-21 | Usuario, Perfil | CA-011, CA-012 | a vincular |
+| [[UC-008 - Alertar estoque mínimo\|UC-008]] | RN-19, RN-20, RN-21 | Usuario, Perfil | CA-011, CA-012 | a vincular |
 
 ## Como evoluir
 

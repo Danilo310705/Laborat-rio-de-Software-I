@@ -13,7 +13,7 @@ responsaveis: [produto, engenharia, seguranca]
 tags: [sismat, caso-de-uso, usuario, acesso]
 ---
 
-# UC-008 - Abrir OS vinculando cliente
+# UC-008 - Alertar estoque mínimo
 
 ## Objetivo
 

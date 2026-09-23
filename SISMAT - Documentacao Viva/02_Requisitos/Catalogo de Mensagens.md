@@ -56,7 +56,7 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-11
 
-**Erro ao atualizar estoque.** Tipo: erro. Uso: [[UC-004 - Cadastrar Serviço|UC-004]].
+**Ordem de serviço aberta com sucesso.** Tipo: erro. Uso: [[UC-009 - Abrir Ordem de Serviço|UC-009]].
 
 ## MSG-12
 
@@ -96,7 +96,7 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-21
 
-**Usuário cadastrado com sucesso.** Tipo: sucesso. Uso: [[UC-008 - Abrir OS vinculando cliente|UC-008]].
+**Usuário cadastrado com sucesso.** Tipo: sucesso. Uso: [[UC-008 - Alertar estoque mínimo|UC-008]].
 
 ## MSG-22
 
@@ -104,11 +104,11 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-23
 
-**E-mail já cadastrado.** Tipo: erro. Uso: [[UC-008 - Abrir OS vinculando cliente|UC-008]].
+**E-mail já cadastrado.** Tipo: erro. Uso: [[UC-008 - Alertar estoque mínimo|UC-008]].
 
 ## MSG-24
 
-**Usuário não encontrado.** Tipo: erro. Uso: [[UC-008 - Abrir OS vinculando cliente|UC-008]].
+**Usuário não encontrado.** Tipo: erro. Uso: [[UC-008 - Alertar estoque mínimo|UC-008]].
 
 ## Diretrizes propostas
 

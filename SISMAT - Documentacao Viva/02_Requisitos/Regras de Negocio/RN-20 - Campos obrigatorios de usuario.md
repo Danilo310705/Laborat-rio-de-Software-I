@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, usuario]
 
 O cadastro exige nome, setor, e-mail, credencial e perfil de acesso.
 
-**Aplicação:** [[UC-008 - Abrir OS vinculando cliente|UC-008]].
+**Aplicação:** [[UC-008 - Alertar estoque mínimo|UC-008]].
 
 **Ponto de revisão:** a obrigatoriedade foi inferida dos dados descritos no PDF e deve ser confirmada.

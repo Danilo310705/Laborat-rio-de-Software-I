@@ -84,7 +84,7 @@ Este caderno consolida a documentação viva do Sistema de Requisição de Mater
 
 ![[UC-007 - Cadastrar fornecedor]]
 
-![[UC-008 - Abrir OS vinculando cliente]]
+![[UC-008 - Alertar estoque mínimo]]
 
 # Regras de negócio e mensagens
 
