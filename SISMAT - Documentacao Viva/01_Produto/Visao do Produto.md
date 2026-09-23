@@ -16,14 +16,19 @@ tags: [sismat, produto, visao]
 
 ## Problema
 
-
-
+Muitas empresas ainda controlam os clientes, serviços, ordens de serviço, peças e estoque de forma física e manual, ou espalhando tudo em várias plataformas. Isso dificulta e atrasa os processos e a organização das informações, fica mais complicado acompanhar os serviços realizado e o controle de materiais utilizados, tal como a gestão do negócio. 
 ## Visão
 
-
+Feito para pequenas oficinas mecânicas, o sistema ERP para gestão de oficinas, facilita na hora de organizar seus atendimentos e controlar suas operações, que centraliza clientes, ordens de serviço, serviços prestados e controle de estoque em um único ambiente. Diferente do controle manual que consome tempo e atrasa os processos, o sistema ERP permite gerenciar cada etapa desde o cadastro do cliente, até o momento em que o veículo entra na oficina faz a aplicação das peças e entrega as chaves ao cliente.
 ## Objetivos
 
-- 
+- Concentrar as informações da oficina em um único sistema.
+- Agilizar o cadastro e a consulta de clientes.
+- Organizar e acompanhar as ordens de serviço.
+- Registrar os serviços realizados em cada veículo.
+- Controlar os materiais e peças disponíveis em estoque.
+- Reduzir erros causados por controles manuais.
+- Facilitar a consulta do histórico de atendimentos
 
 ## Resultados esperados
 
@@ -50,4 +55,4 @@ tags: [sismat, produto, visao]
 - circulação externa proibida;
 - exportação de relatório;
 - acesso controlado por perfil;
-- comportamento ainda não confrontado com código ou ambiente executável.
+- [ ] comportamento ainda não confrontado com có[]()digo ou ambiente executável.

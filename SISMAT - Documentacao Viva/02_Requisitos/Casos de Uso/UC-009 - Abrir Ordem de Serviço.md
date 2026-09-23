@@ -50,29 +50,24 @@ Permitir que o usuário abra uma Ordem de Serviço (O.S.), vinculando um cliente
 1. No passo 6, o sistema não encontra nenhum veículo com a placa informada.
 2. O sistema disponibiliza os demais campos para cadastro do veículo.
 3. O usuário informa os dados do veículo, como marca, modelo e ano.
-4. O usuário informa o problema relatado pelo cliente.
-5. O usuário confirma a abertura da O.S.
-6. O sistema valida os dados informados.
-7. O sistema registra o novo veículo e o vincula ao cliente.
-8. O sistema registra a O.S. vinculada ao cliente e ao novo veículo com status `Aberta`.
-9. O sistema informa que a O.S. foi aberta com sucesso.
+4. Retorna ao passo 8.
 
 ## Exceções
 
-- Campo obrigatório ausente: [[02_Requisitos/Catalogo de Mensagens#MSG-22|MSG-22]].
+- Campo obrigatório ausente: [[02_Requisitos/Catalogo de Mensagens#MSG-22|MSG-22]] e solicitar seu preenchimento..
 - E-mail já usado: [[02_Requisitos/Catalogo de Mensagens#MSG-23|MSG-23]].
 - Cliente não selecionado: exibir [[02_Requisitos/Catalogo de Mensagens#MSG-22|MSG-22]] .
-- Placa inválida: e permitir a correção.
-- **A3a - Dados obrigatórios do veículo não informados:** identificar os campos obrigatórios e solicitar seu preenchimento.
-- **10a - Dados obrigatórios da O.S. não informados:** identificar os campos obrigatórios e solicitar seu preenchimento.
-- **11a - Falha ao registrar a O.S.:** informar que não foi possível abrir a O.S. e não realizar gravação parcial.
-- **A7a - Falha ao cadastrar o veículo:** informar que não foi possível cadastrar o veículo e não registrar a O.S. parcialmente.
+- Placa inválida: exibir [[02_Requisitos/Catalogo de Mensagens#MSG-14|MSG-14]] e permitir a correção.
+- Falha ao registrar a O.S.: exibir [[02_Requisitos/Catalogo de Mensagens#MSG-15|MSG-15]]  e não realizar gravação parcial.
+- Falha ao cadastrar o veículo:  [[Catalogo de Mensagens#MSG-08|MSG-08]] e não registrar a O.S. parcialmente.
+- Veículo vinculado a outro cliente: informar que o veículo está vinculado a outro cliente e solicitar a verificação do cliente selecionado.
 
+
+'*conferir daqui pra baixo*'
 ## Remoção e segurança
 
 A descrição geral promete remover usuários, mas o fluxo não detalha a operação. Veja [[04_Arquitetura/Decisoes/ADR-002 - Exclusao logica de cadastros|ADR-002]]. A “senha” do modelo de dados representa credencial e nunca deve ser persistida em texto puro; veja [[02_Requisitos/Requisitos Nao Funcionais#RNF-002 - Proteção de credenciais|RNF-002]].
 
-'*conferir daqui pra baixo*'
 ## Dados e interfaces
 
 - Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].
