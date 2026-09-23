@@ -68,19 +68,19 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-14
 
-**Produto já cadastrado.** Tipo: erro. Uso: [[UC-005 - Cadastrar produto|UC-005]].
+**Placa invalida.** Tipo: erro. Uso: [[UC-009 - Abrir Ordem de Serviço|UC-009]].
 
 ## MSG-15
 
-**Relatório gerado com sucesso.** Tipo: sucesso. Uso: [[UC-006 - Registrar entrada de mercadoria|UC-006]].
+**Não foi possivel abrir O.S. .** Tipo: erro. Uso: [[UC-009 - Abrir Ordem de Serviço|UC-009]].
 
 ## MSG-16
 
-**Filtro inválido.** Tipo: erro. Uso: [[UC-006 - Registrar entrada de mercadoria|UC-006]].
+**Produto adicionado com sucesso.** Tipo: erro. Uso:  [[UC-010 - Adicionar produtos à O.S.|UC-010]].
 
 ## MSG-17
 
-**Nenhum dado encontrado.** Tipo: informativo. Uso: [[UC-006 - Registrar entrada de mercadoria|UC-006]].
+**Estoque insuficiente.** Tipo: erro. Uso: [[UC-010 - Adicionar produtos à O.S.|UC-010]].
 
 ## MSG-18
 
