@@ -189,6 +189,7 @@
   },
   "active": "928b16549edadd5b",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "02_Requisitos/Casos de Uso/UC-009 - Abrir Ordem de Serviço.md",
     "02_Requisitos/Casos de Uso/UC-012 - Registrar diagnóstico O.S.md",
     "02_Requisitos/Casos de Uso/UC-011 - Adicionar serviço à O.S..md",
@@ -211,10 +212,37 @@
     "01_Produto/Visao do Produto.md",
     "01_Produto/Glossario.md",
     "01_Produto/Matriz de Integracao Curricular.md",
+=======
+    "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
+    "01_Produto/Visao do Produto.md",
+    "90_Templates/Template - Caderno do Projeto Integrador.md",
+>>>>>>> 7640c4558f7e6005219a037120ada33a2f2c180c
     "00_Inicio/Status da documentacao.md",
     "00_Inicio/Home.md",
     "02_Requisitos/Catalogo de Mensagens.md",
     "02_Requisitos/Casos de Uso/UC-009 - Abrir Ordem.md",
+<<<<<<< HEAD
+=======
+    "02_Requisitos/Casos de Uso/UC-009 - Abrir Ordem de Serviço.md",
+    "02_Requisitos/Casos de Uso/UC-008 - Alertar estoque mínimo.md",
+    "02_Requisitos/Casos de Uso/UC-008 - Alertar estoque mínimo 1 1 1.md",
+    "02_Requisitos/Casos de Uso/UC-008 - Abrir OS vinculando cliente.md",
+    "02_Requisitos/Casos de Uso/UC-004 - Cadastrar Serviço.md",
+    "02_Requisitos/Casos de Uso/UC-006 - Registrar entrada de mercadoria.md",
+    "02_Requisitos/Casos de Uso/UC-007 - Cadastrar fornecedor.md",
+    "01_Produto/Escopo e Contexto.md",
+    "01_Produto/Glossario.md",
+    "01_Produto/Matriz de Integracao Curricular.md",
+    "02_Requisitos/Casos de Uso/UC-003 - Consultar historico de serviços ou compras de um cliente.md",
+    "02_Requisitos/Casos de Uso/UC-002 - Consultar clientes.md",
+    "02_Requisitos/Casos de Uso/UC-005 - Cadastrar produto.md",
+    "02_Requisitos/Casos de Uso/Sem título.md",
+    "03_Modelo de Dominio/Dicionario de Dados.md",
+    "01_Produto/Atores e Stakeholders.md",
+    "02_Requisitos/Indice de Casos de Uso.md",
+    "04_Arquitetura/Decisoes/ADR-001 - Momento da reserva e baixa de estoque.md",
+    "04_Arquitetura/Visao de Arquitetura.md",
+>>>>>>> 7640c4558f7e6005219a037120ada33a2f2c180c
     "Sem título 1.canvas",
     "Sem título.canvas",
     "Mapa SISMAT.canvas",
