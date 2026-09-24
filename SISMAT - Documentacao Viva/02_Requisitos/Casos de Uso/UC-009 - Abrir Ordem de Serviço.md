@@ -54,7 +54,7 @@ Permitir que o usuário abra uma Ordem de Serviço (O.S.), vinculando um cliente
 
 ## Exceções
 
-- Campo obrigatório ausente: [[02_Requisitos/Catalogo de Mensagens#MSG-22|MSG-22]] e solicitar seu preenchimento..
+- Campo obrigatório ausente: [[02_Requisitos/Catalogo de Mensagens#MSG-22|MSG-22]] e solicitar seu preenchimento.
 - E-mail já usado: [[02_Requisitos/Catalogo de Mensagens#MSG-23|MSG-23]].
 - Cliente não selecionado: exibir [[02_Requisitos/Catalogo de Mensagens#MSG-22|MSG-22]] .
 - Placa inválida: exibir [[02_Requisitos/Catalogo de Mensagens#MSG-14|MSG-14]] e permitir a correção.

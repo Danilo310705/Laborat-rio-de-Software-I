@@ -22,11 +22,11 @@ tags: [sismat, atores, stakeholders]
 
 ## Stakeholders 
 
-| Stakeholder | Interesse | Participação esperada |
-|---|---|---|
-| Responsável pelo almoxarifado | saldo e atendimento corretos | aprovar regras de estoque |
-| Gestor de área | prazos e consumo por setor | validar relatórios e indicadores |
-| TI/Operações | segurança e disponibilidade | validar arquitetura e operação |
-| Auditoria/Compliance | rastreabilidade | validar retenção e trilha de auditoria |
-| Solicitante | facilidade e transparência | validar experiência e mensagens |
+| Stakeholder                   | Interesse                    | Participação esperada                  |
+| ----------------------------- | ---------------------------- | -------------------------------------- |
+| Responsável pelo almoxarifado | saldo e atendimento corretos | aprovar regras de estoque              |
+| Gestor de área                | prazos e consumo por setor   | validar relatórios e indicadores       |
+| TI/Operações                  | segurança e disponibilidade  | validar arquitetura e operação         |
+| Auditoria/Compliance          | rastreabilidade              | validar retenção e trilha de auditoria |
+| Solicitante                   | facilidade e transparência   | validar experiência e mensagens        |
 
