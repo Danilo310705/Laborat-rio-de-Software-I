@@ -32,12 +32,12 @@ Feito para pequenas oficinas mecânicas, o sistema ERP para gestão de oficinas,
 
 ## Resultados esperados
 
-| Resultado               | Indicador proposto             | Meta                                      |
-| ----------------------- | ------------------------------ | ----------------------------------------- |
-| Requisições rastreáveis | pedidos com histórico completo | 100% dos pedidos auditáveis               |
-| Estoque confiável       | divergência físico x sistema   | acurácia > 98%                            |
-| Atendimento ágil        | tempo entre pedido e entrega   | até 2 horas                               |
-| Uso do fluxo oficial    | requisições feitas no SISMAT   | 100% (recusar pedidos fora do aplicativo) |
+| Resultado                | Indicador proposto                                                                               | Meta                                                                                                                                  |
+| ------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Controle de mercadorias  | Registro de entradas e saídas de mercadorias no sistema                                          | 100% das entradas e saídas de mercadorias registradas no sistema                                                                      |
+| Histórico registrado     | Serviços feitos e mercadorias compradas anteriormente com fácil acesso para consulta             | Tudo que foi feito e finalizado com 100% de acesso para consultar                                                                     |
+| Ordens de Serviço        | Todos os dados reunidos em um só lugar                                                           | Agilizar o processo mantendo a organização e eficiência                                                                               |
+| Melhor gestão financeira | Controle do fluxo de caixa, contas a pagar e receber e calcular lucro real de cada serviço feito | 100% das movimentações financeiras registradas no sistema e pelo menos 95% das contas a pagar acompanhadas e quitadas dentro do prazo |
 
 ## Capacidades
 
