@@ -12,7 +12,6 @@ proxima_revisao: 2026-10-02
 responsaveis: [produto, engenharia, seguranca]
 tags: [sismat, caso-de-uso, usuario, acesso]
 ---
-''
 # UC-018 - Editar ou Remover serviço da O.S.
 
 ## Objetivo

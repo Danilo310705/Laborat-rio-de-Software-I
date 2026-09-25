@@ -74,7 +74,7 @@ Este caderno consolida a documentação viva do Sistema de Requisição de Mater
 
 ![[UC-002 - Consultar clientes]]
 
-![[UC-003 - Consultar historico de serviços ou compras de um cliente]]
+![[UC-003 - Cadastrar Técnico]]
 
 ![[UC-004 - Cadastrar Serviço]]
 

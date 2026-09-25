@@ -16,7 +16,7 @@ tags: [sismat, casos-de-uso]
 |---|---|---|---|
 | UC-001 | [[UC-001 - Cadastrar cliente\|Realizar requisição de material]] | Usuário | em revisão |
 | UC-002 | [[UC-002 - Consultar clientes\|Consultar status da requisição]] | Usuário | em revisão |
-| UC-003 | [[UC-003 - Consultar historico de serviços ou compras de um cliente\|Analisar requisição]] | Estoquista | em revisão |
+| UC-003 | [[UC-003 - Cadastrar Técnico\|Analisar requisição]] | Estoquista | em revisão |
 | UC-004 | [[UC-004 - Cadastrar Serviço\|Entregar material]] | Estoquista | em revisão |
 | UC-005 | [[UC-005 - Cadastrar produto\|Gerenciar produtos]] | Administrador | em revisão |
 | UC-006 | [[UC-006 - Registrar entrada de mercadoria\|Gerar relatórios]] | Administrador / Estoquista | em revisão |

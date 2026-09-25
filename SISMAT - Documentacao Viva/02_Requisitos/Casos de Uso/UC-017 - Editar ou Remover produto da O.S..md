@@ -12,7 +12,6 @@ proxima_revisao: 2026-10-02
 responsaveis: [produto, engenharia, seguranca]
 tags: [sismat, caso-de-uso, usuario, acesso]
 ---
-''
 # UC-017 - Editar ou Remover produto da O.S.
 
 ## Objetivo

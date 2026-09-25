@@ -17,7 +17,7 @@ tags: [sismat, rastreabilidade, qualidade]
 |---|---|---|---|---|
 | [[UC-001 - Cadastrar cliente\|UC-001]] | RN-01, RN-02, RN-03, RN-04 | Usuario, Produto, Requisicao, Item | CA-001 a CA-003 | a vincular |
 | [[UC-002 - Consultar clientes\|UC-002]] | RN-04, RN-05 | Usuario, Requisicao, Item | CA-004 | a vincular |
-| [[UC-003 - Consultar historico de serviços ou compras de um cliente\|UC-003]] | RN-06, RN-07 | Requisicao, Item, Produto | CA-005 | a vincular |
+| [[UC-003 - Cadastrar Técnico\|UC-003]] | RN-06, RN-07 | Requisicao, Item, Produto | CA-005 | a vincular |
 | [[UC-004 - Cadastrar Serviço\|UC-004]] | RN-08, RN-09, RN-10 | Requisicao, Item, Produto, Movimentacao | CA-006, CA-007 | a vincular |
 | [[UC-005 - Cadastrar produto\|UC-005]] | RN-11, RN-12, RN-13 | Produto | CA-008, CA-012 | a vincular |
 | [[UC-006 - Registrar entrada de mercadoria\|UC-006]] | RN-14, RN-15, RN-16 | Produto, Requisicao, Movimentacao | CA-009 | a vincular |

@@ -32,7 +32,7 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-05
 
-**Nenhum cliente encontrado.** Tipo: informativo. Uso: [[UC-002 - Consultar clientes|UC-002]], [[UC-003 - Consultar historico de serviços ou compras de um cliente|UC-003]].
+**Nenhum cliente encontrado.** Tipo: informativo. Uso: [[UC-002 - Consultar clientes|UC-002]], [[UC-003 - Cadastrar Técnico|UC-003]].
 
 ## MSG-06
 
@@ -48,7 +48,7 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-09
 
-**Valor inválido, deve ser maior que zero.** Tipo: erro. Uso: [[UC-003 - Consultar historico de serviços ou compras de um cliente|UC-003]],  [[UC-006 - Registrar entrada de mercadoria|UC-006]].
+**Valor inválido, deve ser maior que zero.** Tipo: erro. Uso: [[UC-003 - Cadastrar Técnico|UC-003]],  [[UC-006 - Registrar entrada de mercadoria|UC-006]].
 
 ## MSG-10
 

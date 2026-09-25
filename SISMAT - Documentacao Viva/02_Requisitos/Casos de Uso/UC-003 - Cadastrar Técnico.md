@@ -1,17 +1,18 @@
 ---
-id: UC-008
+id: UC-003
 tipo: caso-de-uso
 status: em-revisao
 origem: modelo-pdf
 implementacao: nao-verificada
 prioridade: alta
-ator_principal: administrador
+ator_principal: estoquista
 criado_em: 2026-03-26
 atualizado_em: 2026-09-02
 proxima_revisao: 2026-10-02
-responsaveis: [produto, engenharia, seguranca]
-tags: [sismat, caso-de-uso, usuario, acesso]
+responsaveis: [almoxarifado, engenharia, qualidade]
+tags: [sismat, caso-de-uso, aprovacao]
 ---
+
 # UC-019 - Cadastrar Técnico
 
 ## Objetivo
@@ -50,17 +51,16 @@ Não se aplica.
 - Campo obrigatório não preenchido: identificar o campo obrigatório e solicitar seu preenchimento.
 - Dados inválidos: informar quais dados são inválidos e permitir a correção.
 - Falha ao cadastrar técnico: informar que não foi possível realizar o cadastro e não realizar gravação parcial.
-
-## Remoção e segurança
-
-A descrição geral promete remover usuários, mas o fluxo não detalha a operação. Veja [[04_Arquitetura/Decisoes/ADR-002 - Exclusao logica de cadastros|ADR-002]]. A “senha” do modelo de dados representa credencial e nunca deve ser persistida em texto puro; veja [[02_Requisitos/Requisitos Nao Funcionais#RNF-002 - Proteção de credenciais|RNF-002]].
-
-'*conferir daqui pra baixo*'
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].
-- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-12 - Gerenciar usuários|IMG-12]] e [[06_Interfaces/Mapa de Interfaces#IMG-13 - Cadastrar usuário|IMG-13]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Requisicao|Requisicao]], [[03_Modelo de Dominio/Dicionario de Dados#Item_requisicao|Item_requisicao]], [[03_Modelo de Dominio/Dicionario de Dados#Produto|Produto]].
+- Protótipo: [[06_Interfaces/Mapa de Interfaces#IMG-04 - Analisar requisição|IMG-04]].
+- Sequência: [[04_Arquitetura/Diagramas de Sequencia#Analisar requisição|Analisar requisição]].
 
-## Critérios de aceitação
+## Critério de aceitação
 
-Veja [[05_Qualidade/Cenarios de Aceitacao#CA-011 - Impedir e-mail duplicado|CA-011]] e [[05_Qualidade/Cenarios de Aceitacao#CA-012 - Bloquear gestão por perfil não autorizado|CA-012]].
+Veja [[05_Qualidade/Cenarios de Aceitacao#CA-005 - Rejeição exige motivo|CA-005]].
+
+## Ponto a decidir
+
+O PDF não explicita se a aprovação reserva estoque. Veja [[04_Arquitetura/Decisoes/ADR-001 - Momento da reserva e baixa de estoque|ADR-001]].

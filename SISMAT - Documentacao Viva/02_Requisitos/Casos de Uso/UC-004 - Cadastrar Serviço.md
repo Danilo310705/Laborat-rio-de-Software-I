@@ -41,11 +41,9 @@ Cadastrar serviços.
 |     7 |  RS  | Sistema grava o serviço                                                                 |
 |     8 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-01\|MSG-01]]                    |
 
+## Alternativa 
 
-   '*conferir o que é isso aqui em baixo*'
-
-> [!warning] Lacuna da fonte
-> O PDF prevê entrega parcial, mas não define o novo status, o saldo pendente nem quando a requisição é encerrada. Veja [[05_Qualidade/Riscos e Questoes em Aberto#QST-002 - Semântica da entrega parcial|QST-002]].
+Não se aplica.
 
 ## Exceções
 

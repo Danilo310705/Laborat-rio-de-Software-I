@@ -22,7 +22,7 @@ Os 13 protótipos foram extraídos diretamente dos objetos de imagem do PDF, pre
 | IMG-01 | [[#IMG-01 - Nova requisição\|Nova requisição]]                    | [[UC-001 - Cadastrar cliente\|UC-001]] | [[06_Interfaces/Anexos/Prototipos/IMG-01 - Nova requisicao.png\|Abrir PNG]] |
 | IMG-02 | [[#IMG-02 - Itens da requisição\|Itens da requisição]]                | [[UC-001 - Cadastrar cliente\|UC-001]] | [[06_Interfaces/Anexos/Prototipos/IMG-02 - Itens da requisicao.png\|Abrir PNG]] |
 | IMG-03 | [[#IMG-03 - Minhas requisições\|Minhas requisições]]                 | [[UC-002 - Consultar clientes\|UC-002]] | [[06_Interfaces/Anexos/Prototipos/IMG-03 - Minhas requisicoes.png\|Abrir PNG]] |
-| IMG-04 | [[#IMG-04 - Analisar requisição\|Analisar requisição]]                | [[UC-003 - Consultar historico de serviços ou compras de um cliente\|UC-003]] | [[06_Interfaces/Anexos/Prototipos/IMG-04 - Analisar requisicao.png\|Abrir PNG]] |
+| IMG-04 | [[#IMG-04 - Analisar requisição\|Analisar requisição]]                | [[UC-003 - Cadastrar Técnico\|UC-003]] | [[06_Interfaces/Anexos/Prototipos/IMG-04 - Analisar requisicao.png\|Abrir PNG]] |
 | IMG-05 | [[#IMG-05 - Entrega de material\|Entrega de material]]                | [[UC-004 - Cadastrar Serviço\|UC-004]] | [[06_Interfaces/Anexos/Prototipos/IMG-05 - Entrega de material.png\|Abrir PNG]] |
 | IMG-06 | [[#IMG-06 - Gerenciar produtos com confirmação\|Gerenciar produtos com confirmação]] | [[UC-005 - Cadastrar produto\|UC-005]] | [[06_Interfaces/Anexos/Prototipos/IMG-06 - Gerenciar produtos com confirmacao.png\|Abrir PNG]] |
 | IMG-07 | [[#IMG-07 - Lista de produtos\|Lista de produtos]]                  | [[UC-005 - Cadastrar produto\|UC-005]] | [[06_Interfaces/Anexos/Prototipos/IMG-07 - Lista de produtos.png\|Abrir PNG]] |
@@ -55,7 +55,7 @@ Caso de uso: [[UC-002 - Consultar clientes|UC-002]]. Fonte: [[99_Fontes/Especifi
 
 ### IMG-04 - Analisar requisição
 
-Caso de uso: [[UC-003 - Consultar historico de serviços ou compras de um cliente|UC-003]]. Fonte: [[99_Fontes/Especificacao original SISMAT.pdf#page=16|página 16]].
+Caso de uso: [[UC-003 - Cadastrar Técnico|UC-003]]. Fonte: [[99_Fontes/Especificacao original SISMAT.pdf#page=16|página 16]].
 
 ![[06_Interfaces/Anexos/Prototipos/IMG-04 - Analisar requisicao.png]]
 

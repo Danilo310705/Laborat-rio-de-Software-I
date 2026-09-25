@@ -37,6 +37,10 @@ Permitir que o usuário busque um cliente pelo nome, telefone ou CPF/CNPJ.
 |     5 |  EV  | Usuário seleciona um Cliente.                                            |
 |     6 |  RS  | Sistema exibe seu detalhes.                                              |
 
+## Alternativa 
+
+Não se aplica.
+
 ## Exceções
 
 - Se não houver clientes, exibir [[02_Requisitos/Catalogo de Mensagens#MSG-05|MSG-05]].

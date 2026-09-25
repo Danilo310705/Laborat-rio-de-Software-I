@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, autorizacao]
 
 O endereço cadastrado deve estar vinculado a um cliente existente.
 
-**Aplicação:** [UC-001](UC-001%20-%20Cadastrar%20cliente).
+**Aplicação:**  [[UC-001 - Cadastrar cliente|UC-001]].
 
 **Verificação:** não permitir o registro de endereço sem associação a um cliente.

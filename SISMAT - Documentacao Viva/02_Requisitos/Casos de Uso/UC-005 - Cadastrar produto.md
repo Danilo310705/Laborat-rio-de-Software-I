@@ -40,6 +40,9 @@ Cadastrar produto com código, unidade, preço de custo/venda
 |     7 |  RS  | Sistema grava o produto                                                                       |
 |     8 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-01\|MSG-01]]                          |
 
+## Alternativa 
+
+Não se aplica.
 ## Exceções
 
 - Campo obrigatório não informado: exibir [[Catalogo de Mensagens#MSG-22|MSG-22]] e retornar ao preenchimento.

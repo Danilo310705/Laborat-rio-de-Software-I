@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, autorizacao]
 
 Um cliente pode possuir um ou mais contatos vinculados ao seu cadastro.
 
-**Aplicação:** [UC-001](UC-001%20-%20Cadastrar%20cliente).
+**Aplicação:**  [[UC-001 - Cadastrar cliente|UC-001]].
 
 **Verificação:** permitir o registro de contatos adicionais sem substituir os contatos já vinculados ao cliente.

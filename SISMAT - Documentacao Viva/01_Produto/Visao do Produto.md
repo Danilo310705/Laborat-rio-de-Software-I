@@ -43,7 +43,7 @@ Feito para pequenas oficinas mecânicas, o sistema ERP para gestão de oficinas,
 
 - [[UC-001 - Cadastrar cliente|Solicitar materiais]]
 - [[UC-002 - Consultar clientes|Acompanhar requisições]]
-- [[UC-003 - Consultar historico de serviços ou compras de um cliente|Analisar pedidos]]
+- [[UC-003 - Cadastrar Técnico|Analisar pedidos]]
 - [[UC-004 - Cadastrar Serviço|Entregar materiais]]
 - [[UC-005 - Cadastrar produto|Gerenciar produtos]]
 - [[UC-006 - Registrar entrada de mercadoria|Gerar relatórios]]

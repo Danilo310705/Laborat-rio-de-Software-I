@@ -81,7 +81,7 @@ Então o status passa para Rejeitada
 E o motivo fica associado à decisão
 ```
 
-Rastreia: [[UC-003 - Consultar historico de serviços ou compras de um cliente|UC-003]], [[RN-07 - Consulta do histórico do cliente|RN-07]].
+Rastreia: [[UC-003 - Cadastrar Técnico|UC-003]], [[RN-07 - Consulta do histórico do cliente|RN-07]].
 
 ## CA-006 - Entrega total atualiza estoque
 
