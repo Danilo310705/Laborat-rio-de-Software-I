@@ -26,7 +26,7 @@ E contém um item de 3 unidades de P
 E a mensagem MSG-01 é apresentada
 ```
 
-Rastreia: [[UC-001 - Cadastrar cliente|UC-001]], [[02_Requisitos/Regras de Negocio/RN-03 - Status inicial pendente|RN-03]].
+Rastreia: [[UC-001 - Cadastrar cliente|UC-001]], [[RN-03 - Contato obrigatório do cliente|RN-03]].
 
 ## CA-002 - Rejeitar quantidade inválida
 
@@ -43,7 +43,7 @@ Esquema do Cenário: quantidade não positiva
     | -1         |
 ```
 
-Rastreia: [[02_Requisitos/Regras de Negocio/RN-01 - Quantidade positiva|RN-01]].
+Rastreia: [[RN-01 - Identificação do cliente|RN-01]].
 
 ## CA-003 - Rejeitar item sem estoque
 
@@ -54,7 +54,7 @@ Então a requisição não é registrada
 E o sistema apresenta MSG-03 para o item P
 ```
 
-Rastreia: [[02_Requisitos/Regras de Negocio/RN-02 - Limite pelo estoque disponivel|RN-02]].
+Rastreia: [[RN-02 - CPF ou CNPJ válido e único|RN-02]].
 
 ## CA-004 - Isolar requisições por usuário
 
@@ -66,7 +66,7 @@ Então somente os dados de Ana são retornados
 E nenhum dado de Bruno é exposto
 ```
 
-Rastreia: [[UC-002 - Consultar clientes|UC-002]], [[02_Requisitos/Regras de Negocio/RN-05 - Visualizar apenas requisicoes proprias|RN-05]].
+Rastreia: [[UC-002 - Consultar clientes|UC-002]], [[RN-05 - Múltiplos contatos por cliente|RN-05]].
 
 ## CA-005 - Rejeição exige motivo
 
@@ -81,7 +81,7 @@ Então o status passa para Rejeitada
 E o motivo fica associado à decisão
 ```
 
-Rastreia: [[UC-003 - Consultar historico de serviços ou compras de um cliente|UC-003]], [[02_Requisitos/Regras de Negocio/RN-07 - Rejeicao exige motivo|RN-07]].
+Rastreia: [[UC-003 - Consultar historico de serviços ou compras de um cliente|UC-003]], [[RN-07 - Consulta do histórico do cliente|RN-07]].
 
 ## CA-006 - Entrega total atualiza estoque
 
@@ -94,7 +94,7 @@ E o saldo físico de P passa para 7
 E uma movimentação de 3 unidades é registrada
 ```
 
-Rastreia: [[UC-004 - Cadastrar Serviço|UC-004]], [[02_Requisitos/Regras de Negocio/RN-09 - Atualizar estoque apos entrega|RN-09]].
+Rastreia: [[UC-004 - Cadastrar Serviço|UC-004]], [[RN-09 - Veículo vinculado ao cliente|RN-09]].
 
 ## CA-007 - Falha de estoque preserva consistência
 
@@ -118,7 +118,7 @@ Então o produto não é salvo
 E o sistema apresenta MSG-14
 ```
 
-Rastreia: [[UC-005 - Cadastrar produto|UC-005]], [[02_Requisitos/Regras de Negocio/RN-11 - Codigo de produto unico|RN-11]].
+Rastreia: [[UC-005 - Cadastrar produto|UC-005]], [[RN-11 - Preenchimento automático do veículo|RN-11]].
 
 ## CA-009 - Exportar relatório em PDF
 
@@ -129,7 +129,7 @@ Então o sistema entrega um arquivo PDF legível
 E o conteúdo respeita os filtros e os dados exibidos
 ```
 
-Rastreia: [[UC-006 - Registrar entrada de mercadoria|UC-006]], [[02_Requisitos/Regras de Negocio/RN-16 - Exportacao de relatorio em PDF|RN-16]].
+Rastreia: [[UC-006 - Registrar entrada de mercadoria|UC-006]], [[RN-16 - Limite pelo estoque disponível|RN-16]].
 
 ## CA-010 - Listar somente pedidos encerrados do usuário
 
@@ -139,7 +139,7 @@ Quando abre “Pedidos Finalizados”
 Então visualiza apenas seus pedidos Rejeitados e Entregues
 ```
 
-Rastreia: [[UC-007 - Cadastrar fornecedor|UC-007]], [[02_Requisitos/Regras de Negocio/RN-17 - Visualizar apenas pedidos proprios|RN-17]], [[02_Requisitos/Regras de Negocio/RN-18 - Exibir apenas pedidos encerrados|RN-18]].
+Rastreia: [[UC-007 - Cadastrar fornecedor|UC-007]], [[RN-17 - Atualização do estoque pela O.S.|RN-17]], [[RN-18 - Estoque mínimo|RN-18]].
 
 ## CA-011 - Impedir e-mail duplicado
 
@@ -150,7 +150,7 @@ Então o cadastro não é salvo
 E o sistema apresenta MSG-23
 ```
 
-Rastreia: [[UC-008 - Alertar estoque mínimo|UC-008]], [[02_Requisitos/Regras de Negocio/RN-21 - Email unico|RN-21]].
+Rastreia: [[UC-008 - Alertar estoque mínimo|UC-008]], [[RN-21 - Valor padrão do serviço|RN-21]].
 
 ## CA-012 - Bloquear gestão por perfil não autorizado
 
@@ -161,4 +161,4 @@ Então o servidor nega a operação
 E nenhum dado é alterado
 ```
 
-Rastreia: [[02_Requisitos/Regras de Negocio/RN-13 - Somente administrador gerencia produtos|RN-13]], [[02_Requisitos/Regras de Negocio/RN-19 - Somente administrador gerencia usuarios|RN-19]], [[02_Requisitos/Requisitos Nao Funcionais#RNF-001 - Autorização no servidor|RNF-001]].
+Rastreia: [[RN-13 - Campos obrigatórios do produto|RN-13]], [[RN-19 - Entrada de mercadoria|RN-19]], [[02_Requisitos/Requisitos Nao Funcionais#RNF-001 - Autorização no servidor|RNF-001]].

@@ -90,47 +90,47 @@ Este caderno consolida a documentação viva do Sistema de Requisição de Mater
 
 ![[02_Requisitos/Regras de Negocio/Indice de Regras de Negocio]]
 
-![[02_Requisitos/Regras de Negocio/RN-01 - Quantidade positiva]]
+![[RN-01 - Identificação do cliente]]
 
-![[02_Requisitos/Regras de Negocio/RN-02 - Limite pelo estoque disponivel]]
+![[RN-02 - CPF ou CNPJ válido e único]]
 
-![[02_Requisitos/Regras de Negocio/RN-03 - Status inicial pendente]]
+![[RN-03 - Contato obrigatório do cliente]]
 
-![[02_Requisitos/Regras de Negocio/RN-04 - Usuario autenticado]]
+![[RN-04 - Usuário autenticado]]
 
-![[02_Requisitos/Regras de Negocio/RN-05 - Visualizar apenas requisicoes proprias]]
+![[RN-05 - Múltiplos contatos por cliente]]
 
-![[02_Requisitos/Regras de Negocio/RN-06 - Somente estoquista analisa]]
+![[RN-06 - Endereço vinculado ao cliente]]
 
-![[02_Requisitos/Regras de Negocio/RN-07 - Rejeicao exige motivo]]
+![[RN-07 - Consulta do histórico do cliente]]
 
-![[02_Requisitos/Regras de Negocio/RN-08 - Somente requisicao aprovada pode ser entregue]]
+![[RN-08 - Placa única do veículo]]
 
-![[02_Requisitos/Regras de Negocio/RN-09 - Atualizar estoque apos entrega]]
+![[RN-09 - Veículo vinculado ao cliente]]
 
-![[02_Requisitos/Regras de Negocio/RN-10 - Estoque nao negativo]]
+![[RN-10 - Veículo pertencente a outro cliente]]
 
-![[02_Requisitos/Regras de Negocio/RN-11 - Codigo de produto unico]]
+![[RN-11 - Preenchimento automático do veículo]]
 
-![[02_Requisitos/Regras de Negocio/RN-12 - Campos obrigatorios de produto]]
+![[RN-12 - Código único do produto]]
 
-![[02_Requisitos/Regras de Negocio/RN-13 - Somente administrador gerencia produtos]]
+![[RN-13 - Campos obrigatórios do produto]]
 
-![[02_Requisitos/Regras de Negocio/RN-14 - Perfis autorizados a emitir relatorios]]
+![[RN-14 - Valores do produto]]
 
-![[02_Requisitos/Regras de Negocio/RN-15 - Relatorios com dados atualizados]]
+![[RN-15 - Quantidade positiva]]
 
-![[02_Requisitos/Regras de Negocio/RN-16 - Exportacao de relatorio em PDF]]
+![[RN-16 - Limite pelo estoque disponível]]
 
-![[02_Requisitos/Regras de Negocio/RN-17 - Visualizar apenas pedidos proprios]]
+![[RN-17 - Atualização do estoque pela O.S.]]
 
-![[02_Requisitos/Regras de Negocio/RN-18 - Exibir apenas pedidos encerrados]]
+![[RN-18 - Estoque mínimo]]
 
-![[02_Requisitos/Regras de Negocio/RN-19 - Somente administrador gerencia usuarios]]
+![[RN-19 - Entrada de mercadoria]]
 
-![[02_Requisitos/Regras de Negocio/RN-20 - Campos obrigatorios de usuario]]
+![[RN-20 - Atualização do estoque pela entrada]]
 
-![[02_Requisitos/Regras de Negocio/RN-21 - Email unico]]
+![[RN-21 - Valor padrão do serviço]]
 
 ![[02_Requisitos/Catalogo de Mensagens]]
 

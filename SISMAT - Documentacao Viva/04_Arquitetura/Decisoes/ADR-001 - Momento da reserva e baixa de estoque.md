@@ -13,7 +13,7 @@ tags: [sismat, adr, estoque]
 
 ## Contexto
 
-[[02_Requisitos/Regras de Negocio/RN-02 - Limite pelo estoque disponivel|RN-02]] valida saldo na solicitação, enquanto [[02_Requisitos/Regras de Negocio/RN-09 - Atualizar estoque apos entrega|RN-09]] baixa saldo apenas na entrega. Duas requisições podem ser validadas antes que a primeira seja entregue e consumir juntas mais que o disponível.
+[[RN-02 - CPF ou CNPJ válido e único|RN-02]] valida saldo na solicitação, enquanto [[RN-09 - Veículo vinculado ao cliente|RN-09]] baixa saldo apenas na entrega. Duas requisições podem ser validadas antes que a primeira seja entregue e consumir juntas mais que o disponível.
 
 ## Opções
 

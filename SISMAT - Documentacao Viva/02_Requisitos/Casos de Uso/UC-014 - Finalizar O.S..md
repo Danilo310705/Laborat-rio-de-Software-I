@@ -12,7 +12,7 @@ proxima_revisao: 2026-10-02
 responsaveis: [produto, engenharia, seguranca]
 tags: [sismat, caso-de-uso, usuario, acesso]
 ---
-
+''
 # UC-014 - Finalizar O.S.
 
 ## Objetivo
@@ -50,9 +50,9 @@ Permitir que o usuário finalize uma Ordem de Serviço, registrando o pagamento 
 ## Exceções \\falta
 
 
-- Status não selecionado: informar que é necessário selecionar um novo status.
-- Alteração de status inválida: informar que a alteração selecionada não é permitida.
-- Falha ao atualizar o status: informar que não foi possível realizar a alteração e manter o status anterior.
+- Forma de pagamento não selecionada: informar que é necessário selecionar uma forma de pagamento.
+- O.S. não pode ser finalizada: informar que existem informações obrigatórias pendentes na O.S.
+- Falha ao registrar pagamento: informar que não foi possível finalizar a O.S., não registrar o pagamento e manter o status anterior.
 
 ## Remoção e segurança
 

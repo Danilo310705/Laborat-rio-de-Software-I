@@ -23,7 +23,7 @@ Permitir que o usuário registre a entrada de produtos adquiridos de um forneced
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Atores          | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]                                                                   |
 | Gatilho         | Usuário seleciona “Registrar Entrada de Mercadoria”                                                                              |
-| Pré-condições   | Ator autenticado e autorizado conforme [[02_Requisitos/Regras de Negocio/RN-14 - Perfis autorizados a emitir relatorios\|RN-14]] |
+| Pré-condições   | Ator autenticado e autorizado conforme [[RN-14 - Valores do produto\|RN-14]] |
 | Sucesso         | Entrada registrada e estoque dos produtos atualizado                                                                             |
 | Garantia mínima | Em caso de falha, nenhuma alteração parcial no estoque deve ser realizada                                                        |
 

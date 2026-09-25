@@ -32,7 +32,7 @@ Pessoa interna autorizada a usar o sistema.
 | `id_perfil`  | referência a Perfil             | obrigatório                                                                   |
 | `nome`       | nome do usuário                 | obrigatório a confirmar                                                       |
 | `setor`      | unidade organizacional          | obrigatório a confirmar                                                       |
-| `email`      | identificador de acesso/contato | único conforme [[02_Requisitos/Regras de Negocio/RN-21 - Email unico\|RN-21]] |
+| `email`      | identificador de acesso/contato | único conforme [[RN-21 - Valor padrão do serviço\|RN-21]] |
 | `senha`      | credencial na fonte             | implementar como hash, nunca texto puro                                       |
 
 ## Cliente
@@ -85,10 +85,10 @@ Material controlado pelo almoxarifado.
 | Campo | Papel | Regra |
 |---|---|---|
 | `id_produto` | chave primária | obrigatório |
-| `codigo` | código de negócio | único conforme [[02_Requisitos/Regras de Negocio/RN-11 - Codigo de produto unico\|RN-11]] |
+| `codigo` | código de negócio | único conforme [[RN-11 - Preenchimento automático do veículo\|RN-11]] |
 | `descricao` | identificação legível | obrigatório a confirmar |
 | `unidade_medida` | unidade da quantidade | obrigatório a confirmar; definir domínio |
-| `saldo_estoque` | quantidade atual | não negativo conforme [[02_Requisitos/Regras de Negocio/RN-10 - Estoque nao negativo\|RN-10]] |
+| `saldo_estoque` | quantidade atual | não negativo conforme [[RN-10 - Veículo pertencente a outro cliente\|RN-10]] |
 
 ## Requisicao
 

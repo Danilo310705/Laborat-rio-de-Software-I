@@ -23,7 +23,7 @@ Permitir que o usuário consulte o histórico de serviços e compras realizados 
 | -------------- | --------------------------------------------------------------------------------------------------- |
 | Ator principal | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]                                      |
 | Gatilho        | Usuário acessa “Consultar histórico”                                                                |
-| Pré-condições  | Usuário autenticado conforme [[02_Requisitos/Regras de Negocio/RN-04 - Usuario autenticado\|RN-04]] |
+| Pré-condições  | Usuário autenticado conforme [[RN-04 - Usuário autenticado\|RN-04]] |
 | Sucesso        | Histórico de serviços e compras do cliente é exibido                                                |
 
 ## Fluxo principal

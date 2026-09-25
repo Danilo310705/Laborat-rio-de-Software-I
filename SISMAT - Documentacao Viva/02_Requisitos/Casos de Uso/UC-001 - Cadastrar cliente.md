@@ -20,28 +20,28 @@ tags: [sismat, caso-de-uso, requisicao]
 
 Cadastrar PF/PJ, dados de identificação, contato e endereço
 
-| Campo           | Valor                                                                                               |
-| --------------- | --------------------------------------------------------------------------------------------------- |
-| Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]                                      |
-| Gatilho         | Usuário escolhe “Cadastrar Novo Cliente”                                                            |
-| Pré-condições   | Usuário autenticado conforme [[02_Requisitos/Regras de Negocio/RN-04 - Usuario autenticado\|RN-04]] |
-| Sucesso         | Cliente é registrado                                                                                |
-| Garantia mínima | Em caso de falha, nenhum cadastro incompleto do cliente deve ser registrado                         |
+| Campo           | Valor                                                                       |
+| --------------- | --------------------------------------------------------------------------- |
+| Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]              |
+| Gatilho         | Usuário escolhe “Cadastrar Novo Cliente”                                    |
+| Pré-condições   | Usuário autenticado conforme [[RN-04 - Usuário autenticado\|RN-04]]         |
+| Sucesso         | Cliente é registrado                                                        |
+| Garantia mínima | Em caso de falha, nenhum cadastro incompleto do cliente deve ser registrado |
 
 ## Fluxo principal
 
-| Passo | Tipo | Comportamento                                                                    |
-| ----: | :--: | -------------------------------------------------------------------------------- |
-|     1 |  EV  | Usuário acessa o sistema.                                                        |
-|     2 |  EV  | Usuário seleciona “Cadastrar Novo Cliente”.                                      |
-|     3 |  RS  | Sistema exibe a tela de cadastro de cliente.                                     |
-|     4 |  EV  | Usuário seleciona o tipo de cliente: Pessoa Física (PF) ou Pessoa Jurídica (PJ). |
-|     5 |  RS  | Sistema exibe os campos correspondentes ao tipo de cliente selecionado.          |
-|     6 |  EV  | Usuário preenche os dados de identificação, endereço e pelo menos um contato.    |
-|     7 |  EV  | Usuário confirma o cadastro.                                                     |
-|     8 |  RS  | Sistema valida os dados informados.                                              |
-|     9 |  RS  | Sistema registra o cliente, endereço e contato.                                  |
-|    10 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-01\|MSG-01]]             |
+| Passo | Tipo | Comportamento                                                                             |
+| ----: | :--: | ----------------------------------------------------------------------------------------- |
+|     1 |  EV  | Usuário acessa o sistema.                                                                 |
+|     2 |  EV  | Usuário seleciona “Cadastrar Novo Cliente”.                                               |
+|     3 |  RS  | Sistema exibe a tela de cadastro de cliente.                                              |
+|     4 |  EV  | Usuário seleciona o tipo de cliente conforme [[RN-01 - Identificação do cliente\|RN-01]]. |
+|     5 |  RS  | Sistema exibe os campos correspondentes ao tipo de cliente selecionado.                   |
+|     6 |  EV  | Usuário preenche os dados de identificação, endereço e pelo menos um contato.             |
+|     7 |  EV  | Usuário confirma o cadastro.                                                              |
+|     8 |  RS  | Sistema valida os dados informados.                                                       |
+|     9 |  RS  | Sistema registra o cliente, endereço e contato.                                           |
+|    10 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-01\|MSG-01]]                      |
 
 ## Alternativa A - Cadastrar Pessoa Física
 

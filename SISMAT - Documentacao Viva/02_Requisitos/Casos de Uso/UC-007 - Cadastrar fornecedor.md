@@ -23,7 +23,7 @@ Permitir que o usuário cadastre fornecedores e vincule os produtos fornecidos p
 | -------------- | --------------------------------------------------------------------------------------------------- |
 | Ator principal | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]                                      |
 | Gatilho        | Usuário seleciona “Cadastrar Novo Fornecedor”                                                       |
-| Pré-condições  | Usuário autenticado conforme [[02_Requisitos/Regras de Negocio/RN-04 - Usuario autenticado\|RN-04]] |
+| Pré-condições  | Usuário autenticado conforme [[RN-04 - Usuário autenticado\|RN-04]] |
 | Sucesso        | Fornecedor cadastrado e produtos selecionados vinculados a ele                                      |
 
 ## Fluxo principal

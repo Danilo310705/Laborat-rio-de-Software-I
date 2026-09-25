@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "65258f6ea3ba6423",
+    "id": "4ce537d342a69fe8",
     "type": "split",
     "children": [
       {
-        "id": "cf2e37bc677c3ff3",
+        "id": "109d8a9f186f9058",
         "type": "tabs",
         "children": [
           {
-            "id": "928b16549edadd5b",
+            "id": "9be4e85be3959087",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Requisitos/Casos de Uso/UC-012 - Registrar diagnóstico O.S.md",
+                "file": "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UC-012 - Registrar diagnóstico O.S"
+              "title": "UC-001 - Cadastrar cliente"
             }
           }
         ]
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "7b60ebf9a2058e8c",
+    "id": "b42fc0790004e11d",
     "type": "split",
     "children": [
       {
-        "id": "500d100e528b5167",
+        "id": "17c8bab78b1985d5",
         "type": "tabs",
         "children": [
           {
-            "id": "9714cf9df0cc568c",
+            "id": "b341fb574af5c00b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -50,7 +50,7 @@
             }
           },
           {
-            "id": "640d59e8277b63b1",
+            "id": "56ca1917f3253430",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -67,7 +67,7 @@
             }
           },
           {
-            "id": "253554633ba90295",
+            "id": "031c2ccecec84861",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -83,23 +83,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 260.5
+    "width": 300
   },
   "right": {
-    "id": "8b3127f33acded34",
+    "id": "4ca288d610af3f51",
     "type": "split",
     "children": [
       {
-        "id": "b41ca30c9411b26b",
+        "id": "5caa59bfa93cb51f",
         "type": "tabs",
         "children": [
           {
-            "id": "b077586054ce0399",
+            "id": "fb043edfec446f57",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_Requisitos/Casos de Uso/UC-012 - Registrar diagnóstico O.S.md",
+                "file": "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,12 +113,12 @@
             }
           },
           {
-            "id": "b459d66f29413f19",
+            "id": "a01862a097a19251",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_Arquitetura/Diagramas de Sequencia.md",
+                "file": "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -127,7 +127,7 @@
             }
           },
           {
-            "id": "e16df4187da6a267",
+            "id": "10040449c1247780",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -142,7 +142,7 @@
             }
           },
           {
-            "id": "064a376006b554f3",
+            "id": "d9aff270c10e6332",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -156,12 +156,12 @@
             }
           },
           {
-            "id": "da5f0756a759c97c",
+            "id": "b9c67bff4d6c88ce",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_Arquitetura/Diagramas de Sequencia.md",
+                "file": "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -174,7 +174,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,84 +188,33 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "928b16549edadd5b",
+  "active": "9be4e85be3959087",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "02_Requisitos/Casos de Uso/UC-009 - Abrir Ordem de Serviço.md",
-    "02_Requisitos/Casos de Uso/UC-012 - Registrar diagnóstico O.S.md",
-    "02_Requisitos/Casos de Uso/UC-011 - Adicionar serviço à O.S..md",
-    "04_Arquitetura/Diagramas de Sequencia.md",
-    "03_Modelo de Dominio/Modelo de Dados.md",
-    "04_Arquitetura/Visao de Arquitetura.md",
-    "03_Modelo de Dominio/Dicionario de Dados.md",
-    "03_Modelo de Dominio/Ciclo de Vida da Requisicao.md",
-    "05_Qualidade/Cenarios de Aceitacao.md",
-    "05_Qualidade/Matriz de Rastreabilidade.md",
+    "02_Requisitos/Regras de Negocio/RN-01 - Identificação do cliente.md",
     "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
-    "02_Requisitos/Casos de Uso/UC-007 - Cadastrar fornecedor.md",
-    "02_Requisitos/Casos de Uso/UC-004 - Cadastrar Serviço.md",
-    "02_Requisitos/Casos de Uso/UC-005 - Cadastrar produto.md",
-    "02_Requisitos/Indice de Casos de Uso.md",
-    "02_Requisitos/Requisitos Nao Funcionais.md",
-    "01_Produto/Atores e Stakeholders.md",
-    "02_Requisitos/Casos de Uso/UC-010 - Adicionar produtos à O.S..md",
-    "02_Requisitos/Casos de Uso/UC-006 - Registrar entrada de mercadoria.md",
-    "01_Produto/Visao do Produto.md",
-    "01_Produto/Glossario.md",
-    "01_Produto/Matriz de Integracao Curricular.md",
-=======
-    "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
-    "01_Produto/Visao do Produto.md",
-    "90_Templates/Template - Caderno do Projeto Integrador.md",
->>>>>>> 7640c4558f7e6005219a037120ada33a2f2c180c
-    "00_Inicio/Status da documentacao.md",
-    "00_Inicio/Home.md",
-    "02_Requisitos/Catalogo de Mensagens.md",
-    "02_Requisitos/Casos de Uso/UC-009 - Abrir Ordem.md",
-<<<<<<< HEAD
-=======
-    "02_Requisitos/Casos de Uso/UC-009 - Abrir Ordem de Serviço.md",
-    "02_Requisitos/Casos de Uso/UC-008 - Alertar estoque mínimo.md",
-    "02_Requisitos/Casos de Uso/UC-008 - Alertar estoque mínimo 1 1 1.md",
-    "02_Requisitos/Casos de Uso/UC-008 - Abrir OS vinculando cliente.md",
-    "02_Requisitos/Casos de Uso/UC-004 - Cadastrar Serviço.md",
-    "02_Requisitos/Casos de Uso/UC-006 - Registrar entrada de mercadoria.md",
-    "02_Requisitos/Casos de Uso/UC-007 - Cadastrar fornecedor.md",
-    "01_Produto/Escopo e Contexto.md",
-    "01_Produto/Glossario.md",
-    "01_Produto/Matriz de Integracao Curricular.md",
-    "02_Requisitos/Casos de Uso/UC-003 - Consultar historico de serviços ou compras de um cliente.md",
-    "02_Requisitos/Casos de Uso/UC-002 - Consultar clientes.md",
-    "02_Requisitos/Casos de Uso/UC-005 - Cadastrar produto.md",
-    "02_Requisitos/Casos de Uso/Sem título.md",
-    "03_Modelo de Dominio/Dicionario de Dados.md",
-    "01_Produto/Atores e Stakeholders.md",
-    "02_Requisitos/Indice de Casos de Uso.md",
-    "04_Arquitetura/Decisoes/ADR-001 - Momento da reserva e baixa de estoque.md",
-    "04_Arquitetura/Visao de Arquitetura.md",
->>>>>>> 7640c4558f7e6005219a037120ada33a2f2c180c
-    "Sem título 1.canvas",
-    "Sem título.canvas",
-    "Mapa SISMAT.canvas",
-    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-79-82.jpg",
-    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-73-78.jpg",
-    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-67-72.jpg",
-    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-61-66.jpg",
-    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-55-60.jpg",
-    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-49-54.jpg",
-    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-43-48.jpg",
-    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-37-42.jpg",
-    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-31-36.jpg",
-    "tmp/pdfs/qa-cabecalho-horizontal-v1.2/sheet-25-30.jpg",
-    "tmp/pdfs/qa-cabecalho-horizontal-v1.2",
-    "output/pdf/SISMAT-Projeto-Integrador-v1.1.pdf",
-    "tmp/pdfs/arquivados/SISMAT-Projeto-Integrador-v1.1.pdf",
-    "tmp/pdfs/qa-uso-ia-v1.2",
-    "output/pdf/SISMAT-Projeto-Integrador-v1.2.pdf",
-    "09_UsoIA",
-    "tmp/pdfs/arquivados/SISMAT-Projeto-Integrador-v1.0.pdf",
-    "tmp/pdfs/arquivados",
-    "08_Publicacao/Validacao",
-    "tmp/pdfs/qa-layout-referencia-final-regenerated"
+    "02_Requisitos/Regras de Negocio/RN-02 - CPF ou CNPJ válido e único.md",
+    "02_Requisitos/Regras de Negocio/RN-03 - Contato obrigatório do cliente.md",
+    "02_Requisitos/Regras de Negocio/RN-04 - Usuário autenticado.md",
+    "02_Requisitos/Regras de Negocio/RN-05 - Múltiplos contatos por cliente.md",
+    "02_Requisitos/Regras de Negocio/RN-06 - Endereço vinculado ao cliente.md",
+    "02_Requisitos/Regras de Negocio/RN-07 - Consulta do histórico do cliente.md",
+    "02_Requisitos/Regras de Negocio/RN-08 - Placa única do veículo.md",
+    "02_Requisitos/Regras de Negocio/RN-09 - Veículo vinculado ao cliente.md",
+    "02_Requisitos/Regras de Negocio/RN-10 - Veículo pertencente a outro cliente.md",
+    "02_Requisitos/Regras de Negocio/RN-11 - Preenchimento automático do veículo.md",
+    "02_Requisitos/Regras de Negocio/RN-12 - Código único do produto.md",
+    "02_Requisitos/Regras de Negocio/RN-13 - Campos obrigatórios do produto.md",
+    "02_Requisitos/Regras de Negocio/RN-14 - Valores do produto.md",
+    "02_Requisitos/Regras de Negocio/RN-15 - Quantidade positiva.md",
+    "02_Requisitos/Regras de Negocio/RN-16 - Limite pelo estoque disponível.md",
+    "02_Requisitos/Regras de Negocio/RN-17 - Atualização do estoque pela O.S..md",
+    "02_Requisitos/Regras de Negocio/RN-18 - Estoque mínimo.md",
+    "02_Requisitos/Regras de Negocio/RN-19 - Entrada de mercadoria.md",
+    "02_Requisitos/Regras de Negocio/RN-20 - Atualização do estoque pela entrada.md",
+    "02_Requisitos/Regras de Negocio/RN-21 - Valor padrão do serviço.md",
+    "02_Requisitos/Regras de Negocio/RN-22 - Alteração do valor do serviço na O.S..md",
+    "02_Requisitos/Regras de Negocio/RN-23 - Técnico responsável pelo serviço.md",
+    "02_Requisitos/Regras de Negocio/RN-24 - Status inicial da O.S..md",
+    "02_Requisitos/Regras de Negocio/RN-25 - Transição de status da O.S..md"
   ]
 }

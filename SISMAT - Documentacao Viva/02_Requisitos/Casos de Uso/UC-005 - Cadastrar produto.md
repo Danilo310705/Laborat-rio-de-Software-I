@@ -23,7 +23,7 @@ Cadastrar produto com código, unidade, preço de custo/venda
 | --------------- | --------------------------------------------------------------------------------------------------- |
 | Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]                                      |
 | Gatilho         | Usuário escolhe “Cadastrar Novo Produto”                                                            |
-| Pré-condições   | Usuário autenticado conforme [[02_Requisitos/Regras de Negocio/RN-04 - Usuario autenticado\|RN-04]] |
+| Pré-condições   | Usuário autenticado conforme [[RN-04 - Usuário autenticado\|RN-04]] |
 | Sucesso         | Produto válido persistido com código único                                                          |
 | Garantia mínima | Em caso de falha, nenhum cadastro incompleto de produto deve ser registrado                         |
 

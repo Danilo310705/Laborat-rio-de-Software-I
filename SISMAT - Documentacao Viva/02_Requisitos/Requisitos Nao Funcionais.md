@@ -32,7 +32,7 @@ Credenciais devem ser armazenadas com algoritmo de hash de senha adaptativo e sa
 
 Atualização de status, saldo e movimentação de estoque deve ocorrer atomicamente; em falha, nenhum efeito parcial permanece.
 
-**Evidência sugerida:** teste de rollback e teste concorrente que confirme [[02_Requisitos/Regras de Negocio/RN-10 - Estoque nao negativo|RN-10]].
+**Evidência sugerida:** teste de rollback e teste concorrente que confirme [[RN-10 - Veículo pertencente a outro cliente|RN-10]].
 
 ## RNF-004 - Rastreabilidade
 

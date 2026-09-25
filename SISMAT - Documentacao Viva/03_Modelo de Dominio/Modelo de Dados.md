@@ -68,15 +68,15 @@ erDiagram
 
 ## Restrições derivadas
 
-- `USUARIO.email` único: [[02_Requisitos/Regras de Negocio/RN-21 - Email unico|RN-21]].
-- `PRODUTO.codigo` único: [[02_Requisitos/Regras de Negocio/RN-11 - Codigo de produto unico|RN-11]].
-- `ITEM_REQUISICAO.quantidade > 0`: [[02_Requisitos/Regras de Negocio/RN-01 - Quantidade positiva|RN-01]].
-- `PRODUTO.saldo_estoque >= 0`: [[02_Requisitos/Regras de Negocio/RN-10 - Estoque nao negativo|RN-10]].
+- `USUARIO.email` único: [[RN-21 - Valor padrão do serviço|RN-21]].
+- `PRODUTO.codigo` único: [[RN-11 - Preenchimento automático do veículo|RN-11]].
+- `ITEM_REQUISICAO.quantidade > 0`: [[RN-01 - Identificação do cliente|RN-01]].
+- `PRODUTO.saldo_estoque >= 0`: [[RN-10 - Veículo pertencente a outro cliente|RN-10]].
 - requisição deve possuir ao menos um item.
 
 ## Diferenças e lacunas
 
-- `motivo_rejeicao` é necessário para [[02_Requisitos/Regras de Negocio/RN-07 - Rejeicao exige motivo|RN-07]], embora não apareça no quadro de campos da fonte.
+- `motivo_rejeicao` é necessário para [[RN-07 - Consulta do histórico do cliente|RN-07]], embora não apareça no quadro de campos da fonte.
 - `id_requisicao` em movimentação aparece no texto do DER, mas não em todos os quadros de estruturas.
 - o nome `senha` veio da fonte; a implementação deve armazenar hash/credencial conforme [[02_Requisitos/Requisitos Nao Funcionais#RNF-002 - Proteção de credenciais|RNF-002]].
 - entrega parcial pode exigir entidade própria ou quantidades entregue/pendente por item.

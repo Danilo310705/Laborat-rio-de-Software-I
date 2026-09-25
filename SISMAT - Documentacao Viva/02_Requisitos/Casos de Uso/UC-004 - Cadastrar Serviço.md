@@ -23,7 +23,7 @@ Cadastrar serviços.
 | --------------- | --------------------------------------------------------------------------------------------------- |
 | Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]                                      |
 | Gatilho         | Usuário seleciona “Cadastrar Novo Serviço”                                                          |
-| Pré-condições   | Usuário autenticado conforme [[02_Requisitos/Regras de Negocio/RN-04 - Usuario autenticado\|RN-04]] |
+| Pré-condições   | Usuário autenticado conforme [[RN-04 - Usuário autenticado\|RN-04]] |
 | Sucesso         | Sistema registra serviço                                                                            |
 | Garantia mínima | Em caso de falha, nenhum cadastro incompleto de serviço deve ser registrado                         |
 

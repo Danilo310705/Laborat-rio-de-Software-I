@@ -31,10 +31,10 @@ stateDiagram-v2
 
 | Origem | Destino | Ação | Regra |
 |---|---|---|---|
-| inexistente | Pendente | criar requisição | [[02_Requisitos/Regras de Negocio/RN-03 - Status inicial pendente\|RN-03]] |
-| Pendente | Aprovada | aprovar | [[02_Requisitos/Regras de Negocio/RN-06 - Somente estoquista analisa\|RN-06]] |
-| Pendente | Rejeitada | rejeitar com motivo | [[02_Requisitos/Regras de Negocio/RN-07 - Rejeicao exige motivo\|RN-07]] |
-| Aprovada | Entregue | confirmar entrega | [[02_Requisitos/Regras de Negocio/RN-08 - Somente requisicao aprovada pode ser entregue\|RN-08]] |
+| inexistente | Pendente | criar requisição | [[RN-03 - Contato obrigatório do cliente\|RN-03]] |
+| Pendente | Aprovada | aprovar | [[RN-06 - Endereço vinculado ao cliente\|RN-06]] |
+| Pendente | Rejeitada | rejeitar com motivo | [[RN-07 - Consulta do histórico do cliente\|RN-07]] |
+| Aprovada | Entregue | confirmar entrega | [[RN-08 - Placa única do veículo\|RN-08]] |
 
 ## Parte proposta
 
