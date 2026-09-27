@@ -9,7 +9,7 @@ responsaveis: [produto, seguranca]
 tags: [sismat, regra-de-negocio, usuario]
 ---
 
-# RN-21 - Valor padrão do serviço
+# RN-20 - Valor padrão do serviço
 
 Todo serviço deve possuir um valor padrão cadastrado.
 

@@ -9,7 +9,7 @@ responsaveis: [almoxarifado]
 tags: [sismat, regra-de-negocio, estoque]
 ---
 
-# RN-10 - Veículo pertencente a outro cliente
+# RN-09 - Veículo pertencente a outro cliente
 
 Caso a placa informada corresponda a um veículo vinculado a outro cliente, o sistema não deve alterar automaticamente seu vínculo.
 

@@ -104,33 +104,33 @@ Este caderno consolida a documentação viva do Sistema de Requisição de Mater
 
 ![[RN-07 - Consulta do histórico do cliente]]
 
-![[RN-08 - Placa única do veículo]]
+![[RN-07 - Placa única do veículo]]
 
-![[RN-09 - Veículo vinculado ao cliente]]
+![[RN-08 - Veículo vinculado ao cliente]]
 
-![[RN-10 - Veículo pertencente a outro cliente]]
+![[RN-09 - Veículo pertencente a outro cliente]]
 
-![[RN-11 - Preenchimento automático do veículo]]
+![[RN-10 - Preenchimento automático do veículo]]
 
-![[RN-12 - Código único do produto]]
+![[RN-11 - Código único do produto]]
 
-![[RN-13 - Campos obrigatórios do produto]]
+![[RN-12 - Campos obrigatórios do produto]]
 
-![[RN-14 - Valores do produto]]
+![[RN-13 - Valores do produto]]
 
-![[RN-15 - Quantidade positiva]]
+![[RN-14 - Quantidade positiva]]
 
-![[RN-16 - Limite pelo estoque disponível]]
+![[RN-15 - Limite pelo estoque disponível]]
 
-![[RN-17 - Atualização do estoque pela O.S.]]
+![[RN-16 - Atualização do estoque pela O.S.]]
 
-![[RN-18 - Estoque mínimo]]
+![[RN-17 - Estoque mínimo]]
 
-![[RN-19 - Entrada de mercadoria]]
+![[RN-18 - Entrada de mercadoria]]
 
-![[RN-20 - Atualização do estoque pela entrada]]
+![[RN-19 - Atualização do estoque pela entrada]]
 
-![[RN-21 - Valor padrão do serviço]]
+![[RN-20 - Valor padrão do serviço]]
 
 ![[02_Requisitos/Catalogo de Mensagens]]
 

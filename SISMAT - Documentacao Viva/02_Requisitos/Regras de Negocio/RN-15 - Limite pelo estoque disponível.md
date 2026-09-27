@@ -9,7 +9,7 @@ responsaveis: [produto]
 tags: [sismat, regra-de-negocio, relatorio, pdf]
 ---
 
-# RN-16 - Limite pelo estoque disponível
+# RN-15 - Limite pelo estoque disponível
 
 A quantidade de um produto adicionada a uma O.S. não pode exceder sua quantidade disponível em estoque.
 

@@ -9,7 +9,7 @@ responsaveis: [almoxarifado]
 tags: [sismat, regra-de-negocio, estoque, entrega]
 ---
 
-# RN-09 - Veículo vinculado ao cliente
+# RN-08 - Veículo vinculado ao cliente
 
 Todo veículo registrado deve estar vinculado a um cliente.
 

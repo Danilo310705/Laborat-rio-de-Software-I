@@ -9,7 +9,7 @@ responsaveis: [almoxarifado]
 tags: [sismat, regra-de-negocio, entrega]
 ---
 
-# RN-08 - Placa única do veículo
+# RN-07 - Placa única do veículo
 
 A placa deve identificar unicamente um veículo cadastrado no sistema.
 

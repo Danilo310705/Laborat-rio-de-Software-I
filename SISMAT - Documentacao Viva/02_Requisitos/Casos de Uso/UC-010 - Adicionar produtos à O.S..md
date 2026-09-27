@@ -19,57 +19,58 @@ tags: [sismat, caso-de-uso, usuario, acesso]
 
 Permitir que o usuário adicione à Ordem de Serviço os produtos que serão utilizados no atendimento.
 
-| Campo           | Valor                                                                                                     |
-| --------------- | --------------------------------------------------------------------------------------------------------- |
-| Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]                                            |
-| Gatilho         | Usuário seleciona “Adicionar Produto” em uma O.S.                                                         |
-| Pré-condições   | O.S. previamente cadastrada e produto cadastrado no sistema                                               |
-| Sucesso         | Produto adicionado à O.S. e quantidade correspondente atualizada no estoque                               |
-| Garantia mínima | Em caso de falha, o produto não deve ser adicionado à O.S. sem que o estoque seja atualizado corretamente |
+| Campo           | Valor                                                                                                                                                                  |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuár                                                                                                             |
+| Gatilho         | Usuário seleciona “Adicionar Produto” em um                                                                                                                            |
+| Pré-condições   | Usuário autenticado conforme [[RN-04 - Usuário autenticado\|RN-04]], O.S. previamente cadastrada e produto cadastrado no sistema                                       |
+| Sucesso         | Produto adicionado à O.S. e quantidade correspondente atualizada no estoque conforme [[RN-16 - Atualização do estoque pela O.S.\|RN-16]]                               |
+| Garantia mínima | Em caso de falha, o produto não deve ser adicionado à O.S. sem que o estoque seja atualizado corretamente conforme [[RN-16 - Atualização do estoque pela O.S.\|RN-16]] |
 
 ## Fluxo principal
 
-| Passo | Tipo | Comportamento                                                                |
-| ----: | :--: | ---------------------------------------------------------------------------- |
-|     1 |  EV  | Usuário acessa uma O.S. cadastrada.                                          |
-|     2 |  EV  | Usuário seleciona “Adicionar Produto”.                                       |
-|     3 |  RS  | Sistema exibe os produtos cadastrados.                                       |
-|     4 |  EV  | Usuário seleciona o produto desejado.                                        |
-|     5 |  RS  | Sistema exibe o preço de venda e a quantidade disponível em estoque.         |
-|     6 |  EV  | Usuário informa a quantidade utilizada.                                      |
-|     7 |  RS  | Sistema valida a quantidade informada e a disponibilidade em estoque.        |
-|     8 |  EV  | Usuário confirma a inclusão do produto.                                      |
-|     9 |  RS  | Sistema adiciona o produto e a quantidade à O.S.                             |
-|    10 |  RS  | Sistema reduz do estoque a quantidade utilizada.                             |
-|    11 |  RS  | Sistema verifica se a quantidade restante atingiu o estoque mínimo definido. |
-|    12 |  RS  | Sistema atualiza o valor total da O.S.                                       |
-|    13 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-16\|MSG-16]].        |
+| Passo | Tipo | Comportamento                                                                                                                                                                               |
+| ----: | :--: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     1 |  EV  | Usuário acessa uma O.S. cadastrada.                                                                                                                                                         |
+|     2 |  EV  | Usuário seleciona “Adicionar Produto”.                                                                                                                                                      |
+|     3 |  RS  | Sistema exibe os produtos cadastrados.                                                                                                                                                      |
+|     4 |  EV  | Usuário seleciona o produto desejado.                                                                                                                                                       |
+|     5 |  RS  | Sistema exibe o preço de venda e a quantidade disponível em estoque.                                                                                                                        |
+|     6 |  EV  | Usuário informa a quantidade utilizada conforme [[RN-14 - Quantidade positiva\|RN-14]].                                                                                                     |
+|     7 |  RS  | Sistema valida se a quantidade é positiva conforme [[RN-14 - Quantidade positiva\|RN-14]]. e se não excede o estoque disponível conforme [[RN-15 - Limite pelo estoque disponível\|RN-15]]. |
+|     8 |  EV  | Usuário confirma a inclusão do produto.                                                                                                                                                     |
+|     9 |  RS  | Sistema adiciona o produto e a quantidade à O.S.                                                                                                                                            |
+|    10 |  RS  | Sistema reduz do estoque a quantidade utilizada conforme [[RN-16 - Atualização do estoque pela O.S.\|RN-16]].                                                                               |
+|    11 |  RS  | Sistema verifica se a quantidade restante atingiu ou ficou abaixo do estoque mínimo conforme [[RN-17 - Estoque mínimo\|RN-17]].                                                             |
+|    12 |  RS  | Sistema atualiza o valor total da O.S.                                                                                                                                                      |
+|    13 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-16\|MSG-16]].                                                                                                                       |
 
 ## Alternativa A - Estoque mínimo atingido
 
-1. No passo 11, o sistema identifica que a quantidade restante atingiu ou ficou abaixo do estoque mínimo.
-2. O sistema gera o alerta de estoque mínimo.
+1. No passo 11, o sistema identifica que a quantidade restante atingiu ou ficou abaixo do estoque mínimo conforme [[RN-17 - Estoque mínimo|RN-17]].
+2. O sistema gera o alerta de estoque mínimo conforme [[RN-17 - Estoque mínimo|RN-17]].
 3. O fluxo continua normalmente no passo 12.
 
 ## Alternativa B - Adicionar vários produtos
 
 1. Após adicionar um produto, o usuário seleciona “Adicionar Produto” novamente.
-2. O usuário seleciona outro produto e informa a quantidade utilizada.
-3. O processo é repetido para os demais produtos necessários.
+2. O usuário seleciona outro produto e informa a quantidade utilizada conforme [[RN-14 - Quantidade positiva|RN-14]].
+3. O sistema valida a quantidade e a disponibilidade em estoque conforme [[RN-14 - Quantidade positiva|RN-14]] e [[RN-15 - Limite pelo estoque disponível|RN-15]].
+4. O processo é repetido para os demais produtos necessários.
 
 ## Exceções
 
-- Produto não encontrado: exibe [[Catalogo de Mensagens#MSG-18|MSG-18]] e permitir uma nova busca.
-- Quantidade inválida: exibe [[Catalogo de Mensagens#MSG-09|MSG-09]] e permite a correção.
-- Falha ao adicionar o produto: exiber [[Catalogo de Mensagens#MSG-08|MSG-08]]. e não alterar o estoque.
-- Falha ao atualizar o estoque: desfazer a inclusão do produto na O.S. e manter a quantidade anterior em estoque.
+- 4a - Produto não encontrado: exibir [[Catalogo de Mensagens#MSG-18|MSG-18]] e permitir uma nova busca.
 
-'*conferir daqui pra baixo*'
-## Remoção e segurança
+- 7a - Quantidade inválida: exibir [[Catalogo de Mensagens#MSG-09|MSG-09]] e permitir a correção conforme [[RN-14 - Quantidade positiva|RN-14]].
 
-A descrição geral promete remover usuários, mas o fluxo não detalha a operação. Veja [[04_Arquitetura/Decisoes/ADR-002 - Exclusao logica de cadastros|ADR-002]]. A “senha” do modelo de dados representa credencial e nunca deve ser persistida em texto puro; veja [[02_Requisitos/Requisitos Nao Funcionais#RNF-002 - Proteção de credenciais|RNF-002]].
+- 7b - Estoque insuficiente: informar que a quantidade solicitada excede o estoque disponível e permitir a correção conforme [[RN-15 - Limite pelo estoque disponível|RN-15]].
 
-'*conferir daqui pra baixo*'
+- 9a - Falha ao adicionar o produto: exibir [[Catalogo de Mensagens#MSG-08|MSG-08]] e não alterar o estoque.
+
+- 10a - Falha ao atualizar o estoque: desfazer a inclusão do produto na O.S. e manter a quantidade anterior em estoque conforme [[RN-16 - Atualização do estoque pela O.S.|RN-16]].
+
+
 ## Dados e interfaces
 
 - Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].

@@ -13,32 +13,32 @@ responsaveis: [almoxarifado, engenharia, qualidade]
 tags: [sismat, caso-de-uso, aprovacao]
 ---
 
-# UC-019 - Cadastrar Técnico
+# UC-003 - Cadastrar Técnico
 
 ## Objetivo
 
 Permitir que o usuário cadastre os técnicos responsáveis pela execução dos serviços nas Ordens de Serviço.
 
-| Campo           | Valor                                                                       |
-| --------------- | --------------------------------------------------------------------------- |
-| Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]              |
-| Gatilho         | Usuário seleciona “Cadastrar Novo Técnico”                                  |
-| Pré-condições   | Usuário autenticado no sistema                                              |
-| Sucesso         | Técnico cadastrado e disponível para seleção nas O.S.                       |
-| Garantia minima | Em caso de falha, nenhum cadastro incompleto do técnico deve ser registrado |
+| Campo           | Valor                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------ |
+| Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]                                   |
+| Gatilho         | Usuário seleciona “Cadastrar Novo Técnico”                                                       |
+| Pré-condições   | Usuário autenticado no sistema conforme [[RN-04 - Usuário autenticado\|RN-04]]                   |
+| Sucesso         | Técnico cadastrado e disponível para seleção nas O.S. conforme [[RN-33 - Técnico ativo\|RN-33]]. |
+| Garantia minima | Em caso de falha, nenhum cadastro incompleto do técnico deve ser registrado                      |
 
 ## Fluxo principal
 
-| Passo | Tipo | Comportamento                                             |
-| ----: | :--: | --------------------------------------------------------- |
-|     1 |  EV  | Usuário acessa o sistema.                                 |
-|     2 |  EV  | Usuário seleciona “Cadastrar Novo Técnico”.               |
-|     3 |  RS  | Sistema exibe a tela de cadastro de técnico.              |
-|     4 |  EV  | Usuário preenche os dados do técnico.                     |
-|     5 |  EV  | Usuário confirma o cadastro.                              |
-|     6 |  RS  | Sistema valida os dados informados.                       |
-|     7 |  RS  | Sistema registra o técnico.                               |
-|     8 |  RS  | Sistema informa que o técnico foi cadastrado com sucesso. |
+| Passo | Tipo | Comportamento                                                                    |
+| ----: | :--: | -------------------------------------------------------------------------------- |
+|     1 |  EV  | Usuário acessa o sistema.                                                        |
+|     2 |  EV  | Usuário seleciona “Cadastrar Novo Técnico”.                                      |
+|     3 |  RS  | Sistema exibe a tela de cadastro de técnico.                                     |
+|     4 |  EV  | Usuário preenche os dados do técnico.                                            |
+|     5 |  EV  | Usuário confirma o cadastro.                                                     |
+|     6 |  RS  | Sistema valida os dados informados.                                              |
+|     7 |  RS  | Sistema registra o técnico como ativo conforme [[RN-33 - Técnico ativo\|RN-33]]. |
+|     8 |  RS  | Sistema informa que o técnico foi cadastrado com sucesso.                        |
 
 
 ## Alternativa 
@@ -48,9 +48,9 @@ Não se aplica.
 
 ## Exceções 
 
-- Campo obrigatório não preenchido: identificar o campo obrigatório e solicitar seu preenchimento.
-- Dados inválidos: informar quais dados são inválidos e permitir a correção.
-- Falha ao cadastrar técnico: informar que não foi possível realizar o cadastro e não realizar gravação parcial.
+- 6a - Campo obrigatório não preenchido: exibir [[Catalogo de Mensagens#MSG-22|MSG-22]] e solicitar o preenchimento.
+- 6b - Dados inválidos: informar quais dados são inválidos e permitir a correção.
+- 7a - Falha ao cadastrar técnico: exibir [[Catalogo de Mensagens#MSG-08|MSG-08]] e não realizar gravação parcial.
 ## Dados e interfaces
 
 - Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Requisicao|Requisicao]], [[03_Modelo de Dominio/Dicionario de Dados#Item_requisicao|Item_requisicao]], [[03_Modelo de Dominio/Dicionario de Dados#Produto|Produto]].

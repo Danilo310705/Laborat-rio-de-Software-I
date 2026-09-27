@@ -18,45 +18,43 @@ tags: [sismat, caso-de-uso, usuario, acesso]
 
 Permitir que o usuário emita um comprovante contendo as informações da Ordem de Serviço.
 
-| Campo           | Valor                                                                     |
-| --------------- | ------------------------------------------------------------------------- |
-| Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]            |
-| Gatilho         | Usuário seleciona “Emitir Comprovante” em uma O.S.                        |
-| Pré-condições   | O.S. previamente cadastrada                                               |
-| Sucesso         | Comprovante da O.S. gerado com sucesso                                    |
-| Garantia minima | Em caso de falha na emissão, nenhuma informação da O.S. deve ser alterada |
+| Campo           | Valor                                                                                                                           |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]                                                                  |
+| Gatilho         | Usuário seleciona “Emitir Comprovante” em uma O.S.                                                                              |
+| Pré-condições   | Usuário autenticado conforme [[RN-04 - Usuário autenticado\|RN-04]] e O.S. previamente cadastrada                               |
+| Sucesso         | Comprovante da O.S. gerado com sucesso conforme [[RN-30 - Dados do comprovante da O.S.\|RN-30]]                                 |
+| Garantia minima | Em caso de falha na emissão, nenhuma informação da O.S. deve ser alterada conforme [[RN-31 - Emissão não altera a O.S.\|RN-31]] |
 
 ## Fluxo principal
 
-| Passo | Tipo | Comportamento                                    |
-| ----: | :--: | ------------------------------------------------ |
-|     1 |  EV  | Usuário acessa a O.S. desejada.                  |
-|     2 |  EV  | Usuário seleciona “Emitir Comprovante”.          |
-|     3 |  RS  | Sistema reúne as informações registradas na O.S. |
-|     4 |  RS  | Sistema gera o comprovante da O.S.               |
-|     5 |  RS  | Sistema exibe o comprovante ao usuário.          |
-|     6 |  EV  | Usuário solicita a impressão do comprovante.     |
-|     7 |  RS  | Sistema encaminha o comprovante para impressão.  |
+| Passo | Tipo | Comportamento                                                                                                                      |
+| ----: | :--: | ---------------------------------------------------------------------------------------------------------------------------------- |
+|     1 |  EV  | Usuário acessa a O.S. desejada.                                                                                                    |
+|     2 |  EV  | Usuário seleciona “Emitir Comprovante”.                                                                                            |
+|     3 |  RS  | Sistema reúne as informações registradas na O.S. conforme [[RN-30 - Dados do comprovante da O.S.\|RN-30]].                         |
+|     4 |  RS  | Sistema gera o comprovante da O.S. conforme [[RN-30 - Dados do comprovante da O.S.\|RN-30]]                                        |
+|     5 |  RS  | Sistema exibe o comprovante ao usuário  conforme [[RN-31 - Emissão não altera a O.S.\|RN-31]].                                     |
+|     6 |  EV  | Usuário solicita a impressão do comprovante.                                                                                       |
+|     7 |  RS  | Sistema encaminha o comprovante para impressão sem alterar os dados da O.S. conforme [[RN-31 - Emissão não altera a O.S.\|RN-31]]. |
 
 
-## Alternativa A - ## Salvar comprovante em PDF
+## Alternativa A - Salvar comprovante em PDF
 
 1. Após a geração do comprovante, o usuário seleciona a opção para salvar em PDF.
-2. O sistema gera o arquivo PDF com as informações da O.S.
-3. O sistema disponibiliza o arquivo ao usuário.
-
+2. O sistema gera o arquivo PDF utilizando as informações da O.S. conforme [[RN-30 - Dados do comprovante da O.S.|RN-30]]
+3. O sistema disponibiliza o arquivo ao usuário sem alterar os dados da O.S. conforme [[RN-31 - Emissão não altera a O.S.|RN-31]].
 ## Exceções 
 
 
-- Dados da O.S. não encontrados: informar que não foi possível obter as informações necessárias para gerar o comprovante.
-- Falha ao gerar comprovante: informar que não foi possível gerar o comprovante.
-- Falha na impressão: informar que não foi possível realizar a impressão, mantendo o comprovante disponível para uma nova tentativa.
+- 3a - Dados da O.S. não encontrados: exibir [[Catalogo de Mensagens#MSG-33|MSG-33]] conforme [[RN-30 - Dados do comprovante da O.S.|RN-30]].
+- 4a - Falha ao gerar comprovante: exibir [[Catalogo de Mensagens#MSG-34|MSG-34]] e manter a O.S. inalterada conforme [[RN-31 - Emissão não altera a O.S.|RN-31]].
+- 7a - Falha na impressão: exibir [[Catalogo de Mensagens#MSG-35|MSG-35]], manter o comprovante disponível para uma nova tentativa e manter a O.S. inalterada conforme [[RN-31 - Emissão não altera a O.S.|RN-31]].
+- A2a - Falha ao gerar PDF: exibir [[Catalogo de Mensagens#MSG-36|MSG-36]] e manter a O.S. inalterada conforme [[RN-31 - Emissão não altera a O.S.|RN-31]].
 
-## Remoção e segurança
 
-A descrição geral promete remover usuários, mas o fluxo não detalha a operação. Veja [[04_Arquitetura/Decisoes/ADR-002 - Exclusao logica de cadastros|ADR-002]]. A “senha” do modelo de dados representa credencial e nunca deve ser persistida em texto puro; veja [[02_Requisitos/Requisitos Nao Funcionais#RNF-002 - Proteção de credenciais|RNF-002]].
 
-'*conferir daqui pra baixo*'
+
 ## Dados e interfaces
 
 - Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].

@@ -30,16 +30,17 @@ Cadastrar serviços.
 
 ## Fluxo principal
 
-| Passo | Tipo | Comportamento                                                                           |
-| ----: | :--: | --------------------------------------------------------------------------------------- |
-|     1 |  EV  | Usuário acessa o sistema.                                                               |
-|     2 |  EV  | Usuário seleciona “Cadastrar Novo Serviço”.                                             |
-|     3 |  RS  | Sistema exibe a tela de cadastro de serviço.                                            |
-|     4 |  EV  | Usuário preenche a descrição do serviço, o valor padrão e o tempo estimado de execução. |
-|     5 |  EV  | Usuário confirma o cadastro.                                                            |
-|     6 |  RS  | Sistema valida os dados informados.                                                     |
-|     7 |  RS  | Sistema grava o serviço                                                                 |
-|     8 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-01\|MSG-01]]                    |
+| Passo | Tipo | Comportamento                                                                                                                                                                                     |
+| ----: | :--: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     1 |  EV  | Usuário acessa o sistema.                                                                                                                                                                         |
+|     2 |  EV  | Usuário seleciona “Cadastrar Novo Serviço”.                                                                                                                                                       |
+|     3 |  RS  | Sistema exibe a tela de cadastro de serviço.                                                                                                                                                      |
+|     4 |  EV  | Usuário preenche a descrição do serviço, o valor padrão conforme [[RN-20 - Valor padrão do serviço\|RN-20]] e o tempo estimado de execução conforme [[RN-32 - Tempo estimado do serviço\|RN-32]]. |
+|     5 |  EV  | Usuário confirma o cadastro.                                                                                                                                                                      |
+|     6 |  RS  | Sistema valida o valor padrão conforme [[RN-20 - Valor padrão do serviço\|RN-20]] e o tempo estimado de execução conforme [[RN-32 - Tempo estimado do serviço\|RN-32]].                           |
+|     7 |  RS  | Sistema grava o serviço                                                                                                                                                                           |
+|     8 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-01\|MSG-01]]                                                                                                                              |
+
 
 ## Alternativa 
 
@@ -47,11 +48,12 @@ Não se aplica.
 
 ## Exceções
 
-- Campo obrigatorio não informado: exibir [[Catalogo de Mensagens#MSG-22|MSG-22]] e retornar ao preenchimento.
-- Valor padrão inválido: exibir [[Catalogo de Mensagens#MSG-07|MSG-07]] permitir a correção.
-- Falha ao cadastrar o serviço: exibir [[Catalogo de Mensagens#MSG-08|MSG-08]] e encerrar sem gravação.
+- 6a - Campo obrigatório não informado: exibir [[Catalogo de Mensagens#MSG-22|MSG-22]] e retornar ao preenchimento.
+- 6b - Valor padrão inválido: exibir [[Catalogo de Mensagens#MSG-07|MSG-07]] e permitir a correção conforme [[RN-20 - Valor padrão do serviço|RN-20]].
+- 6c - Tempo estimado inválido: exibir [[Catalogo de Mensagens#MSG-20|MSG-20]] conforme  [[RN-32 - Tempo estimado do serviço|RN-32]] e permitir a correção.
+- 7a - Falha ao cadastrar o serviço: exibir [[Catalogo de Mensagens#MSG-08|MSG-08]] e encerrar sem gravação.
 
-'*conferir daqui pra baixo*'
+
 ## Dados e interfaces
 
 - Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Requisicao|Requisicao]], [[03_Modelo de Dominio/Dicionario de Dados#Item_requisicao|Item_requisicao]], [[03_Modelo de Dominio/Dicionario de Dados#Produto|Produto]], [[03_Modelo de Dominio/Dicionario de Dados#Movimentacao_estoque|Movimentacao_estoque]].

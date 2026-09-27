@@ -9,7 +9,7 @@ responsaveis: [produto, seguranca]
 tags: [sismat, regra-de-negocio, usuario]
 ---
 
-# RN-29 - Forma de pagamento obrigatória
+# RN-28 - Forma de pagamento obrigatória
 
 A finalização da O.S. exige o registro da forma de pagamento utilizada.
 

@@ -9,7 +9,7 @@ responsaveis: [produto, seguranca]
 tags: [sismat, regra-de-negocio, usuario]
 ---
 
-# RN-32 - Emissão não altera a O.S.
+# RN-31 - Emissão não altera a O.S.
 
 A geração, impressão ou exportação do comprovante não deve modificar o conteúdo ou o status da Ordem de Serviço.
 

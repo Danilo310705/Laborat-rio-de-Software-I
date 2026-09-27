@@ -30,18 +30,18 @@ Cadastrar PF/PJ, dados de identificação, contato e endereço
 
 ## Fluxo principal
 
-| Passo | Tipo | Comportamento                                                                             |
-| ----: | :--: | ----------------------------------------------------------------------------------------- |
-|     1 |  EV  | Usuário acessa o sistema.                                                                 |
-|     2 |  EV  | Usuário seleciona “Cadastrar Novo Cliente”.                                               |
-|     3 |  RS  | Sistema exibe a tela de cadastro de cliente.                                              |
-|     4 |  EV  | Usuário seleciona o tipo de cliente conforme [[RN-01 - Identificação do cliente\|RN-01]]. |
-|     5 |  RS  | Sistema exibe os campos correspondentes ao tipo de cliente selecionado.                   |
-|     6 |  EV  | Usuário preenche os dados de identificação, endereço e pelo menos um contato.             |
-|     7 |  EV  | Usuário confirma o cadastro.                                                              |
-|     8 |  RS  | Sistema valida os dados informados.                                                       |
-|     9 |  RS  | Sistema registra o cliente, endereço e contato.                                           |
-|    10 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-01\|MSG-01]]                      |
+| Passo | Tipo | Comportamento                                                                                                                                                                               |
+| ----: | :--: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     1 |  EV  | Usuário acessa o sistema.                                                                                                                                                                   |
+|     2 |  EV  | Usuário seleciona “Cadastrar Novo Cliente”.                                                                                                                                                 |
+|     3 |  RS  | Sistema exibe a tela de cadastro de cliente.                                                                                                                                                |
+|     4 |  EV  | Usuário seleciona o tipo de cliente conforme [[RN-01 - Identificação do cliente\|RN-01]].                                                                                                   |
+|     5 |  RS  | Sistema exibe os campos correspondentes ao tipo de cliente selecionado.                                                                                                                     |
+|     6 |  EV  | Usuário preenche os dados de identificação, endereço e pelo menos um contato conforme [[RN-03 - Contato obrigatório do cliente\|RN-03]] e [[RN-06 - Endereço vinculado ao cliente\|RN-06]]. |
+|     7 |  EV  | Usuário confirma o cadastro.                                                                                                                                                                |
+|     8 |  RS  | Sistema valida o CPF/CNPJ conforme [[RN-02 - CPF ou CNPJ válido e único\|RN-02]] e verifica os dados obrigatórios conforme [[RN-03 - Contato obrigatório do cliente\|RN-03]].               |
+|     9 |  RS  | Sistema registra o cliente, endereço e contato conforme [[RN-05 - Múltiplos contatos por cliente\|RN-05]] e [[RN-06 - Endereço vinculado ao cliente\|RN-06]].                               |
+|    10 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-01\|MSG-01]]                                                                                                                        |
 
 ## Alternativa A - Cadastrar Pessoa Física
 
@@ -65,14 +65,14 @@ Cadastrar PF/PJ, dados de identificação, contato e endereço
 
 ## Exceções
 
-| Origem | Condição                                                    | Resposta                                                                                   |
-| ------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| 8a     | CPF informado possui quantidade de dígitos diferente de 11  | Exibir [[02_Requisitos/Catalogo de Mensagens#MSG-02\|MSG-02]] e retornar ao preenchimento. |
-| 8b     | CNPJ informado possui quantidade de dígitos diferente de 14 | Exibir [[02_Requisitos/Catalogo de Mensagens#MSG-03\|MSG-03]] e retornar ao preenchimento. |
-| 8      | CPF/CNPJ já cadastrado                                      | Exibir [[Catalogo de Mensagens#MSG-04 \| MSG-04]] e retornar ao preenchimento.             |
-| 8      | Campo obrigatório não preenchido                            | Exibir [[Catalogo de Mensagens#MSG-22\|MSG-22]] e solicitar seu preenchimento.             |
+| Origem | Condição                                                                                                           | Resposta                                                                                   |
+| ------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| 8a     | CPF informado possui quantidade de dígitos diferente de 11 conforme [[RN-02 - CPF ou CNPJ válido e único\|RN-02]]  | Exibir [[02_Requisitos/Catalogo de Mensagens#MSG-02\|MSG-02]] e retornar ao preenchimento. |
+| 8b     | CNPJ informado possui quantidade de dígitos diferente de 14 conforme [[RN-02 - CPF ou CNPJ válido e único\|RN-02]] | Exibir [[02_Requisitos/Catalogo de Mensagens#MSG-03\|MSG-03]] e retornar ao preenchimento. |
+| 8c     | CPF/CNPJ já cadastrado conforme [[RN-02 - CPF ou CNPJ válido e único\|RN-02]]                                      | Exibir [[Catalogo de Mensagens#MSG-04 \| MSG-04]] e retornar ao preenchimento.             |
+| 8d     | Campo obrigatório não preenchido                                                                                   | Exibir [[Catalogo de Mensagens#MSG-22\|MSG-22]] e solicitar seu preenchimento.             |
 
-'*conferir daqui pra baixo*'
+
 ## Dados e interfaces
 
 - Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Produto|Produto]], [[03_Modelo de Dominio/Dicionario de Dados#Requisicao|Requisicao]], [[03_Modelo de Dominio/Dicionario de Dados#Item_requisicao|Item_requisicao]].

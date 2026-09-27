@@ -9,7 +9,7 @@ responsaveis: [produto, seguranca]
 tags: [sismat, regra-de-negocio, usuario]
 ---
 
-# RN-28 - Finalização da O.S.
+# RN-27 - Finalização da O.S.
 
 Uma O.S. somente deve ser considerada concluída após sua finalização com os dados obrigatórios preenchidos e a forma de pagamento registrada.
 

@@ -9,7 +9,7 @@ responsaveis: [almoxarifado]
 tags: [sismat, regra-de-negocio, produto]
 ---
 
-# RN-12 - Código único do produto
+# RN-11 - Código único do produto
 
 Cada produto deve possuir um código único no sistema.
 

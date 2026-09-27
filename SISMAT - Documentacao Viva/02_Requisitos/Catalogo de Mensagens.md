@@ -92,7 +92,7 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-20
 
-**Filtro inválido.** Tipo: erro. Uso: [[UC-007 - Cadastrar fornecedor|UC-007]].
+**Tempo estimado deve ser maior que zero.** Tipo: erro. Uso: [[UC-004 - Cadastrar Serviço|UC-004]].
 
 ## MSG-21
 
@@ -104,11 +104,79 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-23
 
-**E-mail já cadastrado.** Tipo: erro. Uso: [[UC-008 - Alertar estoque mínimo|UC-008]].
+**A quantidade informada excede a quantidade disponível em estoque.** Tipo: erro. Uso: [[UC-008 - Alertar estoque mínimo|UC-008]].
 
 ## MSG-24
 
-**Usuário não encontrado.** Tipo: erro. Uso: [[UC-008 - Alertar estoque mínimo|UC-008]].
+**O técnico selecionado está inativo. Selecione outro técnico.** Tipo: erro. Uso: [[UC-008 - Alertar estoque mínimo|UC-008]].
+
+## MSG-25
+
+**O.S. finalizada com sucesso.** Tipo: sucesso. Uso: [[UC-014 - Finalizar O.S.|UC-014]].
+
+## MSG-26
+
+**O percentual de desconto informado é inválido. Informe um percentual válido.** Tipo: erro. Uso: [[UC-014 - Finalizar O.S.|UC-014]].
+
+## MSG-27
+
+**O valor do desconto informado é inválido. O desconto não pode ser maior que o valor total da O.S.** Tipo: erro. Uso: [[UC-014 - Finalizar O.S.|UC-014]].
+
+## MSG-28
+
+**Selecione uma forma de pagamento para finalizar a O.S.** Tipo: erro. Uso: [[UC-014 - Finalizar O.S.|UC-014]].
+
+## MSG-29
+
+**A O.S. possui informações obrigatórias pendentes e não pode ser finalizada. Verifique os dados informados.**  Tipo: erro. Uso: [[UC-014 - Finalizar O.S.|UC-014]].
+
+## MSG-30
+
+**Somente uma O.S. com status “Em andamento” pode ser finalizada.** Tipo: erro. Uso: [[UC-014 - Finalizar O.S.|UC-014]].
+
+## MSG-31
+
+**Não foi possível registrar o pagamento. A O.S. não foi finalizada.** Tipo: erro. Uso: [[UC-014 - Finalizar O.S.|UC-014]].
+
+## MSG-32
+
+**Não foi possível concluir a O.S. O pagamento não foi registrado e o status anterior foi mantido.** Tipo: erro. Uso: [[UC-014 - Finalizar O.S.|UC-014]].
+
+## MSG-33
+
+**Não foi possível obter as informações da O.S. para gerar o comprovante.** Tipo: erro. Uso: [[UC-015 - Emitir comprovante da O.S.|UC-015]].
+
+## MSG-34
+
+**Não foi possível gerar o comprovante. Tente novamente.** Tipo: erro. Uso: [[UC-015 - Emitir comprovante da O.S.|UC-015]].
+
+## MSG-35
+
+**Não foi possível imprimir o comprovante. Tente novamente.** Tipo: erro. Uso: [[UC-015 - Emitir comprovante da O.S.|UC-015]].
+
+## MSG-36
+
+**Não foi possível gerar o comprovante em PDF. Tente novamente.** Tipo: erro. Uso: [[UC-015 - Emitir comprovante da O.S.|UC-015]].
+
+## MSG-37
+
+**Nenhuma Ordem de Serviço foi encontrada com os critérios informados.** Tipo: informação. Uso: [[UC-016 - Consultar O.S.|UC-016]].
+
+## MSG-38
+
+**O critério de busca informado é inválido. Verifique os dados e tente novamente.** Tipo: erro. Uso: [[UC-016 - Consultar O.S.|UC-016]].
+
+## MSG-39
+
+**Não foi possível carregar os dados da Ordem de Serviço. Tente novamente.** Tipo: erro. Uso: [[UC-016 - Consultar O.S.|UC-016]].
+
+## MSG-40
+
+**Não foi possível realizar a alteração. Os dados anteriores foram mantidos.** Tipo: erro. Uso: [[UC-017 - Editar ou Remover produto da O.S.|UC-017]].
+
+## MSG-41
+
+**Não foi possível realizar a remoção. Nenhuma alteração foi realizada.** Tipo: erro. Uso: [[UC-017 - Editar ou Remover produto da O.S.|UC-017]].
 
 ## Diretrizes propostas
 

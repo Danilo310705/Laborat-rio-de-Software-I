@@ -9,7 +9,7 @@ responsaveis: [produto, seguranca]
 tags: [sismat, regra-de-negocio, autorizacao]
 ---
 
-# RN-19 - Entrada de mercadoria
+# RN-18 - Entrada de mercadoria
 
 Uma entrada de mercadoria deve possuir fornecedor, produto, quantidade e valor de compra válidos.
 

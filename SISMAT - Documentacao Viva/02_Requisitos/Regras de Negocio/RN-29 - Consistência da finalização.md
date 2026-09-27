@@ -9,7 +9,7 @@ responsaveis: [produto, seguranca]
 tags: [sismat, regra-de-negocio, usuario]
 ---
 
-# RN-30 - Consistência da finalização
+# RN-29 - Consistência da finalização
 
 O registro do pagamento e a alteração do status da O.S. para `Concluída` devem ocorrer de forma consistente.
 

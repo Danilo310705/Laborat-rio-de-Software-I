@@ -9,7 +9,7 @@ responsaveis: [produto, seguranca]
 tags: [sismat, regra-de-negocio, usuario]
 ---
 
-# RN-26 - Diagnóstico vinculado à O.S.
+# RN-25 - Diagnóstico vinculado à O.S.
 
 O diagnóstico técnico deve estar vinculado a uma Ordem de Serviço existente.
 

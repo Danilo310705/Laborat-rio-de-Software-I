@@ -19,46 +19,46 @@ tags: [sismat, caso-de-uso, usuario, acesso]
 
 Permitir que o usuário registre o diagnóstico técnico identificado durante a análise do veículo.
 
-| Campo           | Valor                                                                  |
-| --------------- | ---------------------------------------------------------------------- |
-| Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]         |
-| Gatilho         | Usuário seleciona “Registrar Diagnóstico” em uma O.S.                  |
-| Pré-condições   | O.S. previamente cadastrada                                            |
-| Sucesso         | Diagnóstico registrado e vinculado à O.S.                              |
-| Garantia minima | Em caso de falha, o diagnóstico anterior da O.S. não deve ser alterado |
+| Campo           | Valor                                                                                                                                                      |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]                                                                                             |
+| Gatilho         | Usuário seleciona “Registrar Diagnóstico” em uma O.S.                                                                                                      |
+| Pré-condições   | Usuário autenticado conforme [[RN-04 - Usuário autenticado\|RN-04]] e O.S. previamente cadastrada conforme [[RN-25 - Diagnóstico vinculado à O.S.\|RN-25]] |
+| Sucesso         | Diagnóstico registrado e vinculado à O.S. conforme [[RN-25 - Diagnóstico vinculado à O.S.\|RN-25]]                                                         |
+| Garantia minima | Em caso de falha, o diagnóstico anterior da O.S. não deve ser alterado conforme [[RN-26 - Preservação do diagnóstico anterior\|RN-26]]                     |
 
 ## Fluxo principal
 
-| Passo | Tipo | Comportamento                                                              |
-| ----: | :--: | -------------------------------------------------------------------------- |
-|     1 |  EV  | Usuário acessa uma O.S. cadastrada.                                        |
-|     2 |  EV  | Usuário seleciona “Registrar Diagnóstico”.                                 |
-|     3 |  RS  | Sistema exibe o problema relatado pelo cliente e o campo para diagnóstico. |
-|     4 |  EV  | Usuário informa o diagnóstico técnico do veículo.                          |
-|     5 |  EV  | Usuário confirma o diagnóstico.                                            |
-|     6 |  RS  | Sistema valida os dados informados.                                        |
-|     7 |  RS  | Sistema registra o diagnóstico na O.S.                                     |
-|     8 |  RS  | Sistema informa que o diagnóstico foi registrado com sucesso.              |
+| Passo | Tipo | Comportamento                                                                                    |
+| ----: | :--: | ------------------------------------------------------------------------------------------------ |
+|     1 |  EV  | Usuário acessa uma O.S. cadastrada.                                                              |
+|     2 |  EV  | Usuário seleciona “Registrar Diagnóstico”.                                                       |
+|     3 |  RS  | Sistema exibe o problema relatado pelo cliente e o campo para diagnóstico.                       |
+|     4 |  EV  | Usuário informa o diagnóstico técnico do veículo.                                                |
+|     5 |  EV  | Usuário confirma o diagnóstico.                                                                  |
+|     6 |  RS  | Sistema valida os dados informados.                                                              |
+|     7 |  RS  | Sistema registra o diagnóstico na O.S. conforme [[RN-25 - Diagnóstico vinculado à O.S.\|RN-25]]. |
+|     8 |  RS  | Sistema informa que o diagnóstico foi registrado com sucesso.                                    |
 
 
 ## Alternativa A - Alterar diagnóstico
 
-1. Caso a O.S. já possua um diagnóstico, o sistema exibe o diagnóstico registrado.
+1. 1. Caso a O.S. já possua um diagnóstico, o sistema exibe o diagnóstico registrado.
 2. O usuário altera as informações necessárias.
 3. O usuário confirma a alteração.
-4. O sistema atualiza o diagnóstico da O.S.
+4. O sistema valida o novo diagnóstico.   
+5. O sistema atualiza o diagnóstico somente após a nova informação ser persistida com sucesso conforme [[RN-26 - Preservação do diagnóstico anterior|RN-26]].
+6. O sistema informa que o diagnóstico foi atualizado com sucesso.
 
 ## Exceções
 
-- Serviço não encontrado: exibe [[02_Requisitos/Catalogo de Mensagens#MSG-19|MSG-19]] e permitir uma nova busca.
-- Diagnóstico não informado: informar que o diagnóstico deve ser preenchido.
-- Falha ao registrar diagnóstico: informar que não foi possível registrar o diagnóstico e manter os dados anteriores.
+- 6a - Diagnóstico não informado: informar que o diagnóstico deve ser preenchido e permitir a correção.
+- 7a - Falha ao registrar diagnóstico: informar que não foi possível registrar o diagnóstico e manter os dados anteriores conforme [[RN-26 - Preservação do diagnóstico anterior|RN-26]].
+- A5a - Falha ao alterar diagnóstico: informar que não foi possível realizar a alteração e manter o diagnóstico anterior conforme [[RN-26 - Preservação do diagnóstico anterior|RN-26]].
 
-## Remoção e segurança
 
-A descrição geral promete remover usuários, mas o fluxo não detalha a operação. Veja [[04_Arquitetura/Decisoes/ADR-002 - Exclusao logica de cadastros|ADR-002]]. A “senha” do modelo de dados representa credencial e nunca deve ser persistida em texto puro; veja [[02_Requisitos/Requisitos Nao Funcionais#RNF-002 - Proteção de credenciais|RNF-002]].
 
-'*conferir daqui pra baixo*'
+
 ## Dados e interfaces
 
 - Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].

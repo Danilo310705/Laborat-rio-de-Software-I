@@ -9,7 +9,7 @@ responsaveis: [produto, seguranca]
 tags: [sismat, regra-de-negocio, usuario]
 ---
 
-# RN-24 - Status inicial da O.S.
+# RN-23 - Status inicial da O.S.
 
 Toda Ordem de Serviço criada com sucesso deve iniciar com status `Aberta`.
 

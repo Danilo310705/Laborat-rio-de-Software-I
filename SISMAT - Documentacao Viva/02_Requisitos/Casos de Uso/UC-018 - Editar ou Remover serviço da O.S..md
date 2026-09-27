@@ -18,28 +18,28 @@ tags: [sismat, caso-de-uso, usuario, acesso]
 
 Permitir que o usuário altere ou remova um serviço previamente adicionado à Ordem de Serviço.
 
-| Campo           | Valor                                                                       |
-| --------------- | --------------------------------------------------------------------------- |
-| Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]              |
-| Gatilho         | Usuário seleciona um serviço adicionado à O.S.                              |
-| Pré-condições   | O.S. cadastrada e serviço previamente adicionado à O.S.                     |
-| Sucesso         | Serviço alterado ou removido da O.S.                                        |
-| Garantia minima | Em caso de falha, os dados anteriores do serviço na O.S. devem ser mantidos |
+| Campo           | Valor                                                                                                                        |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]                                                               |
+| Gatilho         | Usuário seleciona um serviço adicionado à O.S.                                                                               |
+| Pré-condições   | Usuário autenticado conforme [[RN-04 - Usuário autenticado\|RN-04]], O.S. cadastrada e serviço previamente adicionado à O.S. |
+| Sucesso         | Serviço alterado ou removido da O.S.                                                                                         |
+| Garantia minima | Em caso de falha, os dados anteriores do serviço na O.S. devem ser mantidos                                                  |
 
 ## Fluxo principal
 
-| Passo | Tipo | Comportamento                                               |
-| ----: | :--: | ----------------------------------------------------------- |
-|     1 |  EV  | Usuário acessa uma O.S. cadastrada.                         |
-|     2 |  RS  | Sistema exibe os serviços adicionados à O.S.                |
-|     3 |  EV  | Usuário seleciona o serviço que deseja editar.              |
-|     4 |  RS  | Sistema exibe o valor e o técnico responsável pelo serviço. |
-|     5 |  EV  | Usuário altera o valor e/ou o técnico responsável.          |
-|     6 |  EV  | Usuário confirma a alteração.                               |
-|     7 |  RS  | Sistema valida os dados informados.                         |
-|     8 |  RS  | Sistema atualiza o serviço na O.S.                          |
-|     9 |  RS  | Sistema recalcula o valor total da O.S.                     |
-|    10 |  RS  | Sistema informa que o serviço foi alterado com sucesso.     |
+| Passo | Tipo | Comportamento                                                                                                                                                                                                        |
+| ----: | :--: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     1 |  EV  | Usuário acessa uma O.S. cadastrada.                                                                                                                                                                                  |
+|     2 |  RS  | Sistema exibe os serviços adicionados à O.S.                                                                                                                                                                         |
+|     3 |  EV  | Usuário seleciona o serviço que deseja editar.                                                                                                                                                                       |
+|     4 |  RS  | Sistema exibe o valor e o técnico responsável pelo serviço.                                                                                                                                                          |
+|     5 |  EV  | Usuário altera o valor conforme [[RN-21 - Alteração do valor do serviço na O.S.\|RN-21]] e/ou o técnico responsável conforme [[RN-22 - Técnico responsável pelo serviço\|RN-22]] e [[RN-33 - Técnico ativo\|RN-33]]. |
+|     6 |  EV  | Usuário confirma a alteração.                                                                                                                                                                                        |
+|     7 |  RS  | Sistema valida o valor conforme [[RN-21 - Alteração do valor do serviço na O.S.\|RN-21]] e ou o técnico responsável conforme [[RN-22 - Técnico responsável pelo serviço\|RN-22]] e [[RN-33 - Técnico ativo\|RN-33]]. |
+|     8 |  RS  | Sistema atualiza o serviço na O.S.                                                                                                                                                                                   |
+|     9 |  RS  | Sistema recalcula o valor total da O.S.                                                                                                                                                                              |
+|    10 |  RS  | Sistema informa que o serviço foi alterado com sucesso.                                                                                                                                                              |
 
 
 ## Alternativa A - Remover serviço
@@ -54,16 +54,13 @@ Permitir que o usuário altere ou remova um serviço previamente adicionado à O
 
 ## Exceções 
 
-- Valor inválido: informar que o valor do serviço é inválido e permitir a correção.
-- Técnico não selecionado: informar que é necessário selecionar um técnico responsável.
-- Falha ao alterar o serviço: manter os dados anteriores do serviço na O.S.
-- Falha ao remover o serviço: manter o serviço na O.S. e informar que não foi possível realizar a remoção.
+- 7a - Valor inválido: exibir [[Catalogo de Mensagens#MSG-07|MSG-07]] e permitir a correção conforme [[RN-21 - Alteração do valor do serviço na O.S.|RN-21]].
+- 7b - Técnico não selecionado: exibir [[Catalogo de Mensagens#MSG-22|MSG-22]] e solicitar a seleção de um técnico conforme [[RN-22 - Técnico responsável pelo serviço|RN-22]].
+- 7c - Técnico inativo: exibir [[Catalogo de Mensagens#MSG-24|MSG-24]] e solicitar a seleção de outro técnico conforme [[RN-33 - Técnico ativo|RN-33]].
+- 8a - Falha ao alterar o serviço: exibir [[Catalogo de Mensagens#MSG-40|MSG-40]] e manter os dados anteriores do serviço na O.S.
+- A4a - Falha ao remover o serviço: exibir [[Catalogo de Mensagens#MSG-41|MSG-41]] e manter o serviço na O.S.
 
-## Remoção e segurança
 
-A descrição geral promete remover usuários, mas o fluxo não detalha a operação. Veja [[04_Arquitetura/Decisoes/ADR-002 - Exclusao logica de cadastros|ADR-002]]. A “senha” do modelo de dados representa credencial e nunca deve ser persistida em texto puro; veja [[02_Requisitos/Requisitos Nao Funcionais#RNF-002 - Proteção de credenciais|RNF-002]].
-
-'*conferir daqui pra baixo*'
 ## Dados e interfaces
 
 - Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].

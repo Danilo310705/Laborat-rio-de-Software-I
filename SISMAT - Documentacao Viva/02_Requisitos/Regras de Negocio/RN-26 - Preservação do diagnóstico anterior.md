@@ -9,7 +9,7 @@ responsaveis: [produto, seguranca]
 tags: [sismat, regra-de-negocio, usuario]
 ---
 
-# RN-27 - Preservação do diagnóstico anterior
+# RN-26 - Preservação do diagnóstico anterior
 
 Caso ocorra falha durante a alteração de um diagnóstico, o diagnóstico anteriormente registrado deve ser mantido.
 

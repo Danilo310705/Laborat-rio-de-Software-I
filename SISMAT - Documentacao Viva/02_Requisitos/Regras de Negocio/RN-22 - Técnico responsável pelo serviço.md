@@ -9,7 +9,7 @@ responsaveis: [produto, seguranca]
 tags: [sismat, regra-de-negocio, usuario]
 ---
 
-# RN-22 - Alteração do valor do serviço na O.S.
+# RN-22 - Técnico responsável pelo serviço
 
 O valor padrão de um serviço pode ser alterado quando o serviço for adicionado a uma O.S., sem modificar o valor padrão armazenado no cadastro do serviço.
 

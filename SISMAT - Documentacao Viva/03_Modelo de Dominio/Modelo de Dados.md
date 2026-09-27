@@ -68,10 +68,10 @@ erDiagram
 
 ## Restrições derivadas
 
-- `USUARIO.email` único: [[RN-21 - Valor padrão do serviço|RN-21]].
-- `PRODUTO.codigo` único: [[RN-11 - Preenchimento automático do veículo|RN-11]].
+- `USUARIO.email` único: [[RN-20 - Valor padrão do serviço|RN-21]].
+- `PRODUTO.codigo` único: [[RN-10 - Preenchimento automático do veículo|RN-11]].
 - `ITEM_REQUISICAO.quantidade > 0`: [[RN-01 - Identificação do cliente|RN-01]].
-- `PRODUTO.saldo_estoque >= 0`: [[RN-10 - Veículo pertencente a outro cliente|RN-10]].
+- `PRODUTO.saldo_estoque >= 0`: [[RN-09 - Veículo pertencente a outro cliente|RN-10]].
 - requisição deve possuir ao menos um item.
 
 ## Diferenças e lacunas

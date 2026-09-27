@@ -18,13 +18,13 @@ tags: [sismat, caso-de-uso, usuario, acesso]
 
 Permitir que o usuário localize e consulte as informações de uma Ordem de Serviço cadastrada.
 
-| Campo           | Valor                                                          |
-| --------------- | -------------------------------------------------------------- |
-| Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]] |
-| Gatilho         | Usuário seleciona “Consultar O.S.”                             |
-| Pré-condições   | Usuário autenticado no sistema                                 |
-| Sucesso         | O.S. localizada e suas informações exibidas                    |
-| Garantia minima | A consulta não altera nenhuma informação da O.S.               |
+| Campo           | Valor                                                               |
+| --------------- | ------------------------------------------------------------------- |
+| Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]      |
+| Gatilho         | Usuário seleciona “Consultar O.S.”                                  |
+| Pré-condições   | Usuário autenticado conforme [[RN-04 - Usuário autenticado\|RN-04]] |
+| Sucesso         | O.S. localizada e suas informações exibidas                         |
+| Garantia minima | A consulta não altera nenhuma informação da O.S.                    |
 
 ## Fluxo principal
 
@@ -55,15 +55,13 @@ Permitir que o usuário localize e consulte as informações de uma Ordem de Ser
 ## Exceções 
 
 
-- Nenhuma O.S. encontrada: informar que nenhuma Ordem de Serviço corresponde aos critérios informados e permitir uma nova busca.
-- Critério de busca inválido: informar que o critério informado é inválido e permitir a correção.
-- Falha ao carregar a O.S.: informar que não foi possível carregar os dados da Ordem de Serviço
+- 5a - Nenhuma O.S. encontrada: exibir [[Catalogo de Mensagens#MSG-37|MSG-37]] e permitir uma nova busca.
+- 5b - Critério de busca inválido: exibir [[Catalogo de Mensagens#MSG-38|MSG-38]] e permitir a correção.
+- 8a - Falha ao carregar a O.S.: exibir [[Catalogo de Mensagens#MSG-39|MSG-39]].
 
-## Remoção e segurança
 
-A descrição geral promete remover usuários, mas o fluxo não detalha a operação. Veja [[04_Arquitetura/Decisoes/ADR-002 - Exclusao logica de cadastros|ADR-002]]. A “senha” do modelo de dados representa credencial e nunca deve ser persistida em texto puro; veja [[02_Requisitos/Requisitos Nao Funcionais#RNF-002 - Proteção de credenciais|RNF-002]].
 
-'*conferir daqui pra baixo*'
+
 ## Dados e interfaces
 
 - Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].

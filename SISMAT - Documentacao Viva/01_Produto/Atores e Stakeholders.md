@@ -14,19 +14,17 @@ tags: [sismat, atores, stakeholders]
 
 ## Atores primários
 
-| Ator          | Responsabilidade                                             | Casos de uso                                                                                                                                                                                                       |
-| ------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Usuário       | Solicitar materiais e acompanhar apenas os próprios pedidos  | [[UC-001 - Cadastrar cliente\|UC-001]], [[UC-002 - Consultar clientes\|UC-002]], [[UC-007 - Cadastrar fornecedor\|UC-007]]                                                     |
-| Estoquista    | Analisar requisições, entregar materiais e emitir relatórios | [[UC-003 - Cadastrar Técnico\|UC-003]], [[UC-004 - Cadastrar Serviço\|UC-004]], [[UC-006 - Registrar entrada de mercadoria\|UC-006]] |
-| Administrador | Manter produtos e usuários e emitir relatórios               | [[UC-005 - Cadastrar produto\|UC-005]], [[UC-006 - Registrar entrada de mercadoria\|UC-006]], [[UC-008 - Alertar estoque mínimo\|UC-008]]           |
+| Ator          | Responsabilidade                                                                                                        | Casos de uso                                                                                                                              |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Usuário       | Operar o sistema da oficina, realizando cadastros, consultas, controle de estoque e gerenciamento das Ordens de Serviço | [[UC-001 - Cadastrar cliente\|UC-001]], [[UC-002 - Consultar clientes\|UC-002]], [[UC-007 - Cadastrar fornecedor\|UC-007]]                |
+
 
 ## Stakeholders 
 
-| Stakeholder                   | Interesse                    | Participação esperada                  |
-| ----------------------------- | ---------------------------- | -------------------------------------- |
-| Responsável pelo almoxarifado | saldo e atendimento corretos | aprovar regras de estoque              |
-| Gestor de área                | prazos e consumo por setor   | validar relatórios e indicadores       |
-| TI/Operações                  | segurança e disponibilidade  | validar arquitetura e operação         |
-| Auditoria/Compliance          | rastreabilidade              | validar retenção e trilha de auditoria |
-| Solicitante                   | facilidade e transparência   | validar experiência e mensagens        |
+| Stakeholder                    | Interesse                                                                                                                | Participação esperada                                                              |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| Proprietário/Gestor da oficina | Manter clientes, estoque, serviços e Ordens de Serviço organizados e acompanhar corretamente os atendimentos realizados. | Definir e validar as regras e necessidades do sistema.                             |
+| Cliente                        | Ter seu veículo e atendimento registrados corretamente, além de receber informações e comprovantes relacionados à O.S.   | Fornecer dados pessoais, dados do veículo e informações sobre o problema relatado. |
+| Técnico                        | Ter os serviços sob sua responsabilidade registrados corretamente nas Ordens de Serviço.                                 | Executar os serviços e fornecer informações técnicas relacionadas ao atendimento.  |
+
 

@@ -9,7 +9,7 @@ responsaveis: [produto, almoxarifado]
 tags: [sismat, regra-de-negocio, relatorio]
 ---
 
-# RN-15 - Quantidade positiva
+# RN-14 - Quantidade positiva
 
 Toda quantidade informada em movimentações de produtos deve ser maior que zero.
 

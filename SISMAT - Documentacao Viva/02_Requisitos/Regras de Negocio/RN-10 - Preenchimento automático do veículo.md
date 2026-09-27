@@ -9,7 +9,7 @@ responsaveis: [almoxarifado]
 tags: [sismat, regra-de-negocio, produto]
 ---
 
-# RN-11 - Preenchimento automático do veículo
+# RN-10 - Preenchimento automático do veículo
 
 Ao informar a placa de um veículo já cadastrado e vinculado ao cliente selecionado, seus dados devem ser recuperados automaticamente.
 

@@ -11,8 +11,8 @@ tags: [sismat, regra-de-negocio, estoque]
 
 # RN-02 - CPF ou CNPJ válido e único
 
-Clientes do tipo Pessoa Física devem possuir CPF válido e clientes do tipo Pessoa Jurídica devem possuir CNPJ válido. Não deve existir mais de um cliente cadastrado com o mesmo CPF ou CNPJ.
+Todo CPF ou CNPJ informado no cadastro deve ser válido e não pode estar duplicado para o mesmo tipo de cadastro.
 
 **Aplicação:** [[UC-001 - Cadastrar cliente|UC-001]].
 
-**Verificação:** validar o CPF/CNPJ informado e consultar a existência de outro cliente com o mesmo documento antes de persistir o cadastro.
+**Verificação:** validar o CPF/CNPJ informado e consultar a existência de outro registro do mesmo tipo com o mesmo documento antes de concluir o cadastro.

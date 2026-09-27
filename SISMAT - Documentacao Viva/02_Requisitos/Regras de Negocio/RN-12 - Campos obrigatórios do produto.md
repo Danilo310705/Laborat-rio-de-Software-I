@@ -9,7 +9,7 @@ responsaveis: [produto, seguranca]
 tags: [sismat, regra-de-negocio, autorizacao]
 ---
 
-# RN-13 - Campos obrigatórios do produto
+# RN-12 - Campos obrigatórios do produto
 
 O cadastro do produto exige nome, código, unidade de medida, preço de custo, preço de venda e estoque mínimo.
 

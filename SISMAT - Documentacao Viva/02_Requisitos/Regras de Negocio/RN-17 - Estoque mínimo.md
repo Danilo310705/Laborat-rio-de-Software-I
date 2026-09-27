@@ -9,7 +9,7 @@ responsaveis: [produto]
 tags: [sismat, regra-de-negocio, status]
 ---
 
-# RN-18 - Estoque mínimo
+# RN-17 - Estoque mínimo
 
 Quando a quantidade disponível de um produto atingir ou ficar abaixo do estoque mínimo definido, o sistema deve gerar um alerta.
 

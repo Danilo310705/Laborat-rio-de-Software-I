@@ -9,7 +9,7 @@ responsaveis: [produto, seguranca]
 tags: [sismat, regra-de-negocio, usuario]
 ---
 
-# RN-20 - Atualização do estoque pela entrada
+# RN-19 - Atualização do estoque pela entrada
 
 Ao registrar uma entrada de mercadoria, a quantidade recebida deve ser acrescentada ao estoque do produto.
 

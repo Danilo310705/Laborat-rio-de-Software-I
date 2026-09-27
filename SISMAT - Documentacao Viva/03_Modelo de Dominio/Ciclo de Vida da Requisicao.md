@@ -34,7 +34,7 @@ stateDiagram-v2
 | inexistente | Pendente | criar requisição | [[RN-03 - Contato obrigatório do cliente\|RN-03]] |
 | Pendente | Aprovada | aprovar | [[RN-06 - Endereço vinculado ao cliente\|RN-06]] |
 | Pendente | Rejeitada | rejeitar com motivo | [[RN-07 - Consulta do histórico do cliente\|RN-07]] |
-| Aprovada | Entregue | confirmar entrega | [[RN-08 - Placa única do veículo\|RN-08]] |
+| Aprovada | Entregue | confirmar entrega | [[RN-07 - Placa única do veículo\|RN-08]] |
 
 ## Parte proposta
 

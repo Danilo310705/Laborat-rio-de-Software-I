@@ -12,30 +12,86 @@ tags: [sismat, casos-de-uso]
 
 # Índice de Casos de Uso
 
-| ID | Caso de uso | Ator principal | Estado documental |
-|---|---|---|---|
-| UC-001 | [[UC-001 - Cadastrar cliente\|Realizar requisição de material]] | Usuário | em revisão |
-| UC-002 | [[UC-002 - Consultar clientes\|Consultar status da requisição]] | Usuário | em revisão |
-| UC-003 | [[UC-003 - Cadastrar Técnico\|Analisar requisição]] | Estoquista | em revisão |
-| UC-004 | [[UC-004 - Cadastrar Serviço\|Entregar material]] | Estoquista | em revisão |
-| UC-005 | [[UC-005 - Cadastrar produto\|Gerenciar produtos]] | Administrador | em revisão |
-| UC-006 | [[UC-006 - Registrar entrada de mercadoria\|Gerar relatórios]] | Administrador / Estoquista | em revisão |
-| UC-007 | [[UC-007 - Cadastrar fornecedor\|Consultar pedidos finalizados]] | Usuário | em revisão |
-| UC-008 | [[UC-008 - Alertar estoque mínimo\|Gerenciar usuários]] | Administrador | em revisão |
+| ID     | Caso de uso                                                                       | Ator principal | Estado documental |
+| ------ | --------------------------------------------------------------------------------- | -------------- | ----------------- |
+| UC-001 | [[UC-001 - Cadastrar cliente\|Cadastrar cliente]]                                 | Usuário        | em revisão        |
+| UC-002 | [[UC-002 - Consultar clientes\|Consultar clientes]]                               | Usuário        | em revisão        |
+| UC-003 | [[UC-003 - Cadastrar Técnico\|Cadastrar Técnico]]                                 | Usuário        | em revisão        |
+| UC-004 | [[UC-004 - Cadastrar Serviço\|Cadastrar Serviço]]                                 | Usuário        | em revisão        |
+| UC-005 | [[UC-005 - Cadastrar produto\|Cadastrar produto]]                                 | Usuário        | em revisão        |
+| UC-006 | [[UC-006 - Registrar entrada de mercadoria\|Registrar entrada de mercadoria]]     | Usuário        | em revisão        |
+| UC-007 | [[UC-007 - Cadastrar fornecedor\|Cadastrar forneced]]                             | Usuário        | em revisão        |
+| UC-008 | [[UC-008 - Alertar estoque mínimo\|Alertar estoque mínimo]]                       | Usuário        | em revisão        |
+| UC-009 | [[UC-009 - Abrir Ordem de Serviço\|Abrir Ordem de Serviço]]                       | Usuário        | em revisão        |
+| UC-010 | [[UC-010 - Adicionar produtos à O.S.\|Adicionar produtos à O.S.]]                 | Usuário        | em revisão        |
+| UC-011 | [[UC-011 - Adicionar serviço à O.S.\|Adicionar serviço à O.S.]]                   | Usuário        | em revisão        |
+| UC-012 | [[UC-012 - Registrar diagnóstico O.S\|Registrar diagnóstico O.S]]                 | Usuário        | em revisão        |
+| UC-013 | [[UC-013 - Atualizar status da O.S.\|Atualizar status da O.S.]]                   | Usuário        | em revisão        |
+| UC-014 | [[UC-014 - Finalizar O.S.\|Finalizar O.S.]]                                       | Usuário        | em revisão        |
+| UC-015 | [[UC-015 - Emitir comprovante da O.S.\|Emitir comprovante da O.S.]]               | Usuário        | em revisão        |
+| UC-016 | [[UC-016 - Consultar O.S.\|Consultar O.S.]]                                       | Usuário        | em revisão        |
+| UC-017 | [[UC-017 - Editar ou Remover produto da O.S.\|Editar ou Remover produto da O.S.]] | Usuário        | em revisão        |
+| UC-018 | [[UC-018 - Editar ou Remover serviço da O.S.\|Editar ou Remover serviço da O.S.]] | Usuário        | em revisão        |
+
+
 
 ## Mapa de atores e capacidades
 
 ```mermaid
 flowchart LR
-    U([Usuário]) --> UC1[UC-001 Solicitar material]
-    U --> UC2[UC-002 Consultar status]
-    U --> UC7[UC-007 Consultar finalizados]
-    E([Estoquista]) --> UC3[UC-003 Analisar requisição]
-    E --> UC4[UC-004 Entregar material]
-    E --> UC6[UC-006 Gerar relatórios]
-    A([Administrador]) --> UC5[UC-005 Gerenciar produtos]
-    A --> UC6
-    A --> UC8[UC-008 Gerenciar usuários]
+
+    U([Usuário])
+
+    subgraph SISTEMA["Sistema de Gerenciamento de Oficina"]
+
+        subgraph CLIENTES["Clientes"]
+            UC1([UC-001<br/>Cadastrar Cliente])
+            UC2([UC-002<br/>Consultar Clientes])
+        end
+
+        subgraph CADASTROS["Cadastros e Estoque"]
+            UC3([UC-003<br/>Cadastrar Técnico])
+            UC4([UC-004<br/>Cadastrar Serviço])
+            UC5([UC-005<br/>Cadastrar Produto])
+            UC6([UC-006<br/>Registrar Entrada<br/>de Mercadoria])
+            UC7([UC-007<br/>Cadastrar Fornecedor])
+            UC8([UC-008<br/>Alertar Estoque Mínimo])
+        end
+
+        subgraph OS["Ordens de Serviço"]
+            UC9([UC-009<br/>Abrir O.S.])
+            UC10([UC-010<br/>Adicionar Produtos<br/>à O.S.])
+            UC11([UC-011<br/>Adicionar Serviço<br/>à O.S.])
+            UC12([UC-012<br/>Registrar Diagnóstico])
+            UC13([UC-013<br/>Atualizar Status<br/>da O.S.])
+            UC14([UC-014<br/>Finalizar O.S.])
+            UC15([UC-015<br/>Emitir Comprovante<br/>da O.S.])
+            UC16([UC-016<br/>Consultar O.S.])
+            UC17([UC-017<br/>Editar ou Remover<br/>Produto da O.S.])
+            UC18([UC-018<br/>Editar ou Remover<br/>Serviço da O.S.])
+        end
+    end
+
+    U --- UC1
+    U --- UC2
+    U --- UC3
+    U --- UC4
+    U --- UC5
+    U --- UC6
+    U --- UC7
+    U --- UC9
+    U --- UC10
+    U --- UC11
+    U --- UC12
+    U --- UC13
+    U --- UC14
+    U --- UC15
+    U --- UC16
+    U --- UC17
+    U --- UC18
+
+    UC10 -. "aciona verificação" .-> UC8
+    UC17 -. "aciona verificação" .-> UC8
 ```
 
 ## Convenção dos fluxos
@@ -44,8 +100,3 @@ flowchart LR
 - **RS**: resposta observável do sistema.
 - Alternativas mantêm o objetivo do fluxo principal; exceções impedem ou interrompem sua conclusão.
 
-## Diagrama original
-
-Imagem extraída da página 6 da fonte. A versão Mermaid acima continua sendo a versão viva e editável.
-
-![[06_Interfaces/Anexos/Diagramas da Fonte/Diagrama de Casos de Uso.png]]

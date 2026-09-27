@@ -94,7 +94,7 @@ E o saldo físico de P passa para 7
 E uma movimentação de 3 unidades é registrada
 ```
 
-Rastreia: [[UC-004 - Cadastrar Serviço|UC-004]], [[RN-09 - Veículo vinculado ao cliente|RN-09]].
+Rastreia: [[UC-004 - Cadastrar Serviço|UC-004]], [[RN-08 - Veículo vinculado ao cliente|RN-09]].
 
 ## CA-007 - Falha de estoque preserva consistência
 
@@ -118,7 +118,7 @@ Então o produto não é salvo
 E o sistema apresenta MSG-14
 ```
 
-Rastreia: [[UC-005 - Cadastrar produto|UC-005]], [[RN-11 - Preenchimento automático do veículo|RN-11]].
+Rastreia: [[UC-005 - Cadastrar produto|UC-005]], [[RN-10 - Preenchimento automático do veículo|RN-11]].
 
 ## CA-009 - Exportar relatório em PDF
 
@@ -129,7 +129,7 @@ Então o sistema entrega um arquivo PDF legível
 E o conteúdo respeita os filtros e os dados exibidos
 ```
 
-Rastreia: [[UC-006 - Registrar entrada de mercadoria|UC-006]], [[RN-16 - Limite pelo estoque disponível|RN-16]].
+Rastreia: [[UC-006 - Registrar entrada de mercadoria|UC-006]], [[RN-15 - Limite pelo estoque disponível|RN-16]].
 
 ## CA-010 - Listar somente pedidos encerrados do usuário
 
@@ -139,7 +139,7 @@ Quando abre “Pedidos Finalizados”
 Então visualiza apenas seus pedidos Rejeitados e Entregues
 ```
 
-Rastreia: [[UC-007 - Cadastrar fornecedor|UC-007]], [[RN-17 - Atualização do estoque pela O.S.|RN-17]], [[RN-18 - Estoque mínimo|RN-18]].
+Rastreia: [[UC-007 - Cadastrar fornecedor|UC-007]], [[RN-16 - Atualização do estoque pela O.S.|RN-17]], [[RN-17 - Estoque mínimo|RN-18]].
 
 ## CA-011 - Impedir e-mail duplicado
 
@@ -150,7 +150,7 @@ Então o cadastro não é salvo
 E o sistema apresenta MSG-23
 ```
 
-Rastreia: [[UC-008 - Alertar estoque mínimo|UC-008]], [[RN-21 - Valor padrão do serviço|RN-21]].
+Rastreia: [[UC-008 - Alertar estoque mínimo|UC-008]], [[RN-20 - Valor padrão do serviço|RN-21]].
 
 ## CA-012 - Bloquear gestão por perfil não autorizado
 
@@ -161,4 +161,4 @@ Então o servidor nega a operação
 E nenhum dado é alterado
 ```
 
-Rastreia: [[RN-13 - Campos obrigatórios do produto|RN-13]], [[RN-19 - Entrada de mercadoria|RN-19]], [[02_Requisitos/Requisitos Nao Funcionais#RNF-001 - Autorização no servidor|RNF-001]].
+Rastreia: [[RN-12 - Campos obrigatórios do produto|RN-13]], [[RN-18 - Entrada de mercadoria|RN-19]], [[02_Requisitos/Requisitos Nao Funcionais#RNF-001 - Autorização no servidor|RNF-001]].
