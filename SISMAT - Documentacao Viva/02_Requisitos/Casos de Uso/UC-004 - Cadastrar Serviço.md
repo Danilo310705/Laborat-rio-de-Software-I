@@ -56,8 +56,8 @@ Não se aplica.
 
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Requisicao|Requisicao]], [[03_Modelo de Dominio/Dicionario de Dados#Item_requisicao|Item_requisicao]], [[03_Modelo de Dominio/Dicionario de Dados#Produto|Produto]], [[03_Modelo de Dominio/Dicionario de Dados#Movimentacao_estoque|Movimentacao_estoque]].
-- Protótipo: [[06_Interfaces/Mapa de Interfaces#IMG-05 - Entrega de material|IMG-05]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Serviço|Serviço]].
+- Protótipo: [[06_Interfaces/Mapa de Interfaces#IMG-04 - Cadastrar Serviço|IMG-04]].
 - Sequência: [[04_Arquitetura/Diagramas de Sequencia#Entregar material|Entregar material]].
 
 ## Critérios de aceitação

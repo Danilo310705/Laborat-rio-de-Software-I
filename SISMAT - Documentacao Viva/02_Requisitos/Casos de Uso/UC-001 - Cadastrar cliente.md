@@ -75,9 +75,8 @@ Cadastrar PF/PJ, dados de identificação, contato e endereço
 
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Produto|Produto]], [[03_Modelo de Dominio/Dicionario de Dados#Requisicao|Requisicao]], [[03_Modelo de Dominio/Dicionario de Dados#Item_requisicao|Item_requisicao]].
-- Protótipos da fonte: [[06_Interfaces/Mapa de Interfaces#IMG-01 - Nova requisição|IMG-01]] e [[06_Interfaces/Mapa de Interfaces#IMG-02 - Itens da requisição|IMG-02]].
-- Sequência: [[04_Arquitetura/Diagramas de Sequencia#Criar requisição|Criar requisição]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Cliente|Cliente]], [[03_Modelo de Dominio/Dicionario de Dados#Endereço|Endereço]], [[03_Modelo de Dominio/Dicionario de Dados#Contato|Contato]].
+- Protótipos da fonte: [[06_Interfaces/Mapa de Interfaces#IMG-01 - Cadastrar cliente|IMG-01]].
 
 ## Critérios de aceitação
 

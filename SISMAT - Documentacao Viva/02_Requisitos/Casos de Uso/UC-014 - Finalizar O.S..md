@@ -88,8 +88,8 @@ Permitir que o usuário finalize uma Ordem de Serviço, registrando o pagamento 
 
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].
-- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-12 - Gerenciar usuários|IMG-12]] e [[06_Interfaces/Mapa de Interfaces#IMG-13 - Cadastrar usuário|IMG-13]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Ordem_Servico|Ordem_Servico]], [[03_Modelo de Dominio/Dicionario de Dados#Pagamento|Pagamento]], [[03_Modelo de Dominio/Dicionario de Dados#Item_Produto_OS|Item_Produto_OS]], [[03_Modelo de Dominio/Dicionario de Dados#Item_Servico_OS|Item_Servico_OS]].
+- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-16 - Finalizar O.S.|IMG-16]].
 
 ## Critérios de aceitação
 

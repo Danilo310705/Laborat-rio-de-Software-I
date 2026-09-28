@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, produto]
 
 Ao informar a placa de um veículo já cadastrado e vinculado ao cliente selecionado, seus dados devem ser recuperados automaticamente.
 
-**Aplicação:** **Abrir Ordem de Serviço**.
+**Aplicação:** [[UC-009 - Abrir Ordem de Serviço|UC-009]].
 
 **Verificação:** consultar o veículo pela placa e preencher seus dados sem criar um novo registro.

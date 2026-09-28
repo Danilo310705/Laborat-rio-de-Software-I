@@ -63,8 +63,8 @@ Permitir que o usuário registre a entrada de produtos adquiridos de um forneced
 
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Produto|Produto]], [[03_Modelo de Dominio/Dicionario de Dados#Requisicao|Requisicao]], [[03_Modelo de Dominio/Dicionario de Dados#Movimentacao_estoque|Movimentacao_estoque]].
-- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-09 - Emitir relatório|IMG-09]] e [[06_Interfaces/Mapa de Interfaces#IMG-10 - Resultado do relatório|IMG-10]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Fornecedor|Fornecedor]], [[03_Modelo de Dominio/Dicionario de Dados#Entrada_Mercadoria|Entrada_Mercadoria]], [[03_Modelo de Dominio/Dicionario de Dados#Item_Entrada_Mercadoria|Item_Entrada_Mercadoria]] e [[03_Modelo de Dominio/Dicionario de Dados#Produto|Produto]].
+- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-06 - Registrar entrada de mercadoria|IMG-06]]
 
 ## Critério de aceitação
 

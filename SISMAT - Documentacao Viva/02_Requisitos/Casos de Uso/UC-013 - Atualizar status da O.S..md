@@ -61,8 +61,8 @@ Permitir que o usuário atualize o status de uma Ordem de Serviço de acordo com
 
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].
-- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-12 - Gerenciar usuários|IMG-12]] e [[06_Interfaces/Mapa de Interfaces#IMG-13 - Cadastrar usuário|IMG-13]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Ordem_Servico|Ordem_Servico]].
+- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-15 - Atualizar status da O.S.|IMG-15]].
 
 ## Critérios de aceitação
 

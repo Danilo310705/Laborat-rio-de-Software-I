@@ -45,12 +45,10 @@ Não se aplica.
 
 - 4a - Se não houver clientes, exibir [[02_Requisitos/Catalogo de Mensagens#MSG-05|MSG-05]].
 
-
-
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[Dicionario de Dados#Cliente|Cliente]].
-- Protótipo: [[06_Interfaces/Mapa de Interfaces#IMG-03 - Minhas requisições|IMG-03]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Cliente|Cliente]], [[03_Modelo de Dominio/Dicionario de Dados#Endereço|Endereço]], [[03_Modelo de Dominio/Dicionario de Dados#Contato|Contato]].
+- Protótipo: [[06_Interfaces/Mapa de Interfaces#IMG-02 - Consultar clientes|IMG-02]].
 
 ## Critério de aceitação
 

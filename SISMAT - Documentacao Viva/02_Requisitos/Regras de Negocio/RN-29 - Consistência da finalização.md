@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, usuario]
 
 O registro do pagamento e a alteração do status da O.S. para `Concluída` devem ocorrer de forma consistente.
 
-**Aplicação:** **Finalizar O.S.**
+**Aplicação:** [[UC-014 - Finalizar O.S.|UC-014]].
 
 **Verificação:** em caso de falha, não registrar parcialmente o pagamento nem alterar a O.S. para `Concluída`.

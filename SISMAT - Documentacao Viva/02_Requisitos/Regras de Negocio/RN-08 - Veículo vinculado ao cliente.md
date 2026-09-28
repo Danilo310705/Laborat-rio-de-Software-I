@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, estoque, entrega]
 
 Todo veículo registrado deve estar vinculado a um cliente.
 
-**Aplicação:** **Abrir Ordem de Serviço** e **Consultar veículos do cliente**.
+**Aplicação:** [[UC-009 - Abrir Ordem de Serviço|UC-009]].
 
 **Verificação:** ao cadastrar um novo veículo durante a abertura da O.S., vinculá-lo ao cliente selecionado.

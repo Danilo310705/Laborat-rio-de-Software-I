@@ -53,9 +53,8 @@ Não se aplica.
 - 7a - Falha ao cadastrar técnico: exibir [[Catalogo de Mensagens#MSG-08|MSG-08]] e não realizar gravação parcial.
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Requisicao|Requisicao]], [[03_Modelo de Dominio/Dicionario de Dados#Item_requisicao|Item_requisicao]], [[03_Modelo de Dominio/Dicionario de Dados#Produto|Produto]].
-- Protótipo: [[06_Interfaces/Mapa de Interfaces#IMG-04 - Analisar requisição|IMG-04]].
-- Sequência: [[04_Arquitetura/Diagramas de Sequencia#Analisar requisição|Analisar requisição]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Técnico|Técnico]].
+- Protótipo: [[06_Interfaces/Mapa de Interfaces#IMG-03 - Cadastrar Técnico|IMG-03]].
 
 ## Critério de aceitação
 

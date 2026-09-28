@@ -29,13 +29,13 @@ Alertar o usuário quando a quantidade disponível de um produto atingir ou fica
 
 ## Fluxo principal - cadastrar
 
-| Passo | Tipo | Comportamento                                                                                                                    |
-| ----: | :--: | -------------------------------------------------------------------------------------------------------------------------------- |
-|     1 |  RS  | Sistema identifica que a quantidade do produto em estoque foi atualizada.                                                        |
-|     2 |  RS  | Sistema verifica o estoque mínimo definido para o produto conforme [[RN-17 - Estoque mínimo\|RN-17]].                            |
-|     3 |  RS  | Sistema identifica que a quantidade atual atingiu ou ficou abaixo do estoque mínimo conforme [[RN-17 - Estoque mínimo\|RN-17]].. |
-|     4 |  RS  | Sistema gera um alerta de estoque mínimo conforme [[RN-17 - Estoque mínimo\|RN-17]]..                                            |
-|     5 |  RS  | Sistema exibe ao usuário qual produto atingiu o estoque mínimo.                                                                  |
+| Passo | Tipo | Comportamento                                                                                                                   |
+| ----: | :--: | ------------------------------------------------------------------------------------------------------------------------------- |
+|     1 |  RS  | Sistema identifica que a quantidade do produto em estoque foi atualizada.                                                       |
+|     2 |  RS  | Sistema verifica o estoque mínimo definido para o produto conforme [[RN-17 - Estoque mínimo\|RN-17]].                           |
+|     3 |  RS  | Sistema identifica que a quantidade atual atingiu ou ficou abaixo do estoque mínimo conforme [[RN-17 - Estoque mínimo\|RN-17]]. |
+|     4 |  RS  | Sistema gera um alerta de estoque mínimo conforme [[RN-17 - Estoque mínimo\|RN-17]].                                            |
+|     5 |  RS  | Sistema exibe ao usuário qual produto atingiu o estoque mínimo.                                                                 |
 
 
 ## Alternativa - Estoque acima do mínimo
@@ -48,16 +48,10 @@ Alertar o usuário quando a quantidade disponível de um produto atingir ou fica
 - 4a - Falha ao gerar o alerta: o sistema mantém a quantidade atual do produto e registra a falha na geração do alerta.
 
 
-
-## Remoção e segurança
-
-A descrição geral promete remover usuários, mas o fluxo não detalha a operação. Veja [[04_Arquitetura/Decisoes/ADR-002 - Exclusao logica de cadastros|ADR-002]]. A “senha” do modelo de dados representa credencial e nunca deve ser persistida em texto puro; veja [[02_Requisitos/Requisitos Nao Funcionais#RNF-002 - Proteção de credenciais|RNF-002]].
-
-
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].
-- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-12 - Gerenciar usuários|IMG-12]] e [[06_Interfaces/Mapa de Interfaces#IMG-13 - Cadastrar usuário|IMG-13]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Produto|Produto]].
+- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-08 - Cadastrar produto|IMG-08]]
 
 ## Critérios de aceitação
 

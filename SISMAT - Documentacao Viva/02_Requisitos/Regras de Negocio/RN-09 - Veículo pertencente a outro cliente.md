@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, estoque]
 
 Caso a placa informada corresponda a um veículo vinculado a outro cliente, o sistema não deve alterar automaticamente seu vínculo.
 
-**Aplicação:** **Abrir Ordem de Serviço**.
+**Aplicação:** [[UC-009 - Abrir Ordem de Serviço|UC-009]].
 
 **Verificação:** impedir a continuidade da abertura da O.S. e informar: “O veículo informado está vinculado a outro cliente. Verifique o cliente selecionado.”

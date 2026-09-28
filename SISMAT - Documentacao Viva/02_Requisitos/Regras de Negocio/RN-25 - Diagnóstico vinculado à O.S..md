@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, usuario]
 
 O diagnóstico técnico deve estar vinculado a uma Ordem de Serviço existente.
 
-**Aplicação:** **Registrar diagnóstico**.
+**Aplicação:** [[UC-012 - Registrar diagnóstico O.S|UC-012]].
 
 **Verificação:** não permitir o registro de diagnóstico sem uma O.S. associada.

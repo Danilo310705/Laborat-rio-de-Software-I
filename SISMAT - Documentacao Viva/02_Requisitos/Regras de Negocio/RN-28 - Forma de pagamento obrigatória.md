@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, usuario]
 
 A finalização da O.S. exige o registro da forma de pagamento utilizada.
 
-**Aplicação:** **Finalizar O.S.**
+**Aplicação:** [[UC-014 - Finalizar O.S.|UC-014]].
 
 **Verificação:** impedir a finalização enquanto nenhuma forma de pagamento válida estiver selecionada.

@@ -54,8 +54,8 @@ Não se aplica.
 
 ## Dados e interfaces
 
-- Entidade: [[03_Modelo de Dominio/Dicionario de Dados#Produto|Produto]].
-- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-06 - Gerenciar produtos com confirmação|IMG-06]], [[06_Interfaces/Mapa de Interfaces#IMG-07 - Lista de produtos|IMG-07]] e [[06_Interfaces/Mapa de Interfaces#IMG-08 - Cadastrar produto|IMG-08]].
+- Entidade: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Produto|Produto]].
+- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-05 - Cadastrar produto|IMG-05]]
 
 ## Critério de aceitação
 

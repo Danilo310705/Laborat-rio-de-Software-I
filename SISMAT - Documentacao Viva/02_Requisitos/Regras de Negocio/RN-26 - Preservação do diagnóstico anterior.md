@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, usuario]
 
 Caso ocorra falha durante a alteração de um diagnóstico, o diagnóstico anteriormente registrado deve ser mantido.
 
-**Aplicação:** **Registrar diagnóstico**.
+**Aplicação:** [[UC-012 - Registrar diagnóstico O.S|UC-012]].
 
 **Verificação:** somente substituir o diagnóstico anterior após a nova informação ser validada e persistida com sucesso.

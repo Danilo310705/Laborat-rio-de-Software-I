@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, entrega]
 
 A placa deve identificar unicamente um veículo cadastrado no sistema.
 
-**Aplicação:** **Abrir Ordem de Serviço** e **Consultar veículos do cliente**.
+**Aplicação:** [[UC-009 - Abrir Ordem de Serviço|UC-009]].
 
 **Verificação:** ao informar uma placa, consultar se já existe veículo cadastrado antes de permitir o registro de um novo veículo.

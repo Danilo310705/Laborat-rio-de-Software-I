@@ -57,8 +57,8 @@ Permitir que o usuário cadastre fornecedores e vincule os produtos fornecidos p
 
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Requisicao|Requisicao]] e [[03_Modelo de Dominio/Dicionario de Dados#Item_requisicao|Item_requisicao]].
-- Protótipo: [[06_Interfaces/Mapa de Interfaces#IMG-11 - Pedidos finalizados|IMG-11]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Fornecedor|Fornecedor]], [[03_Modelo de Dominio/Dicionario de Dados#Fornecedor_Produto|Fornecedor_Produto]], [[03_Modelo de Dominio/Dicionario de Dados#Produto|Produto]].
+- Protótipo: [[06_Interfaces/Mapa de Interfaces#IMG-07 - Cadastrar fornecedor|IMG-07]].
 
 ## Critério de aceitação
 

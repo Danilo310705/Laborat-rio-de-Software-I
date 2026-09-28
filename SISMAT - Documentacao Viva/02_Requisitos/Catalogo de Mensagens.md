@@ -16,7 +16,7 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-01
 
-**Cadastrado com sucesso.** Tipo: sucesso. Uso: [[UC-001 - Cadastrar cliente|UC-001]], [[UC-004 - Cadastrar Serviço|UC-004]], [[UC-005 - Cadastrar produto|UC-005]].
+**Cadastrado com sucesso.** Tipo: sucesso. Uso: [[UC-001 - Cadastrar cliente|UC-001]], [[UC-004 - Cadastrar Serviço|UC-004]], [[UC-005 - Cadastrar produto|UC-005]], [[UC-006 - Registrar entrada de mercadoria|UC-006]], [[UC-007 - Cadastrar fornecedor|UC-007]].
 
 ## MSG-02
 
@@ -40,15 +40,15 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-07
 
-**Valor inválido.** Tipo: erro. Uso: [[UC-004 - Cadastrar Serviço|UC-004]], [[UC-005 - Cadastrar produto|UC-005]].
+**Valor inválido.** Tipo: erro. Uso: [[UC-004 - Cadastrar Serviço|UC-004]], [[UC-005 - Cadastrar produto|UC-005]], [[UC-006 - Registrar entrada de mercadoria|UC-006]], [[UC-011 - Adicionar serviço à O.S.|UC-011]], [[UC-018 - Editar ou Remover serviço da O.S.|UC-018]].
 
 ## MSG-08
 
-**Erro ao realisar cadastro.** Tipo: erro. Uso: [[UC-004 - Cadastrar Serviço|UC-004]], [[UC-005 - Cadastrar produto|UC-005]],  [[UC-007 - Cadastrar fornecedor|UC-007]].
+**Erro ao realisar cadastro.** Tipo: erro. Uso: [[UC-003 - Cadastrar Técnico|UC-003]], [[UC-004 - Cadastrar Serviço|UC-004]], [[UC-005 - Cadastrar produto|UC-005]],  [[UC-007 - Cadastrar fornecedor|UC-007]], [[UC-009 - Abrir Ordem de Serviço|UC-009]], [[UC-010 - Adicionar produtos à O.S.|UC-010]], [[UC-011 - Adicionar serviço à O.S.|UC-011]].
 
 ## MSG-09
 
-**Valor inválido, deve ser maior que zero.** Tipo: erro. Uso: [[UC-003 - Cadastrar Técnico|UC-003]],  [[UC-006 - Registrar entrada de mercadoria|UC-006]].
+**Valor inválido, deve ser maior que zero.** Tipo: erro. Uso: [[UC-003 - Cadastrar Técnico|UC-003]],  [[UC-006 - Registrar entrada de mercadoria|UC-006]], [[UC-010 - Adicionar produtos à O.S.|UC-010]], [[UC-017 - Editar ou Remover produto da O.S.|UC-017]].
 
 ## MSG-10
 
@@ -100,15 +100,15 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-22
 
-**Preencha os campos obrigatórios.** Tipo: erro. Uso: [[UC-004 - Cadastrar Serviço|UC-004]] , [[UC-001 - Cadastrar cliente|UC-001]], [[UC-005 - Cadastrar produto|UC-005]], [[UC-006 - Registrar entrada de mercadoria|UC-006]], [[UC-007 - Cadastrar fornecedor|UC-007]] .
+**Preencha os campos obrigatórios.** Tipo: erro. Uso: [[UC-001 - Cadastrar cliente|UC-001]], [[UC-003 - Cadastrar Técnico|UC-003]], [[UC-004 - Cadastrar Serviço|UC-004]], [[UC-005 - Cadastrar produto|UC-005]], [[UC-006 - Registrar entrada de mercadoria|UC-006]], [[UC-007 - Cadastrar fornecedor|UC-007]], [[UC-009 - Abrir Ordem de Serviço|UC-009]], [[UC-011 - Adicionar serviço à O.S.|UC-011]], [[UC-018 - Editar ou Remover serviço da O.S.|UC-018]].
 
 ## MSG-23
 
-**A quantidade informada excede a quantidade disponível em estoque.** Tipo: erro. Uso: [[UC-008 - Alertar estoque mínimo|UC-008]].
+**A quantidade informada excede a quantidade disponível em estoque.** Tipo: erro. Uso: [[UC-008 - Alertar estoque mínimo|UC-008]], [[UC-017 - Editar ou Remover produto da O.S.|UC-017]].
 
 ## MSG-24
 
-**O técnico selecionado está inativo. Selecione outro técnico.** Tipo: erro. Uso: [[UC-008 - Alertar estoque mínimo|UC-008]].
+**O técnico selecionado está inativo. Selecione outro técnico.** Tipo: erro. Uso: [[UC-008 - Alertar estoque mínimo|UC-008]], [[UC-011 - Adicionar serviço à O.S.|UC-011]], [[UC-018 - Editar ou Remover serviço da O.S.|UC-018]].
 
 ## MSG-25
 
@@ -172,11 +172,11 @@ Os textos abaixo preservam a intenção do PDF. Antes da implementação, revisa
 
 ## MSG-40
 
-**Não foi possível realizar a alteração. Os dados anteriores foram mantidos.** Tipo: erro. Uso: [[UC-017 - Editar ou Remover produto da O.S.|UC-017]].
+**Não foi possível realizar a alteração. Os dados anteriores foram mantidos.** Tipo: erro. Uso: [[UC-017 - Editar ou Remover produto da O.S.|UC-017]], [[UC-018 - Editar ou Remover serviço da O.S.|UC-018]].
 
 ## MSG-41
 
-**Não foi possível realizar a remoção. Nenhuma alteração foi realizada.** Tipo: erro. Uso: [[UC-017 - Editar ou Remover produto da O.S.|UC-017]].
+**Não foi possível realizar a remoção. Nenhuma alteração foi realizada.** Tipo: erro. Uso: [[UC-017 - Editar ou Remover produto da O.S.|UC-017]], [[UC-018 - Editar ou Remover serviço da O.S.|UC-018]].
 
 ## Diretrizes propostas
 

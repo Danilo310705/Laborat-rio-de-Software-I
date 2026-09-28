@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, autorizacao]
 
 Uma entrada de mercadoria deve possuir fornecedor, produto, quantidade e valor de compra válidos.
 
-**Aplicação:** **Registrar entrada de mercadoria**.
+**Aplicação:** [[UC-006 - Registrar entrada de mercadoria|UC-006]],
 
 **Verificação:** validar os dados da entrada antes de atualizar as quantidades em estoque.

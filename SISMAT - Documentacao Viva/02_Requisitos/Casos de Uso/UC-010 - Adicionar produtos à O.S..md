@@ -73,8 +73,8 @@ Permitir que o usuário adicione à Ordem de Serviço os produtos que serão uti
 
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].
-- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-12 - Gerenciar usuários|IMG-12]] e [[06_Interfaces/Mapa de Interfaces#IMG-13 - Cadastrar usuário|IMG-13]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Ordem_Servico|Ordem_Servico]], [[03_Modelo de Dominio/Dicionario de Dados#Produto|Produto]], [[03_Modelo de Dominio/Dicionario de Dados#Item_Produto_OS|Item_Produto_OS]].
+- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-12 - Adicionar Produtos à O.S|IMG-12]].
 
 ## Critérios de aceitação
 

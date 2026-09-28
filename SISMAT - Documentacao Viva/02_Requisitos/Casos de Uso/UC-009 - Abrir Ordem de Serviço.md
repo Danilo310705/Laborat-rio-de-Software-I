@@ -56,7 +56,7 @@ Permitir que o usuário abra uma Ordem de Serviço (O.S.), vinculando um cliente
 6. Ao confirmar a abertura da O.S., o sistema registra o novo veículo e o vincula ao cliente selecionado conforme [[RN-08 - Veículo vinculado ao cliente|RN-08]].
 7. O sistema registra a O.S. vinculada ao novo veículo.
 8. O sistema define o status inicial como `Aberta` conforme [[RN-23 - Status inicial da O.S.|RN-23]].
-9. O sistema exibe MSG-11.
+9. O sistema exibe [[Catalogo de Mensagens#MSG-11|MSG-11]].
 
 ## Exceções
 
@@ -76,8 +76,8 @@ A descrição geral promete remover usuários, mas o fluxo não detalha a opera�
 
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].
-- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-12 - Gerenciar usuários|IMG-12]] e [[06_Interfaces/Mapa de Interfaces#IMG-13 - Cadastrar usuário|IMG-13]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Cliente|Cliente]], [[03_Modelo de Dominio/Dicionario de Dados#Veiculo|Veiculo]], [[03_Modelo de Dominio/Dicionario de Dados#Ordem_Servico|Ordem_Servico]].
+- Protótipos:  [[06_Interfaces/Mapa de Interfaces#IMG-09 - Abrir Ordem de Serviço Placa Registrada|IMG-09]], [[06_Interfaces/Mapa de Interfaces#IMG-10 - Abrir Ordem de Serviço Placa Não Registrada|IMG-10]] e [[06_Interfaces/Mapa de Interfaces#IMG-11 - Ordem de Serviço|IMG-11]].
 
 ## Critérios de aceitação
 

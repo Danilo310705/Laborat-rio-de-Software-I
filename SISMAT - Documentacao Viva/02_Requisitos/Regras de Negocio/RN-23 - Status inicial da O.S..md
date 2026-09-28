@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, usuario]
 
 Toda Ordem de Serviço criada com sucesso deve iniciar com status `Aberta`.
 
-**Aplicação:** **Abrir Ordem de Serviço**.
+**Aplicação:** [[UC-009 - Abrir Ordem de Serviço|UC-009]].
 
 **Verificação:** o usuário não pode definir manualmente outro status durante a abertura da O.S.

@@ -54,7 +54,6 @@ Permitir que o usuário localize e consulte as informações de uma Ordem de Ser
 
 ## Exceções 
 
-
 - 5a - Nenhuma O.S. encontrada: exibir [[Catalogo de Mensagens#MSG-37|MSG-37]] e permitir uma nova busca.
 - 5b - Critério de busca inválido: exibir [[Catalogo de Mensagens#MSG-38|MSG-38]] e permitir a correção.
 - 8a - Falha ao carregar a O.S.: exibir [[Catalogo de Mensagens#MSG-39|MSG-39]].
@@ -64,8 +63,8 @@ Permitir que o usuário localize e consulte as informações de uma Ordem de Ser
 
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].
-- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-12 - Gerenciar usuários|IMG-12]] e [[06_Interfaces/Mapa de Interfaces#IMG-13 - Cadastrar usuário|IMG-13]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Ordem_Servico|Ordem_Servico]], [[03_Modelo de Dominio/Dicionario de Dados#Cliente|Cliente]], [[03_Modelo de Dominio/Dicionario de Dados#Veiculo|Veiculo]].
+- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-18 - Consultar O.S.|IMG-18]].
 
 ## Critérios de aceitação
 

@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, autorizacao]
 
 O cadastro do produto exige nome, código, unidade de medida, preço de custo, preço de venda e estoque mínimo.
 
-**Aplicação:** [UC-005](UC-005%20-%20Cadastrar%20produto).
+**Aplicação:** [UC-005](UC-005%20-%20Cadastrar%20produto), [[UC-008 - Alertar estoque mínimo|UC-008]].
 
 **Verificação:** impedir o cadastro enquanto algum campo obrigatório estiver ausente ou inválido.

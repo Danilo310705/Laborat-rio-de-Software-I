@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, estoque]
 
 Todo CPF ou CNPJ informado no cadastro deve ser válido e não pode estar duplicado para o mesmo tipo de cadastro.
 
-**Aplicação:** [[UC-001 - Cadastrar cliente|UC-001]].
+**Aplicação:** [[UC-001 - Cadastrar cliente|UC-001]], [[UC-007 - Cadastrar fornecedor|UC-007]].
 
 **Verificação:** validar o CPF/CNPJ informado e consultar a existência de outro registro do mesmo tipo com o mesmo documento antes de concluir o cadastro.

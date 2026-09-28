@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, usuario]
 
 Todo serviço deve possuir um tempo estimado de execução maior que zero.
 
-**Aplicação:** UC-004 - Cadastrar Serviço.
+**Aplicação:** [[UC-004 - Cadastrar Serviço|UC-004]]
 
 **Verificação:** exigir o preenchimento do tempo estimado e rejeitar valor igual a zero, negativo, vazio ou inválido antes de concluir o cadastro.

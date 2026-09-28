@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, usuario]
 
 Ao registrar uma entrada de mercadoria, a quantidade recebida deve ser acrescentada ao estoque do produto.
 
-**Aplicação:** **Registrar entrada de mercadoria**.
+**Aplicação:** [[UC-006 - Registrar entrada de mercadoria|UC-006]].
 
 **Verificação:** registrar a entrada e atualizar o estoque de forma consistente, sem permitir atualização parcial da operação.

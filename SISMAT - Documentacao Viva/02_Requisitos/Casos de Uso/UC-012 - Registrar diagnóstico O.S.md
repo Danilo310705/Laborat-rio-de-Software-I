@@ -57,12 +57,10 @@ Permitir que o usuário registre o diagnóstico técnico identificado durante a 
 - A5a - Falha ao alterar diagnóstico: informar que não foi possível realizar a alteração e manter o diagnóstico anterior conforme [[RN-26 - Preservação do diagnóstico anterior|RN-26]].
 
 
-
-
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].
-- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-12 - Gerenciar usuários|IMG-12]] e [[06_Interfaces/Mapa de Interfaces#IMG-13 - Cadastrar usuário|IMG-13]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Ordem_Servico|Ordem_Servico]].
+- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-14 - Registrar diagnóstico O.S|IMG-14]].
 
 ## Critérios de aceitação
 

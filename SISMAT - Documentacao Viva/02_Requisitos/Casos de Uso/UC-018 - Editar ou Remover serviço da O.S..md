@@ -63,8 +63,8 @@ Permitir que o usuário altere ou remova um serviço previamente adicionado à O
 
 ## Dados e interfaces
 
-- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]] e [[03_Modelo de Dominio/Dicionario de Dados#Perfil|Perfil]].
-- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-12 - Gerenciar usuários|IMG-12]] e [[06_Interfaces/Mapa de Interfaces#IMG-13 - Cadastrar usuário|IMG-13]].
+- Entidades: [[03_Modelo de Dominio/Dicionario de Dados#Usuario|Usuario]], [[03_Modelo de Dominio/Dicionario de Dados#Ordem_Servico|Ordem_Servico]], [[03_Modelo de Dominio/Dicionario de Dados#Serviço|Serviço]], [[03_Modelo de Dominio/Dicionario de Dados#Técnico|Técnico]], [[03_Modelo de Dominio/Dicionario de Dados#Item_Servico_OS|Item_Servico_OS]].
+- Protótipos: [[06_Interfaces/Mapa de Interfaces#IMG-21 - Editar ou Remover serviço da O.S.|IMG-21]] e [[06_Interfaces/Mapa de Interfaces#IMG-22 - Editar ou Remover serviço da O.S.|IMG-22]].
 
 ## Critérios de aceitação
 
