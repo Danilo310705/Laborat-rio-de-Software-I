@@ -13,37 +13,42 @@ tags: [sismat, inteligencia-artificial, riscos, controles]
 
 ## Impactos observados
 
-| Dimensão | Impacto positivo | Contrapartida |
-|---|---|---|
-| produtividade | aceleração de tarefas repetitivas de estruturação e publicação | exige tempo de revisão e correção |
-| cobertura | sugestão de artefatos que não existiam na linha de base | parte do conteúdo permanece proposta |
-| consistência | aplicação de padrões de nomes, metadados e ligações | erros podem se propagar se o padrão inicial estiver errado |
-| rastreabilidade | criação de índices, links e matrizes | os vínculos precisam acompanhar mudanças futuras |
-| comunicação | diagramas e texto mais claros para públicos diferentes | simplificações podem omitir detalhes importantes |
-| qualidade editorial | geração repetível e validação visual do PDF | aparência adequada não garante correção técnica |
-| aprendizagem | exposição a práticas de requisitos, arquitetura e documentação | a equipe deve compreender o material e evitar dependência da ferramenta |
+| Dimensão        | Impacto positivo                                                        | Contrapartida                                                          |
+| --------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| produtividade   | redução do tempo gasto com organização, revisão e padronização          | exige conferência humana antes de incorporar o conteúdo                |
+| consistência    | auxílio na padronização de nomes, casos de uso, regras e mensagens      | um erro inicial pode ser repetido em vários documento                  |
+| cobertura       | identificação de situações e regras que inicialmente não estavam claras | algumas sugestões precisaram ser discutidas e ajustadas pelo grupo     |
+| modelagem       | apoio na identificação de entidades, relacionamentos e fluxos           | o modelo gerado precisava ser comparado com as decisões do projeto     |
+| comunicação     | geração de diagramas, protótipos e textos mais fáceis de compreender    | simplificações visuais podem esconder detalhes importantes             |
+| rastreabilidade | facilidade para relacionar casos de uso, regras, mensagens e interfaces | os vínculos precisam ser atualizados sempre que o projeto for alterado |
+| aprendizagem    | apoio na compreensão de requisitos, modelagem e organização documental  | a equipe precisa compreender o conteúdo e não apenas aceitar sugestões |
 
 ## Matriz de riscos e controles
 
-| Risco | Impacto | Controle adotado | Evidência |
-|---|---|---|---|
-| informação inventada ou incorreta | alto | preservar a fonte, revisar e marcar propostas | `99_Fontes`, frontmatter e questões abertas |
-| alteração silenciosa de significado | alto | comparar com a linha de base e manter IDs estáveis | casos de uso, regras e registro de mudanças |
-| proposta apresentada como fato | alto | usar estados `proposto` e `em-revisao` | metadados e alertas editoriais |
-| contradição entre documentos | médio | wikilinks, índices e matriz de rastreabilidade | páginas de requisitos e qualidade |
-| exposição de informação restrita | alto | limitar entradas e confirmar autorização | política desta página e preservação local |
-| dependência excessiva da IA | médio | exigir compreensão e explicação pela equipe | revisão humana e apresentação acadêmica |
-| viés ou linguagem inadequada | médio | revisão de linguagem e contexto por pessoas | versão final aprovada pela equipe |
-| perda de autoria ou integridade acadêmica | alto | declarar o uso e assumir responsabilidade | [[09_UsoIA/Declaracao de Transparencia]] |
-| falsa sensação de qualidade | médio | separar validação editorial de validação funcional | relatório de layout e limitações registradas |
+| Risco                                   | Impacto | Controle adotado                                                    | Evidência                                                  |
+| --------------------------------------- | ------- | ------------------------------------------------------------------- | ---------------------------------------------------------- |
+| informação incorreta ou inventada       | alto    | Revisão manual de todas as sugestões antes da incorporação          | Revisão dos casos de uso, regras e documentos              |
+| contradição entre documentos            | alto    | Comparação entre casos de uso, regras, mensagens e modelo de dados  | Indices e referências entre os artefatos                   |
+| regra de negócio inadequada             | alto    | Discussão da regra pela equipe antes de sua inclusão                | Regras RN-01 a RN-34 revisadas                             |
+| uso de termos ou nomes diferentes       | médio   | Padronização de nomes e identificação numérica                      | UC, RN, MSG, IMG e entidades padronizados                  |
+| protótipo diferente dos requisitos      | médio   | Pomparação das telas com os casos de uso e regras correspondentes   | Mapa de Interfaces e revisão visual dos protótipos         |
+| dependência excessiva da IA             | médio   | Exigência de compreensão do conteúdo por todos os integrantes       | Revisão e apresentação realizada pela equipe               |
+| aceitação automática de sugestões       | alto    | Possibilidade de modificar ou descartar qualquer resposta da IA     | Decisões finais tomadas pelos integrantes                  |
+| perda de autoria acadêmica              | alto    | Declaração explícita do uso de IA e responsabilidade da equipe      | Grupo `09_UsoIA` e Declaração de Transparência             |
+| falsa impressão de sistema implementado | médio   | Identificação do protótipo como demonstrativo                       | Documentação da etapa IA-006                               |
+| erro propagado entre vários artefatos   | médio   | Revisão de referências após alterações de numeração ou nomenclatura | Correções realizadas nos índices e documentos relacionados |
 
 ## Limitações desta utilização
 
 - não houve acesso ao código-fonte ou ao ambiente executável do SISMAT;
-- a IA não entrevistou usuários nem validou regras com responsáveis do negócio;
-- estados, arquitetura e requisitos adicionais marcados como propostas não representam decisões aprovadas;
-- a inspeção do PDF verifica apresentação e integridade editorial, não o funcionamento do sistema;
-- este registro descreve o uso realizado na documentação e deve ser atualizado se IA for usada no código, nos testes ou em novas etapas.
+- A IA não realizou entrevistas com usuários reais da oficina.
+- As regras de negócio foram definidas a partir das decisões e necessidades levantadas pela equipe, sem validação com uma empresa real.
+- Os protótipos de interface representam uma proposta visual do sistema e não uma implementação definitiva.
+- O protótipo interativo possui finalidade demonstrativa e não utiliza backend, banco de dados ou autenticação real.
+- As sugestões geradas pela IA podem conter erros, interpretações inadequadas ou informações que não correspondam às decisões do projeto.
+- Diagramas e modelos produzidos com apoio da IA representam a documentação definida pela equipe, mas não comprovam a existência de uma implementação funcional.
+- O conteúdo gerado ou revisado com apoio de IA depende de validação humana antes de ser considerado parte oficial do projeto.
+- Este registro deve ser atualizado caso a IA seja utilizada em novas etapas do desenvolvimento.
 
 ## Ações recomendadas antes da avaliação
 

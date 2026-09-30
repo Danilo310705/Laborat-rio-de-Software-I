@@ -32,12 +32,13 @@ Feito para pequenas oficinas mecânicas, o sistema ERP para gestão de oficinas,
 
 ## Resultados esperados
 
-| Resultado                | Indicador proposto                                                                               | Meta                                                                                                                                  |
-| ------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Controle de mercadorias  | Registro de entradas e saídas de mercadorias no sistema                                          | 100% das entradas e saídas de mercadorias registradas no sistema                                                                      |
-| Histórico registrado     | Serviços feitos e mercadorias compradas anteriormente com fácil acesso para consulta             | Tudo que foi feito e finalizado com 100% de acesso para consultar                                                                     |
-| Ordens de Serviço        | Todos os dados reunidos em um só lugar                                                           | Agilizar o processo mantendo a organização e eficiência                                                                               |
-| Melhor gestão financeira | Controle do fluxo de caixa, contas a pagar e receber e calcular lucro real de cada serviço feito | 100% das movimentações financeiras registradas no sistema e pelo menos 95% das contas a pagar acompanhadas e quitadas dentro do prazo |
+| Resultado               | Indicador proposto                                                                   | Meta                                                                               |
+| ----------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| Controle de mercadorias | Registro de entradas e saídas de mercadorias no sistema                              | 100% das entradas e saídas de mercadorias registradas no sistema                   |
+| Histórico registrado    | Serviços feitos e mercadorias compradas anteriormente com fácil acesso para consulta | Tudo que foi feito e finalizado com 100% de acesso para consultar                  |
+| Ordens de Serviço       | Todos os dados reunidos em um só lugar                                               | Agilizar o processo mantendo a organização e eficiência                            |
+| Finalização das O.S.    | Registro de pagamento, desconto e emissão de comprovante                             | Permitir que as Ordens de Serviço sejam finalizadas com suas informações completas |
+| Controle dos serviços   | Serviços e técnicos responsáveis registrados nas Ordens de Serviço                   | Manter os serviços executados vinculados ao atendimento correspondente             |
 
 ## Capacidades
 
