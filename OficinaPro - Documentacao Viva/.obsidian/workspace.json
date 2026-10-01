@@ -1,0 +1,231 @@
+{
+  "main": {
+    "id": "4ce537d342a69fe8",
+    "type": "split",
+    "children": [
+      {
+        "id": "109d8a9f186f9058",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9be4e85be3959087",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02_Requisitos/Casos de Uso/UC-008 - Alertar estoque mínimo.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "UC-008 - Alertar estoque mínimo"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b42fc0790004e11d",
+    "type": "split",
+    "children": [
+      {
+        "id": "17c8bab78b1985d5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b341fb574af5c00b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "56ca1917f3253430",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "031c2ccecec84861",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4ca288d610af3f51",
+    "type": "split",
+    "children": [
+      {
+        "id": "5caa59bfa93cb51f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fb043edfec446f57",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos"
+            }
+          },
+          {
+            "id": "a01862a097a19251",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída"
+            }
+          },
+          {
+            "id": "10040449c1247780",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "d9aff270c10e6332",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "b9c67bff4d6c88ce",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "9be4e85be3959087",
+  "lastOpenFiles": [
+    "02_Requisitos/Casos de Uso/UC-007 - Cadastrar fornecedor.md",
+    "02_Requisitos/Casos de Uso/UC-008 - Alertar estoque mínimo.md",
+    "02_Requisitos/Casos de Uso/UC-009 - Abrir Ordem de Serviço.md",
+    "02_Requisitos/Casos de Uso/UC-010 - Adicionar produtos à O.S..md",
+    "08_Publicacao/LEIA-ME - Geracao do PDF.md",
+    "output/pdf/SISMAT-Projeto-Integrador-v1.0.pdf",
+    "02_Requisitos/Regras de Negocio/RN-31 - Emissao nao altera a O.S..md",
+    "08_Publicacao/Caderno do Projeto Integrador - SISMAT.md",
+    "08_Publicacao/Gerador PDF/LICENCAS.md",
+    "08_Publicacao/Gerador PDF/assets/logo-unipar.png",
+    "08_Publicacao/Gerador PDF/assets/LEIA-ME - Marca UNIPAR.md",
+    "02_Requisitos/Catalogo de Mensagens.md",
+    "Mapa SISMAT.canvas",
+    "90_Templates/Template - ADR.md",
+    "tmp/pdfs/SISMAT-publicacao-compilada.html",
+    "tmp/pdfs",
+    "tmp",
+    "08_Publicacao/Gerador PDF/vendor/paged.polyfill.js",
+    "08_Publicacao/Gerador PDF/vendor/mermaid.min.js",
+    "08_Publicacao/Gerador PDF/vendor/marked.umd.js",
+    "08_Publicacao/Gerador PDF/vendor",
+    "08_Publicacao/Gerador PDF/Gerar PDF.ps1",
+    "02_Requisitos/Casos de Uso/UC-001 - Cadastrar cliente.md",
+    "02_Requisitos/Regras de Negocio/RN-01 - Identificação do cliente.md",
+    "02_Requisitos/Regras de Negocio/RN-02 - CPF ou CNPJ válido e único.md",
+    "02_Requisitos/Regras de Negocio/RN-03 - Contato obrigatório do cliente.md",
+    "02_Requisitos/Regras de Negocio/RN-04 - Usuário autenticado.md",
+    "02_Requisitos/Regras de Negocio/RN-05 - Múltiplos contatos por cliente.md",
+    "02_Requisitos/Regras de Negocio/RN-06 - Endereço vinculado ao cliente.md",
+    "02_Requisitos/Regras de Negocio/RN-07 - Consulta do histórico do cliente.md",
+    "02_Requisitos/Regras de Negocio/RN-08 - Placa única do veículo.md",
+    "02_Requisitos/Regras de Negocio/RN-09 - Veículo vinculado ao cliente.md",
+    "02_Requisitos/Regras de Negocio/RN-10 - Veículo pertencente a outro cliente.md",
+    "02_Requisitos/Regras de Negocio/RN-11 - Preenchimento automático do veículo.md",
+    "02_Requisitos/Regras de Negocio/RN-12 - Código único do produto.md",
+    "02_Requisitos/Regras de Negocio/RN-13 - Campos obrigatórios do produto.md",
+    "02_Requisitos/Regras de Negocio/RN-14 - Valores do produto.md"
+  ]
+}

@@ -1,0 +1,1164 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OficinaPro - Caderno do Projeto Integrador do Sistema ERP para Gestão de Oficinas Mecânicas</title>
+  <script>window.PagedConfig = { auto: false };</script>
+  <style>@font-face {
+  font-family: "Sismat Serif";
+  src: url("file:///C:/Windows/Fonts/cambria.ttc");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sismat Serif";
+  src: url("file:///C:/Windows/Fonts/cambriab.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sismat Sans";
+  src: url("file:///C:/Windows/Fonts/segoeui.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sismat Sans";
+  src: url("file:///C:/Windows/Fonts/segoeuib.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --ink: #1c2933;
+  --muted: #62727e;
+  --navy: #17324d;
+  --blue: #49677f;
+  --teal: #167a78;
+  --teal-soft: #e8f4f2;
+  --paper-soft: #f5f7f8;
+  --line: #ced8df;
+  --gold: #b68a2c;
+  --unipar-red: #ef233c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--ink);
+  background: #ffffff;
+  font-family: "Sismat Serif", Cambria, Georgia, serif;
+  font-size: 10.5pt;
+  line-height: 1.48;
+  hyphens: auto;
+  text-rendering: optimizeLegibility;
+}
+
+@page {
+  size: A4;
+  margin: 24mm 20mm 23mm 27mm;
+
+  @top-left { content: none; }
+  @top-right { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+
+@page cover {
+  margin: 0;
+  counter-reset: page 0;
+
+  @top-left { content: none; }
+  @top-right { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+
+@page title {
+  @top-left { content: none; }
+  @top-right { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+
+@page front {
+  @top-left {
+    content: element(pageHeader);
+    vertical-align: bottom;
+    padding-bottom: 2mm;
+    border-bottom: 0.25mm solid var(--line);
+  }
+
+  @top-right { content: none; }
+
+  @bottom-left {
+    content: "PROJETO INTEGRADOR · DOCUMENTAÇÃO VIVA";
+    color: var(--muted);
+    font-family: "Sismat Sans", Arial, sans-serif;
+    font-size: 6.5pt;
+    letter-spacing: 0.05em;
+  }
+}
+
+@page content {
+  @top-left {
+    content: element(pageHeader);
+    vertical-align: bottom;
+    padding-bottom: 2mm;
+    border-bottom: 0.25mm solid var(--line);
+  }
+
+  @top-right {
+    content: counter(page);
+    color: var(--navy);
+    font-family: "Sismat Sans", Arial, sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    vertical-align: bottom;
+    padding-bottom: 2mm;
+    border-bottom: 0.25mm solid var(--line);
+  }
+
+  @bottom-left {
+    content: "SISMAT · ANÁLISE E DESENVOLVIMENTO DE SISTEMAS";
+    color: var(--muted);
+    font-family: "Sismat Sans", Arial, sans-serif;
+    font-size: 6.5pt;
+    letter-spacing: 0.04em;
+  }
+}
+
+.running-header {
+  position: running(pageHeader);
+  width: 125mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.running-header-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3mm;
+}
+
+.running-header img {
+  display: block;
+  flex: 0 0 8mm;
+  width: 8mm;
+  height: 9.4mm;
+  object-fit: contain;
+}
+
+.running-header-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.65mm;
+}
+
+.running-header-copy strong {
+  display: block;
+  font-size: 6.8pt;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.running-header-copy span {
+  display: block;
+  color: var(--muted);
+  font-size: 5.8pt;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.cover {
+  page: cover;
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 87% 13%, rgba(238, 122, 170, 0.13) 0, rgba(238, 122, 170, 0.13) 23mm, transparent 23.3mm),
+    linear-gradient(145deg, #ffffff 0%, #ffffff 72%, #f1f5f7 72%);
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 14mm;
+  background: linear-gradient(180deg, var(--navy) 0 68%, var(--teal) 68% 100%);
+}
+
+.cover::after {
+  content: "";
+  position: absolute;
+  right: -18mm;
+  bottom: 27mm;
+  width: 70mm;
+  height: 70mm;
+  border: 0.7mm solid rgba(73, 103, 127, 0.18);
+  transform: rotate(45deg);
+}
+
+.cover-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 23mm 23mm 19mm 33mm;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+}
+
+.academic-institution {
+  display: flex;
+  align-items: center;
+  gap: 5mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.unipar-logo {
+  display: block;
+  width: 22mm;
+  height: auto;
+}
+
+.cover-brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2mm;
+}
+
+.academic-institution .institution {
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.academic-institution .course,
+.academic-institution .subject {
+  color: var(--muted);
+  font-size: 7pt;
+  letter-spacing: 0.06em;
+}
+
+.cover-kicker {
+  align-self: flex-start;
+  margin-top: 23mm;
+  padding: 2.2mm 4mm;
+  color: #ffffff;
+  background: var(--teal);
+  border-radius: 1mm;
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.cover-title-group {
+  margin-top: 15mm;
+  max-width: 137mm;
+}
+
+.cover-code {
+  color: var(--blue);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 8.5pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.cover-title-group h1 {
+  margin: 4mm 0 2mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 34pt;
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.cover-rule {
+  width: 30mm;
+  height: 0.9mm;
+  margin: 7mm 0 6mm;
+  background: var(--teal);
+}
+
+.cover-title-group p {
+  margin: 0;
+  color: #3c5264;
+  font-size: 14pt;
+  line-height: 1.34;
+}
+
+.cover-authors {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 9pt;
+  text-transform: uppercase;
+}
+
+.cover-authors span {
+  margin-bottom: 1mm;
+  color: var(--muted);
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.cover-footer {
+  margin-top: 12mm;
+  padding-top: 5mm;
+  border-top: 0.35mm solid var(--line);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: var(--muted);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 8pt;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.version-badge {
+  padding: 2mm 3.5mm;
+  color: var(--navy);
+  background: #ffffff;
+  border: 0.3mm solid var(--line);
+  border-radius: 1mm;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.title-page {
+  page: title;
+  counter-reset: page 1;
+  min-height: 250mm;
+  break-before: page;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title-authors {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.title-main {
+  margin-top: 42mm;
+}
+
+.title-main h1 {
+  margin: 0 0 4mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 25pt;
+  line-height: 1.1;
+}
+
+.title-main p {
+  margin: 0;
+  color: #3c5264;
+  font-size: 13pt;
+  line-height: 1.4;
+}
+
+.academic-nature {
+  width: 88mm;
+  margin: 27mm 0 0 auto;
+  padding-left: 5mm;
+  border-left: 0.9mm solid var(--teal);
+  color: #3f5362;
+  font-size: 9pt;
+  line-height: 1.25;
+  text-align: justify;
+}
+
+.academic-nature p {
+  margin: 0 0 2.5mm;
+}
+
+.title-footer {
+  margin-top: auto;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 9pt;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.front-page {
+  page: front;
+  break-before: page;
+}
+
+.front-page > h1 {
+  margin: 0 0 8mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 22pt;
+  line-height: 1.15;
+}
+
+.lead {
+  max-width: 135mm;
+  margin: -2mm 0 9mm;
+  color: var(--muted);
+  font-size: 11.5pt;
+  line-height: 1.45;
+}
+
+.publication-data {
+  margin: 0;
+  border-top: 0.6mm solid var(--navy);
+}
+
+.publication-data > div {
+  display: grid;
+  grid-template-columns: 40mm 1fr;
+  gap: 7mm;
+  padding: 3mm 0;
+  border-bottom: 0.25mm solid var(--line);
+}
+
+.publication-data dt,
+.front-block h2 {
+  margin: 0;
+  color: var(--muted);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.publication-data dd {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.status-chip {
+  display: inline-block;
+  padding: 0.8mm 2.4mm;
+  color: var(--teal);
+  background: var(--teal-soft);
+  border-radius: 4mm;
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+}
+
+.front-block {
+  margin-top: 7mm;
+}
+
+.front-block h2 {
+  margin-bottom: 2.5mm;
+}
+
+.front-block ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  columns: 2;
+  column-gap: 12mm;
+}
+
+.front-block li {
+  margin-bottom: 1.5mm;
+}
+
+.front-block p {
+  margin: 0;
+}
+
+.edition-note {
+  margin-top: 8mm;
+  padding: 4mm 5mm;
+  background: var(--paper-soft);
+  border-left: 1.2mm solid var(--gold);
+  color: #4d5d68;
+  font-size: 8.8pt;
+}
+
+.toc-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 8.7pt;
+  line-height: 1.14;
+}
+
+.toc-list li {
+  break-inside: avoid;
+}
+
+.toc-list a {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: end;
+  gap: 2mm;
+  color: inherit;
+  text-decoration: none;
+}
+
+.toc-list a::before {
+  content: "";
+  grid-column: 2;
+  border-bottom: 0.25mm dotted #9cabb5;
+  transform: translateY(-1mm);
+}
+
+.toc-list a::after {
+  content: target-counter(attr(href), page);
+  grid-column: 3;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.toc-list a span {
+  grid-column: 1;
+}
+
+.toc-level-1 {
+  margin: 1.6mm 0 0.7mm;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.toc-level-2 {
+  margin: 0.5mm 0 0.5mm 7mm;
+  color: #4b5d69;
+  font-size: 8.2pt;
+}
+
+.figure-list li {
+  margin: 1.4mm 0;
+  color: #435662;
+  font-size: 8.4pt;
+  line-height: 1.2;
+}
+
+.publication-content {
+  page: content;
+}
+
+.source-anchor {
+  display: block;
+  height: 0;
+}
+
+.chapter-heading {
+  break-before: page;
+  margin: 0 0 8mm;
+  padding-bottom: 4mm;
+  border-bottom: 0.6mm solid var(--navy);
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 22pt;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.chapter-heading .heading-number {
+  display: block;
+  margin-bottom: 2.5mm;
+  color: var(--teal);
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.chapter-heading.unnumbered {
+  padding-top: 0;
+}
+
+.section-heading {
+  margin: 8mm 0 4mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 15pt;
+  line-height: 1.22;
+  break-after: avoid;
+}
+
+.section-heading .heading-number {
+  margin-right: 2.5mm;
+  color: var(--teal);
+  font-size: 10pt;
+  letter-spacing: 0.04em;
+}
+
+.publication-content h3 {
+  margin: 7mm 0 3mm;
+  color: #29465d;
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 11.5pt;
+  line-height: 1.25;
+  break-after: avoid;
+}
+
+.publication-content h4,
+.publication-content h5,
+.publication-content h6 {
+  margin: 5mm 0 2.5mm;
+  color: #3f586a;
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 10pt;
+  break-after: avoid;
+}
+
+.publication-content p {
+  margin: 0 0 3.3mm;
+  text-align: justify;
+  orphans: 3;
+  widows: 3;
+}
+
+.publication-content ul,
+.publication-content ol {
+  margin: 2mm 0 4mm;
+  padding-left: 7mm;
+}
+
+.publication-content li {
+  margin-bottom: 1.2mm;
+  padding-left: 0.8mm;
+}
+
+.publication-content li::marker {
+  color: var(--teal);
+  font-weight: 700;
+}
+
+a {
+  color: #245d79;
+  text-decoration-color: rgba(36, 93, 121, 0.35);
+  text-decoration-thickness: 0.2mm;
+  text-underline-offset: 0.5mm;
+}
+
+code {
+  padding: 0.2mm 0.8mm;
+  border-radius: 0.8mm;
+  color: #27455b;
+  background: #edf2f5;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 8.5pt;
+  hyphens: none;
+}
+
+pre {
+  margin: 4mm 0;
+  padding: 4mm;
+  overflow: hidden;
+  background: #f3f6f8;
+  border: 0.25mm solid var(--line);
+  border-left: 1.1mm solid var(--blue);
+  border-radius: 1mm;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  break-inside: avoid;
+}
+
+pre code {
+  padding: 0;
+  background: transparent;
+}
+
+.table-wrap {
+  width: 100%;
+  margin: 4mm 0 6mm;
+  break-inside: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 8.2pt;
+  line-height: 1.28;
+  hyphens: auto;
+}
+
+thead {
+  display: table-header-group;
+}
+
+tr {
+  break-inside: avoid;
+}
+
+th,
+td {
+  padding: 2.3mm 2.5mm;
+  border: 0.25mm solid var(--line);
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+th {
+  color: #ffffff;
+  background: var(--navy);
+  font-size: 7.7pt;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) td {
+  background: #f6f8f9;
+}
+
+table.columns-4 { font-size: 7.7pt; }
+table.columns-5,
+table.columns-6,
+table.columns-7,
+table.columns-8 { font-size: 7.1pt; line-height: 1.2; }
+
+table.columns-5 th,
+table.columns-5 td,
+table.columns-6 th,
+table.columns-6 td,
+table.columns-7 th,
+table.columns-7 td,
+table.columns-8 th,
+table.columns-8 td { padding: 1.8mm; }
+
+blockquote.callout,
+.edition-note {
+  break-inside: avoid;
+}
+
+blockquote.callout {
+  margin: 5mm 0;
+  padding: 4mm 5mm;
+  color: #3d505e;
+  background: #f5f8fa;
+  border: 0;
+  border-left: 1.2mm solid var(--blue);
+}
+
+.callout-title {
+  margin-bottom: 1.5mm;
+  color: var(--navy);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+blockquote.callout-warning {
+  background: #fff9e9;
+  border-left-color: var(--gold);
+}
+
+blockquote.callout-warning .callout-title {
+  color: #815f18;
+}
+
+figure.illustration {
+  width: 100%;
+  margin: 6mm 0 7mm;
+  text-align: center;
+  break-inside: avoid;
+}
+
+figure.illustration img,
+figure.illustration svg {
+  display: block;
+  max-width: 100%;
+  max-height: 174mm;
+  width: auto;
+  height: auto;
+  margin: 2.5mm auto;
+  object-fit: contain;
+}
+
+figure.diagram {
+  padding: 4mm;
+  background: #fbfcfd;
+  border: 0.25mm solid var(--line);
+  border-radius: 1mm;
+}
+
+figure.diagram .mermaid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+figure.diagram svg {
+  max-height: 166mm;
+}
+
+figcaption,
+.figure-source {
+  color: var(--muted);
+  font-family: "Sismat Sans", Arial, sans-serif;
+  font-size: 8pt;
+  line-height: 1.3;
+  text-align: left;
+}
+
+figcaption {
+  margin-bottom: 2mm;
+}
+
+.figure-label {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.figure-source {
+  margin-top: 2mm;
+}
+
+.repeated-reference {
+  padding: 2.5mm 3mm;
+  color: var(--muted);
+  background: var(--paper-soft);
+  border-left: 0.8mm solid var(--line);
+  font-size: 8.5pt;
+}
+
+.pagedjs_pages {
+  background: #ffffff !important;
+}
+
+.pagedjs_page {
+  margin: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+@media screen {
+  body {
+    background: #dce3e7;
+  }
+
+  .pagedjs_pages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12mm;
+    padding: 12mm 0;
+    background: #dce3e7 !important;
+  }
+
+  .pagedjs_page {
+    box-shadow: 0 3mm 12mm rgba(23, 50, 77, 0.18) !important;
+  }
+}
+</style>
+  <script src="file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/08_Publicacao/Gerador%20PDF/vendor/marked.umd.js"></script>
+  <script src="file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/08_Publicacao/Gerador%20PDF/vendor/mermaid.min.js"></script>
+  <script src="file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/08_Publicacao/Gerador%20PDF/vendor/paged.polyfill.js"></script>
+</head>
+<body>
+  <section class="cover">
+    <div class="cover-content">
+      <header class="academic-institution">
+        <img class="unipar-logo" src="file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/08_Publicacao/Gerador%20PDF/assets/logo-unipar.png" alt="Universidade Paranaense - UNIPAR">
+        <div class="cover-brand-copy">
+          <div class="institution">Universidade Paranaense - UNIPAR</div>
+          <div class="course">Análise e Desenvolvimento de Sistemas</div>
+          <div class="subject">Laboratório de Software</div>
+        </div>
+      </header>
+      <div class="cover-kicker">Projeto Integrador · DOCUMENTAÇÃO VIVA</div>
+      <div class="cover-title-group">
+        <div class="cover-code">SISTEMA DE REQUISIÇÃO DE MATERIAIS</div>
+        <h1>OficinaPro</h1>
+        <div class="cover-rule"></div>
+        <p>Caderno do Projeto Integrador do Sistema ERP para Gestão de Oficinas Mecânicas</p>
+      </div>
+      <div class="cover-authors">
+        <span>EQUIPE</span>
+        <strong>Danilo Sanches - 60004975</strong><strong>Isabella Candido - 60004968</strong>
+      </div>
+      <footer class="cover-footer">
+        <div><strong>Campus Toledo</strong><br>Toledo - PR · 2026</div>
+        <div class="version-badge">VERSÃO 1.0</div>
+      </footer>
+    </div>
+  </section>
+
+  <section class="title-page">
+    <header class="running-header">
+      <div class="running-header-inner">
+        <img src="file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/08_Publicacao/Gerador%20PDF/assets/logo-unipar.png" alt="UNIPAR">
+        <div class="running-header-copy">
+          <strong>Universidade Paranaense - UNIPAR</strong>
+          <span>Análise e Desenvolvimento de Sistemas · Laboratório de Software</span>
+        </div>
+      </div>
+    </header>
+    <div class="title-authors">
+      <strong>Danilo Sanches - 60004975</strong><strong>Isabella Candido - 60004968</strong>
+    </div>
+    <div class="title-main">
+      <h1>OficinaPro</h1>
+      <p>Caderno do Projeto Integrador do Sistema ERP para Gestão de Oficinas Mecânicas</p>
+    </div>
+    <div class="academic-nature">
+      <p>Projeto Integrador apresentado às disciplinas do curso como requisito parcial de avaliação interdisciplinar da Universidade Paranaense - UNIPAR, Campus Toledo.</p>
+      <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
+      <p><strong>Disciplina:</strong> Laboratório de Software</p>
+      <p><strong>Modalidade:</strong> Projeto Integrador</p>
+      <p><strong>Integração curricular:</strong> Engenharia de Requisitos; Análise de Projetos de Software; Design Front End; Desenvolvimento Back End; Laboratório de Software - Projeto</p>
+    </div>
+    <footer class="title-footer">
+      <div>Toledo - PR</div>
+      <div>2026</div>
+    </footer>
+  </section>
+
+  <section class="front-page document-control">
+    <h1>Ficha da publicação</h1>
+    <p class="lead">Esta edição congela uma visão verificável da documentação viva mantida no Obsidian.</p>
+    <dl class="publication-data">
+      <div><dt>Projeto</dt><dd>OficinaPro - Sistema de Requisição de Materiais</dd></div>
+      <div><dt>Entrega</dt><dd>Projeto Integrador</dd></div>
+      <div><dt>Instituição</dt><dd>Universidade Paranaense - UNIPAR</dd></div>
+      <div><dt>Unidade</dt><dd>Campus Toledo</dd></div>
+      <div><dt>Curso</dt><dd>Análise e Desenvolvimento de Sistemas</dd></div>
+      <div><dt>Disciplina</dt><dd>Laboratório de Software</dd></div>
+      <div><dt>Versão</dt><dd>1.0</dd></div>
+      <div><dt>Data da edição</dt><dd>2026-10-01</dd></div>
+      <div><dt>Estado</dt><dd><span class="status-chip">Em revisão</span></dd></div>
+    </dl>
+    <div class="front-block">
+      <h2>Autores</h2>
+      <ul><li>Danilo Sanches - 60004975</li><li>Isabella Candido - 60004968</li></ul>
+    </div>
+    <div class="front-block">
+      <h2>Integração curricular</h2>
+      <p>Engenharia de Requisitos · Análise de Projetos de Software · Design Front End · Desenvolvimento Back End · Laboratório de Software - Projeto</p>
+    </div>
+    <aside class="edition-note"><strong>Nota editorial.</strong> Itens marcados como propostos dependem de validação. A implementação não foi confrontada com código-fonte neste workspace.</aside>
+  </section>
+
+  <section class="front-page toc-page">
+    <h1>Sumário</h1>
+    <nav id="toc"></nav>
+  </section>
+
+  <section class="front-page figures-page" id="figures-page">
+    <h1>Lista de figuras</h1>
+    <nav id="list-of-figures"></nav>
+  </section>
+
+  <article id="publication-content" class="publication-content"></article>
+
+  <script>
+  (async () => {
+    try {
+      const source = "# Apresentação\n\nEste caderno consolida a documentação viva do **OficinaPro**, um Sistema ERP para Gestão de Oficinas Mecânicas, desenvolvido para acompanhamento e avaliação interdisciplinar do Projeto Integrador. O conteúdo técnico é mantido em páginas independentes no Obsidian e reunido neste caderno por meio de transclusões, evitando duplicação de conteúdo e facilitando a atualização dos artefatos durante a evolução do projeto.\n\n\n## Dados da edição\n\n| Campo           | Valor                                                                                                                                    |\n| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |\n| Projeto         | OficinaPro - Sistema ERP para Gestão de Oficinas Mecânicas                                                                               |\n| Tipo de entrega | Caderno do Projeto Integrador                                                                                                            |\n| Versão          | 1.0                                                                                                                                      |\n| Data            | 1/10/2026                                                                                                                                |\n| Unidade         | UNIPAR - Campus Toledo                                                                                                                   |\n| Disciplinas     | Engenharia de Requisitos; Análise de Projetos de Software; Design Front End; Desenvolvimento Back End; Laboratório de Software - Projeto |\n| Estado          | Em revisão                                                                                                                               |\n\n# Integração curricular\n\n> [!warning] Anexo não localizado: 01_Produto/Matriz de Integracao Curricular\n\n# Visão, escopo e stakeholders\n\n<span id=\"doc-01-produto-visao-do-produto\" class=\"source-anchor\"></span>\n## Visão do Produto\n\n### Problema\n\nMuitas empresas ainda controlam os clientes, serviços, ordens de serviço, peças e estoque de forma física e manual, ou espalhando tudo em várias plataformas. Isso dificulta e atrasa os processos e a organização das informações, fica mais complicado acompanhar os serviços realizado e o controle de materiais utilizados, tal como a gestão do negócio. \n### Visão\n\nFeito para pequenas oficinas mecânicas, o sistema ERP para gestão de oficinas, facilita na hora de organizar seus atendimentos e controlar suas operações, que centraliza clientes, ordens de serviço, serviços prestados e controle de estoque em um único ambiente. Diferente do controle manual que consome tempo e atrasa os processos, o sistema ERP permite gerenciar cada etapa desde o cadastro do cliente, até o momento em que o veículo entra na oficina faz a aplicação das peças e entrega as chaves ao cliente.\n### Objetivos\n\n- Concentrar as informações da oficina em um único sistema.\n- Agilizar o cadastro e a consulta de clientes.\n- Organizar e acompanhar as ordens de serviço.\n- Registrar os serviços realizados em cada veículo.\n- Controlar os materiais e peças disponíveis em estoque.\n- Reduzir erros causados por controles manuais.\n- Facilitar a consulta do histórico de atendimentos\n\n### Resultados esperados\n\n| Resultado               | Indicador proposto                                                                   | Meta                                                                               |\n| ----------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |\n| Controle de mercadorias | Registro de entradas e saídas de mercadorias no sistema                              | 100% das entradas e saídas de mercadorias registradas no sistema                   |\n| Histórico registrado    | Serviços feitos e mercadorias compradas anteriormente com fácil acesso para consulta | Tudo que foi feito e finalizado com 100% de acesso para consultar                  |\n| Ordens de Serviço       | Todos os dados reunidos em um só lugar                                               | Agilizar o processo mantendo a organização e eficiência                            |\n| Finalização das O.S.    | Registro de pagamento, desconto e emissão de comprovante                             | Permitir que as Ordens de Serviço sejam finalizadas com suas informações completas |\n| Controle dos serviços   | Serviços e técnicos responsáveis registrados nas Ordens de Serviço                   | Manter os serviços executados vinculados ao atendimento correspondente             |\n\n### Capacidades\n\n- <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">Solicitar materiais</a>\n- <a href=\"#doc-02-requisitos-casos-de-uso-uc-002-consultar-clientes\">Acompanhar requisições</a>\n- <a href=\"#doc-02-requisitos-casos-de-uso-uc-003-cadastrar-tecnico\">Analisar pedidos</a>\n- <a href=\"#doc-02-requisitos-casos-de-uso-uc-004-cadastrar-servico\">Entregar materiais</a>\n- <a href=\"#doc-02-requisitos-casos-de-uso-uc-005-cadastrar-produto\">Gerenciar produtos</a>\n- <a href=\"#doc-02-requisitos-casos-de-uso-uc-006-registrar-entrada-de-mercadoria\">Gerar relatórios</a>\n- <a href=\"#doc-02-requisitos-casos-de-uso-uc-007-cadastrar-fornecedor\">Consultar histórico</a>\n- <a href=\"#doc-02-requisitos-casos-de-uso-uc-008-alertar-estoque-minimo\">Gerenciar usuários</a>\n\n### Restrições conhecidas\n\n- circulação externa proibida;\n- exportação de relatório;\n- acesso controlado por perfil;\n- [ ] comportamento ainda não confrontado com có[]()digo ou ambiente executável.\n\n\n<span id=\"doc-01-produto-escopo-e-contexto\" class=\"source-anchor\"></span>\n## Escopo e Contexto\n\n### Dentro do escopo atual\n\n- autenticação de usuários para acesso às funcionalidades internas;\n- cadastro e consulta de clientes PF/PJ, incluindo contatos, endereço e observações;\n- cadastro de técnicos;\n- cadastro de serviços, com valor padrão e tempo estimado de execução;\n- cadastro de produtos, incluindo preços e estoque mínimo;\n- cadastro de fornecedores e vínculo com produtos fornecidos;\n- registro de entrada de mercadorias e atualização do estoque;\n- alerta quando a quantidade de um produto atingir ou ficar abaixo do estoque mínimo;\n- abertura de Ordem de Serviço vinculada a cliente e veículo;\n- cadastro automático de veículo durante a abertura da O.S. quando a placa ainda não estiver cadastrada;\n- adição, edição e remoção de produtos da O.S., com atualização correspondente do estoque;\n- adição, edição e remoção de serviços da O.S., permitindo definir o valor cobrado e o técnico responsável;\n- registro e alteração do diagnóstico técnico da O.S.;\n- atualização do status da O.S.;\n- cancelamento de Ordens de Serviço;\n- finalização da O.S. com registro da forma de pagamento;\n- aplicação opcional de desconto percentual ou em valor na finalização da O.S.;\n- emissão e impressão de comprovante da O.S.;\n- geração do comprovante em PDF;\n- consulta de Ordens de Serviço por número da O.S., cliente, placa do veículo ou status.\n\n### Fora do escopo ou não evidenciado\n\n- agendamento de serviços e controle de agenda da oficina;\n- emissão de nota fiscal;\n- integração com sistemas fiscais ou contábeis;\n- contas a pagar e contas a receber;\n- parcelamento e processamento de pagamentos pelo próprio sistema;\n- integração direta com máquinas de cartão, PIX ou instituições financeiras;\n- geração de pedidos de compra para fornecedores;\n- controle de múltiplas filiais ou estoques separados;\n- inventário físico de estoque;\n- notificações por e-mail, SMS;\n- integração com sistemas externos;\n- relatórios gerenciais, financeiros ou de estoque;\n- acesso direto ao sistema por clientes ou técnicos.\n\nOs itens acima não devem ser interpretados como inexistentes na implementação; apenas não aparecem na fonte analisada.\n\n### Contexto do sistema\n```mermaid\nflowchart LR\n    U[Usuário] -->|opera e gerencia| S[Sistema de Gerenciamento de Oficina]\n\n    S -->|persiste dados| DB[(Base de Dados)]\n    S -->|gera| C[Comprovante da O.S.]\n    S -->|gera| PDF[Comprovante PDF]\n\n    CLI[Cliente] -. fornece dados e informações .-> U\n    TEC[Técnico] -. fornece informações técnicas .-> U\n    FOR[Fornecedor] -. fornece mercadorias .-> U\n```\n\n### Premissas\n\n- o acesso às funcionalidades internas exige usuário autenticado;\n- clientes podem ser Pessoa Física ou Pessoa Jurídica;\n- cada cliente pode possuir um ou mais contatos;\n- veículos são vinculados aos clientes e identificados pela placa;\n- um veículo ainda não cadastrado pode ser registrado durante a abertura de uma O.S.;\n- produtos possuem código único, preços, quantidade em estoque e estoque mínimo;\n- entradas de mercadoria aumentam a quantidade disponível em estoque;\n- produtos utilizados em uma O.S. alteram a quantidade disponível em estoque;\n- serviços possuem valor padrão e tempo estimado de execução;\n- o valor de um serviço pode ser alterado especificamente para uma O.S. sem modificar seu valor padrão;\n- técnicos recém-cadastrados iniciam com situação `Ativo`;\n- somente técnicos ativos podem ser selecionados como responsáveis por serviços;\n- toda O.S. inicia com status `Aberta`;\n- uma O.S. pode seguir de `Aberta` para `Em andamento` ou ser `Cancelada`;\n- o status `Concluída` é definido somente durante a finalização da O.S.;\n- a finalização registra a forma de pagamento e pode incluir desconto;\n- a emissão de comprovante não altera os dados registrados na O.S.\n\n\n<span id=\"doc-01-produto-atores-e-stakeholders\" class=\"source-anchor\"></span>\n## Atores e Stakeholders\n\n### Atores primários\n\n| Ator          | Responsabilidade                                                                                                        | Casos de uso                                                                                                                              |\n| ------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |\n| Usuário       | Operar o sistema da oficina, realizando cadastros, consultas, controle de estoque e gerenciamento das Ordens de Serviço | <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">UC-001</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-002-consultar-clientes\">UC-002</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-007-cadastrar-fornecedor\">UC-007</a>                |\n\n\n### Stakeholders \n\n| Stakeholder                    | Interesse                                                                                                                | Participação esperada                                                              |\n| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |\n| Proprietário/Gestor da oficina | Manter clientes, estoque, serviços e Ordens de Serviço organizados e acompanhar corretamente os atendimentos realizados. | Definir e validar as regras e necessidades do sistema.                             |\n| Cliente                        | Ter seu veículo e atendimento registrados corretamente, além de receber informações e comprovantes relacionados à O.S.   | Fornecer dados pessoais, dados do veículo e informações sobre o problema relatado. |\n| Técnico                        | Ter os serviços sob sua responsabilidade registrados corretamente nas Ordens de Serviço.                                 | Executar os serviços e fornecer informações técnicas relacionadas ao atendimento.  |\n\n\n\n\n<span id=\"doc-01-produto-glossario\" class=\"source-anchor\"></span>\n## Glossário\n\n| Termo                         | Definição                                                 | Observação                                                         |\n| ----------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------ |\n| SISMAT                        | Sistema de Requisição de Materiais                        | Nome do produto                                                    |\n| EV                            | Evento do usuário/ator ou ação externa                    | Coluna usada nos fluxos                                            |\n| RS                            | Resposta do sistema                                       | Coluna usada nos fluxos                                            |\n| RN                            | Regra de negócio                                          | Ex.: RN-01                                                         |\n| RF                            | Requisito funcional                                       | Define o que o sistema deve fazer                                  |\n| RNF                           | Requisito não funcional                                   | Define critérios de qualidade, desempenho, segurança e usabilidade |\n| ADR                           | Registro de decisão de arquitetura                        | Registra como a arquitetura vai resolver                           |\n\n> [!tip] Convenção sugerida\n> Use “produto” em cadastro e dados; use “material” na linguagem do pedido. Documente qualquer exceção no contexto da tela.\n\n> [!done] O que documentar\n> **Termos com Duplo Sentido (Ambiguidade):** Palavras que possuem um significado no dia a dia, mas representam um conceito técnico ou de negócio específico no sistema. \n> - _Exemplo:_ **Caixa** (não é o operador, nem a embalagem, é o fluxo financeiro fechado).\n> \n\n> [!error] O que não documentar\n> Termos universais que qualquer usuário já conhece (ex: Botão, Login, Link, Site). Foque no que é exclusivo do negócio da empresa!\n\n\n\n\n# Casos de uso\n\n<span id=\"doc-02-requisitos-indice-de-casos-de-uso\" class=\"source-anchor\"></span>\n## Índice de Casos de Uso\n\n| ID     | Caso de uso                                                                       | Ator principal | Estado documental |\n| ------ | --------------------------------------------------------------------------------- | -------------- | ----------------- |\n| UC-001 | <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">Cadastrar cliente</a>                                 | Usuário        | em revisão        |\n| UC-002 | <a href=\"#doc-02-requisitos-casos-de-uso-uc-002-consultar-clientes\">Consultar clientes</a>                               | Usuário        | em revisão        |\n| UC-003 | <a href=\"#doc-02-requisitos-casos-de-uso-uc-003-cadastrar-tecnico\">Cadastrar Técnico</a>                                 | Usuário        | em revisão        |\n| UC-004 | <a href=\"#doc-02-requisitos-casos-de-uso-uc-004-cadastrar-servico\">Cadastrar Serviço</a>                                 | Usuário        | em revisão        |\n| UC-005 | <a href=\"#doc-02-requisitos-casos-de-uso-uc-005-cadastrar-produto\">Cadastrar produto</a>                                 | Usuário        | em revisão        |\n| UC-006 | <a href=\"#doc-02-requisitos-casos-de-uso-uc-006-registrar-entrada-de-mercadoria\">Registrar entrada de mercadoria</a>     | Usuário        | em revisão        |\n| UC-007 | <a href=\"#doc-02-requisitos-casos-de-uso-uc-007-cadastrar-fornecedor\">Cadastrar forneced</a>                             | Usuário        | em revisão        |\n| UC-008 | <a href=\"#doc-02-requisitos-casos-de-uso-uc-008-alertar-estoque-minimo\">Alertar estoque mínimo</a>                       | Usuário        | em revisão        |\n| UC-009 | <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">Abrir Ordem de Serviço</a>                       | Usuário        | em revisão        |\n| UC-010 | Adicionar produtos à O.S.                 | Usuário        | em revisão        |\n| UC-011 | Adicionar serviço à O.S.                   | Usuário        | em revisão        |\n| UC-012 | Registrar diagnóstico O.S                 | Usuário        | em revisão        |\n| UC-013 | Atualizar status da O.S.                   | Usuário        | em revisão        |\n| UC-014 | Finalizar O.S.                                       | Usuário        | em revisão        |\n| UC-015 | Emitir comprovante da O.S.               | Usuário        | em revisão        |\n| UC-016 | Consultar O.S.                                       | Usuário        | em revisão        |\n| UC-017 | Editar ou Remover produto da O.S. | Usuário        | em revisão        |\n| UC-018 | Editar ou Remover serviço da O.S. | Usuário        | em revisão        |\n\n\n\n### Mapa de atores e capacidades\n\n```mermaid\nflowchart LR\n\n    U([Usuário])\n\n    subgraph SISTEMA[\"Sistema de Gerenciamento de Oficina\"]\n\n        subgraph CLIENTES[\"Clientes\"]\n            UC1([UC-001<br/>Cadastrar Cliente])\n            UC2([UC-002<br/>Consultar Clientes])\n        end\n\n        subgraph CADASTROS[\"Cadastros e Estoque\"]\n            UC3([UC-003<br/>Cadastrar Técnico])\n            UC4([UC-004<br/>Cadastrar Serviço])\n            UC5([UC-005<br/>Cadastrar Produto])\n            UC6([UC-006<br/>Registrar Entrada<br/>de Mercadoria])\n            UC7([UC-007<br/>Cadastrar Fornecedor])\n            UC8([UC-008<br/>Alertar Estoque Mínimo])\n        end\n\n        subgraph OS[\"Ordens de Serviço\"]\n            UC9([UC-009<br/>Abrir O.S.])\n            UC10([UC-010<br/>Adicionar Produtos<br/>à O.S.])\n            UC11([UC-011<br/>Adicionar Serviço<br/>à O.S.])\n            UC12([UC-012<br/>Registrar Diagnóstico])\n            UC13([UC-013<br/>Atualizar Status<br/>da O.S.])\n            UC14([UC-014<br/>Finalizar O.S.])\n            UC15([UC-015<br/>Emitir Comprovante<br/>da O.S.])\n            UC16([UC-016<br/>Consultar O.S.])\n            UC17([UC-017<br/>Editar ou Remover<br/>Produto da O.S.])\n            UC18([UC-018<br/>Editar ou Remover<br/>Serviço da O.S.])\n        end\n    end\n\n    U --- UC1\n    U --- UC2\n    U --- UC3\n    U --- UC4\n    U --- UC5\n    U --- UC6\n    U --- UC7\n    U --- UC9\n    U --- UC10\n    U --- UC11\n    U --- UC12\n    U --- UC13\n    U --- UC14\n    U --- UC15\n    U --- UC16\n    U --- UC17\n    U --- UC18\n\n    UC10 -. \"aciona verificação\" .-> UC8\n    UC17 -. \"aciona verificação\" .-> UC8\n```\n\n### Convenção dos fluxos\n\n- **EV**: ação do ator ou outro evento externo.\n- **RS**: resposta observável do sistema.\n- Alternativas mantêm o objetivo do fluxo principal; exceções impedem ou interrompem sua conclusão.\n\n\n\n<span id=\"doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\" class=\"source-anchor\"></span>\n## UC-001 - Cadastrar cliente\n\n### Objetivo\n\nCadastrar PF/PJ, dados de identificação, contato e endereço\n\n| Campo           | Valor                                                                       |\n| --------------- | --------------------------------------------------------------------------- |\n| Ator principal  | <a href=\"#doc-01-produto-atores-e-stakeholders\">Usuário</a>              |\n| Gatilho         | Usuário escolhe “Cadastrar Novo Cliente”                                    |\n| Pré-condições   | Usuário autenticado conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-04-usuario-autenticado\">RN-04</a>         |\n| Sucesso         | Cliente é registrado                                                        |\n| Garantia mínima | Em caso de falha, nenhum cadastro incompleto do cliente deve ser registrado |\n\n### Fluxo principal\n\n| Passo | Tipo | Comportamento                                                                                                                                                                               |\n| ----: | :--: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n|     1 |  EV  | Usuário acessa o sistema.                                                                                                                                                                   |\n|     2 |  EV  | Usuário seleciona “Cadastrar Novo Cliente”.                                                                                                                                                 |\n|     3 |  RS  | Sistema exibe a tela de cadastro de cliente.                                                                                                                                                |\n|     4 |  EV  | Usuário seleciona o tipo de cliente conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-01-identificacao-do-cliente\">RN-01</a>.                                                                                                   |\n|     5 |  RS  | Sistema exibe os campos correspondentes ao tipo de cliente selecionado.                                                                                                                     |\n|     6 |  EV  | Usuário preenche os dados de identificação, endereço e pelo menos um contato conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-03-contato-obrigatorio-do-cliente\">RN-03</a> e <a href=\"#doc-02-requisitos-regras-de-negocio-rn-06-endereco-vinculado-ao-cliente\">RN-06</a>. |\n|     7 |  EV  | Usuário confirma o cadastro.                                                                                                                                                                |\n|     8 |  RS  | Sistema valida o CPF/CNPJ conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-02-cpf-ou-cnpj-valido-e-unico\">RN-02</a> e verifica os dados obrigatórios conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-03-contato-obrigatorio-do-cliente\">RN-03</a>.               |\n|     9 |  RS  | Sistema registra o cliente, endereço e contato conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-05-multiplos-contatos-por-cliente\">RN-05</a> e <a href=\"#doc-02-requisitos-regras-de-negocio-rn-06-endereco-vinculado-ao-cliente\">RN-06</a>.                               |\n|    10 |  RS  | Sistema exibe <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-01</a>                                                                                                                        |\n\n### Alternativa A - Cadastrar Pessoa Física\n\n1. No passo 4, o usuário seleciona “Pessoa Física”.\n2. O sistema exibe os campos específicos para cadastro de pessoa física.\n3. O fluxo continua no passo 5.\n\n### Alternativa B - Cadastrar Pessoa Jurídica\n\n1. No passo 4, o usuário seleciona “Pessoa Jurídica”.\n2. O sistema exibe os campos específicos para cadastro de pessoa jurídica.\n3. O fluxo continua no passo 5.\n\n### Alternativa C - Adicionar múltiplos contatos\n\n1. No passo 6, o usuário seleciona “Adicionar outro contato”.\n2. O sistema disponibiliza novos campos para preenchimento do contato.\n3. O usuário informa os dados do novo contato.\n4. O usuário pode repetir o processo para adicionar outros contatos.\n5. O fluxo retorna ao passo 7.\n\n### Exceções\n\n| Origem | Condição                                                                                                           | Resposta                                                                                   |\n| ------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |\n| 8a     | CPF informado possui quantidade de dígitos diferente de 11 conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-02-cpf-ou-cnpj-valido-e-unico\">RN-02</a>  | Exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-02</a> e retornar ao preenchimento. |\n| 8b     | CNPJ informado possui quantidade de dígitos diferente de 14 conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-02-cpf-ou-cnpj-valido-e-unico\">RN-02</a> | Exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-03</a> e retornar ao preenchimento. |\n| 8c     | CPF/CNPJ já cadastrado conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-02-cpf-ou-cnpj-valido-e-unico\">RN-02</a>                                      | Exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-04</a> e retornar ao preenchimento.             |\n| 8d     | Campo obrigatório não preenchido                                                                                   | Exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-22</a> e solicitar seu preenchimento.             |\n\n\n### Dados e interfaces\n\n- Entidades: <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Usuario</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Cliente</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Endereço</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Contato</a>.\n- Protótipos da fonte: <a href=\"#doc-06-interfaces-mapa-de-interfaces\">IMG-01</a>.\n\n### Critérios de aceitação\n\nVeja <a href=\"#doc-05-qualidade-cenarios-de-aceitacao\">CA-001</a>, <a href=\"#doc-05-qualidade-cenarios-de-aceitacao\">CA-002</a> e <a href=\"#doc-05-qualidade-cenarios-de-aceitacao\">CA-003</a>.\n\n### Pontos a decidir\n\n- <a href=\"#doc-05-qualidade-riscos-e-questoes-em-aberto\">QST-001</a>: validar disponibilidade não impede concorrência entre requisições.\n- Definir se produtos sem saldo aparecem na lista ou aparecem desabilitados.\n\n\n<span id=\"doc-02-requisitos-casos-de-uso-uc-002-consultar-clientes\" class=\"source-anchor\"></span>\n## UC-002 - Consultar clientes\n\n### Objetivo\n\nPermitir que o usuário busque um cliente pelo nome, telefone ou CPF/CNPJ.\n\n| Campo          | Valor                                                                                               |\n| -------------- | --------------------------------------------------------------------------------------------------- |\n| Ator principal | <a href=\"#doc-01-produto-atores-e-stakeholders\">Usuário</a>                                      |\n| Gatilho        | Usuário acessa “Consultar cliente”                                                                  |\n| Pré-condições  | Usuário autenticado conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-04-usuario-autenticado\">RN-04</a> |\n| Sucesso        | Sistema exibe o cliente ou os clientes correspondentes aos dados informados na busca                |\n\n### Fluxo principal\n\n| Passo | Tipo | Comportamento                                                            |\n| ----: | :--: | ------------------------------------------------------------------------ |\n|     1 |  EV  | Usuário acessa “Consultar cliente”.                                      |\n|     2 |  RS  | Sistema exibe o campo de busca.                                          |\n|     3 |  EV  | Usuário informa o nome, telefone ou CPF/CNPJ do cliente.                 |\n|     4 |  RS  | Sistema lista os clientes correspondentes aos dados informados na busca. |\n|     5 |  EV  | Usuário seleciona um Cliente.                                            |\n|     6 |  RS  | Sistema exibe seu detalhes.                                              |\n\n### Alternativa \n\nNão se aplica.\n\n### Exceções\n\n- 4a - Se não houver clientes, exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-05</a>.\n\n### Dados e interfaces\n\n- Entidades: <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Usuario</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Cliente</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Endereço</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Contato</a>.\n- Protótipo: <a href=\"#doc-06-interfaces-mapa-de-interfaces\">IMG-02</a>.\n\n### Critério de aceitação\n\nVeja <a href=\"#doc-05-qualidade-cenarios-de-aceitacao\">CA-004</a>.\n\n\n<span id=\"doc-02-requisitos-casos-de-uso-uc-003-cadastrar-tecnico\" class=\"source-anchor\"></span>\n## UC-003 - Cadastrar Técnico\n\n### Objetivo\n\nPermitir que o usuário cadastre os técnicos responsáveis pela execução dos serviços nas Ordens de Serviço.\n\n| Campo           | Valor                                                                                            |\n| --------------- | ------------------------------------------------------------------------------------------------ |\n| Ator principal  | <a href=\"#doc-01-produto-atores-e-stakeholders\">Usuário</a>                                   |\n| Gatilho         | Usuário seleciona “Cadastrar Novo Técnico”                                                       |\n| Pré-condições   | Usuário autenticado no sistema conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-04-usuario-autenticado\">RN-04</a>                   |\n| Sucesso         | Técnico cadastrado e disponível para seleção nas O.S. conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-33-tecnico-ativo\">RN-33</a>. |\n| Garantia minima | Em caso de falha, nenhum cadastro incompleto do técnico deve ser registrado                      |\n\n### Fluxo principal\n\n| Passo | Tipo | Comportamento                                                                    |\n| ----: | :--: | -------------------------------------------------------------------------------- |\n|     1 |  EV  | Usuário acessa o sistema.                                                        |\n|     2 |  EV  | Usuário seleciona “Cadastrar Novo Técnico”.                                      |\n|     3 |  RS  | Sistema exibe a tela de cadastro de técnico.                                     |\n|     4 |  EV  | Usuário preenche os dados do técnico.                                            |\n|     5 |  EV  | Usuário confirma o cadastro.                                                     |\n|     6 |  RS  | Sistema valida os dados informados.                                              |\n|     7 |  RS  | Sistema registra o técnico como ativo conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-33-tecnico-ativo\">RN-33</a>. |\n|     8 |  RS  | Sistema informa que o técnico foi cadastrado com sucesso.                        |\n\n\n### Alternativa \n\nNão se aplica.\n\n\n### Exceções \n\n- 6a - Campo obrigatório não preenchido: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-22</a> e solicitar o preenchimento.\n- 6b - Dados inválidos: informar quais dados são inválidos e permitir a correção.\n- 7a - Falha ao cadastrar técnico: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-08</a> e não realizar gravação parcial.\n### Dados e interfaces\n\n- Entidades: <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Usuario</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Técnico</a>.\n- Protótipo: <a href=\"#doc-06-interfaces-mapa-de-interfaces\">IMG-03</a>.\n\n### Critério de aceitação\n\nVeja <a href=\"#doc-05-qualidade-cenarios-de-aceitacao\">CA-005</a>.\n\n### Ponto a decidir\n\nO PDF não explicita se a aprovação reserva estoque. Veja <a href=\"#doc-04-arquitetura-decisoes-adr-001-momento-da-reserva-e-baixa-de-estoque\">ADR-001</a>.\n\n\n<span id=\"doc-02-requisitos-casos-de-uso-uc-004-cadastrar-servico\" class=\"source-anchor\"></span>\n## UC-004 - Cadastrar Serviço\n\n### Objetivo\n\nCadastrar serviços.\n\n| Campo           | Valor                                                                                               |\n| --------------- | --------------------------------------------------------------------------------------------------- |\n| Ator principal  | <a href=\"#doc-01-produto-atores-e-stakeholders\">Usuário</a>                                      |\n| Gatilho         | Usuário seleciona “Cadastrar Novo Serviço”                                                          |\n| Pré-condições   | Usuário autenticado conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-04-usuario-autenticado\">RN-04</a> |\n| Sucesso         | Sistema registra serviço                                                                            |\n| Garantia mínima | Em caso de falha, nenhum cadastro incompleto de serviço deve ser registrado                         |\n\n\n### Fluxo principal\n\n| Passo | Tipo | Comportamento                                                                                                                                                                                     |\n| ----: | :--: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n|     1 |  EV  | Usuário acessa o sistema.                                                                                                                                                                         |\n|     2 |  EV  | Usuário seleciona “Cadastrar Novo Serviço”.                                                                                                                                                       |\n|     3 |  RS  | Sistema exibe a tela de cadastro de serviço.                                                                                                                                                      |\n|     4 |  EV  | Usuário preenche a descrição do serviço, o valor padrão conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-20-valor-padrao-do-servico\">RN-20</a> e o tempo estimado de execução conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-32-tempo-estimado-do-servico\">RN-32</a>. |\n|     5 |  EV  | Usuário confirma o cadastro.                                                                                                                                                                      |\n|     6 |  RS  | Sistema valida o valor padrão conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-20-valor-padrao-do-servico\">RN-20</a> e o tempo estimado de execução conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-32-tempo-estimado-do-servico\">RN-32</a>.                           |\n|     7 |  RS  | Sistema grava o serviço                                                                                                                                                                           |\n|     8 |  RS  | Sistema exibe <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-01</a>                                                                                                                              |\n\n\n### Alternativa \n\nNão se aplica.\n\n### Exceções\n\n- 6a - Campo obrigatório não informado: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-22</a> e retornar ao preenchimento.\n- 6b - Valor padrão inválido: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-07</a> e permitir a correção conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-20-valor-padrao-do-servico\">RN-20</a>.\n- 6c - Tempo estimado inválido: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-20</a> conforme  <a href=\"#doc-02-requisitos-regras-de-negocio-rn-32-tempo-estimado-do-servico\">RN-32</a> e permitir a correção.\n- 7a - Falha ao cadastrar o serviço: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-08</a> e encerrar sem gravação.\n\n\n### Dados e interfaces\n\n- Entidades: <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Usuario</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Serviço</a>.\n- Protótipo: <a href=\"#doc-06-interfaces-mapa-de-interfaces\">IMG-04</a>.\n- Sequência: <a href=\"#doc-04-arquitetura-diagramas-de-sequencia\">Entregar material</a>.\n\n### Critérios de aceitação\n\nVeja <a href=\"#doc-05-qualidade-cenarios-de-aceitacao\">CA-006</a> e <a href=\"#doc-05-qualidade-cenarios-de-aceitacao\">CA-007</a>.\n\n\n<span id=\"doc-02-requisitos-casos-de-uso-uc-005-cadastrar-produto\" class=\"source-anchor\"></span>\n## UC-005 - Cadastrar produto\n\n### Objetivo\n\nCadastrar produto com código, unidade, preço de custo/venda e estoque mínimo.\n\n| Campo           | Valor                                                                                          |\n| --------------- | ---------------------------------------------------------------------------------------------- |\n| Ator principal  | <a href=\"#doc-01-produto-atores-e-stakeholders\">Usuário</a>                                 |\n| Gatilho         | Usuário escolhe “Cadastrar Novo Produto”                                                       |\n| Pré-condições   | Usuário autenticado conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-04-usuario-autenticado\">RN-04</a>                            |\n| Sucesso         | Produto válido persistido com código único conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-11-codigo-unico-do-produto\">RN-11</a> |\n| Garantia mínima | Em caso de falha, nenhum cadastro incompleto de produto deve ser registrado                    |\n\n### Fluxo principal\n\n| Passo | Tipo | Comportamento                                                                                                                                                                                                                          |\n| ----: | :--: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n|     1 |  EV  | Usuário acessa o sistema.                                                                                                                                                                                                              |\n|     2 |  EV  | Usuário seleciona “Cadastrar Novo Produto”.                                                                                                                                                                                            |\n|     3 |  RS  | Sistema exibe a tela de cadastro de produto.                                                                                                                                                                                           |\n|     4 |  EV  | Usuário preenche o nome do produto, código, unidade, preço de custo e venda e estoque mínimo conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-11-codigo-unico-do-produto\">RN-11</a>.                                                                                      |\n|     5 |  EV  | Usuário confirma o cadastro.                                                                                                                                                                                                           |\n|     6 |  RS  | Sistema valida o código conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-11-codigo-unico-do-produto\">RN-11</a>, os campos obrigatórios conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-12-campos-obrigatorios-do-produto\">RN-12</a> e os valores informados conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-13-valores-do-produto\">RN-13</a>. |\n|     7 |  RS  | Sistema grava o produto                                                                                                                                                                                                                |\n|     8 |  RS  | Sistema exibe <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-01</a>                                                                                                                                                                   |\n\n### Alternativa \n\nNão se aplica.\n### Exceções\n\n- 6a - Campo obrigatório não informado: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-22</a> e retornar ao preenchimento conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-12-campos-obrigatorios-do-produto\">RN-12</a>.\n- 6b - Código já cadastrado: informar que o código já está sendo utilizado e impedir o cadastro conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-11-codigo-unico-do-produto\">RN-11</a>.\n- 6c - Preço de custo ou venda inválido: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-07</a> permitir a correção conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-13-valores-do-produto\">RN-13</a>.\n- 7a - Falha ao cadastrar o serviço: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-08</a> e encerrar sem gravação.\n\n\n\n### Dados e interfaces\n\n- Entidade: <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Usuario</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Produto</a>.\n- Protótipos: <a href=\"#doc-06-interfaces-mapa-de-interfaces\">IMG-05</a>\n\n### Critério de aceitação\n\nVeja <a href=\"#doc-05-qualidade-cenarios-de-aceitacao\">CA-008</a>.\n\n\n<span id=\"doc-02-requisitos-casos-de-uso-uc-006-registrar-entrada-de-mercadoria\" class=\"source-anchor\"></span>\n## UC-006 - Registrar entrada de mercadoria\n\n### Objetivo\n\nPermitir que o usuário registre a entrada de produtos adquiridos de um fornecedor, atualizando a quantidade disponível em estoque.\n\n| Campo           | Valor                                                                                                                                     |\n| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |\n| Atores          | <a href=\"#doc-01-produto-atores-e-stakeholders\">Usuário</a>                                                                            |\n| Gatilho         | Usuário seleciona “Registrar Entrada de Mercadoria”                                                                                       |\n| Pré-condições   | Usuário autenticado conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-04-usuario-autenticado\">RN-04</a>, fornecedor e produto previamente cadastrados                         |\n| Sucesso         | Entrada registrada e estoque dos produtos atualizado conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-19-atualizacao-do-estoque-pela-entrada\">RN-19</a>.                     |\n| Garantia mínima | Em caso de falha, nenhuma alteração parcial no estoque deve ser realizada conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-19-atualizacao-do-estoque-pela-entrada\">RN-19</a> |\n\n### Fluxo principal\n\n| Passo | Tipo | Comportamento                                                                                                                                                                                        |\n| ----: | :--: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n|     1 |  EV  | Usuário acessa o sistema.                                                                                                                                                                            |\n|     2 |  EV  | Usuário seleciona “Registrar entrada de mercadoria”.                                                                                                                                                 |\n|     3 |  RS  | Sistema exibe a tela de entrada de mercadoria.                                                                                                                                                       |\n|     4 |  EV  | Usuário seleciona o fornecedor.                                                                                                                                                                      |\n|     5 |  EV  | Usuário seleciona o produto e informa a quantidade recebida e o valor de compra conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-14-quantidade-positiva\">RN-14</a> e <a href=\"#doc-02-requisitos-regras-de-negocio-rn-18-entrada-de-mercadoria\">RN-18</a>.                          |\n|     6 |  EV  | Usuário confirma a entrada de mercadoria.                                                                                                                                                            |\n|     7 |  EV  | Usuário confirma a entrada de mercadoria.                                                                                                                                                            |\n|     8 |  RS  | Sistema valida a quantidade conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-14-quantidade-positiva\">RN-14</a> e os demais dados da entrada conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-13-valores-do-produto\">RN-13</a> e  <a href=\"#doc-02-requisitos-regras-de-negocio-rn-18-entrada-de-mercadoria\">RN-18</a>. |\n|     9 |  RS  | Sistema registra a entrada e acrescenta a quantidade recebida ao estoque conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-19-atualizacao-do-estoque-pela-entrada\">RN-19</a>.                                                            |\n|    10 |  RS  | Sistema exibe <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-01</a>                                                                                                                                 |\n\n### Alternativa - vários itens\n\n1. 1. No passo 5, o usuário seleciona o produto e informa a quantidade recebida e o valor de compra conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-14-quantidade-positiva\">RN-14</a> e <a href=\"#doc-02-requisitos-regras-de-negocio-rn-18-entrada-de-mercadoria\">RN-18</a>.\n2. O usuário seleciona a opção para adicionar outro produto.\n3. O sistema permite informar os dados do próximo produto.\n4. O processo pode ser repetido para os demais produtos recebidos.\n5. O usuário confirma a entrada.\n6. O sistema valida todos os produtos informados conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-13-valores-do-produto\">RN-13</a>, <a href=\"#doc-02-requisitos-regras-de-negocio-rn-14-quantidade-positiva\">RN-14</a> e <a href=\"#doc-02-requisitos-regras-de-negocio-rn-18-entrada-de-mercadoria\">RN-18</a>.\n7. O sistema registra a entrada e atualiza o estoque de todos os produtos conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-19-atualizacao-do-estoque-pela-entrada\">RN-19</a>.\n\n### Exceções\n\n- 4a - Fornecedor não selecionado: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-22</a> e solicitar a seleção do fornecedor conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-18-entrada-de-mercadoria\">RN-18</a>\n- 5a - Produto não selecionado: exibe <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-22</a> e solicitar a seleção do produto conforme  <a href=\"#doc-02-requisitos-regras-de-negocio-rn-18-entrada-de-mercadoria\">RN-18</a>.\n- 7a - Quantidade inválida: exibe <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-09</a> e permitir a correção conforme  <a href=\"#doc-02-requisitos-regras-de-negocio-rn-14-quantidade-positiva\">RN-14</a>.\n- 7b - Valor de compra inválido: <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-07</a> e permitir a correção conforme  <a href=\"#doc-02-requisitos-regras-de-negocio-rn-13-valores-do-produto\">RN-13</a> e <a href=\"#doc-02-requisitos-regras-de-negocio-rn-18-entrada-de-mercadoria\">RN-18</a>.\n- 8a - Falha ao registrar a entrada: exibe <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-10</a> e não realizar nenhuma alteração parcial no estoque conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-19-atualizacao-do-estoque-pela-entrada\">RN-19</a>.\n\n\n### Dados e interfaces\n\n- Entidades: <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Usuario</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Fornecedor</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Entrada_Mercadoria</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Item_Entrada_Mercadoria</a> e <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Produto</a>.\n- Protótipos: <a href=\"#doc-06-interfaces-mapa-de-interfaces\">IMG-06</a>\n\n### Critério de aceitação\n\nVeja <a href=\"#doc-05-qualidade-cenarios-de-aceitacao\">CA-009</a>.\n\n\n<span id=\"doc-02-requisitos-casos-de-uso-uc-007-cadastrar-fornecedor\" class=\"source-anchor\"></span>\n## UC-007 - Cadastrar fornecedor\n\n### Objetivo\n\nPermitir que o usuário cadastre fornecedores e vincule os produtos fornecidos por eles.\n\n| Campo          | Valor                                                                                               |\n| -------------- | --------------------------------------------------------------------------------------------------- |\n| Ator principal | <a href=\"#doc-01-produto-atores-e-stakeholders\">Usuário</a>                                      |\n| Gatilho        | Usuário seleciona “Cadastrar Novo Fornecedor”                                                       |\n| Pré-condições  | Usuário autenticado conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-04-usuario-autenticado\">RN-04</a> |\n| Sucesso        | Fornecedor cadastrado e produtos selecionados vinculados a ele                                      |\n\n### Fluxo principal\n\n| Passo | Tipo | Comportamento                                                                                                   |\n| ----: | :--: | --------------------------------------------------------------------------------------------------------------- |\n|     1 |  EV  | Usuário acessa o sistema.                                                                                       |\n|     2 |  EV  | Usuário seleciona “Cadastrar Novo Fornecedor”                                                                   |\n|     3 |  RS  | Sistema exibe a tela de cadastro de fornecedor.                                                                 |\n|     4 |  EV  | Usuário preenche os dados do fornecedor, incluindo CNPJ conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-02-cpf-ou-cnpj-valido-e-unico\">RN-02</a>. |\n|     5 |  EV  | Usuário seleciona os produtos fornecidos pelo fornecedor.                                                       |\n|     6 |  EV  | Usuário confirma o cadastro.                                                                                    |\n|     7 |  RS  | Sistema valida os dados informados e o CNPJ conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-02-cpf-ou-cnpj-valido-e-unico\">RN-02</a>.             |\n|     8 |  RS  | Sistema registra o fornecedor e vincula os produtos selecionados.                                               |\n|     9 |  RS  | Sistema exibe <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-01</a>                                            |\n### Alternativa  - Fornecedor sem produtos vinculados\n\n1. No passo 5, o usuário não seleciona nenhum produto.\n2. O usuário confirma o cadastro normalmente.\n3. O sistema valida os dados do fornecedor e o CNPJ conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-02-cpf-ou-cnpj-valido-e-unico\">RN-02</a>.\n4. O sistema cadastra o fornecedor sem produtos vinculados.\n5. O sistema exibe MSG-01.\n\n### Exceções\n\n- 7a - Dados obrigatórios não preenchidos: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-22</a> e retornar ao preenchimento..\n- 7b - CNPJ já cadastrado: exibe <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-04</a> e impedir o cadastro conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-02-cpf-ou-cnpj-valido-e-unico\">RN-02</a>.\n- 7c - CNPJ inválido: exibe <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-03</a> e permitir a correção conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-02-cpf-ou-cnpj-valido-e-unico\">RN-02</a>.\n- 8a - Falha ao cadastrar fornecedor: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-08</a> e não realizar gravação parcial.\n\n\n### Dados e interfaces\n\n- Entidades: <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Usuario</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Fornecedor</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Fornecedor_Produto</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Produto</a>.\n- Protótipo: <a href=\"#doc-06-interfaces-mapa-de-interfaces\">IMG-07</a>.\n\n### Critério de aceitação\n\nVeja <a href=\"#doc-05-qualidade-cenarios-de-aceitacao\">CA-010</a>.\n\n\n<span id=\"doc-02-requisitos-casos-de-uso-uc-008-alertar-estoque-minimo\" class=\"source-anchor\"></span>\n## UC-008 - Alertar estoque mínimo\n\n### Objetivo\n\nAlertar o usuário quando a quantidade disponível de um produto atingir ou ficar abaixo do estoque mínimo definido.  \n\n| Campo           | Valor                                                                                                     |\n| --------------- | --------------------------------------------------------------------------------------------------------- |\n| Ator principal  | <a href=\"#doc-01-produto-atores-e-stakeholders\">Sistema</a>                                            |\n| Gatilho         | Quantidade do produto é atualisada                                                                        |\n| Pré-condições   | Produto cadastrado com estoque mínimo definido conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-12-campos-obrigatorios-do-produto\">RN-12</a> |\n| Sucesso         | Alerta de estoque mínimo é gerado conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-17-estoque-minimo\">RN-17</a>                              |\n| Garantia minima | A quantidade atual do produto não é alterada pela geração do alerta                                       |\n\n### Fluxo principal - cadastrar\n\n| Passo | Tipo | Comportamento                                                                                                                   |\n| ----: | :--: | ------------------------------------------------------------------------------------------------------------------------------- |\n|     1 |  RS  | Sistema identifica que a quantidade do produto em estoque foi atualizada.                                                       |\n|     2 |  RS  | Sistema verifica o estoque mínimo definido para o produto conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-17-estoque-minimo\">RN-17</a>.                           |\n|     3 |  RS  | Sistema identifica que a quantidade atual atingiu ou ficou abaixo do estoque mínimo conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-17-estoque-minimo\">RN-17</a>. |\n|     4 |  RS  | Sistema gera um alerta de estoque mínimo conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-17-estoque-minimo\">RN-17</a>.                                            |\n|     5 |  RS  | Sistema exibe ao usuário qual produto atingiu o estoque mínimo.                                                                 |\n\n\n### Alternativa - Estoque acima do mínimo\n\n1. No passo 3, o sistema identifica que a quantidade atual está acima do estoque mínimo conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-17-estoque-minimo\">RN-17</a>.\n2. O sistema não gera alerta e encerra a verificação.\n\n### Exceções\n\n- 4a - Falha ao gerar o alerta: o sistema mantém a quantidade atual do produto e registra a falha na geração do alerta.\n\n\n### Dados e interfaces\n\n- Entidades: <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Produto</a>.\n- Protótipos: <a href=\"#doc-06-interfaces-mapa-de-interfaces\">IMG-08</a>\n\n### Critérios de aceitação\n\nVeja <a href=\"#doc-05-qualidade-cenarios-de-aceitacao\">CA-011</a> e <a href=\"#doc-05-qualidade-cenarios-de-aceitacao\">CA-012</a>.\n\n\n<span id=\"doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\" class=\"source-anchor\"></span>\n## UC-009 - Abrir Ordem de Serviço\n\n### Objetivo\n\nPermitir que o usuário abra uma Ordem de Serviço (O.S.), vinculando um cliente, veículo, produtos e serviços que serão realizados.\n\n| Campo           | Valor                                                                                                                       |\n| --------------- | --------------------------------------------------------------------------------------------------------------------------- |\n| Ator principal  | <a href=\"#doc-01-produto-atores-e-stakeholders\">Usuário</a>                                                              |\n| Gatilho         | Usuário seleciona “Abrir Nova O.S.”                                                                                         |\n| Pré-condições   | Usuário autenticado conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-04-usuario-autenticado\">RN-04</a> e cliente previamente cadastrado                        |\n| Sucesso         | O.S. registrada e vinculada ao cliente e ao veículo, com status `Aberta` conforme RN-23 |\n| Garantia mínima | Em caso de falha, nenhuma O.S. incompleta deve ser registrada.                                                              |\n\n### Fluxo principal\n\n| Passo | Tipo | Comportamento                                                                                                                                                                          |\n| ----: | :--: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n|     1 |  EV  | Usuário acessa o sistema.                                                                                                                                                              |\n|     2 |  EV  | Usuário seleciona “Abrir Nova O.S.”                                                                                                                                                    |\n|     3 |  RS  | Sistema exibe a tela de abertura da O.S.                                                                                                                                               |\n|     4 |  EV  | Usuário busca e seleciona o cliente.                                                                                                                                                   |\n|     5 |  EV  | Usuário informa a placa do veículo.                                                                                                                                                    |\n|     6 |  RS  | Sistema busca um veículo cadastrado com a placa informada conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-07-placa-unica-do-veiculo\">RN-07</a>.                                                                          |\n|     7 |  RS  | Sistema verifica se o veículo está vinculado ao cliente selecionado conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-08-veiculo-vinculado-ao-cliente\">RN-08</a> e <a href=\"#doc-02-requisitos-regras-de-negocio-rn-09-veiculo-pertencente-a-outro-cliente\">RN-09</a>. |\n|     8 |  RS  | Sistema preenche automaticamente os dados do veículo conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-10-preenchimento-automatico-do-veiculo\">RN-10</a>.                                                                  |\n|     9 |  EV  | Usuário informa o problema relatado pelo cliente.                                                                                                                                      |\n|    10 |  EV  | Usuário confirma a abertura da O.S.                                                                                                                                                    |\n|    11 |  RS  | Sistema valida os dados informados.                                                                                                                                                    |\n|    12 |  RS  | Sistema registra a O.S. vinculada ao cliente e ao veículo conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-08-veiculo-vinculado-ao-cliente\">RN-08</a>.                                                                    |\n|    13 |  RS  | Sistema registra a O.S. com status `Aberta` conforme RN-23.                                                                                        |\n|    14 |  RS  | Sistema exibe <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-11</a>.                                                                                                                  |\n\n### Alternativa A - Veículo não cadastrado\n\n1. No passo 6, o sistema não encontra nenhum veículo com a placa informada.\n2. O sistema disponibiliza os demais campos para cadastro do veículo.\n3. O usuário informa os dados do veículo, como marca, modelo e ano.\n4. O sistema valida os dados do novo veículo e verifica novamente a placa conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-07-placa-unica-do-veiculo\">RN-07</a>.\n5. O fluxo retorna ao passo 9.\n6. Ao confirmar a abertura da O.S., o sistema registra o novo veículo e o vincula ao cliente selecionado conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-08-veiculo-vinculado-ao-cliente\">RN-08</a>.\n7. O sistema registra a O.S. vinculada ao novo veículo.\n8. O sistema define o status inicial como `Aberta` conforme RN-23.\n9. O sistema exibe <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-11</a>.\n\n### Exceções\n\n- 4a - Cliente não selecionado: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-22</a> e solicitar a seleção do cliente.\n- 5a - Placa inválida: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-14</a> e permitir a correção.\n- 7a - Veículo vinculado a outro cliente: impedir a continuidade conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-09-veiculo-pertencente-a-outro-cliente\">RN-09</a> e informar que o veículo está vinculado a outro cliente, solicitando a verificação do cliente selecionado.\n- 11a - Campo obrigatório: <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-22</a> e solicitar a seleção do cliente.\n- 12a - Falha ao registrar a O.S.: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-15</a>  e não realizar gravação parcial.\n- A4a - Dados obrigatórios do novo veículo ausentes: exibir <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-22</a> e solicitar o preenchimento.\n- A6a - Falha ao cadastrar o veículo:  <a href=\"#doc-02-requisitos-catalogo-de-mensagens\">MSG-08</a> e não registrar a O.S. parcialmente.\n\n\n\n### Remoção e segurança\n\nA descrição geral promete remover usuários, mas o fluxo não detalha a operação. Veja <a href=\"#doc-04-arquitetura-decisoes-adr-002-exclusao-logica-de-cadastros\">ADR-002</a>. A “senha” do modelo de dados representa credencial e nunca deve ser persistida em texto puro; veja RNF-002.\n\n### Dados e interfaces\n\n- Entidades: <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Usuario</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Cliente</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Veiculo</a>, <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Ordem_Servico</a>.\n- Protótipos:  <a href=\"#doc-06-interfaces-mapa-de-interfaces\">IMG-09</a>, <a href=\"#doc-06-interfaces-mapa-de-interfaces\">IMG-10</a> e <a href=\"#doc-06-interfaces-mapa-de-interfaces\">IMG-11</a>.\n\n### Critérios de aceitação\n\nVeja <a href=\"#doc-05-qualidade-cenarios-de-aceitacao\">CA-011</a> e <a href=\"#doc-05-qualidade-cenarios-de-aceitacao\">CA-012</a>.\n\n\n> [!warning] Anexo não localizado: UC-010 - Adicionar produtos à O.S.\n\n> [!warning] Anexo não localizado: UC-011 - Adicionar serviço à O.S.\n\n> [!warning] Anexo não localizado: UC-012 - Registrar diagnóstico O.S\n\n> [!warning] Anexo não localizado: UC-013 - Atualizar status da O.S.\n\n> [!warning] Anexo não localizado: UC-014 - Finalizar O.S.\n\n> [!warning] Anexo não localizado: UC-015 - Emitir comprovante da O.S.\n\n> [!warning] Anexo não localizado: UC-016 - Consultar O.S.\n\n> [!warning] Anexo não localizado: UC-017 - Editar ou Remover produto da O.S.\n\n> [!warning] Anexo não localizado: UC-018 - Editar ou Remover serviço da O.S.\n\n# Regras de negócio e mensagens\n\n<span id=\"doc-02-requisitos-regras-de-negocio-indice-de-regras-de-negocio\" class=\"source-anchor\"></span>\n## Índice de Regras de Negócio\n\n\n### Clientes e autenticação\n\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-01-identificacao-do-cliente\">RN-01 - Identificação do cliente</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-02-cpf-ou-cnpj-valido-e-unico\">RN-02 - CPF ou CNPJ válido e único</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-03-contato-obrigatorio-do-cliente\">RN-03 - Contato obrigatório do cliente</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-04-usuario-autenticado\">RN-04 - Usuário autenticado</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-05-multiplos-contatos-por-cliente\">RN-05 - Múltiplos contatos por cliente</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-06-endereco-vinculado-ao-cliente\">RN-06 - Endereço vinculado ao cliente</a>\n\n### Veículos\n\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-07-placa-unica-do-veiculo\">RN-07 - Placa única do veículo</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-08-veiculo-vinculado-ao-cliente\">RN-08 - Veículo vinculado ao cliente</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-09-veiculo-pertencente-a-outro-cliente\">RN-09 - Veículo pertencente a outro cliente</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-10-preenchimento-automatico-do-veiculo\">RN-10 - Preenchimento automático do veículo</a>\n\n### Produtos e estoque\n\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-11-codigo-unico-do-produto\">RN-11 - Código único do produto</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-12-campos-obrigatorios-do-produto\">RN-12 - Campos obrigatórios do produto</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-13-valores-do-produto\">RN-13 - Valores do produto</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-14-quantidade-positiva\">RN-14 - Quantidade positiva</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-15-limite-pelo-estoque-disponivel\">RN-15 - Limite pelo estoque disponível</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-16-atualizacao-do-estoque-pela-o-s\">RN-16 - Atualização do estoque pela O.S.</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-17-estoque-minimo\">RN-17 - Estoque mínimo</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-18-entrada-de-mercadoria\">RN-18 - Entrada de mercadoria</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-19-atualizacao-do-estoque-pela-entrada\">RN-19 - Atualização do estoque pela entrada</a>\n\n### Serviços e técnicos\n\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-20-valor-padrao-do-servico\">RN-20 - Valor padrão do serviço</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-21-alteracao-do-valor-do-servico-na-o-s\">RN-21 - Alteração do valor do serviço na O.S.</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-22-tecnico-responsavel-pelo-servico\">RN-22 - Técnico responsável pelo serviço</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-32-tempo-estimado-do-servico\">RN-32 - Tempo estimado do serviço</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-33-tecnico-ativo\">RN-33 - Técnico ativo</a>\n\n### Ordem de Serviço\n\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-23-status-inicial-da-o-s\">RN-23 - Status inicial da O.S.</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-24-transicao-de-status-da-o-s\">RN-24 - Transição de status da O.S.</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-25-diagnostico-vinculado-a-o-s\">RN-25 - Diagnóstico vinculado à O.S.</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-26-preservacao-do-diagnostico-anterior\">RN-26 - Preservação do diagnóstico anterior</a>\n\n### Finalização e pagamento\n\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-27-finalizacao-da-o-s\">RN-27 - Finalização da O.S.</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-28-forma-de-pagamento-obrigatoria\">RN-28 - Forma de pagamento obrigatória</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-29-consistencia-da-finalizacao\">RN-29 - Consistência da finalização</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-34-desconto-na-o-s\">RN-34 - Desconto na O.S.</a>\n\n### Comprovante\n\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-30-dados-do-comprovante-da-o-s\">RN-30 - Dados do comprovante da O.S.</a>\n- <a href=\"#doc-02-requisitos-regras-de-negocio-rn-31-emissao-nao-altera-a-o-s\">RN-31 - Emissão não altera a O.S.</a>\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-01-identificacao-do-cliente\" class=\"source-anchor\"></span>\n## RN-01 - Identificação do cliente\n\nTodo cliente deve ser cadastrado como Pessoa Física (PF) ou Pessoa Jurídica (PJ).\n\n**Aplicação:** <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">UC-001</a>.\n\n**Verificação:** exigir a seleção do tipo de cliente antes de concluir o cadastro.\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-02-cpf-ou-cnpj-valido-e-unico\" class=\"source-anchor\"></span>\n## RN-02 - CPF ou CNPJ válido e único\n\nTodo CPF ou CNPJ informado no cadastro deve ser válido e não pode estar duplicado para o mesmo tipo de cadastro.\n\n**Aplicação:** <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">UC-001</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-007-cadastrar-fornecedor\">UC-007</a>.\n\n**Verificação:** validar o CPF/CNPJ informado e consultar a existência de outro registro do mesmo tipo com o mesmo documento antes de concluir o cadastro.\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-03-contato-obrigatorio-do-cliente\" class=\"source-anchor\"></span>\n## RN-03 - Contato obrigatório do cliente\n\nTodo cliente deve possuir pelo menos um contato cadastrado.\n\n**Aplicação:** <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">UC-001</a>.\n\n**Verificação:** impedir a conclusão do cadastro caso nenhum contato válido tenha sido informado.\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-04-usuario-autenticado\" class=\"source-anchor\"></span>\n## RN-04 - Usuário autenticado\n\nO usuário deve estar autenticado para acessar as funcionalidades internas do sistema.\n\n**Aplicação:** todos os casos de uso que realizam cadastro, consulta ou alteração de informações.\n\n**Verificação:** aplicar autenticação no servidor, não apenas na interface.\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-05-multiplos-contatos-por-cliente\" class=\"source-anchor\"></span>\n## RN-05 - Múltiplos contatos por cliente\n\nUm cliente pode possuir um ou mais contatos vinculados ao seu cadastro.\n\n**Aplicação:**  <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">UC-001</a>.\n\n**Verificação:** permitir o registro de contatos adicionais sem substituir os contatos já vinculados ao cliente.\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-06-endereco-vinculado-ao-cliente\" class=\"source-anchor\"></span>\n## RN-06 - Endereço vinculado ao cliente\n\nO endereço cadastrado deve estar vinculado a um cliente existente.\n\n**Aplicação:**  <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">UC-001</a>.\n\n**Verificação:** não permitir o registro de endereço sem associação a um cliente.\n\n\n> [!warning] Anexo não localizado: RN-07 - Consulta do histórico do cliente\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-07-placa-unica-do-veiculo\" class=\"source-anchor\"></span>\n## RN-07 - Placa única do veículo\n\nA placa deve identificar unicamente um veículo cadastrado no sistema.\n\n**Aplicação:** <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>.\n\n**Verificação:** ao informar uma placa, consultar se já existe veículo cadastrado antes de permitir o registro de um novo veículo.\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-08-veiculo-vinculado-ao-cliente\" class=\"source-anchor\"></span>\n## RN-08 - Veículo vinculado ao cliente\n\nTodo veículo registrado deve estar vinculado a um cliente.\n\n**Aplicação:** <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>.\n\n**Verificação:** ao cadastrar um novo veículo durante a abertura da O.S., vinculá-lo ao cliente selecionado.\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-09-veiculo-pertencente-a-outro-cliente\" class=\"source-anchor\"></span>\n## RN-09 - Veículo pertencente a outro cliente\n\nCaso a placa informada corresponda a um veículo vinculado a outro cliente, o sistema não deve alterar automaticamente seu vínculo.\n\n**Aplicação:** <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>.\n\n**Verificação:** impedir a continuidade da abertura da O.S. e informar: “O veículo informado está vinculado a outro cliente. Verifique o cliente selecionado.”\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-10-preenchimento-automatico-do-veiculo\" class=\"source-anchor\"></span>\n## RN-10 - Preenchimento automático do veículo\n\nAo informar a placa de um veículo já cadastrado e vinculado ao cliente selecionado, seus dados devem ser recuperados automaticamente.\n\n**Aplicação:** <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>.\n\n**Verificação:** consultar o veículo pela placa e preencher seus dados sem criar um novo registro.\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-11-codigo-unico-do-produto\" class=\"source-anchor\"></span>\n## RN-11 - Código único do produto\n\nCada produto deve possuir um código único no sistema.\n\n**Aplicação:** [UC-005](UC-005%20-%20Cadastrar%20produto).\n\n**Verificação:** consultar a existência do código antes de persistir um novo produto.\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-12-campos-obrigatorios-do-produto\" class=\"source-anchor\"></span>\n## RN-12 - Campos obrigatórios do produto\n\nO cadastro do produto exige nome, código, unidade de medida, preço de custo, preço de venda e estoque mínimo.\n\n**Aplicação:** [UC-005](UC-005%20-%20Cadastrar%20produto), <a href=\"#doc-02-requisitos-casos-de-uso-uc-008-alertar-estoque-minimo\">UC-008</a>.\n\n**Verificação:** impedir o cadastro enquanto algum campo obrigatório estiver ausente ou inválido.\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-13-valores-do-produto\" class=\"source-anchor\"></span>\n## RN-13 - Valores do produto\n\nOs preços de custo e venda informados para um produto devem possuir valores válidos.\n\n**Aplicação:** [UC-005](UC-005%20-%20Cadastrar%20produto), <a href=\"#doc-02-requisitos-casos-de-uso-uc-006-registrar-entrada-de-mercadoria\">UC-006</a>\n\n**Verificação:** rejeitar valores vazios, negativos ou não numéricos antes da persistência.\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-14-quantidade-positiva\" class=\"source-anchor\"></span>\n## RN-14 - Quantidade positiva\n\nToda quantidade informada em movimentações de produtos deve ser maior que zero.\n\n**Aplicação:** <a href=\"#doc-02-requisitos-casos-de-uso-uc-006-registrar-entrada-de-mercadoria\">UC-006</a>, UC-010, UC-017.\n\n**Verificação:** rejeitar quantidade igual a zero, negativa, vazia ou não numérica.\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-15-limite-pelo-estoque-disponivel\" class=\"source-anchor\"></span>\n## RN-15 - Limite pelo estoque disponível\n\nA quantidade de um produto adicionada a uma O.S. não pode exceder sua quantidade disponível em estoque.\n\n**Aplicação:** UC-010, UC-017.\n\n**Verificação:** comparar a quantidade solicitada com o estoque disponível antes de adicionar o produto à O.S.\n\n\n> [!warning] Anexo não localizado: RN-16 - Atualização do estoque pela O.S.\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-17-estoque-minimo\" class=\"source-anchor\"></span>\n## RN-17 - Estoque mínimo\n\nQuando a quantidade disponível de um produto atingir ou ficar abaixo do estoque mínimo definido, o sistema deve gerar um alerta.\n\n**Aplicação:** <a href=\"#doc-02-requisitos-casos-de-uso-uc-008-alertar-estoque-minimo\">UC-008</a>, UC-010, UC-017.\n\n**Verificação:** após uma redução no estoque, comparar a quantidade restante com o estoque mínimo cadastrado para o produto.\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-18-entrada-de-mercadoria\" class=\"source-anchor\"></span>\n## RN-18 - Entrada de mercadoria\n\nUma entrada de mercadoria deve possuir fornecedor, produto, quantidade e valor de compra válidos.\n\n**Aplicação:** <a href=\"#doc-02-requisitos-casos-de-uso-uc-006-registrar-entrada-de-mercadoria\">UC-006</a>,\n\n**Verificação:** validar os dados da entrada antes de atualizar as quantidades em estoque.\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-19-atualizacao-do-estoque-pela-entrada\" class=\"source-anchor\"></span>\n## RN-19 - Atualização do estoque pela entrada\n\nAo registrar uma entrada de mercadoria, a quantidade recebida deve ser acrescentada ao estoque do produto.\n\n**Aplicação:** <a href=\"#doc-02-requisitos-casos-de-uso-uc-006-registrar-entrada-de-mercadoria\">UC-006</a>.\n\n**Verificação:** registrar a entrada e atualizar o estoque de forma consistente, sem permitir atualização parcial da operação.\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-20-valor-padrao-do-servico\" class=\"source-anchor\"></span>\n## RN-20 - Valor padrão do serviço\n\nTodo serviço deve possuir um valor padrão cadastrado.\n\n**Aplicação:** [UC-004](UC-004%20-%20Cadastrar%20Serviço), UC-011.\n\n**Verificação:** ao selecionar um serviço para uma O.S., preencher automaticamente o campo de valor com o valor padrão cadastrado.\n\n\n> [!warning] Anexo não localizado: RN-21 - Alteração do valor do serviço na O.S.\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-22-tecnico-responsavel-pelo-servico\" class=\"source-anchor\"></span>\n## RN-22 - Técnico responsável pelo serviço\n\nO valor padrão de um serviço pode ser alterado quando o serviço for adicionado a uma O.S., sem modificar o valor padrão armazenado no cadastro do serviço.\n\n**Aplicação:** UC-011, UC-018.\n\n**Verificação:** armazenar o valor efetivamente utilizado na O.S. separadamente do valor padrão do serviço.\n\n\n> [!warning] Anexo não localizado: RN-23 - Status inicial da O.S.\n\n> [!warning] Anexo não localizado: RN-24 - Transição de status da O.S.\n\n> [!warning] Anexo não localizado: RN-25 - Diagnóstico vinculado à O.S.\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-26-preservacao-do-diagnostico-anterior\" class=\"source-anchor\"></span>\n## RN-26 - Preservação do diagnóstico anterior\n\nCaso ocorra falha durante a alteração de um diagnóstico, o diagnóstico anteriormente registrado deve ser mantido.\n\n**Aplicação:** UC-012.\n\n**Verificação:** somente substituir o diagnóstico anterior após a nova informação ser validada e persistida com sucesso.\n\n\n> [!warning] Anexo não localizado: RN-27 - Finalização da O.S.\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-28-forma-de-pagamento-obrigatoria\" class=\"source-anchor\"></span>\n## RN-28 - Forma de pagamento obrigatória\n\nA finalização da O.S. exige o registro da forma de pagamento utilizada.\n\n**Aplicação:** UC-014.\n\n**Verificação:** impedir a finalização enquanto nenhuma forma de pagamento válida estiver selecionada.\n\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-29-consistencia-da-finalizacao\" class=\"source-anchor\"></span>\n## RN-29 - Consistência da finalização\n\nO registro do pagamento e a alteração do status da O.S. para `Concluída` devem ocorrer de forma consistente.\n\n**Aplicação:** UC-014.\n\n**Verificação:** em caso de falha, não registrar parcialmente o pagamento nem alterar a O.S. para `Concluída`.\n\n\n> [!warning] Anexo não localizado: RN-30 - Dados do comprovante da O.S.\n\n> [!warning] Anexo não localizado: RN-31 - Emissao nao altera a O.S.\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-32-tempo-estimado-do-servico\" class=\"source-anchor\"></span>\n## RN-32 - Tempo estimado do serviço\n\nTodo serviço deve possuir um tempo estimado de execução maior que zero.\n\n**Aplicação:** <a href=\"#doc-02-requisitos-casos-de-uso-uc-004-cadastrar-servico\">UC-004</a>\n\n**Verificação:** exigir o preenchimento do tempo estimado e rejeitar valor igual a zero, negativo, vazio ou inválido antes de concluir o cadastro.\n\n<span id=\"doc-02-requisitos-regras-de-negocio-rn-33-tecnico-ativo\" class=\"source-anchor\"></span>\n## RN-33 - Técnico ativo\n\nTodo técnico cadastrado inicia com situação `Ativo`. Somente técnicos ativos podem ser selecionados como responsáveis por serviços em uma O.S.\n\n**Aplicação:** <a href=\"#doc-02-requisitos-casos-de-uso-uc-003-cadastrar-tecnico\">UC-003</a>, UC-011, UC-018.\n\n**Verificação:** definir automaticamente a situação `Ativo` ao cadastrar um técnico e impedir a seleção de técnicos inativos nos serviços de uma O.S.\n\n> [!warning] Anexo não localizado: RN-34 - Desconto na O.S.\n\n\n<span id=\"doc-02-requisitos-catalogo-de-mensagens\" class=\"source-anchor\"></span>\n## Catálogo de Mensagens\n\nOs textos abaixo preservam a intenção do PDF. Antes da implementação, revisar tom, contexto, acessibilidade e ações de recuperação.\n\n### MSG-01\n\n**Cadastrado com sucesso.** Tipo: sucesso. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">UC-001</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-004-cadastrar-servico\">UC-004</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-005-cadastrar-produto\">UC-005</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-006-registrar-entrada-de-mercadoria\">UC-006</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-007-cadastrar-fornecedor\">UC-007</a>.\n\n### MSG-02\n\n**CPF invalido.** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">UC-001</a>.\n\n### MSG-03\n\n**CNPJ invalido.** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">UC-001</a>,  <a href=\"#doc-02-requisitos-casos-de-uso-uc-007-cadastrar-fornecedor\">UC-007</a>.\n\n### MSG-04\n\n**CPF/CNPJ já cadastrado.** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">UC-001</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-007-cadastrar-fornecedor\">UC-007</a>.\n\n### MSG-05\n\n**Nenhum cliente encontrado.** Tipo: informativo. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-002-consultar-clientes\">UC-002</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-003-cadastrar-tecnico\">UC-003</a>.\n\n### MSG-06\n\n**Requisição não encontrada.** Tipo: erro. Uso original: UC-002; o PDF também aponta este ID para filtro inválido e produto não encontrado. Veja <a href=\"#doc-05-qualidade-riscos-e-questoes-em-aberto\">QST-003</a>.\n\n### MSG-07\n\n**Valor inválido.** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-004-cadastrar-servico\">UC-004</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-005-cadastrar-produto\">UC-005</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-006-registrar-entrada-de-mercadoria\">UC-006</a>, UC-011, UC-018.\n\n### MSG-08\n\n**Erro ao realisar cadastro.** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-003-cadastrar-tecnico\">UC-003</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-004-cadastrar-servico\">UC-004</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-005-cadastrar-produto\">UC-005</a>,  <a href=\"#doc-02-requisitos-casos-de-uso-uc-007-cadastrar-fornecedor\">UC-007</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>, UC-010, UC-011.\n\n### MSG-09\n\n**Valor inválido, deve ser maior que zero.** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-003-cadastrar-tecnico\">UC-003</a>,  <a href=\"#doc-02-requisitos-casos-de-uso-uc-006-registrar-entrada-de-mercadoria\">UC-006</a>, UC-010, UC-017.\n\n### MSG-10\n\n**Não foi possível registrar a entrada dos produtos.** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-006-registrar-entrada-de-mercadoria\">UC-006</a>.\n\n### MSG-11\n\n**Ordem de serviço aberta com sucesso.** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>.\n\n### MSG-12\n\n**Produto cadastrado com sucesso.** Tipo: sucesso. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-005-cadastrar-produto\">UC-005</a>.\n\n### MSG-13\n\n**Preencha os campos obrigatórios.** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-005-cadastrar-produto\">UC-005</a>.\n\n### MSG-14\n\n**Placa invalida.** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>.\n\n### MSG-15\n\n**Não foi possível abrir O.S. .** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>.\n\n### MSG-16\n\n**Produto adicionado com sucesso.** Tipo: sucesso. Uso:  UC-010.\n\n### MSG-17\n\n**Serviço adicionado com sucesso.** Tipo: sucesso. Uso:  UC-011.\n\n### MSG-18\n\n**Nenhum produto encontrado.** Tipo: informativo. Uso:  UC-010.\n\n### MSG-19\n\n**Nenhum serviço encontrado.** Tipo: informativo. Uso: UC-011.\n\n### MSG-20\n\n**Tempo estimado deve ser maior que zero.** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-004-cadastrar-servico\">UC-004</a>.\n\n### MSG-21\n\n**Usuário cadastrado com sucesso.** Tipo: sucesso. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-008-alertar-estoque-minimo\">UC-008</a>.\n\n### MSG-22\n\n**Preencha os campos obrigatórios.** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">UC-001</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-003-cadastrar-tecnico\">UC-003</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-004-cadastrar-servico\">UC-004</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-005-cadastrar-produto\">UC-005</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-006-registrar-entrada-de-mercadoria\">UC-006</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-007-cadastrar-fornecedor\">UC-007</a>, <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>, UC-011, UC-018.\n\n### MSG-23\n\n**A quantidade informada excede a quantidade disponível em estoque.** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-008-alertar-estoque-minimo\">UC-008</a>, UC-017.\n\n### MSG-24\n\n**O técnico selecionado está inativo. Selecione outro técnico.** Tipo: erro. Uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-008-alertar-estoque-minimo\">UC-008</a>, UC-011, UC-018.\n\n### MSG-25\n\n**O.S. finalizada com sucesso.** Tipo: sucesso. Uso: UC-014.\n\n### MSG-26\n\n**O percentual de desconto informado é inválido. Informe um percentual válido.** Tipo: erro. Uso: UC-014.\n\n### MSG-27\n\n**O valor do desconto informado é inválido. O desconto não pode ser maior que o valor total da O.S.** Tipo: erro. Uso: UC-014.\n\n### MSG-28\n\n**Selecione uma forma de pagamento para finalizar a O.S.** Tipo: erro. Uso: UC-014.\n\n### MSG-29\n\n**A O.S. possui informações obrigatórias pendentes e não pode ser finalizada. Verifique os dados informados.**  Tipo: erro. Uso: UC-014.\n\n### MSG-30\n\n**Somente uma O.S. com status “Em andamento” pode ser finalizada.** Tipo: erro. Uso: UC-014.\n\n### MSG-31\n\n**Não foi possível registrar o pagamento. A O.S. não foi finalizada.** Tipo: erro. Uso: UC-014.\n\n### MSG-32\n\n**Não foi possível concluir a O.S. O pagamento não foi registrado e o status anterior foi mantido.** Tipo: erro. Uso: UC-014.\n\n### MSG-33\n\n**Não foi possível obter as informações da O.S. para gerar o comprovante.** Tipo: erro. Uso: UC-015.\n\n### MSG-34\n\n**Não foi possível gerar o comprovante. Tente novamente.** Tipo: erro. Uso: UC-015.\n\n### MSG-35\n\n**Não foi possível imprimir o comprovante. Tente novamente.** Tipo: erro. Uso: UC-015.\n\n### MSG-36\n\n**Não foi possível gerar o comprovante em PDF. Tente novamente.** Tipo: erro. Uso: UC-015.\n\n### MSG-37\n\n**Nenhuma Ordem de Serviço foi encontrada com os critérios informados.** Tipo: informação. Uso: UC-016.\n\n### MSG-38\n\n**O critério de busca informado é inválido. Verifique os dados e tente novamente.** Tipo: erro. Uso: UC-016.\n\n### MSG-39\n\n**Não foi possível carregar os dados da Ordem de Serviço. Tente novamente.** Tipo: erro. Uso: UC-016.\n\n### MSG-40\n\n**Não foi possível realizar a alteração. Os dados anteriores foram mantidos.** Tipo: erro. Uso: UC-017, UC-018.\n\n### MSG-41\n\n**Não foi possível realizar a remoção. Nenhuma alteração foi realizada.** Tipo: erro. Uso: UC-017, UC-018.\n\n### Diretrizes propostas\n\n- mensagens de erro devem explicar o problema e a ação de recuperação;\n- sucesso não deve ser anunciado antes da confirmação da transação;\n- validações devem ser associadas ao campo e também anunciadas a tecnologias assistivas;\n- mensagens técnicas e dados sensíveis não devem ser exibidos ao usuário.\n\n\n> [!warning] Anexo não localizado: 02_Requisitos/Requisitos Nao Funcionais\n\n# Modelo de domínio\n\n<span id=\"doc-03-modelo-de-dominio-modelo-de-dados\" class=\"source-anchor\"></span>\n## Modelo de Dados\n\nO diagrama consolida as estruturas repetidas nos casos de uso e o DER da fonte. É um modelo lógico, ainda não confrontado com o esquema real.\n\n```mermaid\nerDiagram\n\n    USUARIO {\n        int id_usuario PK\n        string nome\n        string email UK\n        string senha\n    }\n\n    CLIENTE {\n        int id_cliente PK\n        string nome\n        string tipo_cliente\n        string cpf_cnpj UK\n        string observacao\n    }\n\n    ENDERECO {\n        int id_endereco PK\n        int id_cliente FK\n        string cep\n        string logradouro\n        string numero\n        string complemento\n        string bairro\n        string cidade\n        string estado\n    }\n\n    CONTATO {\n        int id_contato PK\n        int id_cliente FK\n        string nome_contato\n        string telefone\n        string email\n    }\n\n    VEICULO {\n        int id_veiculo PK\n        int id_cliente FK\n        string placa UK\n        string marca\n        string modelo\n        int ano\n    }\n\n    TECNICO {\n        int id_tecnico PK\n        string nome\n        string telefone\n        boolean ativo\n    }\n\n    SERVICO {\n        int id_servico PK\n        string descricao\n        decimal valor_padrao\n        decimal tempo_estimado\n    }\n\n    PRODUTO {\n        int id_produto PK\n        string codigo UK\n        string nome\n        string unidade_medida\n        decimal preco_custo\n        decimal preco_venda\n        decimal quantidade_estoque\n        decimal estoque_minimo\n    }\n\n    FORNECEDOR {\n        int id_fornecedor PK\n        string nome\n        string cpf_cnpj UK\n        string telefone\n        string email\n    }\n\n    FORNECEDOR_PRODUTO {\n        int id_fornecedor FK\n        int id_produto FK\n    }\n\n    ENTRADA_MERCADORIA {\n        int id_entrada PK\n        int id_fornecedor FK\n        datetime data_entrada\n    }\n\n    ITEM_ENTRADA_MERCADORIA {\n        int id_item_entrada PK\n        int id_entrada FK\n        int id_produto FK\n        decimal quantidade\n        decimal valor_compra\n    }\n\n    ORDEM_SERVICO {\n        int id_os PK\n        int id_cliente FK\n        int id_veiculo FK\n        string problema_relatado\n        string diagnostico\n        string status\n        datetime data_abertura\n        decimal valor_total\n    }\n\n    ITEM_PRODUTO_OS {\n        int id_item_produto_os PK\n        int id_os FK\n        int id_produto FK\n        decimal quantidade\n        decimal valor_unitario\n        decimal subtotal\n    }\n\n    ITEM_SERVICO_OS {\n        int id_item_servico_os PK\n        int id_os FK\n        int id_servico FK\n        int id_tecnico FK\n        decimal valor_cobrado\n    }\n\n    PAGAMENTO {\n        int id_pagamento PK\n        int id_os FK\n        string forma_pagamento\n        string tipo_desconto\n        decimal valor_desconto\n        decimal valor_final\n        datetime data_pagamento\n    }\n\n\n    CLIENTE ||--|| ENDERECO : possui\n    CLIENTE ||--|{ CONTATO : possui\n    CLIENTE ||--o{ VEICULO : possui\n    CLIENTE ||--o{ ORDEM_SERVICO : solicita\n\n    VEICULO ||--o{ ORDEM_SERVICO : vinculado_a\n\n    ORDEM_SERVICO ||--o{ ITEM_PRODUTO_OS : possui\n    PRODUTO ||--o{ ITEM_PRODUTO_OS : utilizado_em\n\n    ORDEM_SERVICO ||--o{ ITEM_SERVICO_OS : possui\n    SERVICO ||--o{ ITEM_SERVICO_OS : realizado_em\n    TECNICO ||--o{ ITEM_SERVICO_OS : responsavel\n\n    ORDEM_SERVICO ||--o| PAGAMENTO : possui\n\n    FORNECEDOR ||--o{ FORNECEDOR_PRODUTO : fornece\n    PRODUTO ||--o{ FORNECEDOR_PRODUTO : fornecido_por\n\n    FORNECEDOR ||--o{ ENTRADA_MERCADORIA : origina\n    ENTRADA_MERCADORIA ||--|{ ITEM_ENTRADA_MERCADORIA : possui\n    PRODUTO ||--o{ ITEM_ENTRADA_MERCADORIA : recebido\n```\n\n### Restrições derivadas\n\n- `CLIENTE.cpf_cnpj` deve ser válido e único conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-02-cpf-ou-cnpj-valido-e-unico\">RN-02</a>.\n- Todo cliente deve ser identificado como `PF` ou `PJ` conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-01-identificacao-do-cliente\">RN-01</a>.\n- Todo cliente deve possuir pelo menos um contato.\n- `VEICULO.placa` deve ser válida e única.\n- Um veículo deve estar vinculado a um único cliente.\n- `PRODUTO.codigo` deve ser único.\n- `PRODUTO.quantidade_estoque` não pode possuir quantidade negativa.\n- `PRODUTO.estoque_minimo` determina o limite utilizado para geração do alerta de estoque mínimo.\n- Quantidades de produtos utilizadas em uma O.S. devem ser maiores que zero.\n- A quantidade utilizada na O.S. não pode exceder a quantidade disponível em estoque.\n- `SERVICO.valor_padrao` é utilizado como valor inicial ao adicionar o serviço à O.S.\n- `ITEM_SERVICO_OS.valor_cobrado` pode ser diferente de `SERVICO.valor_padrao` sem alterar o cadastro original do serviço.\n- `SERVICO.tempo_estimado` deve ser maior que zero conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-32-tempo-estimado-do-servico\">RN-32</a>.\n- Todo técnico recém cadastrado inicia como ativo conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-33-tecnico-ativo\">RN-33</a>.\n- Somente técnicos ativos podem ser vinculados a novos serviços de uma O.S.\n- Toda O.S. inicia com status `Aberta`.\n- O status da O.S. deve respeitar as transições definidas nas regras de negócio.\n- Uma O.S. pode possuir vários produtos e vários serviços.\n- Uma O.S. pode não possuir pagamento enquanto não tiver sido finalizada.\n- O pagamento deve registrar a forma de pagamento e, quando houver, o desconto aplicado.\n- O desconto não pode resultar em valor final negativo.\n- Uma entrada de mercadoria deve estar vinculada a um fornecedor e possuir pelo menos um item.\n- Um fornecedor pode fornecer vários produtos e um produto pode ser fornecido por vários fornecedores.\n\n### Diferenças e lacunas\n\n- O sistema prevê autenticação de `USUARIO`, porém ainda não foram definidos diferentes perfis ou níveis de permissão.\n- O cadastro de `VEICULO` não possui caso de uso próprio; o veículo é cadastrado durante a abertura da O.S. quando a placa informada ainda não existe.\n- O sistema registra a forma de pagamento, mas não realiza processamento financeiro, parcelamento ou integração com meios de pagamento.\n- Não foi definido controle de histórico das alterações realizadas pelos usuários, como qual usuário abriu, alterou ou finalizou uma O.S.\n\nVeja também <a href=\"#doc-03-modelo-de-dominio-dicionario-de-dados\">Dicionário de Dados</a>.\n\n\n\n<span id=\"doc-03-modelo-de-dominio-dicionario-de-dados\" class=\"source-anchor\"></span>\n## Dicionário de Dados\n\n\n### Usuario\n\nPessoa interna autorizada a usar o sistema.\n\n| Campo        | Papel                     | Regra                                   |\n| ------------ | ------------------------- | --------------------------------------- |\n| `id_usuario` | chave primária            | obrigatório                             |\n| `nome`       | nome do usuário           | obrigatório a confirmar                 |\n| `email`      | identificação para acesso | obrigatório e único                     |\n| `senha`      | credencial de acesso      | obrigatória; armazenada de forma segura |\n\n### Cliente\n\nPessoa física ou jurídica que utiliza os serviços ou realiza compras na empresa.\n\n| Campo          | Papel                                | Regra                                                                              |\n| -------------- | ------------------------------------ | ---------------------------------------------------------------------------------- |\n| `id_cliente`   | chave primária                       | obrigatório                                                                        |\n| `nome`         | nome do cliente ou razão social      | obrigatório                                                                        |\n| `tipo_cliente` | identifica PF ou PJ                  | obrigatório; `PF` ou `PJ` conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-01-identificacao-do-cliente\">RN-01</a>     |\n| `cpf_cnpj`     | identificação do cliente             | obrigatório, válido e único conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-02-cpf-ou-cnpj-valido-e-unico\">RN-02</a> |\n| `observacao`   | observações internas sobre o cliente | opcional                                                                           |\n\n### Endereço\n\nRepresenta o endereço vinculado a um cliente.\n\n| Campo         | Papel                            | Regra       |\n| ------------- | -------------------------------- | ----------- |\n| `id_endereco` | chave primária                   | obrigatório |\n| `id_cliente`  | referência a Cliente             | obrigatório |\n| `cep`         | CEP do endereço                  | obrigatório |\n| `logradouro`  | rua, avenida ou outro logradouro | obrigatório |\n| `numero`      | número do endereço               | obrigatório |\n| `complemento` | complemento do endereço          | opcional    |\n| `bairro`      | bairro do endereço               | obrigatório |\n| `cidade`      | cidade do endereço               | obrigatório |\n| `estado`      | estado (UF) do endereço          | obrigatório |\n\n### Contato\n\nRepresenta o contato vinculado a um cliente.\n\n| Campo          | Papel                                     | Regra       |\n| -------------- | ----------------------------------------- | ----------- |\n| `id_contato`   | chave primária                            | obrigatório |\n| `id_cliente`   | identifica o cliente vinculado ao contato | obrigatório |\n| `nome_contato` | nome do contato                           | obrigatório |\n| `telefone`     | telefone para contato                     | obrigatório |\n| `email`        | e-mail para contato                       | opcional    |\n\n\n### Veiculo\n\nRepresenta um veículo vinculado a um cliente.\n\n| Campo        | Papel                    | Regra                       |\n| ------------ | ------------------------ | --------------------------- |\n| `id_veiculo` | chave primária           | obrigatório                 |\n| `id_cliente` | referência a Cliente     | obrigatório                 |\n| `placa`      | identificação do veículo | obrigatória, válida e única |\n| `marca`      | fabricante do veículo    | obrigatório                 |\n| `modelo`     | modelo do veículo        | obrigatório                 |\n| `ano`        | ano do veículo           | obrigatório                 |\n\n### Técnico\n\nRepresenta um profissional responsável pela execução de serviços.\n\n| Campo        | Papel               | Regra                                                        |\n| ------------ | ------------------- | ------------------------------------------------------------ |\n| `id_tecnico` | chave primária      | obrigatório                                                  |\n| `nome`       | nome do técnico     | obrigatório                                                  |\n| `telefone`   | telefone de contato | conforme dados definidos no cadastro                         |\n| `ativo`      | situação do técnico | inicia como `true` conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-33-tecnico-ativo\">RN-33</a> |\n\n### Serviço\n\nRepresenta um serviço disponível no catálogo da oficina.\n\n| Campo            | Papel                        | Regra                                                                |\n| ---------------- | ---------------------------- | -------------------------------------------------------------------- |\n| `id_servico`     | chave primária               | obrigatório                                                          |\n| `descricao`      | identificação do serviço     | obrigatório                                                          |\n| `valor_padrao`   | valor sugerido do serviço    | válido e maior que zero                                              |\n| `tempo_estimado` | tempo estimado para execução | maior que zero conforme <a href=\"#doc-02-requisitos-regras-de-negocio-rn-32-tempo-estimado-do-servico\">RN-32</a> |\n\n### Produto\n\nRepresenta um produto utilizado ou comercializado pela oficina.\n\n| Campo                | Papel                         | Regra                       |\n| -------------------- | ----------------------------- | --------------------------- |\n| `id_produto`         | chave primária                | obrigatório                 |\n| `codigo`             | código de identificação       | obrigatório e único         |\n| `nome`               | identificação legível         | obrigatório                 |\n| `unidade_medida`     | unidade do produto            | obrigatório                 |\n| `preco_custo`        | preço de aquisição            | valor válido                |\n| `preco_venda`        | preço utilizado na venda      | valor válido                |\n| `quantidade_estoque` | quantidade disponível         | não pode ser negativa       |\n| `estoque_minimo`     | limite para geração de alerta | valor válido e não negativo |\n\n### Fornecedor\n\nRepresenta uma pessoa física ou jurídica que fornece produtos para a oficina.\n\n| Campo           | Papel                       | Regra             |\n| --------------- | --------------------------- | ----------------- |\n| `id_fornecedor` | chave primária              | obrigatório       |\n| `nome`          | nome ou razão social        | obrigatório       |\n| `cnpj`          | identificação do fornecedor | válido e único    |\n| `telefone`      | telefone de contato         | conforme cadastro |\n| `email`         | e-mail de contato           | conforme cadastro |\n### Fornecedor_Produto\n\nRepresenta o contato vinculado a um cliente.\n\n| Campo           | Papel                   | Regra       |\n| --------------- | ----------------------- | ----------- |\n| `id_fornecedor` | referência a Fornecedor | obrigatório |\n| `id_produto`    | referência a Produto    | obrigatório |\n\n### Entrada_Mercadoria\n\nRepresenta uma entrada de mercadorias adquiridas de um fornecedor.\n\n| Campo           | Papel                   | Regra                   |\n| --------------- | ----------------------- | ----------------------- |\n| `id_entrada`    | chave primária          | obrigatório             |\n| `id_fornecedor` | referência a Fornecedor | obrigatório             |\n| `data_entrada`  | data/hora da entrada    | preenchida pelo sistema |\n\n### Item_Entrada_Mercadoria\n\nRepresenta cada produto recebido em uma entrada de mercadoria.\n\n| Campo             | Papel                                 | Regra          |\n| ----------------- | ------------------------------------- | -------------- |\n| `id_item_entrada` | chave primária                        | obrigatório    |\n| `id_entrada`      | referência a Entrada_Mercadoria       | obrigatório    |\n| `id_produto`      | referência a Produto                  | obrigatório    |\n| `quantidade`      | quantidade recebida                   | maior que zero |\n| `valor_compra`    | valor de compra registrado na entrada | valor válido   |\n### Ordem_Servico\n\nRepresenta uma Ordem de Serviço aberta para um cliente e veículo.\n\n| Campo               | Papel                                     | Regra                                           |\n| ------------------- | ----------------------------------------- | ----------------------------------------------- |\n| `id_contato`        | chave primária                            | obrigatório                                     |\n| `id_cliente`        | identifica o cliente vinculado ao contato | obrigatório                                     |\n| `id_veiculo`        | referência a Veiculo                      | obrigatório                                     |\n| `problema_relatado` | problema informado pelo cliente           | obrigatório                                     |\n| `diagnostico`       | diagnóstico técnico                       | preenchido posteriormente; opcional na abertura |\n| `status`            | situação atual da O.S.                    | inicia como `Aberta`                            |\n| `data_abertura`     | data/hora da abertura                     | preenchida pelo sistema                         |\n| `valor_total`       | valor total da O.S.                       | calculado a partir dos produtos e serviços      |\n\n### Item_Produto_OS\n\nRepresenta um produto utilizado em uma Ordem de Serviço.\n\n| Campo                | Papel                              | Regra                             |\n| -------------------- | ---------------------------------- | --------------------------------- |\n| `id_item_produto_os` | chave primária                     | obrigatório                       |\n| `id_os`              | referência a Ordem_Servico         | obrigatório                       |\n| `id_produto`         | referência a Produto               | obrigatório                       |\n| `quantidade`         | quantidade utilizada               | maior que zero                    |\n| `valor_unitario`     | preço do produto utilizado na O.S. | registrado no momento da inclusão |\n| `subtotal`           | valor correspondente ao item       | quantidade × valor unitário       |\n### Item_Servico_OS\n\nRepresenta um serviço realizado em uma Ordem de Serviço.\n\n| Campo                | Papel                             | Regra                                                     |\n| -------------------- | --------------------------------- | --------------------------------------------------------- |\n| `id_item_servico_os` | chave primária                    | obrigatório                                               |\n| `id_os`              | referência a Ordem_Servico        | obrigatório                                               |\n| `id_servico`         | referência a Servico              | obrigatório                                               |\n| `id_tecnico`         | referência ao Técnico responsável | obrigatório; técnico ativo                                |\n| `valor_cobrado`      | valor do serviço naquela O.S.     | inicialmente recebe o valor padrão, mas pode ser alterado |\n\n### Pagamento\n\nRepresenta as informações de pagamento registradas na finalização da O.S.\n\n| Campo             | Papel                      | Regra                                          |\n| ----------------- | -------------------------- | ---------------------------------------------- |\n| `id_pagamento`    | chave primária             | obrigatório                                    |\n| `id_os`           | referência a Ordem_Servico | obrigatório                                    |\n| `forma_pagamento` | forma utilizada            | obrigatório                                    |\n| `tipo_desconto`   | forma do desconto          | `Percentual`, `Valor` ou vazio                 |\n| `valor_desconto`  | desconto aplicado          | opcional; deve respeitar as regras de desconto |\n| `valor_final`     | valor final após desconto  | não pode ser negativo                          |\n| `data_pagamento`  | data/hora da finalização   | preenchida pelo sistema                        |\n\n\n\n<span id=\"doc-03-modelo-de-dominio-ciclo-de-vida-da-requisicao\" class=\"source-anchor\"></span>\n## Ciclo de Vida da Requisição\n\n\n\n\n# Arquitetura e decisões\n\n<span id=\"doc-04-arquitetura-visao-de-arquitetura\" class=\"source-anchor\"></span>\n## Visão de Arquitetura\n\n\n\n> [!warning] Anexo não localizado: 06_Interfaces/Anexos/Diagramas da Fonte/Diagrama de Classes.png\n\n\n<span id=\"doc-04-arquitetura-diagramas-de-sequencia\" class=\"source-anchor\"></span>\n## Diagramas de Sequência\n\n\n\n\n<span id=\"doc-04-arquitetura-decisoes-indice-de-decisoes\" class=\"source-anchor\"></span>\n## Índice de Decisões\n\n| ID | Decisão | Estado |\n|---|---|---|\n| ADR-001 | <a href=\"#doc-04-arquitetura-decisoes-adr-001-momento-da-reserva-e-baixa-de-estoque\">Momento da reserva e baixa de estoque</a> | proposta |\n| ADR-002 | <a href=\"#doc-04-arquitetura-decisoes-adr-002-exclusao-logica-de-cadastros\">Exclusão lógica de cadastros</a> | proposta |\n\nUma ADR aprovada não deve ser reescrita para esconder o histórico. Quando substituída, marque-a como `substituido` e crie nova decisão com link bidirecional.\n\n\n<span id=\"doc-04-arquitetura-decisoes-adr-001-momento-da-reserva-e-baixa-de-estoque\" class=\"source-anchor\"></span>\n## ADR-001 - Momento da reserva e baixa de estoque\n\n\n\n<span id=\"doc-04-arquitetura-decisoes-adr-002-exclusao-logica-de-cadastros\" class=\"source-anchor\"></span>\n## ADR-002 - Exclusão lógica de cadastros\n\n\n\n# Interfaces\n\n<span id=\"doc-06-interfaces-mapa-de-interfaces\" class=\"source-anchor\"></span>\n## Mapa de Interfaces\n\nOs 22 protótipos foram organizados a partir das interfaces definidas para os casos de uso do sistema. Cada ID abaixo aponta para o caso de uso, para o PNG local e para a página da fonte.\n\n### Índice rápido\n\n| ID     | Interface                                                                                              | Caso de uso                                            |\n| ------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |\n| IMG-01 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Cadastrar cliente</a>                                                     | <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">UC-001</a>                 |\n| IMG-02 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Consultar clientes</a>                                                   | <a href=\"#doc-02-requisitos-casos-de-uso-uc-002-consultar-clientes\">UC-002</a>                |\n| IMG-03 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Cadastrar Técnico</a>                                                     | <a href=\"#doc-02-requisitos-casos-de-uso-uc-003-cadastrar-tecnico\">UC-003</a>                 |\n| IMG-04 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Cadastrar Serviço</a>                                                     | <a href=\"#doc-02-requisitos-casos-de-uso-uc-004-cadastrar-servico\">UC-004</a>                 |\n| IMG-05 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Alertar estoque mínimo</a>                                                | <a href=\"#doc-02-requisitos-casos-de-uso-uc-005-cadastrar-produto\">UC-005</a>                 |\n| IMG-06 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Registrar entrada de mercadoria</a>                         | <a href=\"#doc-02-requisitos-casos-de-uso-uc-006-registrar-entrada-de-mercadoria\">UC-006</a>   |\n| IMG-07 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Cadastrar fornecedor</a>                                               | <a href=\"#doc-02-requisitos-casos-de-uso-uc-007-cadastrar-fornecedor\">UC-007</a>              |\n| IMG-08 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Cadastrar produto</a>                                                     | <a href=\"#doc-02-requisitos-casos-de-uso-uc-008-alertar-estoque-minimo\">UC-008</a>            |\n| IMG-09 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Abrir Ordem de Serviço Placa Registrada</a>         | <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>            |\n| IMG-10 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Abrir Ordem de Serviço Placa Não Registrada</a> | <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>            |\n| IMG-11 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Ordem de Serviço</a>                                                       | <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>            |\n| IMG-12 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Adicionar Produtos à O.S.</a>                                     | UC-010         |\n| IMG-13 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Adicionar Serviço à O.S.</a>                                       | UC-011          |\n| IMG-14 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Registrar diagnóstico O.S</a>                                     | UC-012         |\n| IMG-15 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Atualizar status da O.S.</a>                                       | UC-013          |\n| IMG-16 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Finalizar O.S.</a>                                                           | UC-014                    |\n| IMG-17 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Emitir comprovante da O.S.</a>                                   | UC-015        |\n| IMG-18 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Consultar O.S.</a>                                                           | UC-016                    |\n| IMG-19 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Editar ou Remover produto da O.S.</a>                     | UC-017 |\n| IMG-20 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Editar ou Remover produto da O.S.</a>                     | UC-017 |\n| IMG-21 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Editar ou Remover serviço da O.S.</a>                     | UC-018 |\n| IMG-22 | <a href=\"#doc-06-interfaces-mapa-de-interfaces\">Editar ou Remover serviço da O.S.</a>                     | UC-018 |\n\n\n\n### Galeria de protótipos\n\n#### IMG-01 - Cadastrar cliente\n\nCaso de uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-001-cadastrar-cliente\">UC-001</a>. \n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 01 - Cadastrar Cliente\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2001%20-%20Cadastrar%20Cliente.png\" alt=\"Protótipo IMG- 01 - Cadastrar Cliente\"></figure>\n\n#### IMG-02 - Consultar clientes\n\nCaso de uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-002-consultar-clientes\">UC-002</a>. \n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 02 - Consultar Clientes\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2002%20-%20Consultar%20Clientes.png\" alt=\"Protótipo IMG- 02 - Consultar Clientes\"></figure>\n\n#### IMG-03 - Cadastrar Técnico\n\nCaso de uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-003-cadastrar-tecnico\">UC-003</a>. \n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 03 - Cadastrar Técnico\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2003%20-%20Cadastrar%20T%C3%A9cnico.png\" alt=\"Protótipo IMG- 03 - Cadastrar Técnico\"></figure>\n\n#### IMG-04 - Cadastrar Serviço\n\nCaso de uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-004-cadastrar-servico\">UC-004</a>.\n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG-04 - Cadastrar Serviço\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-04%20-%20Cadastrar%20Servi%C3%A7o.png\" alt=\"Protótipo IMG-04 - Cadastrar Serviço\"></figure>\n\n#### IMG-05 - Cadastrar produto\n\nCaso de uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-005-cadastrar-produto\">UC-005</a>.\n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 05 - Cadastrar produto\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2005%20-%20Cadastrar%20produto.png\" alt=\"Protótipo IMG- 05 - Cadastrar produto\"></figure>\n\n#### IMG-06 - Registrar entrada de mercadoria\n\nCaso de uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-006-registrar-entrada-de-mercadoria\">UC-006</a>. \n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 06 - Registrar Entrada de Mercadoria\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2006%20-%20Registrar%20Entrada%20de%20Mercadoria.png\" alt=\"Protótipo IMG- 06 - Registrar Entrada de Mercadoria\"></figure>\n\n#### IMG-07 - Cadastrar fornecedor\n\nCaso de uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-007-cadastrar-fornecedor\">UC-007</a>. \n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 07 - Cadastrar fornecedor\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2007%20-%20Cadastrar%20fornecedor.png\" alt=\"Protótipo IMG- 07 - Cadastrar fornecedor\"></figure>\n\n#### IMG-08 - Alertar estoque mínimo\n\nCaso de uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-008-alertar-estoque-minimo\">UC-008</a>.\n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 08 - Alertar estoque mínimo\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2008%20-%20Alertar%20estoque%20m%C3%ADnimo.png\" alt=\"Protótipo IMG- 08 - Alertar estoque mínimo\"></figure>\n\n#### IMG-09 - Abrir Ordem de Serviço Placa Registrada\n\nCaso de uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>. \n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 09 - Abrir Ordem de Serviço1\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2009%20-%20Abrir%20Ordem%20de%20Servi%C3%A7o1.png\" alt=\"Protótipo IMG- 09 - Abrir Ordem de Serviço1\"></figure>\n\n#### IMG-10 - Abrir Ordem de Serviço Placa Não Registrada\n\nCaso de uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>. \n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 10 - Abrir Ordem de Serviço2\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2010%20-%20Abrir%20Ordem%20de%20Servi%C3%A7o2.png\" alt=\"Protótipo IMG- 10 - Abrir Ordem de Serviço2\"></figure>\n\n#### IMG-11 - Ordem de Serviço\n\nCaso de uso: <a href=\"#doc-02-requisitos-casos-de-uso-uc-009-abrir-ordem-de-servico\">UC-009</a>. \n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 11 - Abrir Ordem de Serviço3\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2011%20-%20Abrir%20Ordem%20de%20Servi%C3%A7o3.png\" alt=\"Protótipo IMG- 11 - Abrir Ordem de Serviço3\"></figure>\n\n#### IMG-12 - Adicionar Produtos à O.S.\n\nCaso de uso: UC-010. \n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 12 - Adicionar produtos à O.S\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2012%20-%20Adicionar%20produtos%20%C3%A0%20O.S.png\" alt=\"Protótipo IMG- 12 - Adicionar produtos à O.S\"></figure>\n\n#### IMG-13 - Adicionar Serviço à O.S.\n\nCaso de uso: UC-011.\n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 13 - Adicionar serviço à O.S\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2013%20-%20Adicionar%20servi%C3%A7o%20%C3%A0%20O.S.png\" alt=\"Protótipo IMG- 13 - Adicionar serviço à O.S\"></figure>\n\n#### IMG-14 - Registrar diagnóstico O.S\n\nCaso de uso: UC-012.\n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 14 - Registrar diagnóstico O.S\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2014%20-%20Registrar%20diagn%C3%B3stico%20O.S.png\" alt=\"Protótipo IMG- 14 - Registrar diagnóstico O.S\"></figure>\n\n#### IMG-15 - Atualizar status da O.S.\n\nCaso de uso: UC-013.\n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 15 - Atualizar status da O.S\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2015%20-%20Atualizar%20status%20da%20O.S.png\" alt=\"Protótipo IMG- 15 - Atualizar status da O.S\"></figure>\n\n#### IMG-16 - Finalizar O.S.\n\nCaso de uso: UC-014.\n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 16 - Finalizar O.S\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2016%20-%20Finalizar%20O.S.png\" alt=\"Protótipo IMG- 16 - Finalizar O.S\"></figure>\n\n#### IMG-17 - Emitir comprovante da O.S.\n\nCaso de uso: UC-015.\n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 17 - Emitir comprovante da O.S\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2017%20-%20Emitir%20comprovante%20da%20O.S.png\" alt=\"Protótipo IMG- 17 - Emitir comprovante da O.S\"></figure>\n\n#### IMG-18 - Consultar O.S.\n\nCaso de uso: UC-016.\n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 18 - Consultar O.S\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2018%20-%20Consultar%20O.S.png\" alt=\"Protótipo IMG- 18 - Consultar O.S\"></figure>\n\n#### IMG-19 - Editar ou Remover produto da O.S. \n\nCaso de uso: UC-017.\n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 19 - Editar ou Remover produto da O.S.1\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2019%20-%20Editar%20ou%20Remover%20produto%20da%20O.S.1.png\" alt=\"Protótipo IMG- 19 - Editar ou Remover produto da O.S.1\"></figure>\n\n#### IMG-20 - Editar ou Remover produto da O.S.\n\nCaso de uso: UC-017.\n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 20 - Editar ou Remover produto da O.S.2\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2020%20-%20Editar%20ou%20Remover%20produto%20da%20O.S.2.png\" alt=\"Protótipo IMG- 20 - Editar ou Remover produto da O.S.2\"></figure>\n\n#### IMG-21 - Editar ou Remover serviço da O.S.\n\nCaso de uso: UC-018.\n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 21 - Editar ou Remover serviço da O.S.1\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2021%20-%20Editar%20ou%20Remover%20servi%C3%A7o%20da%20O.S.1.png\" alt=\"Protótipo IMG- 21 - Editar ou Remover serviço da O.S.1\"></figure>\n\n#### IMG-22 - Editar ou Remover serviço da O.S.\n\nCaso de uso: UC-018.\n\n<figure class=\"illustration\" data-caption=\"Protótipo IMG- 22 - Editar ou Remover serviço da O.S.2\" data-source=\"SISMAT.EST.00001 (2026)\"><img src=\"file:///C:/Users/Usuario/Desktop/codigos%20da%20univer/periodo%204/Danilo%20dos%20Santos%20Sanches%20-%20SISMAT%20-%20Documentacao%20Viva/Laborat%C3%B3rio%20de%20Software%20I/OficinaPro%20-%20Documentacao%20Viva/06_Interfaces/Anexos/Prototipos/IMG-%2022%20-%20Editar%20ou%20Remover%20servi%C3%A7o%20da%20O.S.2.png\" alt=\"Protótipo IMG- 22 - Editar ou Remover serviço da O.S.2\"></figure>\n\n### Diagramas visuais da fonte\n\nAlém dos protótipos de interface, a documentação do sistema possui outros diagramas que complementam a especificação:\n\n- Diagrama de Casos de Uso;\n- Diagrama Entidade - Relacionamento;\n  \nEsses diagramas representam diferentes aspectos do sistema e devem permanecer consistentes com os casos de uso, regras de negócio e modelo de dados.\n\n### Evolução recomendada\n\nAs interfaces apresentadas representam a versão atual do sistema e podem sofrer ajustes durante o desenvolvimento. Alterações futuras devem manter consistência com:\n\n- os casos de uso;\n- as regras de negócio;\n- as mensagens do sistema;\n- o modelo de dados;\n- os requisitos funcionais.\n\nTambém devem ser considerados aspectos de usabilidade, responsividade, acessibilidade e clareza das mensagens apresentadas ao usuário.\n\n\n### Contrato mínimo de uma tela\n\n| Aspecto   | Conteúdo esperado                                             |\n| --------- | ------------------------------------------------------------- |\n| Objetivo  | tarefa do usuário                                             |\n| Entrada   | campos, formato e obrigatoriedade                             |\n| Ações     | comandos disponíveis por perfil                               |\n| Estados   | normal, vazio, carregando, erro, sucesso                      |\n| Regras    | Regras de negócio relacionadas à funcionalidade representada. |\n| Dados     | entidades e campos exibidos                                   |\n| Aceitação | cenários que cobrem a tela                                    |\n\n\n# Qualidade e validação\n\n<span id=\"doc-05-qualidade-cenarios-de-aceitacao\" class=\"source-anchor\"></span>\n## Cenários de Aceitação\n\n\n\n<span id=\"doc-05-qualidade-matriz-de-rastreabilidade\" class=\"source-anchor\"></span>\n## Matriz de Rastreabilidade\n\n\n\n<span id=\"doc-05-qualidade-riscos-e-questoes-em-aberto\" class=\"source-anchor\"></span>\n## Riscos e Questões em Aberto\n\n### Riscos\n\n\n\n\n\n# Governança e evolução\n\n<span id=\"doc-00-inicio-como-manter-esta-documentacao-viva\" class=\"source-anchor\"></span>\n## Como manter esta documentação viva\n\n### Regra principal\n\nUma mudança de comportamento só está concluída quando código, teste e documentação afetada são atualizados juntos. Se a decisão ainda não foi tomada, registre uma questão; se foi tomada, registre uma ADR.\n\n### Fluxo de atualização\n\n1. Abra ou atualize o caso de uso afetado.\n2. Revise links para regras de negócio, entidades, mensagens e critérios de aceitação.\n3. Atualize o diagrama Mermaid quando o fluxo, o estado ou a integração mudar.\n4. Registre decisões relevantes em `04_Arquitetura/Decisoes`.\n5. Atualize `atualizado_em`, `ultima_revisao` e `proxima_revisao` no frontmatter.\n6. Inclua um resumo em <a href=\"#doc-07-operacao-registro-de-mudancas\">Registro de Mudanças</a> apenas para marcos; use o Git para o histórico detalhado.\n\n### Estados padronizados\n\n| Estado | Uso |\n|---|---|\n| `rascunho` | Conteúdo incompleto |\n| `em-revisao` | Derivado da fonte, aguardando validação |\n| `proposto` | Melhoria ainda não aprovada |\n| `aprovado` | Validado pelo responsável de negócio |\n| `implementado` | Confirmado no sistema e coberto por teste |\n| `obsoleto` | Mantido apenas por histórico |\n\n### Definição de pronto da documentação\n\n- [ ] o comportamento observável está descrito;\n- [ ] as exceções relevantes estão cobertas;\n- [ ] regras e dados estão ligados por wikilinks;\n- [ ] existe ao menos um cenário de aceitação correspondente;\n- [ ] dúvidas não resolvidas estão no registro de questões;\n- [ ] a implementação e os testes foram vinculados quando existirem;\n- [ ] o responsável e a próxima revisão estão definidos.\n\n### Convenções\n\n- IDs não mudam depois de publicados: `UC-001`, `RN-01`, `RNF-001`, `ADR-001`, `QST-001`, `CA-001` \n- Renomeie arquivos pelo Obsidian, com atualização automática de links habilitada.\n- Não duplique regras dentro de casos de uso; escreva a regra em sua página e faça o link.\n- Use `EV` para ação externa e `RS` para resposta do sistema apenas nas tabelas de fluxo.\n- Marque inferências com `origem: evolucao-proposta`.\n\n### Revisão periódica\n\nRecomenda-se revisão mensal enquanto o produto estiver em construção e trimestral após estabilização. A página <a href=\"#doc-00-inicio-status-da-documentacao\">Status da documentação</a> reúne pesquisas para localizar conteúdo pendente.\n\n\n<span id=\"doc-07-operacao-registro-de-mudancas\" class=\"source-anchor\"></span>\n## Registro de Mudanças\n\nO Git deve registrar o histórico detalhado. Esta página resume marcos documentais e decisões com impacto amplo.\n\n### 2026-09-16 - Transparência do uso de inteligência artificial\n\n#### Adicionado\n\n- grupo `09_UsoIA` com índice, registro de etapas, metodologia, responsabilidades, impactos, riscos, controles e declaração de transparência;\n- diferenciação entre extração assistida, reestruturação assistida, proposta assistida e validação assistida;\n- registro explícito da revisão humana e das limitações do uso de IA.\n\n#### Alterado\n\n- caderno do Projeto Integrador passou a incorporar a seção de uso de inteligência artificial;\n- publicação avançou para a versão 1.2.\n\n#### Motivo\n\nTornar o uso de IA transparente, auditável e compatível com a responsabilidade autoral da equipe e com a avaliação acadêmica.\n\n### 2026-09-16 - Layout acadêmico institucional\n\n#### Adicionado\n\n- marca oficial da Universidade Paranaense na capa;\n- folha de rosto com natureza do Projeto Integrador;\n- fonte de cada figura e diagrama;\n- relatório de validação técnica e visual do PDF.\n\n#### Alterado\n\n- layout passou a adotar a identidade acadêmico-editorial aprovada: formato A4, faixa lateral azul e verde, grafismos geométricos, cabeçalhos institucionais e paginação superior;\n- capa e cabeçalhos passaram a exibir a marca da UNIPAR, o curso de Análise e Desenvolvimento de Sistemas e a disciplina Laboratório de Software;\n- cabeçalho corrente passou a alinhar horizontalmente a marca da UNIPAR e a identificação institucional, conforme a referência visual aprovada;\n- publicação avançou para a versão 1.1.\n\n#### Motivo\n\nAproximar a entrega interdisciplinar de um trabalho acadêmico formal sem caracterizá-la como TCC e sem romper o fluxo de documentação viva.\n\n### 2026-09-02 - Publicação editorial no padrão Overleaf\n\n#### Adicionado\n\n- gerador local de PDF baseado em HTML paginado;\n- sumário e lista de figuras com números de página;\n- numeração automática, cabeçalhos correntes e marcadores PDF;\n- renderização incorporada de Markdown e Mermaid;\n- projeto gráfico editorial e dependências versionadas.\n\n#### Alterado\n\n- o caderno passou a usar metadados estruturados no frontmatter;\n- a exportação nativa do Obsidian tornou-se apenas uma prévia rápida;\n- a saída formal passou para `output/pdf`.\n\n#### Motivo\n\nElevar a legibilidade e a apresentação formal sem perder a documentação viva nem exigir manutenção duplicada em Overleaf.\n\n### 2026-09-02 - Template de publicação em PDF\n\n#### Adicionado\n\n- perfil de impressão A4 para o exportador nativo do Obsidian;\n- caderno completo do Projeto Integrador com transclusões;\n- template reutilizável para novas entregas;\n- guia e checklist de geração do PDF;\n- matriz de integração curricular das disciplinas.\n\n#### Decisão\n\nO Obsidian permanece como fonte viva; cada PDF representa uma versão congelada para avaliação.\n\n### 2026-09-02 - Incorporação dos anexos visuais\n\n#### Adicionado\n\n- 13 protótipos `IMG-01` a `IMG-13` em resolução original;\n- diagramas originais de casos de uso, entidade-relacionamento e classes;\n- galeria visual e links diretos no mapa de interfaces.\n\n#### Atualizado\n\n- casos de uso agora apontam para a seção exata de cada protótipo;\n- modelos vivos exibem os diagramas originais como referência da linha de base.\n\n### 2026-09-02 - Migração para documentação viva\n\n#### Adicionado\n\n- vault Obsidian autônomo e sem plugin obrigatório;\n- visão, escopo, atores e glossário;\n- oito casos de uso e 21 regras de negócio em páginas interligadas;\n- catálogo de mensagens e mapa de protótipos;\n- modelos de dados e estados em Mermaid;\n- visão conceitual de arquitetura e diagramas de sequência;\n- requisitos não funcionais propostos;\n- cenários de aceitação e matriz de rastreabilidade;\n- ADRs propostas, riscos e questões abertas;\n- templates e guia de governança.\n\n#### Fonte\n\nLinha de base: `SISMAT.EST.00001`, versão 1, emissão 26/03/2026.\n\n#### Limitação\n\nNão foi localizado código-fonte do SISMAT para validar o estado `implementado`.\n\n### 2026-03-26 - Linha de base original\n\nEmissão inicial do documento de especificação de casos de uso em PDF.\n\n\n# Uso de inteligência artificial\n\n<span id=\"doc-09-usoia-indice-de-uso-de-ia\" class=\"source-anchor\"></span>\n## Uso de Inteligência Artificial\n\nEste grupo documenta, de forma transparente e verificável, onde a inteligência artificial foi utilizada no Projeto Integrador SISMAT, como foi utilizada, quais resultados produziu e quais controles humanos foram aplicados.\n\n> [!important] Princípio de responsabilidade\n> A IA foi usada como ferramenta de apoio à análise, organização, redação, geração de artefatos propostos e verificação editorial. A autoria, as decisões, a validação do conteúdo e a responsabilidade pela entrega permanecem com a equipe.\n\n### Documentos do grupo\n\n- <a href=\"#doc-09-usoia-etapas-e-registro-de-uso\">Etapas e Registro de Uso</a>\n- <a href=\"#doc-09-usoia-metodologia-e-responsabilidades\">Metodologia e Responsabilidades</a>\n- <a href=\"#doc-09-usoia-impactos-riscos-e-controles\">Impactos, Riscos e Controles</a>\n- <a href=\"#doc-09-usoia-declaracao-de-transparencia\">Declaração de Transparência</a>\n\n### Classificação das contribuições\n\n| Classificação | Significado |\n|---|---|\n| extração assistida | localização e organização de informações já presentes na fonte |\n| reestruturação assistida | transformação da forma de apresentação sem alterar intencionalmente o significado |\n| proposta assistida | conteúdo novo sugerido pela IA e sujeito à aprovação da equipe |\n| validação assistida | verificações técnicas ou editoriais que apoiam, mas não substituem, a revisão humana |\n\n### Regra de atualização\n\nSempre que uma nova atividade usar IA de forma relevante, a equipe deve:\n\n1. incluir uma entrada em <a href=\"#doc-09-usoia-etapas-e-registro-de-uso\">Etapas e Registro de Uso</a>;\n2. informar a entrada fornecida, o objetivo e a saída aproveitada;\n3. registrar a verificação humana realizada;\n4. indicar impactos, limitações ou riscos novos;\n5. atualizar a <a href=\"#doc-09-usoia-declaracao-de-transparencia\">declaração</a> quando o escopo do uso mudar.\n\n\n\n<span id=\"doc-09-usoia-etapas-e-registro-de-uso\" class=\"source-anchor\"></span>\n## Etapas e Registro de Uso\n\n### Resumo das utilizações\n\n| ID     | Etapa                            | Papel da IA                                      | Resultado incorporado                                            | Situação      |\n| ------ | -------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------- |\n| IA-001 | Organização da documentação      | estruturação, revisão e padronização             | organização dos documentos e índices no Obsidian                 | revisado      |\n| IA-002 | Casos de uso e regras de negócio | sugestão, revisão e verificação de consistência  | casos de uso, regras de negócio e mensagens do sistema           | revisado      |\n| IA-003 | modelagem visual                 | geração de código Mermaid                        | diagramas editáveis de domínio, estados, arquitetura e sequência | revisado      |\n| IA-004 | Diagramas e mapas                | geração e organização de diagramas editáveis     | diagramas Mermaid e mapas da documentação                        | revisado      |\n| IA-005 | Protótipos de interface          | geração visual das interfaces                    | protótipos das telas vinculados aos casos de uso                 | revisado      |\n| IA-006 | Protótipo interativo             | geração de uma demonstração navegável do sistema | protótipo web utilizado para visualizar o funcionamento          | demonstrativo |\n| IA-007 | transparência                    | organização do registro                          | grupo `09_UsoIA` e declaração de uso                             | ativo         |\n\n### IA-001 - Organização da documentação\n\n**Entrada:** requisitos, anotações, decisões da equipe e documentos produzidos durante o desenvolvimento do Projeto Integrador.\n\n**Como a IA foi usada:** auxílio na organização dos conteúdos em páginas separadas, padronização dos títulos, criação de índices, estruturação das informações e preparação dos textos para utilização no Obsidian.\n\n**Saída aproveitada:** estrutura organizada da documentação, índices de casos de uso, regras de negócio, mensagens, interfaces e demais artefatos.\n\n**Validação humana:** a equipe analisou a estrutura proposta, alterou nomes, removeu conteúdos desnecessários e definiu quais documentos seriam mantidos no projeto.\n\n**Impacto:** facilitou a organização e navegação pela documentação, diminuindo o trabalho repetitivo de formatação e permitindo maior consistência entre os documentos.\n\n### IA-002 - Casos de uso, regras de negócio e mensagens\n\n**Entrada:** funcionalidades desejadas para o sistema da oficina e decisões tomadas pela equipe sobre seu funcionamento.\n\n**Como a IA foi usada:** apoio na elaboração e revisão dos casos de uso, identificação de fluxos principais, alternativas e exceções, sugestão e organização das regras de negócio e padronização das mensagens apresentadas pelo sistema.\n\n**Saída aproveitada:** casos de uso UC-001 a UC-018, regras de negócio RN-01 a RN-34 e catálogo de mensagens utilizado nos respectivos fluxos.\n\n**Validação humana:** a equipe analisou cada sugestão, discutiu o comportamento esperado do sistema e decidiu quais fluxos, regras e mensagens seriam incorporados ou modificados.\n\n**Impacto:** auxiliou na identificação de inconsistências e situações que inicialmente não estavam previstas, como transições de status da O.S., controle de estoque, técnicos ativos, descontos e comportamento durante edição e remoção de itens.\n\n### IA-003 - Modelagem de dados\n\n**Entrada:** casos de uso, regras de negócio e informações necessárias para execução das funcionalidades.\n\n**Como a IA foi usada:** apoio na identificação das entidades, atributos, chaves, relacionamentos e cardinalidades necessárias para representar os dados do sistema.\n\n**Saída aproveitada:** Dicionário de Dados e Diagrama Entidade-Relacionamento (DER), contendo entidades como Cliente, Veículo, Produto, Serviço, Técnico, Fornecedor, Ordem de Serviço e Pagamento.\n\n**Validação humana:** a equipe revisou as entidades propostas, simplificou elementos considerados desnecessários e verificou se o modelo correspondia às funcionalidades definidas nos casos de uso.\n\n**Impacto:** permitiu visualizar de forma mais clara como os dados das diferentes funcionalidades se relacionam e ajudou a identificar problemas de modelagem antes de uma possível implementação.\n\n### IA-004 - Diagramas e mapas\n\n**Entrada:** casos de uso, atores, entidades e relacionamentos definidos na documentação.\n\n**Como a IA foi usada:** geração e revisão de diagramas em Mermaid, organização do mapa de atores e capacidades e apoio na representação visual dos relacionamentos do sistema.\n\n**Saída aproveitada:** diagramas editáveis integrados aos arquivos Markdown e utilizados como complemento à documentação textual.\n\n**Validação humana:** a equipe comparou os diagramas com os casos de uso, regras e modelo de dados e solicitou alterações quando alguma informação não correspondia às decisões do projeto.\n\n**Impacto:** facilitou a visualização geral do sistema e tornou os diagramas mais simples de atualizar juntamente com a documentação.\n\n### IA-005 - Protótipos de interface\n\n**Entrada:** casos de uso, regras de negócio, mensagens, entidades e funcionalidades definidas pela equipe.\n\n**Como a IA foi usada:** geração dos protótipos visuais das interfaces do sistema, definindo a organização dos formulários, tabelas, menus, botões, informações exibidas e diferentes estados necessários para representar os casos de uso.\n\n**Saída aproveitada:** protótipos identificados como IMG-01 a IMG-22 e vinculados aos respectivos casos de uso no Mapa de Interfaces.\n\n**Validação humana:** a equipe analisou visualmente as telas geradas, verificou se os campos e ações correspondiam aos requisitos e solicitou ajustes quando necessário.\n\n**Impacto:** permitiu representar visualmente como o sistema poderia funcionar sem a necessidade de implementar previamente sua interface.\n\n### IA-006 - Protótipo interativo\n\n**Entrada:** protótipos visuais, casos de uso, regras de negócio e fluxo esperado das principais funcionalidades.\n\n**Como a IA foi usada:** geração de um protótipo web navegável para demonstrar o funcionamento das interfaces e permitir a interação entre diferentes partes do sistema.\n\n**Saída aproveitada:** protótipo demonstrativo contendo navegação entre clientes, Ordens de Serviço, produtos, serviços, técnicos, fornecedores e estoque.\n\nO protótipo permite simular ações como:\n\n- cadastrar clientes;\n- abrir uma Ordem de Serviço;\n- identificar veículos pela placa;\n- adicionar produtos e serviços;\n- alterar o status da O.S.;\n- registrar diagnóstico;\n- finalizar a O.S.;\n- aplicar desconto;\n- selecionar forma de pagamento;\n- gerar visualização do comprovante;\n- registrar entrada de mercadorias;\n- visualizar alertas de estoque mínimo.\n\n**Validação humana:** a equipe utilizou o protótipo para verificar se os fluxos estavam compreensíveis e coerentes com os casos de uso e regras de negócio.\n\n**Impacto:** possibilitou visualizar e testar conceitualmente o funcionamento do sistema antes de sua implementação real.\n\n**Limitação:** o protótipo possui caráter demonstrativo e não representa uma implementação final do sistema. Ele não utiliza o backend Java/Spring Boot nem o banco de dados PostgreSQL definidos para uma futura implementação.\n\n### IA-007 - Registro de transparência\n\n**Entrada:** histórico das atividades assistidas por IA realizadas durante a evolução documental.\n\n**Como a IA foi usada:** consolidação do registro, da metodologia, dos impactos, dos riscos e das responsabilidades.\n\n**Saída aproveitada:** documentos do grupo `09_UsoIA`.\n\n**Validação humana:** a equipe deve revisar este registro antes de cada entrega e adequá-lo às orientações dos docentes e da instituição.\n\n**Impacto:** torna o uso de IA explícito, auditável e compatível com a responsabilidade autoral da equipe.\n\n### Como registrar um novo uso\n\nAdicione uma nova seção com ID sequencial e informe: data, etapa, entrada, objetivo, como a IA foi usada, saída incorporada, validação humana, impacto, limitações e responsável pela revisão.\n\n\n\n<span id=\"doc-09-usoia-metodologia-e-responsabilidades\" class=\"source-anchor\"></span>\n## Metodologia e Responsabilidades\n\n### Fluxo adotado\n\n```mermaid\nflowchart LR\n    A[Fonte ou necessidade] --> B[Definir tarefa e limites]\n    B --> C[Solicitar apoio da IA]\n    C --> D[Classificar a saída]\n    D --> E[Revisão humana]\n    E -->|reprovada| C\n    E -->|aprovada| F[Incorporar à documentação]\n    F --> G[Validar links, conteúdo e publicação]\n    G --> H[Registrar o uso e os impactos]\n```\n\n### Responsabilidades\n\n| Atividade | Apoio da IA | Responsabilidade da equipe |\n|---|---|---|\n| interpretação da fonte | localizar, resumir e relacionar informações | conferir sentido, contexto e fidelidade |\n| redação | sugerir estrutura e texto inicial | revisar, corrigir e assumir a autoria da versão entregue |\n| modelagem | propor diagramas e relações | validar regras, estados, entidades e decisões |\n| conteúdo novo | sugerir artefatos e alternativas | decidir o que entra e marcar o que ainda é proposta |\n| publicação | apoiar automação, estilo e verificação | confirmar dados acadêmicos e aprovar o layout |\n| validação | executar verificações repetíveis | avaliar resultados e corrigir problemas encontrados |\n\n### Controles aplicados\n\n1. **Fonte preservada:** o documento original permanece separado e identificável.\n2. **Rastreabilidade:** páginas derivadas mantêm origem, status e links relacionados.\n3. **Separação de certeza:** fatos da fonte não são misturados silenciosamente com propostas.\n4. **Revisão humana:** nenhuma saída de IA é considerada correta apenas por ter sido gerada.\n5. **Versionamento:** mudanças relevantes entram no <a href=\"#doc-07-operacao-registro-de-mudancas\">Registro de Mudancas</a>.\n6. **Validação editorial:** o PDF final é renderizado e inspecionado antes da entrega.\n7. **Responsabilidade autoral:** a equipe responde pelo conteúdo incorporado.\n\n### O que a IA não substitui\n\n- validação com usuários, docentes ou responsáveis pelo almoxarifado;\n- decisões de requisitos e arquitetura;\n- comprovação de implementação por código, execução ou testes;\n- avaliação acadêmica;\n- revisão de informações pessoais, confidenciais ou institucionais;\n- domínio técnico e capacidade de explicar o material apresentado.\n\n### Dados e confidencialidade\n\nDevem ser fornecidos à IA somente os dados necessários à tarefa e autorizados para esse uso. Informações pessoais, credenciais, segredos, bases de produção e dados institucionais restritos não devem ser incluídos. A presença do aviso de confidencialidade na linha de base exige que a equipe confirme as permissões aplicáveis antes de compartilhar o material fora do ambiente autorizado.\n\n### Critério de aceitação de uma saída\n\nUma contribuição assistida por IA só pode entrar na entrega quando:\n\n- sua origem e sua finalidade estiverem claras;\n- a equipe conseguir explicar e defender o conteúdo;\n- os vínculos com a fonte ou com uma decisão estiverem registrados;\n- hipóteses e propostas estiverem identificadas;\n- não houver contradição conhecida com os demais artefatos;\n- as verificações proporcionais ao risco tiverem sido realizadas.\n\n\n\n<span id=\"doc-09-usoia-impactos-riscos-e-controles\" class=\"source-anchor\"></span>\n## Impactos, Riscos e Controles\n\n### Impactos observados\n\n| Dimensão        | Impacto positivo                                                        | Contrapartida                                                          |\n| --------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------- |\n| produtividade   | redução do tempo gasto com organização, revisão e padronização          | exige conferência humana antes de incorporar o conteúdo                |\n| consistência    | auxílio na padronização de nomes, casos de uso, regras e mensagens      | um erro inicial pode ser repetido em vários documento                  |\n| cobertura       | identificação de situações e regras que inicialmente não estavam claras | algumas sugestões precisaram ser discutidas e ajustadas pelo grupo     |\n| modelagem       | apoio na identificação de entidades, relacionamentos e fluxos           | o modelo gerado precisava ser comparado com as decisões do projeto     |\n| comunicação     | geração de diagramas, protótipos e textos mais fáceis de compreender    | simplificações visuais podem esconder detalhes importantes             |\n| rastreabilidade | facilidade para relacionar casos de uso, regras, mensagens e interfaces | os vínculos precisam ser atualizados sempre que o projeto for alterado |\n| aprendizagem    | apoio na compreensão de requisitos, modelagem e organização documental  | a equipe precisa compreender o conteúdo e não apenas aceitar sugestões |\n\n### Matriz de riscos e controles\n\n| Risco                                   | Impacto | Controle adotado                                                    | Evidência                                                  |\n| --------------------------------------- | ------- | ------------------------------------------------------------------- | ---------------------------------------------------------- |\n| informação incorreta ou inventada       | alto    | Revisão manual de todas as sugestões antes da incorporação          | Revisão dos casos de uso, regras e documentos              |\n| contradição entre documentos            | alto    | Comparação entre casos de uso, regras, mensagens e modelo de dados  | Indices e referências entre os artefatos                   |\n| regra de negócio inadequada             | alto    | Discussão da regra pela equipe antes de sua inclusão                | Regras RN-01 a RN-34 revisadas                             |\n| uso de termos ou nomes diferentes       | médio   | Padronização de nomes e identificação numérica                      | UC, RN, MSG, IMG e entidades padronizados                  |\n| protótipo diferente dos requisitos      | médio   | Pomparação das telas com os casos de uso e regras correspondentes   | Mapa de Interfaces e revisão visual dos protótipos         |\n| dependência excessiva da IA             | médio   | Exigência de compreensão do conteúdo por todos os integrantes       | Revisão e apresentação realizada pela equipe               |\n| aceitação automática de sugestões       | alto    | Possibilidade de modificar ou descartar qualquer resposta da IA     | Decisões finais tomadas pelos integrantes                  |\n| perda de autoria acadêmica              | alto    | Declaração explícita do uso de IA e responsabilidade da equipe      | Grupo `09_UsoIA` e Declaração de Transparência             |\n| falsa impressão de sistema implementado | médio   | Identificação do protótipo como demonstrativo                       | Documentação da etapa IA-006                               |\n| erro propagado entre vários artefatos   | médio   | Revisão de referências após alterações de numeração ou nomenclatura | Correções realizadas nos índices e documentos relacionados |\n\n### Limitações desta utilização\n\n- não houve acesso ao código-fonte ou ao ambiente executável do SISMAT;\n- A IA não realizou entrevistas com usuários reais da oficina.\n- As regras de negócio foram definidas a partir das decisões e necessidades levantadas pela equipe, sem validação com uma empresa real.\n- Os protótipos de interface representam uma proposta visual do sistema e não uma implementação definitiva.\n- O protótipo interativo possui finalidade demonstrativa e não utiliza backend, banco de dados ou autenticação real.\n- As sugestões geradas pela IA podem conter erros, interpretações inadequadas ou informações que não correspondam às decisões do projeto.\n- Diagramas e modelos produzidos com apoio da IA representam a documentação definida pela equipe, mas não comprovam a existência de uma implementação funcional.\n- O conteúdo gerado ou revisado com apoio de IA depende de validação humana antes de ser considerado parte oficial do projeto.\n- Este registro deve ser atualizado caso a IA seja utilizada em novas etapas do desenvolvimento.\n\n### Ações recomendadas antes da avaliação\n\n- [ ] revisar este grupo com todos os integrantes;\n- [ ] adaptar a declaração às orientações dos docentes e da UNIPAR;\n- [ ] confirmar se o compartilhamento da linha de base estava autorizado;\n- [ ] validar requisitos propostos com o responsável pelo processo;\n- [ ] garantir que todos consigam explicar os artefatos entregues;\n- [ ] registrar novos usos de IA ocorridos após esta edição.\n\n\n\n<span id=\"doc-09-usoia-declaracao-de-transparencia\" class=\"source-anchor\"></span>\n## Declaração de Transparência\n\nEste Projeto Integrador utilizou a inteligência artificial como ferramenta de apoio para organizar e revisar textos, auxiliar na estruturação dos casos de uso e regras de negócio, sugerir melhorias na documentação, apoiar a construção do modelo de dados e diagramas, além de ajudar na identificação de inconsistências entre os diferentes artefatos do projeto.\n\nOs protótipos das interfaces do sistema foram gerados com o auxílio de inteligência artificial a partir dos requisitos, casos de uso, regras de negócio e decisões definidas pela equipe. A definição das funcionalidades que deveriam aparecer em cada tela, bem como a validação do resultado final, foi realizada pelos integrantes do projeto.\n\nAs decisões sobre o funcionamento do sistema, regras de negócio, entidades, relacionamentos, fluxos dos casos de uso e demais elementos da documentação foram analisadas e definidas pela equipe. As sugestões fornecidas pela inteligência artificial não foram utilizadas automaticamente, sendo revisadas, adaptadas ou descartadas de acordo com as necessidades do projeto.\n\nTambém foram utilizados recursos de IA para auxiliar na correção de escrita, padronização de termos e organização da documentação no Obsidian, buscando manter consistência entre casos de uso, regras de negócio, mensagens do sistema, modelo de dados e demais documentos.\n\nA equipe permanece responsável pelo conteúdo apresentado, pelas decisões tomadas e pela capacidade de explicar os artefatos desenvolvidos. O uso de inteligência artificial teve caráter de apoio e não substituiu a participação dos integrantes na análise, definição e desenvolvimento do projeto.\n\nO detalhamento das atividades realizadas com apoio de inteligência artificial, assim como seus impactos, limitações e formas de revisão, é apresentado nas demais seções do grupo `09_UsoIA`.\n\n\n\n# Referências e controle documental\n\nA linha de base desta publicação é o documento `SISMAT.EST.00001`, versão 1, emitido em 26/03/2026. O arquivo original permanece preservado em `99_Fontes` e não é incorporado integralmente nesta publicação devido à extensão e ao aviso de confidencialidade.\n";
+      const content = document.getElementById("publication-content");
+      content.innerHTML = marked.parse(source, { gfm: true, breaks: false });
+
+      const slugify = (text) => text.normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "") || "secao";
+
+      const usedIds = new Set(Array.from(document.querySelectorAll("[id]")).map((item) => item.id));
+      let currentChapter = 0;
+      let currentSection = 0;
+      let chapterIsNumbered = false;
+
+      for (const heading of content.querySelectorAll("h1, h2, h3, h4, h5, h6")) {
+        const originalText = heading.textContent.trim();
+        let candidate = slugify(originalText);
+        let suffix = 2;
+        while (usedIds.has(candidate)) candidate = slugify(originalText) + "-" + suffix++;
+        heading.id = candidate;
+        usedIds.add(candidate);
+
+        if (heading.tagName === "H1") {
+          heading.classList.add("chapter-heading");
+          const unnumbered = originalText.toLocaleLowerCase("pt-BR") === "apresentação";
+          chapterIsNumbered = !unnumbered;
+          currentSection = 0;
+          if (chapterIsNumbered) {
+            currentChapter += 1;
+            heading.dataset.toc = "true";
+            heading.dataset.tocLevel = "1";
+            heading.insertAdjacentHTML("afterbegin", '<span class="heading-number">' + currentChapter + '&nbsp;</span>');
+          } else {
+            heading.classList.add("unnumbered");
+            heading.dataset.toc = "true";
+            heading.dataset.tocLevel = "1";
+          }
+        } else if (heading.tagName === "H2") {
+          heading.classList.add("section-heading");
+          if (chapterIsNumbered) {
+            currentSection += 1;
+            heading.dataset.toc = "true";
+            heading.dataset.tocLevel = "2";
+            heading.insertAdjacentHTML("afterbegin", '<span class="heading-number">' + currentChapter + '.' + currentSection + '&nbsp;</span>');
+          }
+        }
+      }
+
+      for (const blockquote of content.querySelectorAll("blockquote")) {
+        const first = blockquote.querySelector("p");
+        if (!first) continue;
+        const originalHtml = first.innerHTML;
+        const match = originalHtml.match(/^\[!([A-Za-z-]+)\]\s*([^\n<]*)(?:\n|<br\s*\/?\s*>)?/);
+        if (!match) continue;
+        const type = match[1].toLowerCase();
+        const title = match[2] || ({ warning: "Atenção", info: "Informação", note: "Nota" }[type] || "Observação");
+        const remainingHtml = originalHtml.slice(match[0].length).trim();
+        if (remainingHtml) first.innerHTML = remainingHtml;
+        else first.remove();
+        blockquote.classList.add("callout", "callout-" + type);
+        blockquote.insertAdjacentHTML("afterbegin", '<div class="callout-title">' + title + '</div>');
+      }
+
+      for (const table of content.querySelectorAll("table")) {
+        const columns = table.querySelectorAll("thead th").length;
+        table.classList.add("columns-" + Math.min(columns, 8));
+        const wrapper = document.createElement("div");
+        wrapper.className = "table-wrap";
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+      }
+
+      let diagramIndex = 0;
+      for (const code of content.querySelectorAll("pre > code.language-mermaid")) {
+        const pre = code.parentElement;
+        const figure = document.createElement("figure");
+        figure.className = "diagram illustration";
+        const diagram = document.createElement("div");
+        diagram.className = "mermaid";
+        diagram.textContent = code.textContent;
+        figure.appendChild(diagram);
+
+        let previous = pre.previousElementSibling;
+        while (previous && !/^H[1-6]$/.test(previous.tagName)) previous = previous.previousElementSibling;
+        const label = previous ? previous.textContent.replace(/^\d+(?:\.\d+)?\s*/, "").trim() : "Diagrama " + (++diagramIndex);
+        figure.dataset.caption = label;
+        figure.dataset.source = "Elaboração própria (2026)";
+        pre.replaceWith(figure);
+      }
+
+      mermaid.initialize({
+        startOnLoad: false,
+        securityLevel: "strict",
+        theme: "base",
+        fontFamily: "Cambria, Georgia, serif",
+        themeVariables: {
+          primaryColor: "#f2f2f2",
+          primaryTextColor: "#111111",
+          primaryBorderColor: "#565656",
+          lineColor: "#565656",
+          secondaryColor: "#f8f8f8",
+          tertiaryColor: "#ffffff",
+          actorBkg: "#ffffff",
+          actorBorder: "#565656",
+          actorTextColor: "#111111",
+          signalColor: "#111111",
+          signalTextColor: "#111111",
+          noteBkgColor: "#fff8e8",
+          noteBorderColor: "#a32638"
+        },
+        flowchart: { htmlLabels: true, curve: "basis" },
+        sequence: { useMaxWidth: true, wrap: true, diagramMarginX: 8, diagramMarginY: 8 }
+      });
+      await mermaid.run({ nodes: content.querySelectorAll(".mermaid") });
+
+      let figureNumber = 0;
+      const figures = [];
+      for (const figure of content.querySelectorAll("figure.illustration")) {
+        figureNumber += 1;
+        figure.id = "figura-" + figureNumber;
+        let caption = figure.querySelector("figcaption");
+        if (!caption) {
+          caption = document.createElement("figcaption");
+          figure.insertBefore(caption, figure.firstChild);
+        }
+        const captionText = figure.dataset.caption || "Ilustração " + figureNumber;
+        caption.innerHTML = '<span class="figure-label">Figura ' + figureNumber + '</span><span class="figure-separator"> - </span>' + captionText;
+        const source = document.createElement("div");
+        source.className = "figure-source";
+        source.textContent = "Fonte: " + (figure.dataset.source || "Elaboração própria (2026)") + ".";
+        figure.appendChild(source);
+        figures.push({ id: figure.id, text: "Figura " + figureNumber + " - " + captionText });
+      }
+
+      const tocList = document.createElement("ol");
+      tocList.className = "toc-list";
+      for (const heading of content.querySelectorAll('[data-toc="true"]')) {
+        const item = document.createElement("li");
+        item.className = "toc-level-" + heading.dataset.tocLevel;
+        const link = document.createElement("a");
+        link.href = "#" + heading.id;
+        link.innerHTML = "<span>" + heading.textContent.trim() + "</span>";
+        item.appendChild(link);
+        tocList.appendChild(item);
+      }
+      document.getElementById("toc").appendChild(tocList);
+
+      const figureList = document.createElement("ol");
+      figureList.className = "figure-list toc-list";
+      for (const figure of figures) {
+        const item = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = "#" + figure.id;
+        link.innerHTML = "<span>" + figure.text + "</span>";
+        item.appendChild(link);
+        figureList.appendChild(item);
+      }
+      document.getElementById("list-of-figures").appendChild(figureList);
+      if (!figures.length) document.getElementById("figures-page").remove();
+
+      const result = await window.PagedPolyfill.preview();
+      window.__PAGE_COUNT__ = result.total;
+      window.__PAGED_DONE__ = true;
+    } catch (error) {
+      window.__BUILD_ERROR__ = error && error.stack ? error.stack : String(error);
+      console.error(error);
+    }
+  })();
+  </script>
+</body>
+</html>
