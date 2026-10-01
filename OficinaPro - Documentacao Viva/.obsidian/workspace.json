@@ -11,14 +11,12 @@
             "id": "9be4e85be3959087",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "02_Requisitos/Casos de Uso/UC-008 - Alertar estoque mínimo.md",
-                "mode": "source",
-                "source": false
+                "file": "06_Interfaces/Anexos/Prototipos/IMG- 02 - Consultar Clientes.png"
               },
-              "icon": "lucide-file",
-              "title": "UC-008 - Alertar estoque mínimo"
+              "icon": "lucide-image",
+              "title": "IMG- 02 - Consultar Clientes"
             }
           }
         ]
@@ -190,8 +188,11 @@
   },
   "active": "9be4e85be3959087",
   "lastOpenFiles": [
-    "02_Requisitos/Casos de Uso/UC-007 - Cadastrar fornecedor.md",
+    "06_Interfaces/Anexos/Prototipos/IMG- 03 - Cadastrar Técnico.png",
+    "06_Interfaces/Anexos/Prototipos/IMG- 01 - Cadastrar Cliente.png",
+    "90_Templates/Template - ADR.md",
     "02_Requisitos/Casos de Uso/UC-008 - Alertar estoque mínimo.md",
+    "02_Requisitos/Casos de Uso/UC-007 - Cadastrar fornecedor.md",
     "02_Requisitos/Casos de Uso/UC-009 - Abrir Ordem de Serviço.md",
     "02_Requisitos/Casos de Uso/UC-010 - Adicionar produtos à O.S..md",
     "08_Publicacao/LEIA-ME - Geracao do PDF.md",
@@ -203,7 +204,6 @@
     "08_Publicacao/Gerador PDF/assets/LEIA-ME - Marca UNIPAR.md",
     "02_Requisitos/Catalogo de Mensagens.md",
     "Mapa SISMAT.canvas",
-    "90_Templates/Template - ADR.md",
     "tmp/pdfs/SISMAT-publicacao-compilada.html",
     "tmp/pdfs",
     "tmp",
@@ -225,7 +225,6 @@
     "02_Requisitos/Regras de Negocio/RN-10 - Veículo pertencente a outro cliente.md",
     "02_Requisitos/Regras de Negocio/RN-11 - Preenchimento automático do veículo.md",
     "02_Requisitos/Regras de Negocio/RN-12 - Código único do produto.md",
-    "02_Requisitos/Regras de Negocio/RN-13 - Campos obrigatórios do produto.md",
-    "02_Requisitos/Regras de Negocio/RN-14 - Valores do produto.md"
+    "02_Requisitos/Regras de Negocio/RN-13 - Campos obrigatórios do produto.md"
   ]
 }
