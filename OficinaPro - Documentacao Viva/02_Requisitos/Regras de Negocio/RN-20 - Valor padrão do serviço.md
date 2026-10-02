@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, usuario]
 
 Todo serviço deve possuir um valor padrão cadastrado.
 
-**Aplicação:** [UC-004](UC-004%20-%20Cadastrar%20Serviço), [[UC-011 - Adicionar serviço à O.S.|UC-011]].
+**Aplicação:** [UC-004](UC-004%20-%20Cadastrar%20Serviço), [[UC-011 - Adicionar serviço à O S|UC-011]].
 
 **Verificação:** ao selecionar um serviço para uma O.S., preencher automaticamente o campo de valor com o valor padrão cadastrado.

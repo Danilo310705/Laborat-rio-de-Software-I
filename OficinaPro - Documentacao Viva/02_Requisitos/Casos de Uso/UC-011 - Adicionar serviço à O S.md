@@ -38,16 +38,16 @@ Permitir que o usuário adicione serviços à Ordem de Serviço, definindo o val
 |     5 |  RS  | Sistema preenche automaticamente o valor padrão do serviço conforme [[RN-20 - Valor padrão do serviço\|RN-20]].                                                                                                             |
 |     6 |  EV  | Usuário seleciona o técnico responsável pela execução do serviço entre os técnicos ativos conforme [[RN-22 - Técnico responsável pelo serviço\|RN-22]] e [[RN-33 - Técnico ativo\|RN-33]].                                  |
 |     7 |  EV  | Usuário confirma a inclusão do serviço.                                                                                                                                                                                     |
-|     8 |  RS  | Sistema valida o valor informado conforme [[RN-21 - Alteração do valor do serviço na O.S.\|RN-21]] e o técnico responsável conforme [[RN-22 - Técnico responsável pelo serviço\|RN-22]] e [[RN-33 - Técnico ativo\|RN-33]]. |
-|     9 |  RS  | Sistema adiciona o serviço à O.S. com o valor utilizado e o técnico responsável conforme [[RN-21 - Alteração do valor do serviço na O.S.\|RN-21]] e [[RN-22 - Técnico responsável pelo serviço\|RN-22]].                    |
+|     8 |  RS  | Sistema valida o valor informado conforme [[RN-21 - Alteração do valor do serviço na O S\|RN-21]] e o técnico responsável conforme [[RN-22 - Técnico responsável pelo serviço\|RN-22]] e [[RN-33 - Técnico ativo\|RN-33]]. |
+|     9 |  RS  | Sistema adiciona o serviço à O.S. com o valor utilizado e o técnico responsável conforme [[RN-21 - Alteração do valor do serviço na O S\|RN-21]] e [[RN-22 - Técnico responsável pelo serviço\|RN-22]].                    |
 |    10 |  RS  | Sistema atualiza o valor total da O.S.                                                                                                                                                                                      |
 |    11 |  RS  | Sistema exibe  [[02_Requisitos/Catalogo de Mensagens#MSG-17\|MSG-17]]                                                                                                                                                       |
 
 ## Alternativa A - Alterar valor do serviço
 
-1. Após o passo 5, o usuário altera o valor preenchido automaticamente conforme [[RN-21 - Alteração do valor do serviço na O.S.|RN-21]].
-2. O sistema utiliza o valor informado somente para aquele serviço naquela O.S. conforme [[RN-21 - Alteração do valor do serviço na O.S.|RN-21]].
-3. O valor padrão cadastrado para o serviço permanece inalterado conforme [[RN-21 - Alteração do valor do serviço na O.S.|RN-21]].
+1. Após o passo 5, o usuário altera o valor preenchido automaticamente conforme [[RN-21 - Alteração do valor do serviço na O S|RN-21]].
+2. O sistema utiliza o valor informado somente para aquele serviço naquela O.S. conforme [[RN-21 - Alteração do valor do serviço na O S|RN-21]].
+3. O valor padrão cadastrado para o serviço permanece inalterado conforme [[RN-21 - Alteração do valor do serviço na O S|RN-21]].
 4. O fluxo continua no passo 6.
 
 ## Alternativa B - Adicionar vários serviços
@@ -62,7 +62,7 @@ Permitir que o usuário adicione serviços à Ordem de Serviço, definindo o val
 - 4a - Serviço não encontrado: exibe [[02_Requisitos/Catalogo de Mensagens#MSG-19|MSG-19]] e permitir uma nova busca.
 - 6a - Técnico não selecionado:  exibir [[02_Requisitos/Catalogo de Mensagens#MSG-22|MSG-22]] e solicitar a seleção do técnico conforme [[RN-20 - Valor padrão do serviço|RN-20]].
 - 6b - Técnico inativo: exibir [[02_Requisitos/Catalogo de Mensagens#MSG-24|MSG-24]] impedir a seleção do técnico conforme [[RN-33 - Técnico ativo|RN-33]] e solicitar a escolha de outro técnico.
-- 8a - Valor inválido: exibir [[Catalogo de Mensagens#MSG-07|MSG-07]] e permitir a correção conforme [[RN-21 - Alteração do valor do serviço na O.S.|RN-21]].
+- 8a - Valor inválido: exibir [[Catalogo de Mensagens#MSG-07|MSG-07]] e permitir a correção conforme [[RN-21 - Alteração do valor do serviço na O S|RN-21]].
 - 9a - Falha ao adicionar o serviço: exibe [[Catalogo de Mensagens#MSG-08|MSG-08]] e não realizar gravação parcial.
 
 

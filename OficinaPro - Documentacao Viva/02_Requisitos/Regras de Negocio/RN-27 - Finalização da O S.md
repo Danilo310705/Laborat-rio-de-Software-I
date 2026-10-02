@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, usuario]
 
 Uma O.S. somente deve ser considerada concluída após sua finalização com os dados obrigatórios preenchidos e a forma de pagamento registrada.
 
-**Aplicação:** [[UC-014 - Finalizar O.S.|UC-014]].
+**Aplicação:** [[UC-014 - Finalizar O S|UC-014]].
 
 **Verificação:** validar as informações necessárias antes de alterar o status da O.S. para `Concluída`.

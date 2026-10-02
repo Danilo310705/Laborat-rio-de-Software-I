@@ -24,7 +24,7 @@ Permitir que o usuário abra uma Ordem de Serviço (O.S.), vinculando um cliente
 | Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]                                                              |
 | Gatilho         | Usuário seleciona “Abrir Nova O.S.”                                                                                         |
 | Pré-condições   | Usuário autenticado conforme [[RN-04 - Usuário autenticado\|RN-04]] e cliente previamente cadastrado                        |
-| Sucesso         | O.S. registrada e vinculada ao cliente e ao veículo, com status `Aberta` conforme [[RN-23 - Status inicial da O.S.\|RN-23]] |
+| Sucesso         | O.S. registrada e vinculada ao cliente e ao veículo, com status `Aberta` conforme [[RN-23 - Status inicial da O S\|RN-23]] |
 | Garantia mínima | Em caso de falha, nenhuma O.S. incompleta deve ser registrada.                                                              |
 
 ## Fluxo principal
@@ -43,7 +43,7 @@ Permitir que o usuário abra uma Ordem de Serviço (O.S.), vinculando um cliente
 |    10 |  EV  | Usuário confirma a abertura da O.S.                                                                                                                                                    |
 |    11 |  RS  | Sistema valida os dados informados.                                                                                                                                                    |
 |    12 |  RS  | Sistema registra a O.S. vinculada ao cliente e ao veículo conforme [[RN-08 - Veículo vinculado ao cliente\|RN-08]].                                                                    |
-|    13 |  RS  | Sistema registra a O.S. com status `Aberta` conforme [[RN-23 - Status inicial da O.S.\|RN-23]].                                                                                        |
+|    13 |  RS  | Sistema registra a O.S. com status `Aberta` conforme [[RN-23 - Status inicial da O S\|RN-23]].                                                                                        |
 |    14 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-11\|MSG-11]].                                                                                                                  |
 
 ## Alternativa A - Veículo não cadastrado
@@ -55,7 +55,7 @@ Permitir que o usuário abra uma Ordem de Serviço (O.S.), vinculando um cliente
 5. O fluxo retorna ao passo 9.
 6. Ao confirmar a abertura da O.S., o sistema registra o novo veículo e o vincula ao cliente selecionado conforme [[RN-08 - Veículo vinculado ao cliente|RN-08]].
 7. O sistema registra a O.S. vinculada ao novo veículo.
-8. O sistema define o status inicial como `Aberta` conforme [[RN-23 - Status inicial da O.S.|RN-23]].
+8. O sistema define o status inicial como `Aberta` conforme [[RN-23 - Status inicial da O S|RN-23]].
 9. O sistema exibe [[Catalogo de Mensagens#MSG-11|MSG-11]].
 
 ## Exceções

@@ -34,9 +34,9 @@ Permitir que o usuário altere ou remova um serviço previamente adicionado à O
 |     2 |  RS  | Sistema exibe os serviços adicionados à O.S.                                                                                                                                                                         |
 |     3 |  EV  | Usuário seleciona o serviço que deseja editar.                                                                                                                                                                       |
 |     4 |  RS  | Sistema exibe o valor e o técnico responsável pelo serviço.                                                                                                                                                          |
-|     5 |  EV  | Usuário altera o valor conforme [[RN-21 - Alteração do valor do serviço na O.S.\|RN-21]] e/ou o técnico responsável conforme [[RN-22 - Técnico responsável pelo serviço\|RN-22]] e [[RN-33 - Técnico ativo\|RN-33]]. |
+|     5 |  EV  | Usuário altera o valor conforme [[RN-21 - Alteração do valor do serviço na O S\|RN-21]] e/ou o técnico responsável conforme [[RN-22 - Técnico responsável pelo serviço\|RN-22]] e [[RN-33 - Técnico ativo\|RN-33]]. |
 |     6 |  EV  | Usuário confirma a alteração.                                                                                                                                                                                        |
-|     7 |  RS  | Sistema valida o valor conforme [[RN-21 - Alteração do valor do serviço na O.S.\|RN-21]] e ou o técnico responsável conforme [[RN-22 - Técnico responsável pelo serviço\|RN-22]] e [[RN-33 - Técnico ativo\|RN-33]]. |
+|     7 |  RS  | Sistema valida o valor conforme [[RN-21 - Alteração do valor do serviço na O S\|RN-21]] e ou o técnico responsável conforme [[RN-22 - Técnico responsável pelo serviço\|RN-22]] e [[RN-33 - Técnico ativo\|RN-33]]. |
 |     8 |  RS  | Sistema atualiza o serviço na O.S.                                                                                                                                                                                   |
 |     9 |  RS  | Sistema recalcula o valor total da O.S.                                                                                                                                                                              |
 |    10 |  RS  | Sistema informa que o serviço foi alterado com sucesso.                                                                                                                                                              |
@@ -54,7 +54,7 @@ Permitir que o usuário altere ou remova um serviço previamente adicionado à O
 
 ## Exceções 
 
-- 7a - Valor inválido: exibir [[Catalogo de Mensagens#MSG-07|MSG-07]] e permitir a correção conforme [[RN-21 - Alteração do valor do serviço na O.S.|RN-21]].
+- 7a - Valor inválido: exibir [[Catalogo de Mensagens#MSG-07|MSG-07]] e permitir a correção conforme [[RN-21 - Alteração do valor do serviço na O S|RN-21]].
 - 7b - Técnico não selecionado: exibir [[Catalogo de Mensagens#MSG-22|MSG-22]] e solicitar a seleção de um técnico conforme [[RN-22 - Técnico responsável pelo serviço|RN-22]].
 - 7c - Técnico inativo: exibir [[Catalogo de Mensagens#MSG-24|MSG-24]] e solicitar a seleção de outro técnico conforme [[RN-33 - Técnico ativo|RN-33]].
 - 8a - Falha ao alterar o serviço: exibir [[Catalogo de Mensagens#MSG-40|MSG-40]] e manter os dados anteriores do serviço na O.S.

@@ -23,8 +23,8 @@ Permitir que o usuário registre o diagnóstico técnico identificado durante a 
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuário]]                                                                                             |
 | Gatilho         | Usuário seleciona “Registrar Diagnóstico” em uma O.S.                                                                                                      |
-| Pré-condições   | Usuário autenticado conforme [[RN-04 - Usuário autenticado\|RN-04]] e O.S. previamente cadastrada conforme [[RN-25 - Diagnóstico vinculado à O.S.\|RN-25]] |
-| Sucesso         | Diagnóstico registrado e vinculado à O.S. conforme [[RN-25 - Diagnóstico vinculado à O.S.\|RN-25]]                                                         |
+| Pré-condições   | Usuário autenticado conforme [[RN-04 - Usuário autenticado\|RN-04]] e O.S. previamente cadastrada conforme [[RN-25 - Diagnóstico vinculado à O S\|RN-25]] |
+| Sucesso         | Diagnóstico registrado e vinculado à O.S. conforme [[RN-25 - Diagnóstico vinculado à O S\|RN-25]]                                                         |
 | Garantia minima | Em caso de falha, o diagnóstico anterior da O.S. não deve ser alterado conforme [[RN-26 - Preservação do diagnóstico anterior\|RN-26]]                     |
 
 ## Fluxo principal
@@ -37,7 +37,7 @@ Permitir que o usuário registre o diagnóstico técnico identificado durante a 
 |     4 |  EV  | Usuário informa o diagnóstico técnico do veículo.                                                |
 |     5 |  EV  | Usuário confirma o diagnóstico.                                                                  |
 |     6 |  RS  | Sistema valida os dados informados.                                                              |
-|     7 |  RS  | Sistema registra o diagnóstico na O.S. conforme [[RN-25 - Diagnóstico vinculado à O.S.\|RN-25]]. |
+|     7 |  RS  | Sistema registra o diagnóstico na O.S. conforme [[RN-25 - Diagnóstico vinculado à O S\|RN-25]]. |
 |     8 |  RS  | Sistema informa que o diagnóstico foi registrado com sucesso.                                    |
 
 

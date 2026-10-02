@@ -89,23 +89,23 @@ Este caderno consolida a documentação viva do **OficinaPro**, um Sistema ERP p
 
 ![[UC-009 - Abrir Ordem de Serviço]]
 
-![[UC-010 - Adicionar produtos à O.S.]]
+![[UC-010 - Adicionar produtos à O S]]
 
-![[UC-011 - Adicionar serviço à O.S.]]
+![[UC-011 - Adicionar serviço à O S]]
 
-![[UC-012 - Registrar diagnóstico O.S]]
+![[UC-012 - Registrar diagnóstico O S]]
 
-![[UC-013 - Atualizar status da O.S.]]
+![[UC-013 - Atualizar status da O S]]
 
-![[UC-014 - Finalizar O.S.]]
+![[UC-014 - Finalizar O S]]
 
-![[UC-015 - Emitir comprovante da O.S.]]
+![[UC-015 - Emitir comprovante da O S]]
 
-![[UC-016 - Consultar O.S.]]
+![[UC-016 - Consultar O S]]
 
-![[UC-017 - Editar ou Remover produto da O.S.]]
+![[UC-017 - Editar ou Remover produto da O S]]
 
-![[UC-018 - Editar ou Remover serviço da O.S.]]
+![[UC-018 - Editar ou Remover serviço da O S]]
 
 # Regras de negócio e mensagens
 
@@ -122,8 +122,6 @@ Este caderno consolida a documentação viva do **OficinaPro**, um Sistema ERP p
 ![[RN-05 - Múltiplos contatos por cliente]]
 
 ![[RN-06 - Endereço vinculado ao cliente]]
-
-![[RN-07 - Consulta do histórico do cliente]]
 
 ![[RN-07 - Placa única do veículo]]
 
@@ -143,7 +141,7 @@ Este caderno consolida a documentação viva do **OficinaPro**, um Sistema ERP p
 
 ![[RN-15 - Limite pelo estoque disponível]]
 
-![[RN-16 - Atualização do estoque pela O.S.]]
+![[RN-16 - Atualização do estoque pela O S]]
 
 ![[RN-17 - Estoque mínimo]]
 
@@ -153,33 +151,33 @@ Este caderno consolida a documentação viva do **OficinaPro**, um Sistema ERP p
 
 ![[RN-20 - Valor padrão do serviço]]
 
-![[RN-21 - Alteração do valor do serviço na O.S.]]
+![[RN-21 - Alteração do valor do serviço na O S]]
 
 ![[RN-22 - Técnico responsável pelo serviço]]
 
-![[RN-23 - Status inicial da O.S.]]
+![[RN-23 - Status inicial da O S]]
 
-![[RN-24 - Transição de status da O.S.]]
+![[RN-24 - Transição de status da O S]]
 
-![[RN-25 - Diagnóstico vinculado à O.S.]]
+![[RN-25 - Diagnóstico vinculado à O S]]
 
 ![[RN-26 - Preservação do diagnóstico anterior]]
 
-![[RN-27 - Finalização da O.S.]]
+![[RN-27 - Finalização da O S]]
 
 ![[RN-28 - Forma de pagamento obrigatória]]
 
 ![[RN-29 - Consistência da finalização]]
 
-![[RN-30 - Dados do comprovante da O.S.]]
+![[RN-30 - Dados do comprovante da O S]]
 
-![[RN-31 - Emissao nao altera a O.S.]]
+![[RN-31 - Emissao nao altera a O S]]
 
 ![[RN-32 - Tempo estimado do serviço]]
 
 ![[RN-33 - Técnico ativo]]
 
-![[RN-34 - Desconto na O.S.]]
+![[RN-34 - Desconto na O S]]
 
 
 ![[02_Requisitos/Catalogo de Mensagens]]

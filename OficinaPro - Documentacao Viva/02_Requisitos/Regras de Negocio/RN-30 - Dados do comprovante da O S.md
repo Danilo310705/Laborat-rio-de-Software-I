@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, usuario]
 
 O comprovante deve ser gerado utilizando os dados registrados na Ordem de Serviço, incluindo cliente, veículo, produtos, serviços, valores, desconto aplicado e informações de pagamento, quando disponíveis.
 
-**Aplicação:** [[UC-015 - Emitir comprovante da O.S.|UC-015]]
+**Aplicação:** [[UC-015 - Emitir comprovante da O S|UC-015]]
 
 **Verificação:** utilizar os dados persistidos da O.S. para composição do comprovante, sem modificar as informações originais.

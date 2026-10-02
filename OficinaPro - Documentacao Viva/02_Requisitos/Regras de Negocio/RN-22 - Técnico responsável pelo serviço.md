@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, usuario]
 
 O valor padrão de um serviço pode ser alterado quando o serviço for adicionado a uma O.S., sem modificar o valor padrão armazenado no cadastro do serviço.
 
-**Aplicação:** [[UC-011 - Adicionar serviço à O.S.|UC-011]], [[UC-018 - Editar ou Remover serviço da O.S.|UC-018]].
+**Aplicação:** [[UC-011 - Adicionar serviço à O S|UC-011]], [[UC-018 - Editar ou Remover serviço da O S|UC-018]].
 
 **Verificação:** armazenar o valor efetivamente utilizado na O.S. separadamente do valor padrão do serviço.

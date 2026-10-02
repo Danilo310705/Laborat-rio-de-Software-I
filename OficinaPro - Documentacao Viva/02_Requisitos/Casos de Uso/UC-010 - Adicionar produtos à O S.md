@@ -24,8 +24,8 @@ Permitir que o usuário adicione à Ordem de Serviço os produtos que serão uti
 | Ator principal  | [[01_Produto/Atores e Stakeholders#Atores primários\|Usuár                                                                                                             |
 | Gatilho         | Usuário seleciona “Adicionar Produto” em um                                                                                                                            |
 | Pré-condições   | Usuário autenticado conforme [[RN-04 - Usuário autenticado\|RN-04]], O.S. previamente cadastrada e produto cadastrado no sistema                                       |
-| Sucesso         | Produto adicionado à O.S. e quantidade correspondente atualizada no estoque conforme [[RN-16 - Atualização do estoque pela O.S.\|RN-16]]                               |
-| Garantia mínima | Em caso de falha, o produto não deve ser adicionado à O.S. sem que o estoque seja atualizado corretamente conforme [[RN-16 - Atualização do estoque pela O.S.\|RN-16]] |
+| Sucesso         | Produto adicionado à O.S. e quantidade correspondente atualizada no estoque conforme [[RN-16 - Atualização do estoque pela O S\|RN-16]]                               |
+| Garantia mínima | Em caso de falha, o produto não deve ser adicionado à O.S. sem que o estoque seja atualizado corretamente conforme [[RN-16 - Atualização do estoque pela O S\|RN-16]] |
 
 ## Fluxo principal
 
@@ -40,7 +40,7 @@ Permitir que o usuário adicione à Ordem de Serviço os produtos que serão uti
 |     7 |  RS  | Sistema valida se a quantidade é positiva conforme [[RN-14 - Quantidade positiva\|RN-14]]. e se não excede o estoque disponível conforme [[RN-15 - Limite pelo estoque disponível\|RN-15]]. |
 |     8 |  EV  | Usuário confirma a inclusão do produto.                                                                                                                                                     |
 |     9 |  RS  | Sistema adiciona o produto e a quantidade à O.S.                                                                                                                                            |
-|    10 |  RS  | Sistema reduz do estoque a quantidade utilizada conforme [[RN-16 - Atualização do estoque pela O.S.\|RN-16]].                                                                               |
+|    10 |  RS  | Sistema reduz do estoque a quantidade utilizada conforme [[RN-16 - Atualização do estoque pela O S\|RN-16]].                                                                               |
 |    11 |  RS  | Sistema verifica se a quantidade restante atingiu ou ficou abaixo do estoque mínimo conforme [[RN-17 - Estoque mínimo\|RN-17]].                                                             |
 |    12 |  RS  | Sistema atualiza o valor total da O.S.                                                                                                                                                      |
 |    13 |  RS  | Sistema exibe [[02_Requisitos/Catalogo de Mensagens#MSG-16\|MSG-16]].                                                                                                                       |
@@ -68,7 +68,7 @@ Permitir que o usuário adicione à Ordem de Serviço os produtos que serão uti
 
 - 9a - Falha ao adicionar o produto: exibir [[Catalogo de Mensagens#MSG-08|MSG-08]] e não alterar o estoque.
 
-- 10a - Falha ao atualizar o estoque: desfazer a inclusão do produto na O.S. e manter a quantidade anterior em estoque conforme [[RN-16 - Atualização do estoque pela O.S.|RN-16]].
+- 10a - Falha ao atualizar o estoque: desfazer a inclusão do produto na O.S. e manter a quantidade anterior em estoque conforme [[RN-16 - Atualização do estoque pela O S|RN-16]].
 
 
 ## Dados e interfaces

@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, status]
 
 Quando a quantidade disponível de um produto atingir ou ficar abaixo do estoque mínimo definido, o sistema deve gerar um alerta.
 
-**Aplicação:** [[UC-008 - Alertar estoque mínimo|UC-008]], [[UC-010 - Adicionar produtos à O.S.|UC-010]], [[UC-017 - Editar ou Remover produto da O.S.|UC-017]].
+**Aplicação:** [[UC-008 - Alertar estoque mínimo|UC-008]], [[UC-010 - Adicionar produtos à O S|UC-010]], [[UC-017 - Editar ou Remover produto da O S|UC-017]].
 
 **Verificação:** após uma redução no estoque, comparar a quantidade restante com o estoque mínimo cadastrado para o produto.

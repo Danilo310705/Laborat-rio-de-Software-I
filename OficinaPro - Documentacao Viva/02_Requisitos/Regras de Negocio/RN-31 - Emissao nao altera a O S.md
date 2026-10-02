@@ -13,6 +13,6 @@ tags: [sismat, regra-de-negocio, usuario]
 
 A geração, impressão ou exportação do comprovante não deve modificar o conteúdo ou o status da Ordem de Serviço.
 
-**Aplicação:** [[UC-015 - Emitir comprovante da O.S.|UC-015]].
+**Aplicação:** [[UC-015 - Emitir comprovante da O S|UC-015]].
 
 **Verificação:** tratar a emissão do comprovante como operação de consulta, sem alteração dos dados persistidos.
